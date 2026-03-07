@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ウマ娘 | CollabVaultX</title>
+    <meta
+      name="description"
+      content="CollabVaultX entry page for Japan-exclusive Uma Musume collaboration archives."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="subpage-hero subpage-hero-umamusume">
+        <div class="subpage-hero-content">
+          <a class="back-link" href="index.html">← Top pageへ戻る</a>
+          <p class="eyebrow">Title Archive Entry</p>
+          <h1>ウマ娘</h1>
+          <p class="hero-copy">
+            ウマ娘に関する国内限定コラボ配布物を整理していくための入口ページです。
+          </p>
+          <p class="hero-subcopy">
+            このページでは、作品単位でコラボの入口をまとめ、今後の詳細ページへ接続していきます。
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <section class="filter-panel" aria-labelledby="filter-heading">
+          <div class="filter-panel-heading">
+            <p class="section-label">Filter Bar</p>
+            <h2 id="filter-heading">絞り込み</h2>
+            <p class="section-copy">
+              今後はコラボ先やカテゴリで一覧を絞り込める想定です。現在は見た目のみの試作です。
+            </p>
+          </div>
+
+          <div class="filter-groups">
+            <section class="filter-group" aria-labelledby="filter-partner-heading" data-filter-group="partner">
+              <h3 id="filter-partner-heading">コラボ先</h3>
+              <div class="filter-chip-row">
+                <a href="#" class="filter-chip is-active" data-filter-value="all">すべて</a>
+                <a href="#" class="filter-chip" data-filter-value="seven">セブン</a>
+                <a href="#" class="filter-chip" data-filter-value="lawson">ローソン</a>
+                <a href="#" class="filter-chip" data-filter-value="family-restaurant-a">ファミレスA</a>
+                <a href="#" class="filter-chip" data-filter-value="family-restaurant-b">ファミレスB</a>
+              </div>
+            </section>
+
+            <section class="filter-group" aria-labelledby="filter-category-heading" data-filter-group="category">
+              <h3 id="filter-category-heading">カテゴリ</h3>
+              <div class="filter-chip-row">
+                <a href="#" class="filter-chip is-active" data-filter-value="all">すべて</a>
+                <a href="#" class="filter-chip" data-filter-value="clear-file">クリアファイル</a>
+                <a href="#" class="filter-chip" data-filter-value="card">カード</a>
+                <a href="#" class="filter-chip" data-filter-value="figure">フィギュア</a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="section-heading section-heading-with-meta">
+          <div>
+            <p class="section-label">Collaboration List</p>
+            <h2>コラボ一覧</h2>
+            <p class="section-copy">
+              新しい順に見ていける想定の一覧です。ここから各コラボページへ入る構成を想定しています。
+            </p>
+          </div>
+          <p class="list-meta">Latest first</p>
+        </section>
+
+        <section class="collab-grid collab-grid-rich" aria-label="ウマ娘コラボ一覧">
+          <article class="collab-card collab-card-rich" id="collab-seven-4th" data-partner="seven" data-category="clear-file card">
+            <div class="collab-thumb">
+              <img src="assets/images/umamusume-banner-wide.png" alt="セブンイレブン 4周年コラボの仮サムネイル" />
+            </div>
+            <div class="collab-card-body">
+              <p class="card-tag">2024 / Seven-Eleven</p>
+              <h3>セブンイレブン 4周年コラボ</h3>
+              <p>
+                クリアファイル配布と描き下ろし販促ビジュアルを中心に整理していく想定の最新ダミーエントリです。
+              </p>
+              <a class="card-button" href="collab-umamusume-seven-4th.html" data-collab-slug="seven-eleven-4th">詳細を見る</a>
+            </div>
+          </article>
+
+          <article class="collab-card collab-card-rich" id="collab-lawson-2023-spring" data-partner="lawson" data-category="clear-file card">
+            <div class="collab-thumb">
+              <img src="assets/images/umamusume-card-main.png" alt="ローソン 2023春コラボの仮サムネイル" />
+            </div>
+            <div class="collab-card-body">
+              <p class="card-tag">2023 / Lawson</p>
+              <h3>ローソン 2023春コラボ</h3>
+              <p>
+                対象商品購入で入手できる配布物や、キャンペーン時期をたどりやすくするための仮カードです。
+              </p>
+              <a class="card-button" href="#" data-collab-slug="lawson-2023-spring">詳細を見る</a>
+            </div>
+          </article>
+
+          <article class="collab-card collab-card-rich" id="collab-familymart-summer" data-partner="family-restaurant-a" data-category="clear-file figure">
+            <div class="collab-thumb">
+              <img src="assets/images/umamusume-hero-main.png" alt="ファミリーマート 夏キャンペーンの仮サムネイル" />
+            </div>
+            <div class="collab-card-body">
+              <p class="card-tag">2023 / Family Campaign</p>
+              <h3>ファミリーマート 夏キャンペーン</h3>
+              <p>
+                夏季施策として展開された配布物や店頭装飾をまとめる想定で置いたダミーのアーカイブ入口です。
+              </p>
+              <a class="card-button" href="#" data-collab-slug="familymart-summer">詳細を見る</a>
+            </div>
+          </article>
+
+          <article class="collab-card collab-card-rich" id="collab-seven-2nd" data-partner="seven" data-category="clear-file">
+            <div class="collab-thumb">
+              <img src="assets/images/umamusume-card-alt-1.png" alt="セブンイレブン 2周年コラボの仮サムネイル" />
+            </div>
+            <div class="collab-card-body">
+              <p class="card-tag">2022 / Seven-Eleven</p>
+              <h3>セブンイレブン 2周年コラボ</h3>
+              <p>
+                クリアファイル配布時期や対象商品の違いを見比べられるようにするための過去施策ダミーです。
+              </p>
+              <a class="card-button" href="#" data-collab-slug="seven-eleven-2nd">詳細を見る</a>
+            </div>
+          </article>
+
+          <article class="collab-card collab-card-rich" id="collab-family-restaurant-a-fair" data-partner="family-restaurant-a" data-category="card figure">
+            <div class="collab-thumb">
+              <img src="assets/images/thumb-umamusume.png" alt="ファミレスA コラボフェアの仮サムネイル" />
+            </div>
+            <div class="collab-card-body">
+              <p class="card-tag">2022 / Family Restaurant A</p>
+              <h3>ファミレスA コラボフェア</h3>
+              <p>
+                メニュー連動特典や限定カードなど、店舗系コラボを後から増やしやすいようにした仮エントリです。
+              </p>
+              <a class="card-button" href="#" data-collab-slug="family-restaurant-a-fair">詳細を見る</a>
+            </div>
+          </article>
+
+          <article class="collab-card collab-card-rich" id="collab-family-restaurant-b-campaign" data-partner="family-restaurant-b" data-category="card figure">
+            <div class="collab-thumb">
+              <img src="assets/images/umamusume-banner-wide.png" alt="ファミレスB コラボキャンペーンの仮サムネイル" />
+            </div>
+            <div class="collab-card-body">
+              <p class="card-tag">2021 / Family Restaurant B</p>
+              <h3>ファミレスB コラボキャンペーン</h3>
+              <p>
+                初期コラボ施策を年次で追えるようにするためのダミーカードで、将来の一覧拡張を想定しています。
+              </p>
+              <a class="card-button" href="#" data-collab-slug="family-restaurant-b-campaign">詳細を見る</a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
