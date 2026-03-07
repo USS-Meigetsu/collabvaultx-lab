@@ -1,12 +1,113 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CollabVaultX Lab</title>
+    <title>CollabVaultX</title>
+    <meta
+      name="description"
+      content="CollabVaultX is an English-first archive for Japan-exclusive collaboration goods."
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>CollabVaultX Lab</h1>
-    <p>公開テスト用ページです。更新テスト：1</p>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Prototype Top Page</p>
+          <h1>CollabVaultX</h1>
+          <p class="hero-copy">
+            日本国内限定のコラボ商品を、英語中心で整理・記録していくための
+            アーカイブサイトです。
+          </p>
+          <p class="hero-subcopy">
+            English-first archive for Japan-exclusive collaboration goods.
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <section class="section-heading">
+          <p class="section-label">Featured Titles</p>
+          <h2>作品ごとのアーカイブ入口</h2>
+          <p class="section-copy">
+            まずはウマ娘を主役にした試作です。今後は他作品やカテゴリも順次追加していく想定です。
+          </p>
+        </section>
+
+        <section class="card-grid" aria-label="作品一覧">
+          <article class="title-card title-card-featured" id="title-umamusume">
+            <div class="card-media">
+              <img src="assets/images/umamusume-card-main.png" alt="ウマ娘カードイメージ" />
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Primary Archive</p>
+              <h3>ウマ娘</h3>
+              <p>
+                コンビニ、量販店、外食などの国内限定コラボ配布物を追いやすくするための主軸アーカイブ。
+              </p>
+              <a class="card-button" href="#" data-slug="umamusume">アーカイブを見る</a>
+            </div>
+          </article>
+
+          <article class="title-card" id="title-project-a">
+            <div class="card-media">
+              <img src="assets/images/project-a-card-main.png" alt="作品Aカードイメージ" />
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Coming Later</p>
+              <h3>作品A</h3>
+              <p>
+                将来的に別作品の限定配布グッズや購入特典を整理するためのダミーカードです。
+              </p>
+              <a class="card-button" href="#" data-slug="project-a">アーカイブを見る</a>
+            </div>
+          </article>
+
+          <article class="title-card" id="title-project-b">
+            <div class="card-media">
+              <img src="assets/images/project-b-card-main.png" alt="作品Bカードイメージ" />
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Coming Later</p>
+              <h3>作品B</h3>
+              <p>
+                店舗横断で情報をたどれる構成を想定した、次期追加候補のプレースホルダです。
+              </p>
+              <a class="card-button" href="#" data-slug="project-b">アーカイブを見る</a>
+            </div>
+          </article>
+
+          <article class="title-card" id="title-project-c">
+            <div class="card-media">
+              <img src="assets/images/project-c-card-main.png" alt="作品Cカードイメージ" />
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Coming Later</p>
+              <h3>作品C</h3>
+              <p>
+                コラボ名、配布アイテム、販売チャネルをまとめて見られる構成を拡張予定です。
+              </p>
+              <a class="card-button" href="#" data-slug="project-c">アーカイブを見る</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="info-panel">
+          <div>
+            <p class="section-label">Prototype Note</p>
+            <h2>現在試作品として公開中</h2>
+            <p>
+              まずはトップページの見た目と導線を確認するための段階です。今後、作品数やカテゴリ数の増加を見越して構造を広げていきます。
+            </p>
+          </div>
+
+          <nav class="footer-links" aria-label="補助リンク">
+            <a href="#">About</a>
+            <a href="#">今後の対応予定カテゴリ</a>
+          </nav>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
