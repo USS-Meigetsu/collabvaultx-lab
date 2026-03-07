@@ -63,7 +63,7 @@ img {
   background:
     linear-gradient(90deg, rgba(6, 9, 14, 0.9) 0%, rgba(6, 9, 14, 0.78) 46%, rgba(6, 9, 14, 0.45) 100%),
     linear-gradient(180deg, rgba(9, 12, 18, 0.18), rgba(9, 12, 18, 0.78)),
-    url("assets/images/bg-top-dark-city.png") center/cover no-repeat;
+    url("../images/bg-top-dark-city.png") center/cover no-repeat;
 }
 
 .hero::before,
@@ -90,7 +90,7 @@ img {
   background:
     linear-gradient(90deg, rgba(6, 9, 14, 0.92) 0%, rgba(6, 9, 14, 0.76) 52%, rgba(6, 9, 14, 0.4) 100%),
     linear-gradient(180deg, rgba(9, 12, 18, 0.14), rgba(9, 12, 18, 0.74)),
-    url("assets/images/umamusume-banner-wide.png") center/cover no-repeat;
+    url("../images/umamusume-banner-wide.png") center/cover no-repeat;
 }
 
 .back-link {
@@ -440,7 +440,7 @@ main {
   background:
     linear-gradient(90deg, rgba(6, 9, 14, 0.92) 0%, rgba(6, 9, 14, 0.76) 52%, rgba(6, 9, 14, 0.38) 100%),
     linear-gradient(180deg, rgba(9, 12, 18, 0.14), rgba(9, 12, 18, 0.74)),
-    url("assets/images/umamusume-hero-main.png") center/cover no-repeat;
+    url("../images/umamusume-hero-main.png") center/cover no-repeat;
 }
 
 .subpage-hero-content-wide {
@@ -574,3 +574,4 @@ main {
     grid-column: auto;
   }
 }
+
