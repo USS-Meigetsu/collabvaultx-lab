@@ -738,3 +738,119 @@ main {
   }
 }
 
+
+.subpage-hero-collab-entry::before {
+  background:
+    linear-gradient(90deg, rgba(5, 8, 13, 0.5) 0%, rgba(5, 8, 13, 0.2) 100%),
+    radial-gradient(circle at 78% 20%, rgba(138, 215, 255, 0.14), transparent 24%);
+}
+
+.subpage-hero-collab-entry .subpage-hero-content-wide {
+  max-width: 720px;
+  padding: 44px 44px 48px;
+}
+
+.subpage-hero-collab-entry h1 {
+  max-width: 14ch;
+  font-size: clamp(2.45rem, 5vw, 4.35rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.subpage-hero-collab-entry .hero-copy,
+.subpage-hero-collab-entry .hero-subcopy {
+  max-width: 52rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.subpage-hero-collab-entry .hero-copy {
+  margin-top: 18px;
+  line-height: 1.82;
+}
+
+.subpage-hero-collab-entry .hero-subcopy {
+  color: #d7dfeb;
+}
+
+.collab-card-body {
+  padding: 24px 24px 26px;
+}
+
+.collab-card-body h3 {
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.collab-card-body p {
+  line-height: 1.72;
+}
+
+.collab-card-primary .collab-card-body {
+  padding: 24px 24px 28px;
+}
+
+.collab-card-primary h3 {
+  font-size: 1.9rem;
+}
+
+.product-thumb {
+  aspect-ratio: 16 / 10;
+  padding: 14px;
+}
+
+.product-thumb::after {
+  inset: 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(6, 9, 14, 0.04), rgba(6, 9, 14, 0.26));
+}
+
+.product-thumb img {
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.product-card-body {
+  padding: 22px 24px 24px;
+}
+
+.product-card-body h3 {
+  font-size: 1.52rem;
+  line-height: 1.18;
+}
+
+.product-card-body > p {
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.product-details summary {
+  font-size: 0.97rem;
+}
+
+.market-links {
+  gap: 12px;
+}
+
+.market-links span {
+  font-size: 0.92rem;
+}
+
+@media (max-width: 860px) {
+  .subpage-hero-collab-entry .subpage-hero-content-wide {
+    padding: 28px 24px 32px;
+  }
+
+  .subpage-hero-collab-entry h1 {
+    max-width: 100%;
+    font-size: clamp(2.1rem, 8vw, 3rem);
+  }
+
+  .product-thumb {
+    padding: 12px;
+  }
+
+  .product-thumb::after {
+    inset: 12px;
+  }
+}
