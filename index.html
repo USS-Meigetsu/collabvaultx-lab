@@ -27,12 +27,41 @@
       </header>
 
       <main>
-        <section class="section-heading">
-          <p class="section-label">Featured Titles</p>
-          <h2>作品ごとのアーカイブ入口</h2>
-          <p class="section-copy">
-            まずはウマ娘を主役にした試作です。今後は他作品やカテゴリも順次追加していく想定です。
-          </p>
+        <section class="quick-search-panel" aria-labelledby="quick-search-heading">
+          <div class="quick-search-heading">
+            <p class="section-label">Search Guide</p>
+            <h2 id="quick-search-heading">探し方</h2>
+            <p class="section-copy">
+              このトップページでは、まず作品から入口を選びます。作品名で探すか、下の主要作品ボタンから移動してください。
+            </p>
+          </div>
+
+          <div class="quick-search-box" aria-label="作品検索UIイメージ">
+            <span class="quick-search-icon">Search</span>
+            <input type="text" placeholder="作品名で探す" aria-label="作品名で探す" />
+          </div>
+
+          <div class="guide-groups guide-groups-single">
+            <section class="guide-group" aria-labelledby="guide-works-heading">
+              <h3 id="guide-works-heading">作品</h3>
+              <div class="guide-chip-row">
+                <span class="guide-chip is-highlighted">ウマ娘</span>
+                <span class="guide-chip">作品A</span>
+                <span class="guide-chip">作品B</span>
+                <span class="guide-chip">作品C</span>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="section-heading section-heading-stack">
+          <div>
+            <p class="section-label">Featured Titles</p>
+            <h2>作品一覧</h2>
+            <p class="section-copy">
+              まずはウマ娘を主役にした試作です。ここから作品単位のアーカイブ入口へ進めます。
+            </p>
+          </div>
         </section>
 
         <section class="card-grid" aria-label="作品一覧">
@@ -93,13 +122,11 @@
           </article>
         </section>
 
-        <section class="info-panel">
+        <section class="info-panel info-panel-compact">
           <div>
             <p class="section-label">Prototype Note</p>
             <h2>現在試作品として公開中</h2>
-            <p>
-              まずはトップページの見た目と導線を確認するための段階です。今後、作品数やカテゴリ数の増加を見越して構造を広げていきます。
-            </p>
+            <p>今後、作品やカテゴリを順次追加予定です。まずは作品入口としての導線整理を優先しています。</p>
           </div>
 
           <nav class="footer-links" aria-label="補助リンク">
@@ -111,8 +138,3 @@
     </div>
   </body>
 </html>
-
-
-
-
-
