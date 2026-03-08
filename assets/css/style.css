@@ -39,6 +39,10 @@ img {
   width: 100%;
 }
 
+input {
+  font: inherit;
+}
+
 .page-shell {
   width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
@@ -50,7 +54,10 @@ img {
 .info-panel,
 .title-card,
 .filter-panel,
-.collab-card {
+.quick-search-panel,
+.collab-card,
+.overview-card,
+.product-card {
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
@@ -120,7 +127,9 @@ img {
 .section-heading h2,
 .info-panel h2,
 .filter-panel h2,
+.quick-search-panel h2,
 .filter-group h3,
+.guide-group h3,
 .title-card h3,
 .collab-card h3 {
   margin: 0;
@@ -162,9 +171,14 @@ main {
   padding: 0 4px;
 }
 
+.section-heading-stack {
+  display: block;
+}
+
 .section-heading h2,
 .info-panel h2,
-.filter-panel h2 {
+.filter-panel h2,
+.quick-search-panel h2 {
   font-size: clamp(1.7rem, 4vw, 2.4rem);
 }
 
@@ -172,6 +186,7 @@ main {
 .info-panel p,
 .card-body p,
 .filter-panel p,
+.quick-search-panel p,
 .collab-card p {
   margin: 14px 0 0;
   line-height: 1.75;
@@ -189,6 +204,94 @@ main {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.quick-search-panel {
+  margin-bottom: 32px;
+  padding: 28px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(11, 16, 25, 0.96), rgba(9, 13, 20, 0.98));
+}
+
+.quick-search-heading {
+  max-width: 760px;
+}
+
+.quick-search-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.quick-search-icon {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(138, 215, 255, 0.12);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quick-search-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+}
+
+.quick-search-box input::placeholder {
+  color: var(--muted);
+}
+
+.guide-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.guide-group {
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.guide-group h3 {
+  font-size: 1rem;
+}
+
+.guide-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.guide-chip {
+  display: inline-flex;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.guide-chip.is-highlighted {
+  border-color: rgba(138, 215, 255, 0.24);
+  background: rgba(138, 215, 255, 0.12);
+  color: var(--text);
 }
 
 .card-grid,
@@ -370,10 +473,14 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  margin-top: 26px;
-  padding: 30px 32px;
+  margin-top: 28px;
+  padding: 28px 30px;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(12, 17, 26, 0.96), rgba(10, 14, 21, 0.98));
+}
+
+.info-panel-compact {
+  align-items: center;
 }
 
 .footer-links {
@@ -389,51 +496,6 @@ main {
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.03);
   color: var(--text);
-}
-
-@media (max-width: 860px) {
-  .page-shell {
-    width: min(100% - 28px, 1160px);
-    padding-top: 24px;
-  }
-
-  .hero,
-  .subpage-hero {
-    min-height: 360px;
-    background-position: 64% center;
-  }
-
-  .hero-content,
-  .subpage-hero-content {
-    padding: 32px 24px;
-  }
-
-  .section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .filter-groups,
-  .card-grid,
-  .collab-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .title-card,
-  .title-card-featured,
-  .title-card:not(.title-card-featured),
-  .collab-card {
-    grid-column: auto;
-  }
-
-  .filter-panel,
-  .info-panel {
-    padding: 24px;
-  }
-
-  .footer-links {
-    min-width: 0;
-  }
 }
 
 .subpage-hero-collab {
@@ -469,14 +531,6 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 18px;
-}
-
-.overview-card,
-.product-card {
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(15, 20, 31, 0.96), rgba(11, 15, 24, 0.98));
 }
 
 .overview-card {
@@ -564,14 +618,116 @@ main {
 }
 
 @media (max-width: 860px) {
+  .page-shell {
+    width: min(100% - 28px, 1160px);
+    padding-top: 24px;
+  }
+
+  .hero,
+  .subpage-hero {
+    min-height: 360px;
+    background-position: 64% center;
+  }
+
+  .hero-content,
+  .subpage-hero-content {
+    padding: 32px 24px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .guide-groups,
+  .filter-groups,
+  .card-grid,
+  .collab-grid,
   .overview-grid,
   .product-grid {
     grid-template-columns: 1fr;
   }
 
+  .title-card,
+  .title-card-featured,
+  .title-card:not(.title-card-featured),
+  .collab-card,
   .overview-card,
   .product-card {
     grid-column: auto;
   }
+
+  .quick-search-panel,
+  .filter-panel,
+  .info-panel {
+    padding: 24px;
+  }
+
+  .quick-search-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    min-width: 0;
+    width: 100%;
+  }
 }
 
+.guide-groups-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.guide-groups-single .guide-group {
+  max-width: 720px;
+}
+
+.filter-groups-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.filter-search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.filter-search-icon {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(138, 215, 255, 0.12);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.filter-search-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+}
+
+.filter-search-box input::placeholder {
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .filter-groups-three {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-search-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
