@@ -617,6 +617,12 @@ main {
   font-weight: 700;
 }
 
+.market-links span {
+  width: 100%;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 @media (max-width: 860px) {
   .page-shell {
     width: min(100% - 28px, 1160px);
@@ -731,3 +737,4 @@ main {
     flex-direction: column;
   }
 }
+
