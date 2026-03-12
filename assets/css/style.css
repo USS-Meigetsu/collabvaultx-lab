@@ -46,7 +46,7 @@ input {
 .page-shell {
   width: min(1640px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 40px 0 56px;
+  padding: 22px 0 56px;
 }
 
 .hero,
@@ -85,8 +85,8 @@ input {
 .subpage-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 540px;
-  padding: 56px;
+  max-width: min(88%, 1080px);
+  padding: 34px 40px 40px;
 }
 
 .subpage-hero {
@@ -102,7 +102,7 @@ input {
 
 .back-link {
   display: inline-flex;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
   padding: 10px 14px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
@@ -114,7 +114,7 @@ input {
 .eyebrow,
 .section-label,
 .card-tag {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -138,20 +138,20 @@ input {
 
 .hero h1,
 .subpage-hero h1 {
-  max-width: 10ch;
+  max-width: 16ch;
   font-size: clamp(3rem, 7vw, 5.8rem);
 }
 
 .hero-copy {
-  max-width: 34rem;
-  margin: 22px 0 10px;
+  max-width: min(88%, 60rem);
+  margin: 16px 0 10px;
   font-size: 1.08rem;
   line-height: 1.9;
   color: var(--text);
 }
 
 .hero-subcopy {
-  max-width: 38rem;
+  max-width: min(88%, 60rem);
   margin: 0;
   font-size: 0.98rem;
   line-height: 1.7;
@@ -648,7 +648,7 @@ main {
 @media (max-width: 860px) {
   .page-shell {
     width: min(calc(100% - 28px), 1640px);
-    padding-top: 24px;
+    padding-top: 14px;
   }
 
   .hero,
@@ -659,7 +659,7 @@ main {
 
   .hero-content,
   .subpage-hero-content {
-    padding: 32px 24px;
+    padding: 22px 20px 24px;
   }
 
   .section-heading {
@@ -806,7 +806,7 @@ main {
 }
 
 .subpage-hero-collab-entry .subpage-hero-content-wide {
-  max-width: 760px;
+  max-width: min(88%, 1240px);
   padding: 32px 34px 34px;
 }
 
@@ -815,7 +815,7 @@ main {
 }
 
 .subpage-hero-collab-entry h1 {
-  max-width: 18ch;
+  max-width: min(88%, 32ch);
   font-size: clamp(2.1rem, 4.5vw, 3.55rem);
   line-height: 1.12;
   text-wrap: balance;
@@ -823,7 +823,7 @@ main {
 
 .subpage-hero-collab-entry .hero-copy,
 .subpage-hero-collab-entry .hero-subcopy {
-  max-width: 52rem;
+  max-width: min(88%, 72rem);
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
 }
 
@@ -949,6 +949,21 @@ main {
   border-radius: 12px;
   object-fit: cover;
   background: rgba(255, 255, 255, 0.04);
+}
+
+@media (min-width: 1500px) {
+  .collab-card {
+    grid-column: span 3;
+  }
+
+  .product-card,
+  .product-grid-catalog .product-card {
+    grid-column: span 3;
+  }
+
+  .product-card-wide {
+    grid-column: span 6;
+  }
 }
 
 @media (max-width: 860px) {
