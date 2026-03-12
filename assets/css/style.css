@@ -44,7 +44,7 @@ input {
 }
 
 .page-shell {
-  width: min(1160px, calc(100% - 40px));
+  width: min(1640px, calc(100% - 48px));
   margin: 0 auto;
   padding: 40px 0 56px;
 }
@@ -341,6 +341,28 @@ main {
   transform: scale(1.02);
 }
 
+.card-media-link,
+.collab-thumb-link {
+  display: block;
+  color: inherit;
+}
+
+.card-title-link {
+  color: inherit;
+}
+
+.card-media-link:hover img,
+.card-media-link:focus-visible img,
+.collab-thumb-link:hover img,
+.collab-thumb-link:focus-visible img {
+  transform: scale(1.05);
+}
+
+.card-title-link:hover,
+.card-title-link:focus-visible {
+  color: var(--accent);
+}
+
 .title-card-featured .card-media {
   aspect-ratio: 16 / 8.4;
 }
@@ -625,7 +647,7 @@ main {
 
 @media (max-width: 860px) {
   .page-shell {
-    width: min(100% - 28px, 1160px);
+    width: min(calc(100% - 28px), 1640px);
     padding-top: 24px;
   }
 
@@ -753,6 +775,14 @@ main {
   z-index: 0;
 }
 
+.subpage-hero-collab-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  cursor: zoom-in;
+}
+
 .subpage-hero-collab-media::after {
   content: "";
   position: absolute;
@@ -778,6 +808,10 @@ main {
 .subpage-hero-collab-entry .subpage-hero-content-wide {
   max-width: 760px;
   padding: 32px 34px 34px;
+}
+
+.subpage-hero-collab-entry .subpage-hero-content {
+  z-index: 2;
 }
 
 .subpage-hero-collab-entry h1 {
