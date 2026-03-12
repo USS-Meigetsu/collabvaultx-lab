@@ -739,6 +739,36 @@ main {
 }
 
 
+.subpage-hero-collab-entry {
+  min-height: clamp(360px, 46vw, 430px);
+  padding: 14px;
+  background:
+    linear-gradient(180deg, rgba(9, 12, 18, 0.1), rgba(9, 12, 18, 0.34)),
+    rgba(5, 8, 13, 0.88);
+}
+
+.subpage-hero-collab-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.subpage-hero-collab-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 13, 0.84) 0%, rgba(5, 8, 13, 0.62) 42%, rgba(5, 8, 13, 0.24) 78%),
+    linear-gradient(180deg, rgba(9, 12, 18, 0.24), rgba(9, 12, 18, 0.7));
+}
+
+.subpage-hero-collab-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
 .subpage-hero-collab-entry::before {
   background:
     linear-gradient(90deg, rgba(5, 8, 13, 0.5) 0%, rgba(5, 8, 13, 0.2) 100%),
@@ -746,13 +776,13 @@ main {
 }
 
 .subpage-hero-collab-entry .subpage-hero-content-wide {
-  max-width: 720px;
-  padding: 44px 44px 48px;
+  max-width: 760px;
+  padding: 32px 34px 34px;
 }
 
 .subpage-hero-collab-entry h1 {
-  max-width: 14ch;
-  font-size: clamp(2.45rem, 5vw, 4.35rem);
+  max-width: 18ch;
+  font-size: clamp(2.1rem, 4.5vw, 3.55rem);
   line-height: 1.12;
   text-wrap: balance;
 }
@@ -764,12 +794,31 @@ main {
 }
 
 .subpage-hero-collab-entry .hero-copy {
-  margin-top: 18px;
-  line-height: 1.82;
+  margin-top: 14px;
+  line-height: 1.74;
 }
 
 .subpage-hero-collab-entry .hero-subcopy {
   color: #d7dfeb;
+}
+
+.subpage-hero-collab-entry .hero-meta-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 760px;
+  margin-top: 16px;
+}
+
+.subpage-hero-collab-entry .hero-meta-line {
+  margin: 0;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(7, 10, 16, 0.46);
+  color: #d7dfeb;
+  line-height: 1.65;
+  backdrop-filter: blur(4px);
 }
 
 .collab-card-body {
@@ -836,35 +885,6 @@ main {
   font-size: 0.92rem;
 }
 
-.subpage-hero-sanrio-entry {
-  background:
-    linear-gradient(90deg, rgba(6, 9, 14, 0.94) 0%, rgba(6, 9, 14, 0.8) 52%, rgba(6, 9, 14, 0.46) 100%),
-    linear-gradient(180deg, rgba(9, 12, 18, 0.12), rgba(9, 12, 18, 0.76)),
-    url("../images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/hero-main.jpg") center/cover no-repeat;
-}
-
-.subpage-hero-sanrio-entry .subpage-hero-content-wide {
-  max-width: 860px;
-}
-
-.subpage-hero-sanrio-entry h1 {
-  max-width: 18ch;
-  font-size: clamp(2.25rem, 4.5vw, 3.95rem);
-  line-height: 1.12;
-}
-
-.hero-meta-stack {
-  display: grid;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.hero-meta-line {
-  margin: 0;
-  color: #d7dfeb;
-  line-height: 1.65;
-}
-
 .product-grid-catalog .product-card {
   grid-column: span 4;
 }
@@ -898,13 +918,39 @@ main {
 }
 
 @media (max-width: 860px) {
+  .subpage-hero-collab-entry {
+    min-height: 340px;
+    padding: 12px;
+  }
+
+  .subpage-hero-collab-media::after {
+    background:
+      linear-gradient(180deg, rgba(5, 8, 13, 0.84) 0%, rgba(5, 8, 13, 0.46) 52%, rgba(5, 8, 13, 0.22) 100%),
+      linear-gradient(180deg, rgba(9, 12, 18, 0.18), rgba(9, 12, 18, 0.7));
+  }
+
   .subpage-hero-collab-entry .subpage-hero-content-wide {
-    padding: 28px 24px 32px;
+    padding: 24px 20px 28px;
   }
 
   .subpage-hero-collab-entry h1 {
     max-width: 100%;
-    font-size: clamp(2.1rem, 8vw, 3rem);
+    font-size: clamp(1.9rem, 7.4vw, 2.7rem);
+  }
+
+  .subpage-hero-collab-entry .hero-copy {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .subpage-hero-collab-entry .hero-meta-stack {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .subpage-hero-collab-entry .hero-meta-line {
+    padding: 9px 12px;
   }
 
   .product-thumb {
@@ -913,12 +959,6 @@ main {
 
   .product-thumb::after {
     inset: 12px;
-  }
-
-  .subpage-hero-sanrio-entry {
-    background:
-      linear-gradient(180deg, rgba(6, 9, 14, 0.92), rgba(6, 9, 14, 0.74)),
-      url("../images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/hero-main-sp.jpg") center/cover no-repeat;
   }
 
   .product-grid-catalog .product-card,
