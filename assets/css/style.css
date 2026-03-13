@@ -560,6 +560,10 @@ main {
   padding: 24px;
 }
 
+.overview-grid-two .overview-card {
+  grid-column: span 6;
+}
+
 .overview-card h3,
 .product-card h3 {
   margin: 0;
@@ -571,6 +575,16 @@ main {
   margin: 14px 0 0;
   line-height: 1.75;
   color: var(--muted);
+}
+
+.overview-card ul {
+  margin: 14px 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.overview-card li + li {
+  margin-top: 8px;
 }
 
 .product-card {
@@ -643,6 +657,64 @@ main {
   width: 100%;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.reference-section {
+  margin-top: 26px;
+}
+
+.reference-panel {
+  max-width: 980px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.reference-lede {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.reference-block + .reference-block {
+  margin-top: 18px;
+}
+
+.reference-block h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+
+.reference-block ul {
+  margin: 10px 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.reference-block li + li {
+  margin-top: 8px;
+}
+
+.reference-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.reference-links a {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.reference-links a:hover,
+.reference-links a:focus-visible {
+  color: var(--text);
 }
 
 @media (max-width: 860px) {
