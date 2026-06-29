@@ -14,6 +14,9 @@ Before committing, run:
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 ```
 
+The same check also runs in GitHub Actions on pushes to `main` and pull
+requests.
+
 Do not commit browser profiles, cookies, login databases, local cache folders,
 temporary screenshots, or source-capture PDFs.
 
