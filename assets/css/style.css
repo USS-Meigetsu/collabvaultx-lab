@@ -315,6 +315,12 @@ main {
   background: linear-gradient(180deg, rgba(15, 25, 39, 0.98), rgba(9, 13, 22, 1));
 }
 
+.title-card-coming-soon,
+.collab-card-planned {
+  border-style: dashed;
+  opacity: 0.82;
+}
+
 .title-card:not(.title-card-featured) {
   grid-column: span 6;
 }
@@ -345,6 +351,11 @@ main {
 .collab-thumb-link {
   display: block;
   color: inherit;
+}
+
+.card-media-placeholder img,
+.collab-thumb-placeholder img {
+  filter: saturate(0.72);
 }
 
 .card-title-link {
@@ -405,6 +416,13 @@ main {
 .title-card-featured .card-button {
   background: linear-gradient(135deg, rgba(138, 215, 255, 0.18), rgba(255, 211, 111, 0.16));
   border-color: rgba(138, 215, 255, 0.34);
+}
+
+.card-button-disabled {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--muted);
+  cursor: default;
 }
 
 .filter-panel {
@@ -497,6 +515,14 @@ main {
   text-align: center;
 }
 
+.planned-heading {
+  margin-top: 42px;
+}
+
+.planned-grid {
+  margin-top: 0;
+}
+
 .collab-thumb {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -532,12 +558,17 @@ main {
   min-width: 240px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-link-disabled {
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.03);
   color: var(--text);
+}
+
+.footer-link-disabled {
+  color: var(--muted);
 }
 
 .subpage-hero-collab {

@@ -26,3 +26,6 @@ source.pdf
 page-*-test.png
 sanrio-download-list.tsv
 oracle-handoff-context.md
+
+# Local Oracle/ChatGPT project routing
+.oracle/

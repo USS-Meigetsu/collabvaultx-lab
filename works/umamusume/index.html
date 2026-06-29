@@ -51,10 +51,6 @@
                 <button type="button" class="filter-chip" data-filter-value="cocos" aria-pressed="false">ココス</button>
                 <button type="button" class="filter-chip" data-filter-value="sanrio" aria-pressed="false">サンリオ</button>
                 <button type="button" class="filter-chip" data-filter-value="round1" aria-pressed="false">ROUND1</button>
-                <button type="button" class="filter-chip" data-filter-value="lawson" aria-pressed="false">ローソン</button>
-                <button type="button" class="filter-chip" data-filter-value="seven" aria-pressed="false">セブン</button>
-                <button type="button" class="filter-chip" data-filter-value="family-restaurant-a" aria-pressed="false">Family A</button>
-                <button type="button" class="filter-chip" data-filter-value="family-restaurant-b" aria-pressed="false">Family B</button>
               </div>
             </section>
 
@@ -77,14 +73,14 @@
             <p class="section-label">Collaboration List</p>
             <h2>コラボ一覧</h2>
             <p class="section-copy">
-              新しい順に見ていける想定の一覧です。ここから各コラボページへ入る構成を想定しています。
+              公開済みの詳細ページだけを表示します。追加予定の仮カードは下の別枠に分けています。
             </p>
           </div>
           <p class="list-meta" data-visible-count>Latest first</p>
         </section>
 
         <section class="collab-grid collab-grid-rich" aria-label="ウマ娘コラボ一覧">
-          <article class="collab-card collab-card-rich collab-card-primary" id="collab-cocos-umaimono-fes" data-partner="cocos" data-category="card figure goods prize">
+          <article class="collab-card collab-card-rich collab-card-primary" id="collab-cocos-umaimono-fes" data-status="published" data-partner="cocos" data-category="card figure goods prize">
             <a class="collab-thumb collab-thumb-link" href="./collabs/cocos-umaimono-fes-202601/index.html" data-collab-slug="cocos-umaimono-fes-202601" aria-label="ココスへようこそ！ウマいものフェス！の詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/hero-main.png" alt="ココスへようこそ！ウマいものフェス！のサムネイル" />
             </a>
@@ -98,7 +94,7 @@
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-sanrio-characters-popup-shop" data-partner="sanrio" data-category="clear-file card figure goods">
+          <article class="collab-card collab-card-rich" id="collab-sanrio-characters-popup-shop" data-status="published" data-partner="sanrio" data-category="clear-file card figure goods">
             <a class="collab-thumb collab-thumb-link" href="./collabs/sanrio-characters-popup-shop-202512/index.html" data-collab-slug="sanrio-characters-popup-shop-202512" aria-label="ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOPの詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/hero-main.jpg" alt="ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOPのサムネイル" />
             </a>
@@ -112,7 +108,7 @@
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-round1-campaign" data-partner="round1" data-category="card figure goods prize">
+          <article class="collab-card collab-card-rich" id="collab-round1-campaign" data-status="published" data-partner="round1" data-category="card figure goods prize">
             <a class="collab-thumb collab-thumb-link" href="./collabs/round1-collab-campaign-202510/index.html" data-collab-slug="round1-collab-campaign-202510" aria-label="アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーンの詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-hero-main.jpg" alt="アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーンのサムネイル" />
             </a>
@@ -126,82 +122,96 @@
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-lawson-2023-spring" data-partner="lawson" data-category="clear-file card">
-            <a class="collab-thumb collab-thumb-link" href="#" data-collab-slug="lawson-2023-spring" aria-label="ローソン 2023春コラボの詳細へ移動">
+        </section>
+        <p class="filter-empty" data-filter-empty hidden>該当する公開済みコラボがありません。</p>
+
+        <section class="section-heading section-heading-with-meta planned-heading">
+          <div>
+            <p class="section-label">Planned Entries</p>
+            <h2>追加予定</h2>
+            <p class="section-copy">
+              今後ページ化する候補です。現在は公開済み一覧の検索・絞り込み対象には含めていません。
+            </p>
+          </div>
+          <p class="list-meta">Coming later</p>
+        </section>
+
+        <section class="collab-grid collab-grid-rich planned-grid" aria-label="追加予定のウマ娘コラボ">
+          <article class="collab-card collab-card-rich collab-card-planned" id="collab-lawson-2023-spring">
+            <div class="collab-thumb collab-thumb-placeholder" aria-hidden="true">
               <img src="../../assets/images/umamusume-card-main.png" alt="ローソン 2023春コラボの仮サムネイル" />
-            </a>
+            </div>
             <div class="collab-card-body">
-              <p class="card-tag">2023 / Lawson</p>
-              <h3><a class="card-title-link" href="#" data-collab-slug="lawson-2023-spring">ローソン 2023春コラボ</a></h3>
+              <p class="card-tag">Coming Later / Lawson</p>
+              <h3>ローソン 2023春コラボ</h3>
               <p>
                 対象商品購入で入手できる配布物や、キャンペーン時期をたどりやすくするための仮カードです。
               </p>
-              <a class="card-button" href="#" data-collab-slug="lawson-2023-spring">詳細を見る</a>
+              <span class="card-button card-button-disabled">準備中</span>
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-familymart-summer" data-partner="family-restaurant-a" data-category="clear-file figure">
-            <a class="collab-thumb collab-thumb-link" href="#" data-collab-slug="familymart-summer" aria-label="ファミリーマート 夏キャンペーンの詳細へ移動">
+          <article class="collab-card collab-card-rich collab-card-planned" id="collab-familymart-summer">
+            <div class="collab-thumb collab-thumb-placeholder" aria-hidden="true">
               <img src="../../assets/images/umamusume-hero-main.png" alt="ファミリーマート 夏キャンペーンの仮サムネイル" />
-            </a>
+            </div>
             <div class="collab-card-body">
-              <p class="card-tag">2023 / Family Campaign</p>
-              <h3><a class="card-title-link" href="#" data-collab-slug="familymart-summer">ファミリーマート 夏キャンペーン</a></h3>
+              <p class="card-tag">Coming Later / Family Campaign</p>
+              <h3>ファミリーマート 夏キャンペーン</h3>
               <p>
                 夏季施策として展開された配布物や店頭装飾をまとめる想定で置いたダミーのアーカイブ入口です。
               </p>
-              <a class="card-button" href="#" data-collab-slug="familymart-summer">詳細を見る</a>
+              <span class="card-button card-button-disabled">準備中</span>
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-seven-2nd" data-partner="seven" data-category="clear-file">
-            <a class="collab-thumb collab-thumb-link" href="#" data-collab-slug="seven-eleven-2nd" aria-label="セブンイレブン 2周年コラボの詳細へ移動">
+          <article class="collab-card collab-card-rich collab-card-planned" id="collab-seven-2nd">
+            <div class="collab-thumb collab-thumb-placeholder" aria-hidden="true">
               <img src="../../assets/images/umamusume-card-alt-1.png" alt="セブンイレブン 2周年コラボの仮サムネイル" />
-            </a>
+            </div>
             <div class="collab-card-body">
-              <p class="card-tag">2022 / Seven-Eleven</p>
-              <h3><a class="card-title-link" href="#" data-collab-slug="seven-eleven-2nd">セブンイレブン 2周年コラボ</a></h3>
+              <p class="card-tag">Coming Later / Seven-Eleven</p>
+              <h3>セブンイレブン 2周年コラボ</h3>
               <p>
                 クリアファイル配布時期や対象商品の違いを見比べられるようにするための過去施策ダミーです。
               </p>
-              <a class="card-button" href="#" data-collab-slug="seven-eleven-2nd">詳細を見る</a>
+              <span class="card-button card-button-disabled">準備中</span>
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-family-restaurant-a-fair" data-partner="family-restaurant-a" data-category="card figure">
-            <a class="collab-thumb collab-thumb-link" href="#" data-collab-slug="family-restaurant-a-fair" aria-label="ファミレスA コラボフェアの詳細へ移動">
+          <article class="collab-card collab-card-rich collab-card-planned" id="collab-family-restaurant-a-fair">
+            <div class="collab-thumb collab-thumb-placeholder" aria-hidden="true">
               <img src="../../assets/images/thumb-umamusume.png" alt="ファミレスA コラボフェアの仮サムネイル" />
-            </a>
+            </div>
             <div class="collab-card-body">
-              <p class="card-tag">2022 / Family Restaurant A</p>
-              <h3><a class="card-title-link" href="#" data-collab-slug="family-restaurant-a-fair">ファミレスA コラボフェア</a></h3>
+              <p class="card-tag">Coming Later / Family Restaurant A</p>
+              <h3>ファミレスA コラボフェア</h3>
               <p>
                 メニュー連動特典や限定カードなど、店舗系コラボを後から増やしやすいようにした仮エントリです。
               </p>
-              <a class="card-button" href="#" data-collab-slug="family-restaurant-a-fair">詳細を見る</a>
+              <span class="card-button card-button-disabled">準備中</span>
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-family-restaurant-b-campaign" data-partner="family-restaurant-b" data-category="card figure">
-            <a class="collab-thumb collab-thumb-link" href="#" data-collab-slug="family-restaurant-b-campaign" aria-label="ファミレスB コラボキャンペーンの詳細へ移動">
+          <article class="collab-card collab-card-rich collab-card-planned" id="collab-family-restaurant-b-campaign">
+            <div class="collab-thumb collab-thumb-placeholder" aria-hidden="true">
               <img src="../../assets/images/umamusume-banner-wide.png" alt="ファミレスB コラボキャンペーンの仮サムネイル" />
-            </a>
+            </div>
             <div class="collab-card-body">
-              <p class="card-tag">2021 / Family Restaurant B</p>
-              <h3><a class="card-title-link" href="#" data-collab-slug="family-restaurant-b-campaign">ファミレスB コラボキャンペーン</a></h3>
+              <p class="card-tag">Coming Later / Family Restaurant B</p>
+              <h3>ファミレスB コラボキャンペーン</h3>
               <p>
                 初期コラボ施策を年次で追えるようにするためのダミーカードで、将来の一覧拡張を想定しています。
               </p>
-              <a class="card-button" href="#" data-collab-slug="family-restaurant-b-campaign">詳細を見る</a>
+              <span class="card-button card-button-disabled">準備中</span>
             </div>
           </article>
         </section>
-        <p class="filter-empty" data-filter-empty hidden>該当するコラボがありません。</p>
       </main>
     </div>
     <script>
       (() => {
-        const cards = Array.from(document.querySelectorAll(".collab-card-rich"));
+        const cards = Array.from(document.querySelectorAll(".collab-card-rich[data-status='published']"));
         const keywordInput = document.querySelector("[data-filter-keyword]");
         const visibleCount = document.querySelector("[data-visible-count]");
         const emptyState = document.querySelector("[data-filter-empty]");
@@ -233,7 +243,7 @@
           });
 
           if (visibleCount) {
-            visibleCount.textContent = `${shown} / ${cards.length} entries`;
+            visibleCount.textContent = `公開済み ${shown} / ${cards.length} 件`;
           }
           if (emptyState) {
             emptyState.hidden = shown !== 0;
