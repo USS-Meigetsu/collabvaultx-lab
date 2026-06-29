@@ -123,6 +123,28 @@ function assertTextIncludes(pageText, expected, label) {
   }
 }
 
+function validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageText, publishedItems, label) {
+  if (!itemHtml.includes('id="related-items-heading"')) {
+    fail(`${label}: related item navigation is missing related-items-heading`);
+    return;
+  }
+
+  for (const relatedItem of publishedItems.filter((candidate) => candidate.campaignId === item.campaignId)) {
+    if (relatedItem.id === item.id) {
+      if (!itemHtml.includes('aria-current="page"') || !itemPageText.includes(relatedItem.officialNameJa)) {
+        fail(`${label}: related navigation must mark current item "${relatedItem.officialNameJa}" with aria-current="page"`);
+      }
+      continue;
+    }
+
+    const relatedHtmlPath = pagePathToHtmlPath(relatedItem.page.path);
+    const expectedHref = relativeUrl(itemHtmlPath, relatedHtmlPath);
+    if (!itemHtml.includes(`href="${expectedHref}"`)) {
+      fail(`${label}: related navigation is missing link to ${relatedItem.id} (${expectedHref})`);
+    }
+  }
+}
+
 const campaign = readJson("data/campaigns/lawson-cinderellagray-campaign-202511.json");
 const items = readJson("data/items/lawson-cinderellagray-campaign-202511.json");
 const sources = readJson("data/sources/lawson-cinderellagray-campaign-202511.json");
@@ -254,10 +276,15 @@ function validatePublishedItemPage(item) {
 
   if (verifyingSources.length === 0) {
     fail(`${label}: sourceIds must include at least one official or partner-official source`);
-  } else if (!verifyingSources.some((source) => itemHtml.includes(source.url))) {
-    const sourceUrls = verifyingSources.map((source) => source.url).join(", ");
-    fail(`${label}: item page is missing an official source URL from sourceIds (${sourceUrls})`);
+  } else {
+    for (const source of verifyingSources) {
+      if (!itemHtml.includes(source.url)) {
+        fail(`${label}: item page is missing official source URL ${source.url}`);
+      }
+    }
   }
+
+  validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageText, publishedItemPageItems, label);
 
   for (const search of item.marketplaceSearches ?? []) {
     if (!itemHtml.includes(search.url)) {

@@ -24,6 +24,7 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
   - `h1` with the official or source-faithful Japanese item name.
   - Japanese item summary.
   - `hero-english-summary` with `lang="en"`.
+  - hero image using eager/high-priority loading.
   - concise metadata lines for original acquisition or sale method.
 - Overview cards:
   - acquisition or sale rule.
@@ -91,8 +92,9 @@ git diff --check
 `scripts/check-data-html-sync.mjs` auto-discovers `Item` records whose
 `page.status` is `published`. For each one, it checks page existence, canonical
 URL, `og:url`, sitemap URL, parent `data-item-id` card link, official name,
-English summary, source facts, official source URL, marketplace URLs, product
-image metadata, and product image path.
+English summary, source facts, every official or partner-official source URL,
+marketplace URLs, related item-page navigation, product image metadata, and
+product image path.
 
 ## Browser QA
 

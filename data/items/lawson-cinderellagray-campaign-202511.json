@@ -96,6 +96,12 @@
     "campaignId": "lawson-cinderellagray-campaign-202511",
     "officialNameJa": "グラス&白桃ゼリー",
     "displayNameEn": "Glass and peach jelly",
+    "summaryEn": "Lawson glass and peach jelly food-sale group for the Uma Musume Cinderella Gray campaign, covering the two glass designs, price, sale timing, official source, and reference searches.",
+    "page": {
+      "status": "published",
+      "slug": "glass-peach-jelly",
+      "path": "works/umamusume/collabs/lawson-cinderellagray-campaign-202511/items/glass-peach-jelly/"
+    },
     "category": "food",
     "recordType": "group",
     "distributionType": "food-sale",
@@ -107,6 +113,7 @@
     "lineupLabelJa": "グラスデザイン全2種 / 各968円（税込）",
     "priceLabel": "各968円（税込）",
     "acquisitionMethodJa": "2025年11月25日よりローソン店頭で順次発売",
+    "availabilityLabel": "2025年11月25日より順次発売、数量限定",
     "startDate": "2025-11-25",
     "endCondition": "while-supplies-last",
     "assetIds": [

@@ -104,5 +104,5 @@ benefits, keep the categories broad and put the detailed item words in
 - Keep unverified backlog items out of public card grids. Add new archive
   entries only after official sources, checked dates, search metadata, and item
   notes are ready.
-- Product-list images should use `loading="lazy"` and `decoding="async"`;
-  hero images are intentionally left eager.
+- Product-list and item product images should use `loading="lazy"` and
+  `decoding="async"`; hero images should use eager/high-priority loading.

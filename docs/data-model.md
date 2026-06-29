@@ -203,7 +203,7 @@ Published `Item` records require:
 - `confidence`
 - `recordType`
 - `distributionType`
-- `displayNameEn` or an English explanation on the campaign page
+- `displayNameEn`
 - `assetIds`, or a documented reason why no image is used
 
 Published item pages additionally require:
