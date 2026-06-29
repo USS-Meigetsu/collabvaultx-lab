@@ -20,6 +20,9 @@ jobs:
       - name: Run data checks
         run: node scripts/check-data.mjs
 
+      - name: Run data and HTML sync checks
+        run: node scripts/check-data-html-sync.mjs
+
       - name: Run site checks
         shell: pwsh
         run: ./scripts/check-site.ps1

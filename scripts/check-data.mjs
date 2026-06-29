@@ -55,8 +55,11 @@ const unsafeStringPatterns = [
   /[\\/]Temp[\\/]/i,
   /collabvaultx-visual-diffs/i,
   /browser[-_ ]?profile/i,
-  /cookies?/i,
-  /\.pdf\b/i,
+  /Login Data/i,
+  /Local State/i,
+  /Web Data/i,
+  /Secure Preferences/i,
+  /source[-_ ]?capture/i,
 ];
 const mojibakePattern = /繧|縺|蜈|螢|莠|遞|逕|蜒|髯|譁|蠑|鬚/;
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -272,9 +275,18 @@ for (const asset of assets) {
   requireString(asset, "altJa", label);
   requireString(asset, "sourceId", label);
   checkRefs([asset.sourceId], sourceMap, label, "sourceId");
+  const assetSource = sourceMap.get(asset.sourceId);
+  if (assetSource?.type === "marketplace-reference") {
+    fail(`${label}: asset sourceId cannot point to a marketplace-reference source`);
+  }
 
-  if (path.isAbsolute(asset.path) || asset.path.includes("..")) {
+  const normalizedAssetPath = asset.path.replace(/\\/g, "/");
+  if (path.isAbsolute(asset.path) || normalizedAssetPath.includes("..")) {
     fail(`${label}: asset path must be repo-relative and stay inside the repo`);
+  } else if (!normalizedAssetPath.startsWith("assets/images/")) {
+    fail(`${label}: asset path must be under assets/images/`);
+  } else if (!/\.(avif|gif|jpe?g|png|svg|webp)$/i.test(normalizedAssetPath)) {
+    fail(`${label}: asset path must point to an image file`);
   } else if (!fs.existsSync(path.join(rootDir, asset.path))) {
     fail(`${label}: asset path does not exist (${asset.path})`);
   }
@@ -311,6 +323,12 @@ for (const campaign of campaigns) {
   checkRefs([campaign.workId], workMap, label, "workId");
   checkRefs(campaign.sourceIds, sourceMap, label, "sourceIds");
   checkRefs(campaign.itemIds, itemMap, label, "itemIds");
+  for (const itemId of campaign.itemIds ?? []) {
+    const item = itemMap.get(itemId);
+    if (item && item.campaignId !== campaign.id) {
+      fail(`${label}: itemIds includes ${itemId}, but that item belongs to ${item.campaignId}`);
+    }
+  }
 
   if (!hasVerifyingSource(campaign.sourceIds, sourceMap)) {
     fail(`${label}: sourceIds must include at least one official or partner-official source`);

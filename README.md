@@ -12,6 +12,7 @@ Before committing, run:
 
 ```powershell
 node scripts/check-data.mjs
+node scripts/check-data-html-sync.mjs
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 ```
 
@@ -37,6 +38,7 @@ temporary screenshots, or source-capture PDFs.
 The archive schema is documented in `docs/data-model.md`. Keep new campaign
 HTML aligned with that model even before the site is migrated to generated data.
 Pilot data lives under `data/` and is validated by `scripts/check-data.mjs`.
+Published-card sync checks live in `scripts/check-data-html-sync.mjs`.
 
 ## Search metadata
 
