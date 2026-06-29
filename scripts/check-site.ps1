@@ -38,7 +38,16 @@ $unsafeBlankTargets = New-Object System.Collections.Generic.List[string]
 $unsafeJavascriptLinks = New-Object System.Collections.Generic.List[string]
 $missingMetadata = New-Object System.Collections.Generic.List[string]
 $missingCardMetadata = New-Object System.Collections.Generic.List[string]
+$publicPlaceholderText = New-Object System.Collections.Generic.List[string]
 $publicUrls = New-Object System.Collections.Generic.List[string]
+
+$publicPlaceholderTerms = @(
+  "作品A",
+  "作品B",
+  "作品C",
+  "ファミレスA",
+  "ファミレスB"
+)
 
 function Get-RelativePathForReport([string]$path) {
   return Resolve-Path -LiteralPath $path -Relative
@@ -93,6 +102,12 @@ foreach ($file in $htmlFiles) {
 
   if ($text -match $mojibakePattern) {
     $mojibakeFiles.Add($file.FullName)
+  }
+
+  foreach ($term in $publicPlaceholderTerms) {
+    if ($text.Contains($term)) {
+      $publicPlaceholderText.Add("$relativeFile -> $term")
+    }
   }
 
   if ($siteBaseUrl -ne "") {
@@ -256,4 +271,8 @@ if ($missingCardMetadata.Count -gt 0) {
   Write-Error ("Missing published card metadata found:`n" + ($missingCardMetadata -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, no mojibake markers, placeholder links, javascript links, missing local links, or unsafe blank-target links."
+if ($publicPlaceholderText.Count -gt 0) {
+  Write-Error ("Public placeholder title text found:`n" + ($publicPlaceholderText -join "`n"))
+}
+
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."
