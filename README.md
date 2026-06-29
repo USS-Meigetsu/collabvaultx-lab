@@ -26,6 +26,8 @@ temporary screenshots, or source-capture PDFs.
 - Store public web assets under `assets/images/works/<work>/collabs/<slug>/`.
 - Keep source URLs in the page's reference area when item rules or campaign facts
   are based on official pages.
+- Keep each published HTML page's canonical URL, Open Graph metadata, and
+  `sitemap.xml` entry aligned with the public `CNAME` domain.
 - Keep local capture files, browser profiles, and automation state outside the
   repository.
 

@@ -3,6 +3,15 @@ $ErrorActionPreference = "Stop"
 
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot = Split-Path -Parent $scriptDir
+$siteHostPath = Join-Path $repoRoot "CNAME"
+$siteHost = ""
+if (Test-Path -LiteralPath $siteHostPath) {
+  $siteHost = (Get-Content -LiteralPath $siteHostPath -Raw -Encoding UTF8).Trim()
+}
+$siteBaseUrl = ""
+if ($siteHost -ne "") {
+  $siteBaseUrl = "https://$siteHost"
+}
 
 & (Join-Path $scriptDir "check-clean-files.ps1")
 
@@ -25,9 +34,28 @@ $missingLinks = New-Object System.Collections.Generic.List[string]
 $mojibakeFiles = New-Object System.Collections.Generic.List[string]
 $placeholderLinks = New-Object System.Collections.Generic.List[string]
 $unsafeBlankTargets = New-Object System.Collections.Generic.List[string]
+$missingMetadata = New-Object System.Collections.Generic.List[string]
+$publicUrls = New-Object System.Collections.Generic.List[string]
 
 function Get-RelativePathForReport([string]$path) {
   return Resolve-Path -LiteralPath $path -Relative
+}
+
+function Get-RepositoryRelativePath([string]$path) {
+  $rootUri = [System.Uri]($repoRoot.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar)
+  $fileUri = [System.Uri]$path
+  return [System.Uri]::UnescapeDataString($rootUri.MakeRelativeUri($fileUri).ToString())
+}
+
+function Get-PublicPathForHtmlFile([System.IO.FileInfo]$file) {
+  $relativePath = Get-RepositoryRelativePath $file.FullName
+  if ($relativePath -eq "index.html") {
+    return "/"
+  }
+  if ($relativePath.EndsWith("/index.html")) {
+    return "/" + $relativePath.Substring(0, $relativePath.Length - "index.html".Length)
+  }
+  return "/" + $relativePath
 }
 
 function Test-SkippableUrl([string]$url) {
@@ -52,9 +80,35 @@ function Add-MissingLocalReference([System.IO.FileInfo]$file, [string]$url) {
 
 foreach ($file in $htmlFiles) {
   $text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
+  $relativeFile = Get-RelativePathForReport $file.FullName
 
   if ($text -match $mojibakePattern) {
     $mojibakeFiles.Add($file.FullName)
+  }
+
+  if ($siteBaseUrl -ne "") {
+    $expectedUrl = $siteBaseUrl + (Get-PublicPathForHtmlFile $file)
+    $publicUrls.Add($expectedUrl)
+    $escapedExpectedUrl = [regex]::Escape($expectedUrl)
+
+    if ($text -notmatch ('<link\s+rel="canonical"\s+href="' + $escapedExpectedUrl + '"\s*/?>')) {
+      $missingMetadata.Add("$relativeFile -> missing canonical $expectedUrl")
+    }
+    if ($text -notmatch '<meta\s+property="og:title"\s+content="[^"]+"\s*/?>') {
+      $missingMetadata.Add("$relativeFile -> missing og:title")
+    }
+    if ($text -notmatch '<meta\s+property="og:description"\s+content="[^"]+"\s*/?>') {
+      $missingMetadata.Add("$relativeFile -> missing og:description")
+    }
+    if ($text -notmatch ('<meta\s+property="og:url"\s+content="' + $escapedExpectedUrl + '"\s*/?>')) {
+      $missingMetadata.Add("$relativeFile -> missing og:url $expectedUrl")
+    }
+    if ($text -notmatch ('<meta\s+property="og:image"\s+content="' + [regex]::Escape($siteBaseUrl) + '/[^"]+"\s*/?>')) {
+      $missingMetadata.Add("$relativeFile -> missing absolute og:image")
+    }
+    if ($text -notmatch '<meta\s+name="twitter:card"\s+content="summary_large_image"\s*/?>') {
+      $missingMetadata.Add("$relativeFile -> missing twitter summary_large_image card")
+    }
   }
 
   $attrMatches = [regex]::Matches($text, '(src|href)="([^"]+)"')
@@ -62,7 +116,6 @@ foreach ($file in $htmlFiles) {
     $attr = $match.Groups[1].Value
     $url = $match.Groups[2].Value
     if ($attr -eq "href" -and $url -eq "#") {
-      $relativeFile = Get-RelativePathForReport $file.FullName
       $placeholderLinks.Add("$relativeFile -> href=`"#`"")
       continue
     }
@@ -87,7 +140,6 @@ foreach ($file in $htmlFiles) {
       $relTokens = $relMatch.Groups[1].Value.ToLowerInvariant() -split "\s+"
     }
     if (-not ($relTokens -contains "noopener") -or -not ($relTokens -contains "noreferrer")) {
-      $relativeFile = Get-RelativePathForReport $file.FullName
       $unsafeBlankTargets.Add("$relativeFile -> $tag")
     }
   }
@@ -98,6 +150,32 @@ foreach ($file in $cssFiles) {
   $urlMatches = [regex]::Matches($text, 'url\((["'']?)([^"''\)]+)\1\)')
   foreach ($match in $urlMatches) {
     Add-MissingLocalReference $file $match.Groups[2].Value.Trim()
+  }
+}
+
+if ($siteBaseUrl -ne "") {
+  $robotsPath = Join-Path $repoRoot "robots.txt"
+  $sitemapPath = Join-Path $repoRoot "sitemap.xml"
+  $expectedSitemapUrl = "$siteBaseUrl/sitemap.xml"
+
+  if (-not (Test-Path -LiteralPath $robotsPath)) {
+    $missingMetadata.Add("robots.txt -> missing")
+  } else {
+    $robotsText = Get-Content -LiteralPath $robotsPath -Raw -Encoding UTF8
+    if ($robotsText -notmatch ('(?m)^Sitemap:\s*' + [regex]::Escape($expectedSitemapUrl) + '\s*$')) {
+      $missingMetadata.Add("robots.txt -> missing Sitemap: $expectedSitemapUrl")
+    }
+  }
+
+  if (-not (Test-Path -LiteralPath $sitemapPath)) {
+    $missingMetadata.Add("sitemap.xml -> missing")
+  } else {
+    $sitemapText = Get-Content -LiteralPath $sitemapPath -Raw -Encoding UTF8
+    foreach ($url in $publicUrls) {
+      if ($sitemapText -notmatch ('<loc>' + [regex]::Escape($url) + '</loc>')) {
+        $missingMetadata.Add("sitemap.xml -> missing $url")
+      }
+    }
   }
 }
 
@@ -117,4 +195,8 @@ if ($unsafeBlankTargets.Count -gt 0) {
   Write-Error ("target=`"_blank`" links must include rel=`"noopener noreferrer`":`n" + ($unsafeBlankTargets -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."
+if ($missingMetadata.Count -gt 0) {
+  Write-Error ("Missing public metadata found:`n" + ($missingMetadata -join "`n"))
+}
+
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, metadata, sitemap, robots, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."
