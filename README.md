@@ -31,6 +31,8 @@ temporary screenshots, or source-capture PDFs.
 
 ## Search metadata
 
+- Top page title cards use `data-title-card`, `data-status`, and
+  `data-search-keywords` so the quick search can filter work entries.
 - Published collaboration cards use `data-status="published"` and are the only
   cards included in list filtering.
 - Add `data-search-keywords` to published cards for spelling variants, English

@@ -31,8 +31,13 @@
             <p class="section-label">Search Guide</p>
             <h2 id="quick-search-heading">探し方</h2>
             <p class="section-copy">
-              このトップページでは、まず作品から入口を選びます。現在公開中の入口はウマ娘アーカイブです。
+              作品名や公開状態から入口を絞り込めます。現在公開中の入口はウマ娘アーカイブです。
             </p>
+          </div>
+
+          <div class="quick-search-box" aria-label="作品検索">
+            <span class="quick-search-icon">Search</span>
+            <input type="search" placeholder="作品名・状態で探す" aria-label="作品名・状態で探す" data-title-search />
           </div>
 
           <div class="guide-groups guide-groups-single">
@@ -45,10 +50,19 @@
                 <span class="guide-chip">作品C</span>
               </div>
             </section>
+
+            <section class="guide-group" aria-labelledby="guide-status-heading">
+              <h3 id="guide-status-heading">状態</h3>
+              <div class="guide-chip-row">
+                <button type="button" class="guide-chip guide-filter-chip is-highlighted" data-title-status="all" aria-pressed="true">すべて</button>
+                <button type="button" class="guide-chip guide-filter-chip" data-title-status="available" aria-pressed="false">公開中</button>
+                <button type="button" class="guide-chip guide-filter-chip" data-title-status="planned" aria-pressed="false">準備中</button>
+              </div>
+            </section>
           </div>
         </section>
 
-        <section class="section-heading section-heading-stack">
+        <section class="section-heading section-heading-with-meta">
           <div>
             <p class="section-label">Featured Titles</p>
             <h2>作品一覧</h2>
@@ -56,10 +70,17 @@
               まずはウマ娘を主役にした試作です。ここから作品単位のアーカイブ入口へ進めます。
             </p>
           </div>
+          <p class="list-meta" data-title-count aria-live="polite">作品 4 / 4 件</p>
         </section>
 
         <section class="card-grid" aria-label="作品一覧">
-          <article class="title-card title-card-featured" id="title-umamusume">
+          <article
+            class="title-card title-card-featured"
+            id="title-umamusume"
+            data-title-card
+            data-status="available"
+            data-search-keywords="umamusume uma musume ウマ娘 domestic japan collaboration goods archive primary published available"
+          >
             <a class="card-media card-media-link" href="./works/umamusume/index.html" data-slug="umamusume" aria-label="ウマ娘アーカイブへ移動">
               <img src="assets/images/umamusume-card-main.png" alt="ウマ娘カードイメージ" />
             </a>
@@ -73,7 +94,13 @@
             </div>
           </article>
 
-          <article class="title-card title-card-coming-soon" id="title-project-a">
+          <article
+            class="title-card title-card-coming-soon"
+            id="title-project-a"
+            data-title-card
+            data-status="planned"
+            data-search-keywords="作品A project a future planned coming later limited goods purchase bonus"
+          >
             <div class="card-media card-media-placeholder" aria-hidden="true">
               <img src="assets/images/project-a-card-main.png" alt="作品Aカードイメージ" />
             </div>
@@ -87,7 +114,13 @@
             </div>
           </article>
 
-          <article class="title-card title-card-coming-soon" id="title-project-b">
+          <article
+            class="title-card title-card-coming-soon"
+            id="title-project-b"
+            data-title-card
+            data-status="planned"
+            data-search-keywords="作品B project b future planned coming later store channel archive"
+          >
             <div class="card-media card-media-placeholder" aria-hidden="true">
               <img src="assets/images/project-b-card-main.png" alt="作品Bカードイメージ" />
             </div>
@@ -101,7 +134,13 @@
             </div>
           </article>
 
-          <article class="title-card title-card-coming-soon" id="title-project-c">
+          <article
+            class="title-card title-card-coming-soon"
+            id="title-project-c"
+            data-title-card
+            data-status="planned"
+            data-search-keywords="作品C project c future planned coming later collaboration item channel"
+          >
             <div class="card-media card-media-placeholder" aria-hidden="true">
               <img src="assets/images/project-c-card-main.png" alt="作品Cカードイメージ" />
             </div>
@@ -115,6 +154,7 @@
             </div>
           </article>
         </section>
+        <p class="filter-empty" data-title-empty aria-live="polite" hidden>該当する作品がありません。</p>
 
         <section class="info-panel info-panel-compact">
           <div>
@@ -130,5 +170,58 @@
         </section>
       </main>
     </div>
+    <script>
+      (() => {
+        const titleCards = Array.from(document.querySelectorAll("[data-title-card]"));
+        const searchInput = document.querySelector("[data-title-search]");
+        const statusButtons = Array.from(document.querySelectorAll("[data-title-status]"));
+        const titleCount = document.querySelector("[data-title-count]");
+        const emptyState = document.querySelector("[data-title-empty]");
+        const state = { status: "all" };
+        const normalize = (value) => value.trim().toLocaleLowerCase("ja-JP");
+
+        const syncStatusButtons = () => {
+          statusButtons.forEach((button) => {
+            const isActive = button.dataset.titleStatus === state.status;
+            button.classList.toggle("is-highlighted", isActive);
+            button.setAttribute("aria-pressed", String(isActive));
+          });
+        };
+
+        const applyTitleFilters = () => {
+          const keyword = normalize(searchInput?.value ?? "");
+          let shown = 0;
+
+          titleCards.forEach((card) => {
+            const statusMatches = state.status === "all" || card.dataset.status === state.status;
+            const text = normalize(`${card.textContent} ${card.dataset.status ?? ""} ${card.dataset.searchKeywords ?? ""}`);
+            const keywordMatches = keyword === "" || text.includes(keyword);
+            const isShown = statusMatches && keywordMatches;
+
+            card.hidden = !isShown;
+            if (isShown) shown += 1;
+          });
+
+          if (titleCount) {
+            titleCount.textContent = `作品 ${shown} / ${titleCards.length} 件`;
+          }
+          if (emptyState) {
+            emptyState.hidden = shown !== 0;
+          }
+        };
+
+        statusButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            state.status = button.dataset.titleStatus;
+            syncStatusButtons();
+            applyTitleFilters();
+          });
+        });
+
+        searchInput?.addEventListener("input", applyTitleFilters);
+        syncStatusButtons();
+        applyTitleFilters();
+      })();
+    </script>
   </body>
 </html>

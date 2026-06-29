@@ -278,14 +278,26 @@ main {
 }
 
 .guide-chip {
+  appearance: none;
   display: inline-flex;
   padding: 10px 14px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.03);
   color: var(--muted);
+  font: inherit;
   font-size: 0.94rem;
   font-weight: 700;
+}
+
+.guide-filter-chip {
+  cursor: pointer;
+}
+
+.guide-filter-chip:hover,
+.guide-filter-chip:focus-visible {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: var(--text);
 }
 
 .guide-chip.is-highlighted {
@@ -423,6 +435,10 @@ main {
   background: rgba(255, 255, 255, 0.025);
   color: var(--muted);
   cursor: default;
+}
+
+.title-card[hidden] {
+  display: none;
 }
 
 .filter-panel {
@@ -851,11 +867,17 @@ main {
 }
 
 .guide-groups-single {
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .guide-groups-single .guide-group {
-  max-width: 720px;
+  min-width: 0;
+}
+
+@media (max-width: 860px) {
+  .guide-groups-single {
+    grid-template-columns: 1fr;
+  }
 }
 
 .filter-groups-three {
