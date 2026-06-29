@@ -18,6 +18,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#07090d" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/site.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -179,58 +180,5 @@
         </section>
       </main>
     </div>
-    <script>
-      (() => {
-        const titleCards = Array.from(document.querySelectorAll("[data-title-card]"));
-        const searchInput = document.querySelector("[data-title-search]");
-        const statusButtons = Array.from(document.querySelectorAll("[data-title-status]"));
-        const titleCount = document.querySelector("[data-title-count]");
-        const emptyState = document.querySelector("[data-title-empty]");
-        const state = { status: "all" };
-        const normalize = (value) => value.trim().toLocaleLowerCase("ja-JP");
-
-        const syncStatusButtons = () => {
-          statusButtons.forEach((button) => {
-            const isActive = button.dataset.titleStatus === state.status;
-            button.classList.toggle("is-highlighted", isActive);
-            button.setAttribute("aria-pressed", String(isActive));
-          });
-        };
-
-        const applyTitleFilters = () => {
-          const keyword = normalize(searchInput?.value ?? "");
-          let shown = 0;
-
-          titleCards.forEach((card) => {
-            const statusMatches = state.status === "all" || card.dataset.status === state.status;
-            const text = normalize(`${card.textContent} ${card.dataset.status ?? ""} ${card.dataset.searchKeywords ?? ""}`);
-            const keywordMatches = keyword === "" || text.includes(keyword);
-            const isShown = statusMatches && keywordMatches;
-
-            card.hidden = !isShown;
-            if (isShown) shown += 1;
-          });
-
-          if (titleCount) {
-            titleCount.textContent = `作品 ${shown} / ${titleCards.length} 件`;
-          }
-          if (emptyState) {
-            emptyState.hidden = shown !== 0;
-          }
-        };
-
-        statusButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            state.status = button.dataset.titleStatus;
-            syncStatusButtons();
-            applyTitleFilters();
-          });
-        });
-
-        searchInput?.addEventListener("input", applyTitleFilters);
-        syncStatusButtons();
-        applyTitleFilters();
-      })();
-    </script>
   </body>
 </html>

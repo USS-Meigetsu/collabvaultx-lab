@@ -18,6 +18,7 @@ if ($siteHost -ne "") {
 $htmlFiles = @(Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter "*.html" -File |
   Where-Object { $_.FullName -notmatch "\\.git\\" })
 $cssFiles = @(Get-ChildItem -LiteralPath (Join-Path $repoRoot "assets") -Recurse -Filter "*.css" -File)
+$jsFiles = @(Get-ChildItem -LiteralPath (Join-Path $repoRoot "assets") -Recurse -Filter "*.js" -File)
 
 $mojibakeMarkers = @(
   [string][char]0x7E67,
@@ -153,9 +154,20 @@ foreach ($file in $htmlFiles) {
 
 foreach ($file in $cssFiles) {
   $text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
+  if ($text -match $mojibakePattern) {
+    $mojibakeFiles.Add($file.FullName)
+  }
+
   $urlMatches = [regex]::Matches($text, 'url\((["'']?)([^"''\)]+)\1\)')
   foreach ($match in $urlMatches) {
     Add-MissingLocalReference $file $match.Groups[2].Value.Trim()
+  }
+}
+
+foreach ($file in $jsFiles) {
+  $text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
+  if ($text -match $mojibakePattern) {
+    $mojibakeFiles.Add($file.FullName)
   }
 }
 
@@ -205,4 +217,4 @@ if ($missingMetadata.Count -gt 0) {
   Write-Error ("Missing public metadata found:`n" + ($missingMetadata -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, metadata, sitemap, robots, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."

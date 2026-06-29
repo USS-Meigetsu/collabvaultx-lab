@@ -18,6 +18,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#07090d" />
     <link rel="stylesheet" href="../../assets/css/style.css" />
+    <script src="../../assets/js/site.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -242,78 +243,6 @@
         </section>
       </main>
     </div>
-    <script>
-      (() => {
-        const cards = Array.from(document.querySelectorAll(".collab-card-rich[data-status='published']"));
-        const keywordInput = document.querySelector("[data-filter-keyword]");
-        const visibleCount = document.querySelector("[data-visible-count]");
-        const emptyState = document.querySelector("[data-filter-empty]");
-        const resetButton = document.querySelector("[data-filter-reset]");
-        const state = { partner: "all", category: "all" };
-        const normalize = (value) => value.trim().toLocaleLowerCase("ja-JP");
-
-        const syncChipGroup = (groupName, value) => {
-          document.querySelectorAll(`[data-filter-group="${groupName}"] .filter-chip`).forEach((chip) => {
-            const isActive = chip.dataset.filterValue === value;
-            chip.classList.toggle("is-active", isActive);
-            chip.setAttribute("aria-pressed", String(isActive));
-          });
-        };
-
-        const applyFilters = () => {
-          const keyword = normalize(keywordInput?.value ?? "");
-          let shown = 0;
-
-          cards.forEach((card) => {
-            const partnerMatches = state.partner === "all" || card.dataset.partner === state.partner;
-            const categories = (card.dataset.category ?? "").split(/\s+/);
-            const categoryMatches = state.category === "all" || categories.includes(state.category);
-            const text = normalize(`${card.textContent} ${card.dataset.partner} ${card.dataset.category} ${card.dataset.searchKeywords ?? ""}`);
-            const keywordMatches = keyword === "" || text.includes(keyword);
-            const isShown = partnerMatches && categoryMatches && keywordMatches;
-
-            card.hidden = !isShown;
-            if (isShown) shown += 1;
-          });
-
-          if (visibleCount) {
-            visibleCount.textContent = `公開済み ${shown} / ${cards.length} 件`;
-          }
-          if (emptyState) {
-            emptyState.hidden = shown !== 0;
-          }
-        };
-
-        document.querySelectorAll("[data-filter-group='partner'] .filter-chip").forEach((chip) => {
-          chip.addEventListener("click", () => {
-            state.partner = chip.dataset.filterValue;
-            syncChipGroup("partner", state.partner);
-            applyFilters();
-          });
-        });
-
-        document.querySelectorAll("[data-filter-group='category'] .filter-chip").forEach((chip) => {
-          chip.addEventListener("click", () => {
-            state.category = chip.dataset.filterValue;
-            syncChipGroup("category", state.category);
-            applyFilters();
-          });
-        });
-
-        keywordInput?.addEventListener("input", applyFilters);
-        resetButton?.addEventListener("click", () => {
-          state.partner = "all";
-          state.category = "all";
-          if (keywordInput) {
-            keywordInput.value = "";
-          }
-          syncChipGroup("partner", state.partner);
-          syncChipGroup("category", state.category);
-          applyFilters();
-        });
-        applyFilters();
-      })();
-    </script>
   </body>
 </html>
 

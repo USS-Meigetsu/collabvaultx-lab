@@ -5,8 +5,8 @@ Japan-exclusive collaboration goods.
 
 ## Local checks
 
-This project is currently plain HTML/CSS. Open `index.html` directly or serve the
-repository root with any static file server.
+This project is currently plain HTML/CSS/vanilla JS. Open `index.html` directly
+or serve the repository root with any static file server.
 
 Before committing, run:
 
@@ -33,6 +33,7 @@ temporary screenshots, or source-capture PDFs.
 
 ## Search metadata
 
+- Shared search/filter behavior lives in `assets/js/site.js`.
 - Top page title cards use `data-title-card`, `data-status`, and
   `data-search-keywords` so the quick search can filter work entries.
 - Published collaboration cards use `data-status="published"` and are the only
