@@ -25,3 +25,12 @@ temporary screenshots, or source-capture PDFs.
   are based on official pages.
 - Keep local capture files, browser profiles, and automation state outside the
   repository.
+
+## Search metadata
+
+- Published collaboration cards use `data-status="published"` and are the only
+  cards included in list filtering.
+- Add `data-search-keywords` to published cards for spelling variants, English
+  names, Japanese names, partner aliases, and major item types.
+- Keep `data-category` broad and stable: `goods`, `clear-file`, `card`,
+  `figure`, and `prize`. Item-specific words belong in `data-search-keywords`.

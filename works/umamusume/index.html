@@ -80,7 +80,14 @@
         </section>
 
         <section class="collab-grid collab-grid-rich" aria-label="ウマ娘コラボ一覧">
-          <article class="collab-card collab-card-rich collab-card-primary" id="collab-cocos-umaimono-fes" data-status="published" data-partner="cocos" data-category="card figure goods prize">
+          <article
+            class="collab-card collab-card-rich collab-card-primary"
+            id="collab-cocos-umaimono-fes"
+            data-status="published"
+            data-partner="cocos"
+            data-category="card figure goods prize"
+            data-search-keywords="cocos coco's ココス ウマいものフェス umaimono uma musume ウマ娘 clear card special clear card acrylic panel blanket b2 poster prize goods"
+          >
             <a class="collab-thumb collab-thumb-link" href="./collabs/cocos-umaimono-fes-202601/index.html" data-collab-slug="cocos-umaimono-fes-202601" aria-label="ココスへようこそ！ウマいものフェス！の詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/hero-main.png" alt="ココスへようこそ！ウマいものフェス！のサムネイル" />
             </a>
@@ -94,7 +101,14 @@
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-sanrio-characters-popup-shop" data-status="published" data-partner="sanrio" data-category="clear-file card figure goods">
+          <article
+            class="collab-card collab-card-rich"
+            id="collab-sanrio-characters-popup-shop"
+            data-status="published"
+            data-partner="sanrio"
+            data-category="clear-file card figure goods"
+            data-search-keywords="sanrio sanrio characters サンリオ popup shop pop up shop cinderella gray シンデレラグレイ uma musume ウマ娘 acrylic stand postcard clear file plush mascot goods"
+          >
             <a class="collab-thumb collab-thumb-link" href="./collabs/sanrio-characters-popup-shop-202512/index.html" data-collab-slug="sanrio-characters-popup-shop-202512" aria-label="ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOPの詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/hero-main.jpg" alt="ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOPのサムネイル" />
             </a>
@@ -108,7 +122,14 @@
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-round1-campaign" data-status="published" data-partner="round1" data-category="card figure goods prize">
+          <article
+            class="collab-card collab-card-rich"
+            id="collab-round1-campaign"
+            data-status="published"
+            data-partner="round1"
+            data-category="card figure goods prize"
+            data-search-keywords="round1 round one ラウンドワン cinderella gray シンデレラグレイ uma musume ウマ娘 anime sports entertainment bowling karaoke spocha amusement capsule toy prize goods tapestry acrylic stand can badge sticker"
+          >
             <a class="collab-thumb collab-thumb-link" href="./collabs/round1-collab-campaign-202510/index.html" data-collab-slug="round1-collab-campaign-202510" aria-label="アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーンの詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-hero-main.jpg" alt="アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーンのサムネイル" />
             </a>
@@ -234,7 +255,7 @@
             const partnerMatches = state.partner === "all" || card.dataset.partner === state.partner;
             const categories = (card.dataset.category ?? "").split(/\s+/);
             const categoryMatches = state.category === "all" || categories.includes(state.category);
-            const text = normalize(`${card.textContent} ${card.dataset.partner} ${card.dataset.category}`);
+            const text = normalize(`${card.textContent} ${card.dataset.partner} ${card.dataset.category} ${card.dataset.searchKeywords ?? ""}`);
             const keywordMatches = keyword === "" || text.includes(keyword);
             const isShown = partnerMatches && categoryMatches && keywordMatches;
 
