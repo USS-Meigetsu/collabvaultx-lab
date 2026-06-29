@@ -42,9 +42,15 @@ function Get-RelativePathForReport([string]$path) {
 }
 
 function Get-RepositoryRelativePath([string]$path) {
-  $rootUri = [System.Uri]($repoRoot.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar)
-  $fileUri = [System.Uri]$path
-  return [System.Uri]::UnescapeDataString($rootUri.MakeRelativeUri($fileUri).ToString())
+  $trimChars = [char[]]@([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar)
+  $fullRoot = [System.IO.Path]::GetFullPath($repoRoot).TrimEnd($trimChars) + [System.IO.Path]::DirectorySeparatorChar
+  $fullPath = [System.IO.Path]::GetFullPath($path)
+
+  if (-not $fullPath.StartsWith($fullRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
+    throw "Path is outside repository root: $path"
+  }
+
+  return ($fullPath.Substring($fullRoot.Length) -replace "\\", "/")
 }
 
 function Get-PublicPathForHtmlFile([System.IO.FileInfo]$file) {
