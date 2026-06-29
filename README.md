@@ -38,6 +38,8 @@ temporary screenshots, or source-capture PDFs.
   `data-search-keywords` so the quick search can filter work entries.
 - Published collaboration cards use `data-status="published"` and are the only
   cards included in list filtering.
+- Published collaboration cards should include a `card-meta-list` with `Period`,
+  `Source`, and `Items`; CI fails if these are missing.
 - Add `data-search-keywords` to published cards for spelling variants, English
   names, Japanese names, partner aliases, and major item types.
 - Keep `data-category` broad and stable: `goods`, `clear-file`, `card`,

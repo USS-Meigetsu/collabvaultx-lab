@@ -36,6 +36,7 @@ $mojibakeFiles = New-Object System.Collections.Generic.List[string]
 $placeholderLinks = New-Object System.Collections.Generic.List[string]
 $unsafeBlankTargets = New-Object System.Collections.Generic.List[string]
 $missingMetadata = New-Object System.Collections.Generic.List[string]
+$missingCardMetadata = New-Object System.Collections.Generic.List[string]
 $publicUrls = New-Object System.Collections.Generic.List[string]
 
 function Get-RelativePathForReport([string]$path) {
@@ -150,6 +151,27 @@ foreach ($file in $htmlFiles) {
       $unsafeBlankTargets.Add("$relativeFile -> $tag")
     }
   }
+
+  $publishedCardMatches = [regex]::Matches($text, '<article\b(?=[^>]*data-status="published")[\s\S]*?</article>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+  foreach ($match in $publishedCardMatches) {
+    $article = $match.Value
+    $idMatch = [regex]::Match($article, 'id="([^"]+)"')
+    $articleLabel = "published card"
+    if ($idMatch.Success) {
+      $articleLabel = $idMatch.Groups[1].Value
+    }
+
+    if ($article -notmatch 'class="[^"]*\bcard-meta-list\b[^"]*"') {
+      $missingCardMetadata.Add("$relativeFile -> $articleLabel missing card-meta-list")
+      continue
+    }
+
+    foreach ($term in @("Period", "Source", "Items")) {
+      if ($article -notmatch ("<dt>" + [regex]::Escape($term) + "</dt>")) {
+        $missingCardMetadata.Add("$relativeFile -> $articleLabel missing card metadata term: $term")
+      }
+    }
+  }
 }
 
 foreach ($file in $cssFiles) {
@@ -217,4 +239,8 @@ if ($missingMetadata.Count -gt 0) {
   Write-Error ("Missing public metadata found:`n" + ($missingMetadata -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."
+if ($missingCardMetadata.Count -gt 0) {
+  Write-Error ("Missing published card metadata found:`n" + ($missingCardMetadata -join "`n"))
+}
+
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."
