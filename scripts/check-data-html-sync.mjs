@@ -68,10 +68,11 @@ function extractArticle(html, id) {
   return { html: article, openingTag };
 }
 
-function extractProductCardContaining(html, text) {
+function extractProductCardByItemId(html, itemId) {
   const articlePattern = /<article\b(?=[^>]*class=["'][^"']*\bproduct-card\b)[^>]*>[\s\S]*?<\/article>/g;
   for (const match of html.matchAll(articlePattern)) {
-    if (textContent(match[0]).includes(text)) {
+    const openingTag = match[0].match(/^<article\b[^>]*>/)?.[0] ?? "";
+    if (getAttribute(openingTag, "data-item-id") === itemId) {
       return match[0];
     }
   }
@@ -193,15 +194,8 @@ if (!card) {
   }
 }
 
-function validatePublishedItemPage({ itemId, sourceId, assetId }) {
-  const item = itemMap.get(itemId);
-  const label = `Lawson item page ${itemId}`;
-
-  if (!item) {
-    fail(`data/items/lawson-cinderellagray-campaign-202511.json: missing ${itemId} item`);
-    return;
-  }
-
+function validatePublishedItemPage(item) {
+  const label = `Lawson item page ${item.id}`;
   const itemPage = item.page;
   if (!itemPage || itemPage.status !== "published" || !itemPage.slug || !itemPage.path) {
     fail(`${label}: item must have published page metadata`);
@@ -222,12 +216,12 @@ function validatePublishedItemPage({ itemId, sourceId, assetId }) {
   const parentHtmlPath = `works/umamusume/collabs/${campaign.slug}/index.html`;
   const parentHtml = readText(parentHtmlPath);
   const sitemap = readText("sitemap.xml");
-  const source = item.sourceIds
+  const verifyingSources = item.sourceIds
     .map((id) => sourceMap.get(id))
-    .find((candidate) => candidate?.id === sourceId);
-  const asset = item.assetIds
+    .filter((candidate) => candidate?.type === "official" || candidate?.type === "partner-official");
+  const assetsForItem = item.assetIds
     .map((id) => assetMap.get(id))
-    .find((candidate) => candidate?.id === assetId);
+    .filter(Boolean);
 
   if (getCanonicalUrl(itemHtml) !== itemPublicUrl) {
     fail(`${label}: canonical URL does not match ${itemPublicUrl}`);
@@ -239,9 +233,9 @@ function validatePublishedItemPage({ itemId, sourceId, assetId }) {
     fail(`${label}: sitemap.xml is missing ${itemPublicUrl}`);
   }
 
-  const productCard = extractProductCardContaining(parentHtml, item.officialNameJa);
+  const productCard = extractProductCardByItemId(parentHtml, item.id);
   if (!productCard) {
-    fail(`${label}: parent Lawson page is missing product card for ${item.officialNameJa}`);
+    fail(`${label}: parent Lawson page is missing product card with data-item-id="${item.id}"`);
   } else {
     const expectedParentHref = relativeUrl(parentHtmlPath, itemHtmlPath);
     const alternateParentHref = expectedParentHref.replace(/^\.\//, "");
@@ -258,10 +252,11 @@ function validatePublishedItemPage({ itemId, sourceId, assetId }) {
   assertTextIncludes(itemPageText, item.acquisitionMethodJa, label);
   assertTextIncludes(itemPageText, item.availabilityLabel, label);
 
-  if (!source) {
-    fail(`${label}: ${sourceId} source is missing from sourceIds`);
-  } else if (!itemHtml.includes(source.url)) {
-    fail(`${label}: item page is missing source URL ${source.url}`);
+  if (verifyingSources.length === 0) {
+    fail(`${label}: sourceIds must include at least one official or partner-official source`);
+  } else if (!verifyingSources.some((source) => itemHtml.includes(source.url))) {
+    const sourceUrls = verifyingSources.map((source) => source.url).join(", ");
+    fail(`${label}: item page is missing an official source URL from sourceIds (${sourceUrls})`);
   }
 
   for (const search of item.marketplaceSearches ?? []) {
@@ -270,46 +265,37 @@ function validatePublishedItemPage({ itemId, sourceId, assetId }) {
     }
   }
 
-  if (!asset) {
-    fail(`${label}: ${assetId} asset is missing from assetIds`);
+  if (assetsForItem.length === 0) {
+    fail(`${label}: assetIds must include at least one known asset`);
   } else {
-    const expectedImageSrc = relativeUrl(itemHtmlPath, asset.path);
-    const productImageMatches = [
+    const productImages = [
       ...itemHtml.matchAll(/<div\s+class=["']product-thumb["']>\s*<img\b([^>]*)>/g),
-    ];
-    const productImage = productImageMatches
-      .map((match) => match[1])
-      .find((attributes) => decodeEntities(getAttribute(attributes, "src")) === expectedImageSrc);
+    ].map((match) => match[1]);
 
-    if (!productImage) {
-      fail(`${label}: product image src must match ${expectedImageSrc}`);
-    } else {
-      if (getAttribute(productImage, "loading") !== "lazy") {
-        fail(`${label}: product image must use loading="lazy"`);
-      }
-      if (getAttribute(productImage, "decoding") !== "async") {
-        fail(`${label}: product image must use decoding="async"`);
-      }
-      if (decodeEntities(getAttribute(productImage, "alt")) !== asset.altJa) {
-        fail(`${label}: product image alt must match asset.altJa`);
+    for (const asset of assetsForItem) {
+      const expectedImageSrc = relativeUrl(itemHtmlPath, asset.path);
+      const productImage = productImages.find((attributes) => decodeEntities(getAttribute(attributes, "src")) === expectedImageSrc);
+
+      if (!productImage) {
+        fail(`${label}: product image src must match ${expectedImageSrc}`);
+      } else {
+        if (getAttribute(productImage, "loading") !== "lazy") {
+          fail(`${label}: product image must use loading="lazy"`);
+        }
+        if (getAttribute(productImage, "decoding") !== "async") {
+          fail(`${label}: product image must use decoding="async"`);
+        }
+        if (decodeEntities(getAttribute(productImage, "alt")) !== asset.altJa) {
+          fail(`${label}: product image alt must match asset.altJa`);
+        }
       }
     }
   }
 }
 
-for (const itemConfig of [
-  {
-    itemId: "lawson-clear-files",
-    sourceId: "lawson-clear-file",
-    assetId: "lawson-clear-file-main",
-  },
-  {
-    itemId: "lawson-galbo-series",
-    sourceId: "lawson-food",
-    assetId: "lawson-galbo-main",
-  },
-]) {
-  validatePublishedItemPage(itemConfig);
+const publishedItemPageItems = items.filter((item) => item.page?.status === "published");
+for (const item of publishedItemPageItems) {
+  validatePublishedItemPage(item);
 }
 
 if (errors.length > 0) {

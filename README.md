@@ -41,6 +41,7 @@ temporary screenshots, or source-capture PDFs.
 
 The archive schema is documented in `docs/data-model.md`. Keep new campaign
 HTML aligned with that model even before the site is migrated to generated data.
+Hand-written item group pages should follow `docs/item-page-template.md`.
 Pilot data lives under `data/` and is validated by `scripts/check-data.mjs`.
 Published-card and item-page sync checks live in
 `scripts/check-data-html-sync.mjs`.
