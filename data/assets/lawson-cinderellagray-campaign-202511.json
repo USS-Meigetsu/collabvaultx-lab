@@ -1,0 +1,64 @@
+[
+  {
+    "id": "lawson-cinderellagray-hero",
+    "path": "assets/images/works/umamusume/collabs/lawson-cinderellagray-campaign-202511/hero-main.jpg",
+    "role": "hero",
+    "altJa": "アニメ『ウマ娘 シンデレラグレイ』× ローソン キャンペーンのキービジュアル",
+    "sourceId": "lawson-campaign-main",
+    "loading": "eager"
+  },
+  {
+    "id": "lawson-clear-file-main",
+    "path": "assets/images/works/umamusume/collabs/lawson-cinderellagray-campaign-202511/item-clear-file-main.jpg",
+    "role": "product",
+    "altJa": "オリジナルクリアファイル代表画像",
+    "sourceId": "lawson-clear-file",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "lawson-galbo-main",
+    "path": "assets/images/works/umamusume/collabs/lawson-cinderellagray-campaign-202511/item-galbo-main.jpg",
+    "role": "product",
+    "altJa": "明治 ガルボシリーズ代表画像",
+    "sourceId": "lawson-food",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "lawson-glass-jelly-main",
+    "path": "assets/images/works/umamusume/collabs/lawson-cinderellagray-campaign-202511/item-glass-jelly-main.jpg",
+    "role": "product",
+    "altJa": "グラス&白桃ゼリー代表画像",
+    "sourceId": "lawson-food",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "lawson-acrylic-stand-main",
+    "path": "assets/images/works/umamusume/collabs/lawson-cinderellagray-campaign-202511/item-acrylic-stand-main.jpg",
+    "role": "product",
+    "altJa": "アクリルスタンド代表画像",
+    "sourceId": "lawson-goods",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "lawson-loppi-hmv-main",
+    "path": "assets/images/works/umamusume/collabs/lawson-cinderellagray-campaign-202511/item-loppi-hmv-main.jpg",
+    "role": "product",
+    "altJa": "@Loppi・HMV限定予約販売グッズ代表画像",
+    "sourceId": "lawson-loppi-hmv-goods",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "lawson-entame-kuji-main",
+    "path": "assets/images/works/umamusume/collabs/lawson-cinderellagray-campaign-202511/item-entame-kuji-main.jpg",
+    "role": "product",
+    "altJa": "エンタメくじ代表画像",
+    "sourceId": "kujist-entame-kuji",
+    "loading": "lazy",
+    "decoding": "async"
+  }
+]

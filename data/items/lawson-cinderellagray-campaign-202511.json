@@ -1,0 +1,233 @@
+[
+  {
+    "id": "lawson-clear-files",
+    "campaignId": "lawson-cinderellagray-campaign-202511",
+    "officialNameJa": "オリジナルクリアファイル",
+    "displayNameEn": "Original clear files",
+    "category": "clear-file",
+    "recordType": "group",
+    "distributionType": "purchase-bonus",
+    "sourceIds": [
+      "lawson-clear-file"
+    ],
+    "confidence": "official",
+    "descriptionJa": "先着・数量限定の配布特典。対象の明治のお菓子3点購入で1枚入手できる、全7種のクリアファイルです。",
+    "lineupLabelJa": "全7種 / 各店計21枚",
+    "acquisitionMethodJa": "対象のお菓子3点と好きなクリアファイル1枚をレジへ持参",
+    "availabilityLabel": "2025年11月25日 7:00〜12月8日、または景品がなくなり次第終了",
+    "startDate": "2025-11-25",
+    "endDate": "2025-12-08",
+    "endCondition": "while-supplies-last",
+    "assetIds": [
+      "lawson-clear-file-main"
+    ],
+    "marketplaceSearches": [
+      {
+        "platform": "eBay",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson clear file",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+clear+file"
+      },
+      {
+        "platform": "Mercari",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20クリアファイル"
+      },
+      {
+        "platform": "Suruga-ya",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+クリアファイル"
+      }
+    ]
+  },
+  {
+    "id": "lawson-galbo-series",
+    "campaignId": "lawson-cinderellagray-campaign-202511",
+    "officialNameJa": "明治 ガルボシリーズ",
+    "displayNameEn": "Meiji Galbo series",
+    "category": "food",
+    "recordType": "group",
+    "distributionType": "food-sale",
+    "sourceIds": [
+      "lawson-food"
+    ],
+    "confidence": "official",
+    "descriptionJa": "ローソン限定のオリジナルフード。全3種で、各商品にオリジナルフォト風カードが1枚入っています。",
+    "lineupLabelJa": "全3種 / 各899円（税込）",
+    "priceLabel": "各899円（税込）",
+    "acquisitionMethodJa": "2025年11月25日よりローソン店頭で順次発売",
+    "startDate": "2025-11-25",
+    "endCondition": "while-supplies-last",
+    "assetIds": [
+      "lawson-galbo-main"
+    ],
+    "marketplaceSearches": [
+      {
+        "platform": "eBay",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson Galbo card",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Galbo+card"
+      },
+      {
+        "platform": "Mercari",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20ガルボ%20カード"
+      },
+      {
+        "platform": "Suruga-ya",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+ガルボ+カード"
+      }
+    ]
+  },
+  {
+    "id": "lawson-glass-peach-jelly",
+    "campaignId": "lawson-cinderellagray-campaign-202511",
+    "officialNameJa": "グラス&白桃ゼリー",
+    "displayNameEn": "Glass and peach jelly",
+    "category": "food",
+    "recordType": "group",
+    "distributionType": "food-sale",
+    "sourceIds": [
+      "lawson-food"
+    ],
+    "confidence": "official",
+    "descriptionJa": "グラス付きのオリジナルフード。グラスデザインは全2種で、ローソン標準価格は各968円（税込）です。",
+    "lineupLabelJa": "グラスデザイン全2種 / 各968円（税込）",
+    "priceLabel": "各968円（税込）",
+    "acquisitionMethodJa": "2025年11月25日よりローソン店頭で順次発売",
+    "startDate": "2025-11-25",
+    "endCondition": "while-supplies-last",
+    "assetIds": [
+      "lawson-glass-jelly-main"
+    ],
+    "marketplaceSearches": [
+      {
+        "platform": "eBay",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson glass peach jelly",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+glass+peach+jelly"
+      },
+      {
+        "platform": "Mercari",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20グラス%20白桃ゼリー"
+      },
+      {
+        "platform": "Suruga-ya",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+グラス+白桃ゼリー"
+      }
+    ]
+  },
+  {
+    "id": "lawson-acrylic-stand",
+    "campaignId": "lawson-cinderellagray-campaign-202511",
+    "officialNameJa": "アクリルスタンド",
+    "displayNameEn": "Acrylic stands",
+    "category": "figure",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "lawson-goods"
+    ],
+    "confidence": "official",
+    "descriptionJa": "数量限定の店頭販売グッズ。全6種で、ローソンの書籍棚にて販売されたアクリルスタンドです。",
+    "lineupLabelJa": "全6種 / 各1,650円（税込）",
+    "priceLabel": "各1,650円（税込）",
+    "acquisitionMethodJa": "2025年11月25日よりローソン店頭で順次発売",
+    "startDate": "2025-11-25",
+    "endCondition": "while-supplies-last",
+    "assetIds": [
+      "lawson-acrylic-stand-main"
+    ],
+    "marketplaceSearches": [
+      {
+        "platform": "eBay",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson acrylic stand",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+acrylic+stand"
+      },
+      {
+        "platform": "Mercari",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20アクリルスタンド"
+      },
+      {
+        "platform": "Suruga-ya",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+アクリルスタンド"
+      }
+    ]
+  },
+  {
+    "id": "lawson-loppi-hmv-reservation-goods",
+    "campaignId": "lawson-cinderellagray-campaign-202511",
+    "officialNameJa": "@Loppi・HMV限定予約販売グッズ",
+    "displayNameEn": "Loppi/HMV reservation goods",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "reservation-sale",
+    "sourceIds": [
+      "lawson-loppi-hmv-goods"
+    ],
+    "confidence": "official",
+    "descriptionJa": "@Loppi・HMV&BOOKS online限定の予約販売グッズ。ぬいぐるみ、B2タペストリー、アクリルジオラマ、缶バッジ、フェイスタオル、アクリルスタンドをグループとして記録しています。",
+    "lineupLabelJa": "ぬいぐるみ全3種 / B2タペストリー全6種 / アクリルジオラマ / 缶バッジ全6種 / フェイスタオル全2種 / アクリルスタンド全6種",
+    "acquisitionMethodJa": "@Loppi・HMV&BOOKS online限定の予約販売",
+    "startDate": "2025-11-25",
+    "assetIds": [
+      "lawson-loppi-hmv-main"
+    ],
+    "marketplaceSearches": [
+      {
+        "platform": "eBay",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods"
+      },
+      {
+        "platform": "Mercari",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ"
+      },
+      {
+        "platform": "Suruga-ya",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+Loppi+HMV+グッズ"
+      }
+    ]
+  },
+  {
+    "id": "lawson-entame-kuji",
+    "campaignId": "lawson-cinderellagray-campaign-202511",
+    "officialNameJa": "エンタメくじ",
+    "displayNameEn": "Entertainment lottery",
+    "category": "prize",
+    "recordType": "lottery-prize-group",
+    "distributionType": "lottery",
+    "sourceIds": [
+      "kujist-entame-kuji"
+    ],
+    "confidence": "official",
+    "descriptionJa": "くじストリートで案内された販売くじ。1回770円（税込）で、ローソンとHMVが取扱店舗として案内されています。",
+    "priceLabel": "1回770円（税込）",
+    "acquisitionMethodJa": "2025年11月25日よりローソンとHMVで発売",
+    "startDate": "2025-11-25",
+    "assetIds": [
+      "lawson-entame-kuji-main"
+    ],
+    "marketplaceSearches": [
+      {
+        "platform": "eBay",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson entame kuji",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+entame+kuji"
+      },
+      {
+        "platform": "Mercari",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20エンタメくじ"
+      },
+      {
+        "platform": "Suruga-ya",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+エンタメくじ"
+      }
+    ]
+  }
+]

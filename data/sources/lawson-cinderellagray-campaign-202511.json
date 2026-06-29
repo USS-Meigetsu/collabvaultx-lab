@@ -1,0 +1,56 @@
+[
+  {
+    "id": "lawson-campaign-main",
+    "type": "official",
+    "url": "https://www.lawson.co.jp/lab/campaign/anime_cinderellagray/",
+    "label": "ローソン公式キャンペーンページ",
+    "checkedAt": "2026-06-29",
+    "scope": "Campaign overview, overall schedule, clear files, original food, store goods, and related campaign links.",
+    "language": "ja"
+  },
+  {
+    "id": "lawson-clear-file",
+    "type": "official",
+    "url": "https://www.lawson.co.jp/lab/campaign/anime_cinderellagray/file.html",
+    "label": "オリジナルクリアファイルページ",
+    "checkedAt": "2026-06-29",
+    "scope": "Clear file lineup, quantity, period, and purchase condition.",
+    "language": "ja"
+  },
+  {
+    "id": "lawson-food",
+    "type": "official",
+    "url": "https://www.lawson.co.jp/lab/campaign/anime_cinderellagray/food.html",
+    "label": "オリジナルフードページ",
+    "checkedAt": "2026-06-29",
+    "scope": "Galbo series and glass with peach jelly item details.",
+    "language": "ja"
+  },
+  {
+    "id": "lawson-goods",
+    "type": "official",
+    "url": "https://www.lawson.co.jp/lab/campaign/anime_cinderellagray/goods.html",
+    "label": "店頭販売グッズページ",
+    "checkedAt": "2026-06-29",
+    "scope": "Store goods including acrylic stands.",
+    "language": "ja"
+  },
+  {
+    "id": "lawson-loppi-hmv-goods",
+    "type": "official",
+    "url": "https://www.lawson.co.jp/campaign/lop_anime_cinderellagray_2025/",
+    "label": "@Loppi・HMV&BOOKS online限定グッズページ",
+    "checkedAt": "2026-06-29",
+    "scope": "Loppi/HMV reservation goods lineup.",
+    "language": "ja"
+  },
+  {
+    "id": "kujist-entame-kuji",
+    "type": "partner-official",
+    "url": "https://kujist.jp/kuji/anime_cinderellagray2/",
+    "label": "くじストリート エンタメくじページ",
+    "checkedAt": "2026-06-29",
+    "scope": "Entertainment lottery price and sales channel.",
+    "language": "ja"
+  }
+]

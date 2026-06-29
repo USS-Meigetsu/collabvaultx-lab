@@ -1,0 +1,67 @@
+{
+  "id": "lawson-cinderellagray-campaign-202511",
+  "workId": "umamusume",
+  "officialTitleJa": "アニメ『ウマ娘 シンデレラグレイ』× ローソン",
+  "displayTitleEn": "Lawson Cinderella Gray campaign",
+  "relatedTitleJa": "ウマ娘 シンデレラグレイ",
+  "relatedTitleEn": "Uma Musume Cinderella Gray",
+  "slug": "lawson-cinderellagray-campaign-202511",
+  "status": "published",
+  "periodLabel": "2025 Nov-Dec",
+  "startDate": "2025-11-25",
+  "endCondition": "varies-by-item",
+  "checkedAt": "2026-06-29",
+  "partnerNames": [
+    "ローソン",
+    "HMV",
+    "@Loppi"
+  ],
+  "categories": [
+    "clear-file",
+    "food",
+    "figure",
+    "goods",
+    "prize"
+  ],
+  "heroAssetId": "lawson-cinderellagray-hero",
+  "cardMeta": {
+    "period": "2025 Nov-Dec",
+    "source": "Checked 2026-06-29",
+    "items": "Clear files / food / goods / lottery"
+  },
+  "summaryJa": "ローソンで展開されたアニメ『ウマ娘 シンデレラグレイ』キャンペーン。店頭配布、食品、店頭販売グッズ、@Loppi・HMV限定予約販売グッズ、エンタメくじを記録しています。",
+  "summaryEn": "Lawson campaign archive covering clear-file bonuses, original food, store goods, HMV/Loppi reservation goods, and entertainment lottery items.",
+  "searchKeywords": [
+    "Uma Musume Cinderella Gray Lawson",
+    "ウマ娘 シンデレラグレイ ローソン",
+    "clear file",
+    "クリアファイル",
+    "Galbo",
+    "ガルボ",
+    "glass peach jelly",
+    "グラス 白桃ゼリー",
+    "acrylic stand",
+    "アクリルスタンド",
+    "entame kuji",
+    "エンタメくじ",
+    "Loppi",
+    "HMV"
+  ],
+  "sourceIds": [
+    "lawson-campaign-main",
+    "lawson-clear-file",
+    "lawson-food",
+    "lawson-goods",
+    "lawson-loppi-hmv-goods",
+    "kujist-entame-kuji"
+  ],
+  "itemIds": [
+    "lawson-clear-files",
+    "lawson-galbo-series",
+    "lawson-glass-peach-jelly",
+    "lawson-acrylic-stand",
+    "lawson-loppi-hmv-reservation-goods",
+    "lawson-entame-kuji"
+  ],
+  "marketNoteRequired": true
+}

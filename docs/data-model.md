@@ -10,6 +10,8 @@ source discipline.
 - Official Japanese work, campaign, and item names stay intact.
 - English display fields explain the entry without replacing official names.
 - Official sources and marketplace reference searches are separate concepts.
+- `Work` represents the parent public route. Subtitles, anime seasons, and
+  focused campaign titles belong on `Campaign`.
 - Every published campaign has a `checkedAt` date and enough source metadata to
   explain what was verified.
 - Optional fields should stay empty until confirmed; do not invent counts,
@@ -22,7 +24,7 @@ A `Work` is the parent intellectual property or title.
 Required fields:
 
 - `id`: stable lowercase slug, such as `umamusume`.
-- `officialNameJa`: official Japanese title.
+- `officialNameJa`: official Japanese parent title for the route.
 - `displayNameEn`: English display name used for navigation and summaries.
 - `slug`: public URL segment under `works/`.
 - `status`: `published`, `draft`, or `backlog`.
@@ -48,16 +50,26 @@ Required fields:
 - `status`: `published`, `draft`, or `backlog`.
 - `periodLabel`: human-readable confirmed period.
 - `checkedAt`: ISO date when the sources were checked.
-- `sources`: at least one official `Source`.
-- `items`: confirmed item groups.
+- `sourceIds`: IDs for official or partner-official `Source` records.
+- `itemIds`: IDs for confirmed `Item` records.
 
 Optional fields:
 
+- `relatedTitleJa`: focused title, season, or spin-off name used by this
+  campaign.
+- `relatedTitleEn`: English display name for `relatedTitleJa`.
 - `partnerNames`: stores, venues, brands, or collaborators.
 - `categories`: broad stable categories such as `goods`, `clear-file`, `card`,
-  `figure`, and `prize`.
+  `figure`, `food`, and `prize`.
 - `searchKeywords`: Japanese, English, partner aliases, and major item words.
 - `heroAssetId`: hero image asset.
+- `startDate`: ISO start date when confirmed.
+- `endDate`: ISO end date when a single campaign-level end date is confirmed.
+- `endCondition`: text or enum-style value such as `while-supplies-last` or
+  `varies-by-item`.
+- `cardMeta`: display metadata for archive list cards: `period`, `source`, and
+  `items`.
+- `marketNoteRequired`: true when any item has marketplace reference searches.
 - `summaryJa`: short Japanese archive description.
 - `summaryEn`: short English archive description.
 - `notes`: source caveats, missing official details, or verification limits.
@@ -73,6 +85,12 @@ Required fields:
 - `campaignId`: parent `Campaign.id`.
 - `officialNameJa`: official or source-faithful item name.
 - `category`: broad item category.
+- `recordType`: `single`, `group`, `set`, or `lottery-prize-group`.
+- `distributionType`: `purchase-bonus`, `retail-sale`, `food-sale`, `lottery`,
+  `crane-prize`, `reservation-sale`, or `facility-bonus`.
+- `sourceIds`: source IDs that verify this item. Marketplace references do not
+  satisfy this requirement.
+- `confidence`: `official`, `source-backed`, or `needs-verification`.
 - `descriptionJa`: source-backed item description.
 - `acquisitionMethodJa`: how it was originally obtained when confirmed.
 
@@ -84,7 +102,6 @@ Optional fields:
 - `availabilityLabel`: confirmed store, venue, period, or limited-stock note.
 - `assetIds`: item images.
 - `marketplaceSearches`: secondary-market reference searches.
-- `confidence`: `official`, `source-backed`, or `needs-verification`.
 
 ## Source
 
@@ -149,39 +166,115 @@ Optional fields:
 Marketplace searches must be accompanied by UI copy that availability, price,
 and authenticity are not verified by CollabVaultX.
 
+## Published record requirements
+
+Published records have stricter requirements than draft or backlog records.
+
+Published `Work` records require:
+
+- `summaryEn`
+- `aliases`
+
+Published `Campaign` records require:
+
+- `summaryEn`
+- `searchKeywords`
+- `partnerNames`
+- `categories`
+- `sourceIds`
+- `itemIds`
+- `periodLabel`
+- `checkedAt`
+- `heroAssetId`
+- `cardMeta.period`
+- `cardMeta.source`
+- `cardMeta.items`
+
+Published `Item` records require:
+
+- `sourceIds`
+- `confidence`
+- `recordType`
+- `distributionType`
+- `displayNameEn` or an English explanation on the campaign page
+- `assetIds`, or a documented reason why no image is used
+
+Published `Source` records require:
+
+- `type`
+- `url`
+- `label`
+- `checkedAt`
+
+Published `Asset` records require:
+
+- an existing repo-relative `path`
+- `altJa`
+- `sourceId`
+
+Published `MarketplaceSearch` records require:
+
+- `platform`
+- `queryLabel`
+- `url`
+
 ## Lawson Cinderella Gray Example
 
 ```json
 {
   "work": {
     "id": "umamusume",
-    "officialNameJa": "ウマ娘 シンデレラグレイ",
-    "displayNameEn": "Uma Musume Cinderella Gray",
+    "officialNameJa": "ウマ娘 プリティーダービー",
+    "displayNameEn": "Uma Musume Pretty Derby",
     "slug": "umamusume",
-    "status": "published"
+    "status": "published",
+    "aliases": ["Uma Musume", "ウマ娘"],
+    "summaryEn": "Archive of Uma Musume collaboration goods and campaigns."
   },
   "campaign": {
     "id": "lawson-cinderellagray-campaign-202511",
     "workId": "umamusume",
     "officialTitleJa": "アニメ『ウマ娘 シンデレラグレイ』× ローソン",
     "displayTitleEn": "Lawson Cinderella Gray campaign",
+    "relatedTitleJa": "ウマ娘 シンデレラグレイ",
+    "relatedTitleEn": "Uma Musume Cinderella Gray",
     "slug": "lawson-cinderellagray-campaign-202511",
     "status": "published",
     "periodLabel": "2025 Nov-Dec",
+    "startDate": "2025-11-25",
+    "endCondition": "varies-by-item",
     "checkedAt": "2026-06-29",
     "partnerNames": ["ローソン", "HMV", "@Loppi"],
-    "categories": ["clear-file", "goods", "prize"],
+    "categories": ["clear-file", "food", "figure", "goods", "prize"],
+    "heroAssetId": "lawson-cinderellagray-hero",
+    "cardMeta": {
+      "period": "2025 Nov-Dec",
+      "source": "Checked 2026-06-29",
+      "items": "Clear files / food / goods / lottery"
+    },
+    "summaryEn": "Lawson campaign archive covering clear-file bonuses, original food, store goods, HMV/Loppi reservation goods, and entertainment lottery items.",
     "searchKeywords": [
       "Uma Musume Cinderella Gray Lawson",
       "ウマ娘 シンデレラグレイ ローソン",
       "Loppi HMV"
     ],
-    "sources": ["lawson-campaign-main", "lawson-loppi-hmv-goods"],
-    "items": [
+    "sourceIds": [
+      "lawson-campaign-main",
+      "lawson-clear-file",
+      "lawson-food",
+      "lawson-goods",
+      "lawson-loppi-hmv-goods",
+      "kujist-entame-kuji"
+    ],
+    "itemIds": [
       "lawson-clear-files",
+      "lawson-galbo-series",
+      "lawson-glass-peach-jelly",
+      "lawson-acrylic-stand",
       "lawson-loppi-hmv-reservation-goods",
       "lawson-entame-kuji"
-    ]
+    ],
+    "marketNoteRequired": true
   },
   "item": {
     "id": "lawson-loppi-hmv-reservation-goods",
@@ -189,6 +282,10 @@ and authenticity are not verified by CollabVaultX.
     "officialNameJa": "@Loppi・HMV限定予約販売グッズ",
     "displayNameEn": "Loppi/HMV reservation goods",
     "category": "goods",
+    "recordType": "group",
+    "distributionType": "reservation-sale",
+    "sourceIds": ["lawson-loppi-hmv-goods"],
+    "confidence": "official",
     "descriptionJa": "@Loppi・HMV&BOOKS online限定の予約販売グッズ。",
     "lineupLabelJa": "ぬいぐるみ全3種 / B2タペストリー全6種 / アクリルジオラマ / 缶バッジ全6種 / フェイスタオル全2種 / アクリルスタンド全6種",
     "acquisitionMethodJa": "@Loppi・HMV&BOOKS online限定の予約販売",
@@ -196,14 +293,15 @@ and authenticity are not verified by CollabVaultX.
     "marketplaceSearches": [
       {
         "platform": "eBay",
-        "queryLabel": "Uma Musume Cinderella Gray Lawson Loppi HMV goods"
+        "queryLabel": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods"
       },
       {
         "platform": "Mercari",
-        "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ"
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ"
       }
-    ],
-    "confidence": "official"
+    ]
   },
   "sources": [
     {

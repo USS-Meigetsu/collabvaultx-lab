@@ -11,6 +11,7 @@ or serve the repository root with any static file server.
 Before committing, run:
 
 ```powershell
+node scripts/check-data.mjs
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 ```
 
@@ -35,6 +36,7 @@ temporary screenshots, or source-capture PDFs.
 
 The archive schema is documented in `docs/data-model.md`. Keep new campaign
 HTML aligned with that model even before the site is migrated to generated data.
+Pilot data lives under `data/` and is validated by `scripts/check-data.mjs`.
 
 ## Search metadata
 
@@ -48,7 +50,8 @@ HTML aligned with that model even before the site is migrated to generated data.
 - Add `data-search-keywords` to published cards for spelling variants, English
   names, Japanese names, partner aliases, and major item types.
 - Keep `data-category` broad and stable: `goods`, `clear-file`, `card`,
-  `figure`, and `prize`. Item-specific words belong in `data-search-keywords`.
+  `figure`, `food`, and `prize`. Item-specific words belong in
+  `data-search-keywords`.
 
 ## English-first display rules
 
@@ -68,6 +71,7 @@ HTML aligned with that model even before the site is migrated to generated data.
 - `card`: paper/plastic cards, postcards, and card-shaped bonuses.
 - `figure`: acrylic stands, acrylic panels, standees, and figure-like display
   goods.
+- `food`: packaged foods, drinks, menu items, and food-with-bonus products.
 - `prize`: lottery prizes, crane-game prizes, facility-use bonuses, and other
   reward-style items.
 
