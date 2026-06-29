@@ -40,15 +40,31 @@ $missingMetadata = New-Object System.Collections.Generic.List[string]
 $missingCardMetadata = New-Object System.Collections.Generic.List[string]
 $missingEnglishSummaries = New-Object System.Collections.Generic.List[string]
 $missingDetailSourceMetadata = New-Object System.Collections.Generic.List[string]
+$missingLazyProductImages = New-Object System.Collections.Generic.List[string]
 $publicPlaceholderText = New-Object System.Collections.Generic.List[string]
 $publicUrls = New-Object System.Collections.Generic.List[string]
 
+function Join-Chars([int[]]$codes) {
+  return -join ($codes | ForEach-Object { [string][char]$_ })
+}
+
+$workLabel = Join-Chars @(0x4F5C, 0x54C1)
+$familyRestaurantLabel = Join-Chars @(0x30D5, 0x30A1, 0x30DF, 0x30EC, 0x30B9)
+$preparingThumbnailLabel = Join-Chars @(0x6E96, 0x5099, 0x4E2D, 0x30B5, 0x30E0, 0x30CD, 0x30A4, 0x30EB)
+$assumedArchiveEntryLabel = Join-Chars @(0x60F3, 0x5B9A, 0x306E, 0x30A2, 0x30FC, 0x30AB, 0x30A4, 0x30D6, 0x5165, 0x53E3)
+$pastCampaignCandidateLabel = Join-Chars @(0x904E, 0x53BB, 0x65BD, 0x7B56, 0x5019, 0x88DC)
+
 $publicPlaceholderTerms = @(
-  "作品A",
-  "作品B",
-  "作品C",
-  "ファミレスA",
-  "ファミレスB"
+  "$($workLabel)A",
+  "$($workLabel)B",
+  "$($workLabel)C",
+  "$($familyRestaurantLabel)A",
+  "$($familyRestaurantLabel)B",
+  $preparingThumbnailLabel,
+  "Coming Later / Family Campaign",
+  "Coming Later / Seven-Eleven",
+  $assumedArchiveEntryLabel,
+  $pastCampaignCandidateLabel
 )
 
 function Get-RelativePathForReport([string]$path) {
@@ -127,6 +143,14 @@ foreach ($file in $htmlFiles) {
     if ($text -match 'class="[^"]*\bmarket-links\b[^"]*"' -and
         $text -notmatch 'class="[^"]*\bmarket-note\b[^"]*"[\s\S]*?<span\s+lang="en">') {
       $missingDetailSourceMetadata.Add("$relativeFile -> missing market-note with lang=en text")
+    }
+
+    $productImageMatches = [regex]::Matches($text, '<div\s+class="product-thumb">\s*<img\b([^>]*)>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    foreach ($match in $productImageMatches) {
+      $imgAttributes = $match.Groups[1].Value
+      if ($imgAttributes -notmatch '\bloading="lazy"' -or $imgAttributes -notmatch '\bdecoding="async"') {
+        $missingLazyProductImages.Add("$relativeFile -> product image missing loading lazy or async decoding")
+      }
     }
   }
 
@@ -316,8 +340,12 @@ if ($missingDetailSourceMetadata.Count -gt 0) {
   Write-Error ("Missing detail source metadata found:`n" + ($missingDetailSourceMetadata -join "`n"))
 }
 
+if ($missingLazyProductImages.Count -gt 0) {
+  Write-Error ("Missing lazy product image attributes found:`n" + ($missingLazyProductImages -join "`n"))
+}
+
 if ($publicPlaceholderText.Count -gt 0) {
   Write-Error ("Public placeholder title text found:`n" + ($publicPlaceholderText -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, English summaries, detail source metadata, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, English summaries, detail source metadata, lazy product images, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."

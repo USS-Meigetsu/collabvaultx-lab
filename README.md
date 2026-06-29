@@ -83,3 +83,8 @@ benefits, keep the categories broad and put the detailed item words in
 - Do not add campaign periods, store counts, item rules, or bonus conditions
   unless they are backed by an official source or clearly labeled as a later
   verification target.
+- Keep unverified backlog items out of public card grids. Add new archive
+  entries only after official sources, checked dates, search metadata, and item
+  notes are ready.
+- Product-list images should use `loading="lazy"` and `decoding="async"`;
+  hero images are intentionally left eager.
