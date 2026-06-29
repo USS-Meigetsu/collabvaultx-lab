@@ -35,6 +35,7 @@ $missingLinks = New-Object System.Collections.Generic.List[string]
 $mojibakeFiles = New-Object System.Collections.Generic.List[string]
 $placeholderLinks = New-Object System.Collections.Generic.List[string]
 $unsafeBlankTargets = New-Object System.Collections.Generic.List[string]
+$unsafeJavascriptLinks = New-Object System.Collections.Generic.List[string]
 $missingMetadata = New-Object System.Collections.Generic.List[string]
 $missingCardMetadata = New-Object System.Collections.Generic.List[string]
 $publicUrls = New-Object System.Collections.Generic.List[string]
@@ -69,7 +70,7 @@ function Get-PublicPathForHtmlFile([System.IO.FileInfo]$file) {
 function Test-SkippableUrl([string]$url) {
   return $url -eq "" -or
     $url.StartsWith("#") -or
-    $url -match "^(https?:|mailto:|tel:|javascript:|data:)"
+    $url -match "^(https?:|mailto:|tel:|data:)"
 }
 
 function Add-MissingLocalReference([System.IO.FileInfo]$file, [string]$url) {
@@ -119,33 +120,37 @@ foreach ($file in $htmlFiles) {
     }
   }
 
-  $attrMatches = [regex]::Matches($text, '(src|href)="([^"]+)"')
+  $attrMatches = [regex]::Matches($text, '\b(src|href)\s*=\s*(["''])(.*?)\2', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
   foreach ($match in $attrMatches) {
-    $attr = $match.Groups[1].Value
-    $url = $match.Groups[2].Value
-    if ($attr -eq "href" -and $url -eq "#") {
+    $attr = $match.Groups[1].Value.ToLowerInvariant()
+    $url = $match.Groups[3].Value
+    if ($attr -eq "href" -and $url.Trim() -eq "#") {
       $placeholderLinks.Add("$relativeFile -> href=`"#`"")
+      continue
+    }
+    if ($attr -eq "href" -and $url.Trim() -match "(?i)^javascript:") {
+      $unsafeJavascriptLinks.Add("$relativeFile -> $url")
       continue
     }
     Add-MissingLocalReference $file $url
   }
 
-  $srcsetMatches = [regex]::Matches($text, 'srcset="([^"]+)"')
+  $srcsetMatches = [regex]::Matches($text, '\bsrcset\s*=\s*(["''])(.*?)\1', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
   foreach ($match in $srcsetMatches) {
-    $entries = $match.Groups[1].Value -split ","
+    $entries = $match.Groups[2].Value -split ","
     foreach ($entry in $entries) {
       $candidate = ($entry.Trim() -split "\s+")[0]
       Add-MissingLocalReference $file $candidate
     }
   }
 
-  $blankTargetMatches = [regex]::Matches($text, '<a\b[^>]*target="_blank"[^>]*>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  $blankTargetMatches = [regex]::Matches($text, '<a\b(?=[^>]*\btarget\s*=\s*(["''])_blank\1)[^>]*>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
   foreach ($match in $blankTargetMatches) {
     $tag = $match.Value
-    $relMatch = [regex]::Match($tag, 'rel="([^"]*)"', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    $relMatch = [regex]::Match($tag, '\brel\s*=\s*(["''])(.*?)\1', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
     $relTokens = @()
     if ($relMatch.Success) {
-      $relTokens = $relMatch.Groups[1].Value.ToLowerInvariant() -split "\s+"
+      $relTokens = $relMatch.Groups[2].Value.ToLowerInvariant() -split "\s+"
     }
     if (-not ($relTokens -contains "noopener") -or -not ($relTokens -contains "noreferrer")) {
       $unsafeBlankTargets.Add("$relativeFile -> $tag")
@@ -164,6 +169,10 @@ foreach ($file in $htmlFiles) {
     if ($article -notmatch 'class="[^"]*\bcard-meta-list\b[^"]*"') {
       $missingCardMetadata.Add("$relativeFile -> $articleLabel missing card-meta-list")
       continue
+    }
+    $searchKeywordsMatch = [regex]::Match($article, '\bdata-search-keywords\s*=\s*(["''])(.*?)\1', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    if (-not $searchKeywordsMatch.Success -or $searchKeywordsMatch.Groups[2].Value.Trim() -eq "") {
+      $missingCardMetadata.Add("$relativeFile -> $articleLabel missing data-search-keywords")
     }
 
     foreach ($term in @("Period", "Source", "Items")) {
@@ -235,6 +244,10 @@ if ($unsafeBlankTargets.Count -gt 0) {
   Write-Error ("target=`"_blank`" links must include rel=`"noopener noreferrer`":`n" + ($unsafeBlankTargets -join "`n"))
 }
 
+if ($unsafeJavascriptLinks.Count -gt 0) {
+  Write-Error ("javascript: href links are not allowed:`n" + ($unsafeJavascriptLinks -join "`n"))
+}
+
 if ($missingMetadata.Count -gt 0) {
   Write-Error ("Missing public metadata found:`n" + ($missingMetadata -join "`n"))
 }
@@ -243,4 +256,4 @@ if ($missingCardMetadata.Count -gt 0) {
   Write-Error ("Missing published card metadata found:`n" + ($missingCardMetadata -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, no mojibake markers, placeholder links, javascript links, missing local links, or unsafe blank-target links."

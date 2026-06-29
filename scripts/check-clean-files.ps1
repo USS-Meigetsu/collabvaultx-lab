@@ -1,5 +1,8 @@
 $ErrorActionPreference = "Stop"
 
+$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$repoRoot = Split-Path -Parent $scriptDir
+
 $patterns = @(
   "edge-profile",
   "Login Data",
@@ -16,8 +19,8 @@ $patterns = @(
 )
 
 $regex = ($patterns -join "|")
-$tracked = git ls-files | Select-String -Pattern $regex
-$untracked = git ls-files --others --exclude-standard | Select-String -Pattern $regex
+$tracked = git -C $repoRoot ls-files | Select-String -Pattern $regex
+$untracked = git -C $repoRoot ls-files --others --exclude-standard | Select-String -Pattern $regex
 
 if ($tracked -or $untracked) {
   Write-Error "Blocked unsafe or scratch files detected in the repository."
