@@ -170,6 +170,16 @@ function validateUrl(value, label, field) {
   }
 }
 
+function validatePagePath(value, label, field) {
+  if (!requireString({ [field]: value }, field, label)) return;
+  if (value.startsWith("/") || value.includes("\\") || value.includes("..")) {
+    fail(`${label}: ${field} must be a safe repo-relative public path`);
+  }
+  if (!value.endsWith("/")) {
+    fail(`${label}: ${field} must end with "/"`);
+  }
+}
+
 function inspectStrings(value, label, stack = []) {
   if (typeof value === "string") {
     for (const pattern of unsafeStringPatterns) {
@@ -407,6 +417,33 @@ for (const item of items) {
       requireString(search, "platform", searchLabel);
       requireString(search, "queryLabel", searchLabel);
       validateUrl(search.url, searchLabel, "url");
+    }
+  }
+
+  if (item.page !== undefined) {
+    if (requireObject(item, "page", label)) {
+      const pageLabel = `${label}:page`;
+      validateStatus(item.page, pageLabel);
+      requireString(item.page, "slug", pageLabel);
+      if (typeof item.page.slug === "string" && !idPattern.test(item.page.slug)) {
+        fail(`${pageLabel}: slug "${item.page.slug}" must be lowercase kebab-case`);
+      }
+      validatePagePath(item.page.path, pageLabel, "path");
+
+      if (item.page.status === "published") {
+        requireString(item, "summaryEn", label);
+        const expectedSegment = `/items/${item.page.slug}/`;
+        const hasPagePath = typeof item.page.path === "string" && item.page.path.trim() !== "";
+        if (hasPagePath && !item.page.path.includes(expectedSegment)) {
+          fail(`${pageLabel}: path must include "${expectedSegment}"`);
+        }
+        if (hasPagePath) {
+          const htmlPath = path.join(rootDir, item.page.path, "index.html");
+          if (!fs.existsSync(htmlPath)) {
+            fail(`${pageLabel}: published item page is missing ${path.relative(rootDir, htmlPath)}`);
+          }
+        }
+      }
     }
   }
 

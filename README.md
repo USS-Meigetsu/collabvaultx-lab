@@ -17,6 +17,7 @@ node --check scripts/check-data-html-sync.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
+git diff --check
 ```
 
 The same check also runs in GitHub Actions on pushes to `main` and pull
@@ -41,7 +42,8 @@ temporary screenshots, or source-capture PDFs.
 The archive schema is documented in `docs/data-model.md`. Keep new campaign
 HTML aligned with that model even before the site is migrated to generated data.
 Pilot data lives under `data/` and is validated by `scripts/check-data.mjs`.
-Published-card sync checks live in `scripts/check-data-html-sync.mjs`.
+Published-card and item-page sync checks live in
+`scripts/check-data-html-sync.mjs`.
 
 ## Search metadata
 
@@ -63,7 +65,8 @@ Published-card sync checks live in `scripts/check-data-html-sync.mjs`.
 - Keep official Japanese campaign titles and item names intact.
 - Add a short English summary to every published title/collaboration card so
   English readers can understand the entry before opening the detail page.
-- Add a short `hero-english-summary` to every collaboration detail page.
+- Add a short `hero-english-summary` to every collaboration detail page and
+  published item page.
 - Use `lang="en"` on English summary paragraphs.
 - Do not mass-translate official Japanese names; pair a concise English
   explanation with the original name instead.
@@ -86,14 +89,14 @@ benefits, keep the categories broad and put the detailed item words in
 
 ## Source rules
 
-- Each detail page should include an `Official source`, `Checked date`, and
-  `Notes` block.
+- Each detail page and published item page should include an `Official source`,
+  `Checked date`, and `Notes` block.
 - Treat page content as a record of what was confirmed on the checked date,
   especially when official campaign pages may disappear later.
 - Use marketplace links as reference searches only; do not present them as
   official purchase sources.
-- Detail pages with marketplace/search links should show a `market-note`
-  before the item cards.
+- Detail pages and item pages with marketplace/search links should show a
+  `market-note` before the item cards or reference searches.
 - Do not add campaign periods, store counts, item rules, or bonus conditions
   unless they are backed by an official source or clearly labeled as a later
   verification target.

@@ -97,6 +97,11 @@ Required fields:
 Optional fields:
 
 - `displayNameEn`: English display name.
+- `summaryEn`: short English archive summary for item cards or item pages.
+- `page`: public item-page metadata. A published item page uses:
+  - `status`: `published`, `draft`, or `backlog`.
+  - `slug`: page slug under the campaign's `items/` directory.
+  - `path`: public repo-relative directory path ending in `/`.
 - `lineupLabelJa`: confirmed lineup text, such as counts or grouped item names.
 - `priceLabel`: confirmed original price or lottery price.
 - `availabilityLabel`: confirmed store, venue, period, or limited-stock note.
@@ -199,6 +204,15 @@ Published `Item` records require:
 - `displayNameEn` or an English explanation on the campaign page
 - `assetIds`, or a documented reason why no image is used
 
+Published item pages additionally require:
+
+- `page.status`
+- `page.slug`
+- `page.path`
+- `summaryEn`
+- a matching HTML page, canonical URL, sitemap URL, official source link,
+  marketplace reference links when present, and product image metadata
+
 Published `Source` records require:
 
 - `type`
@@ -281,6 +295,7 @@ Published `MarketplaceSearch` records require:
     "campaignId": "lawson-cinderellagray-campaign-202511",
     "officialNameJa": "@Loppi・HMV限定予約販売グッズ",
     "displayNameEn": "Loppi/HMV reservation goods",
+    "summaryEn": "Loppi and HMV reservation goods group for the Lawson x Uma Musume Cinderella Gray campaign.",
     "category": "goods",
     "recordType": "group",
     "distributionType": "reservation-sale",

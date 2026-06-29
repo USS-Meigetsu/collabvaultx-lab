@@ -130,8 +130,10 @@ foreach ($file in $htmlFiles) {
   }
 
   $isCollabDetailPage = $repositoryRelativePath -match '^works/umamusume/collabs/[^/]+/index\.html$'
+  $isItemDetailPage = $repositoryRelativePath -match '^works/umamusume/collabs/[^/]+/items/[^/]+/index\.html$'
+  $isArchiveDetailPage = $isCollabDetailPage -or $isItemDetailPage
 
-  if ($isCollabDetailPage) {
+  if ($isArchiveDetailPage) {
     if ($text -notmatch 'class="[^"]*\bhero-english-summary\b[^"]*"\s+lang="en"') {
       $missingEnglishSummaries.Add("$relativeFile -> missing hero-english-summary lang=en")
     }

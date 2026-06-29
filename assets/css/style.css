@@ -822,6 +822,17 @@ main {
   line-height: 1.6;
 }
 
+.item-fact-list {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px 16px;
+}
+
+.item-fact-list span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .reference-section {
   margin-top: 26px;
 }

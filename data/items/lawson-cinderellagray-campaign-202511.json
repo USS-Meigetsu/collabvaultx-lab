@@ -4,6 +4,12 @@
     "campaignId": "lawson-cinderellagray-campaign-202511",
     "officialNameJa": "オリジナルクリアファイル",
     "displayNameEn": "Original clear files",
+    "summaryEn": "Lawson clear-file purchase bonus record for the Uma Musume Cinderella Gray campaign, covering lineup count, acquisition rule, period, official source, and reference searches.",
+    "page": {
+      "status": "published",
+      "slug": "clear-file",
+      "path": "works/umamusume/collabs/lawson-cinderellagray-campaign-202511/items/clear-file/"
+    },
     "category": "clear-file",
     "recordType": "group",
     "distributionType": "purchase-bonus",
@@ -13,7 +19,7 @@
     "confidence": "official",
     "descriptionJa": "先着・数量限定の配布特典。対象の明治のお菓子3点購入で1枚入手できる、全7種のクリアファイルです。",
     "lineupLabelJa": "全7種 / 各店計21枚",
-    "acquisitionMethodJa": "対象のお菓子3点と好きなクリアファイル1枚をレジへ持参",
+    "acquisitionMethodJa": "対象の明治のお菓子3点と好きなクリアファイル1枚をレジへ持参",
     "availabilityLabel": "2025年11月25日 7:00〜12月8日、または景品がなくなり次第終了",
     "startDate": "2025-11-25",
     "endDate": "2025-12-08",
