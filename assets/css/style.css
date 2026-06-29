@@ -578,6 +578,47 @@ main {
   padding: 22px 24px 24px;
 }
 
+.card-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.card-meta-list div {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  max-width: 100%;
+  padding: 6px 9px;
+  border: 1px solid rgba(138, 215, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(138, 215, 255, 0.055);
+}
+
+.card-meta-list dt {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-meta-list dd {
+  min-width: 0;
+  margin: 0;
+  color: #d7dfeb;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.card-meta-list + h3 {
+  margin-top: 14px;
+}
+
 .info-panel {
   display: flex;
   justify-content: space-between;
