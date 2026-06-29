@@ -193,103 +193,123 @@ if (!card) {
   }
 }
 
-const clearFileItem = itemMap.get("lawson-clear-files");
+function validatePublishedItemPage({ itemId, sourceId, assetId }) {
+  const item = itemMap.get(itemId);
+  const label = `Lawson item page ${itemId}`;
 
-if (!clearFileItem) {
-  fail("data/items/lawson-cinderellagray-campaign-202511.json: missing lawson-clear-files item");
-} else {
-  const label = "Lawson clear-file item page";
-  const itemPage = clearFileItem.page;
+  if (!item) {
+    fail(`data/items/lawson-cinderellagray-campaign-202511.json: missing ${itemId} item`);
+    return;
+  }
 
-  if (!itemPage || itemPage.status !== "published" || itemPage.slug !== "clear-file" || !itemPage.path) {
-    fail(`${label}: lawson-clear-files must have published page metadata for clear-file`);
+  const itemPage = item.page;
+  if (!itemPage || itemPage.status !== "published" || !itemPage.slug || !itemPage.path) {
+    fail(`${label}: item must have published page metadata`);
+    return;
+  }
+
+  const itemHtmlPath = pagePathToHtmlPath(itemPage.path);
+  const itemHtmlFullPath = path.join(rootDir, itemHtmlPath);
+  const itemPublicUrl = publicUrlForPath(itemPage.path);
+
+  if (!fs.existsSync(itemHtmlFullPath)) {
+    fail(`${label}: ${itemHtmlPath} is missing`);
+    return;
+  }
+
+  const itemHtml = readText(itemHtmlPath);
+  const itemPageText = textContent(itemHtml);
+  const parentHtmlPath = `works/umamusume/collabs/${campaign.slug}/index.html`;
+  const parentHtml = readText(parentHtmlPath);
+  const sitemap = readText("sitemap.xml");
+  const source = item.sourceIds
+    .map((id) => sourceMap.get(id))
+    .find((candidate) => candidate?.id === sourceId);
+  const asset = item.assetIds
+    .map((id) => assetMap.get(id))
+    .find((candidate) => candidate?.id === assetId);
+
+  if (getCanonicalUrl(itemHtml) !== itemPublicUrl) {
+    fail(`${label}: canonical URL does not match ${itemPublicUrl}`);
+  }
+  if (getMetaContent(itemHtml, "og:url") !== itemPublicUrl) {
+    fail(`${label}: og:url does not match ${itemPublicUrl}`);
+  }
+  if (!sitemap.includes(`<loc>${itemPublicUrl}</loc>`)) {
+    fail(`${label}: sitemap.xml is missing ${itemPublicUrl}`);
+  }
+
+  const productCard = extractProductCardContaining(parentHtml, item.officialNameJa);
+  if (!productCard) {
+    fail(`${label}: parent Lawson page is missing product card for ${item.officialNameJa}`);
   } else {
-    const itemHtmlPath = pagePathToHtmlPath(itemPage.path);
-    const itemHtmlFullPath = path.join(rootDir, itemHtmlPath);
-    const itemPublicUrl = publicUrlForPath(itemPage.path);
+    const expectedParentHref = relativeUrl(parentHtmlPath, itemHtmlPath);
+    const alternateParentHref = expectedParentHref.replace(/^\.\//, "");
+    const cardLinks = getOpeningTags(productCard, "a").map((tag) => decodeEntities(getAttribute(tag, "href")));
+    if (!cardLinks.includes(expectedParentHref) && !cardLinks.includes(alternateParentHref)) {
+      fail(`${label}: parent product card is missing link to ${expectedParentHref}`);
+    }
+  }
 
-    if (!fs.existsSync(itemHtmlFullPath)) {
-      fail(`${label}: ${itemHtmlPath} is missing`);
+  assertTextIncludes(itemPageText, item.officialNameJa, label);
+  assertTextIncludes(itemPageText, item.summaryEn, label);
+  assertTextIncludes(itemPageText, item.lineupLabelJa, label);
+  assertTextIncludes(itemPageText, item.priceLabel, label);
+  assertTextIncludes(itemPageText, item.acquisitionMethodJa, label);
+  assertTextIncludes(itemPageText, item.availabilityLabel, label);
+
+  if (!source) {
+    fail(`${label}: ${sourceId} source is missing from sourceIds`);
+  } else if (!itemHtml.includes(source.url)) {
+    fail(`${label}: item page is missing source URL ${source.url}`);
+  }
+
+  for (const search of item.marketplaceSearches ?? []) {
+    if (!itemHtml.includes(search.url)) {
+      fail(`${label}: item page is missing marketplace URL for ${search.platform}`);
+    }
+  }
+
+  if (!asset) {
+    fail(`${label}: ${assetId} asset is missing from assetIds`);
+  } else {
+    const expectedImageSrc = relativeUrl(itemHtmlPath, asset.path);
+    const productImageMatches = [
+      ...itemHtml.matchAll(/<div\s+class=["']product-thumb["']>\s*<img\b([^>]*)>/g),
+    ];
+    const productImage = productImageMatches
+      .map((match) => match[1])
+      .find((attributes) => decodeEntities(getAttribute(attributes, "src")) === expectedImageSrc);
+
+    if (!productImage) {
+      fail(`${label}: product image src must match ${expectedImageSrc}`);
     } else {
-      const itemHtml = readText(itemHtmlPath);
-      const itemPageText = textContent(itemHtml);
-      const parentHtmlPath = `works/umamusume/collabs/${campaign.slug}/index.html`;
-      const parentHtml = readText(parentHtmlPath);
-      const sitemap = readText("sitemap.xml");
-      const source = clearFileItem.sourceIds
-        .map((id) => sourceMap.get(id))
-        .find((candidate) => candidate?.id === "lawson-clear-file");
-      const asset = clearFileItem.assetIds
-        .map((id) => assetMap.get(id))
-        .find((candidate) => candidate?.id === "lawson-clear-file-main");
-
-      if (getCanonicalUrl(itemHtml) !== itemPublicUrl) {
-        fail(`${label}: canonical URL does not match ${itemPublicUrl}`);
+      if (getAttribute(productImage, "loading") !== "lazy") {
+        fail(`${label}: product image must use loading="lazy"`);
       }
-      if (getMetaContent(itemHtml, "og:url") !== itemPublicUrl) {
-        fail(`${label}: og:url does not match ${itemPublicUrl}`);
+      if (getAttribute(productImage, "decoding") !== "async") {
+        fail(`${label}: product image must use decoding="async"`);
       }
-      if (!sitemap.includes(`<loc>${itemPublicUrl}</loc>`)) {
-        fail(`${label}: sitemap.xml is missing ${itemPublicUrl}`);
-      }
-
-      const clearFileCard = extractProductCardContaining(parentHtml, clearFileItem.officialNameJa);
-      if (!clearFileCard) {
-        fail(`${label}: parent Lawson page is missing the clear-file product card`);
-      } else {
-        const expectedParentHref = relativeUrl(parentHtmlPath, itemHtmlPath);
-        const alternateParentHref = expectedParentHref.replace(/^\.\//, "");
-        const cardLinks = getOpeningTags(clearFileCard, "a").map((tag) => decodeEntities(getAttribute(tag, "href")));
-        if (!cardLinks.includes(expectedParentHref) && !cardLinks.includes(alternateParentHref)) {
-          fail(`${label}: parent clear-file card is missing link to ${expectedParentHref}`);
-        }
-      }
-
-      assertTextIncludes(itemPageText, clearFileItem.officialNameJa, label);
-      assertTextIncludes(itemPageText, clearFileItem.summaryEn, label);
-      assertTextIncludes(itemPageText, clearFileItem.lineupLabelJa, label);
-      assertTextIncludes(itemPageText, clearFileItem.acquisitionMethodJa, label);
-      assertTextIncludes(itemPageText, clearFileItem.availabilityLabel, label);
-
-      if (!source) {
-        fail(`${label}: lawson-clear-file source is missing from sourceIds`);
-      } else if (!itemHtml.includes(source.url)) {
-        fail(`${label}: item page is missing source URL ${source.url}`);
-      }
-
-      for (const search of clearFileItem.marketplaceSearches ?? []) {
-        if (!itemHtml.includes(search.url)) {
-          fail(`${label}: item page is missing marketplace URL for ${search.platform}`);
-        }
-      }
-
-      if (!asset) {
-        fail(`${label}: lawson-clear-file-main asset is missing from assetIds`);
-      } else {
-        const expectedImageSrc = relativeUrl(itemHtmlPath, asset.path);
-        const productImageMatches = [
-          ...itemHtml.matchAll(/<div\s+class=["']product-thumb["']>\s*<img\b([^>]*)>/g),
-        ];
-        const productImage = productImageMatches
-          .map((match) => match[1])
-          .find((attributes) => decodeEntities(getAttribute(attributes, "src")) === expectedImageSrc);
-
-        if (!productImage) {
-          fail(`${label}: product image src must match ${expectedImageSrc}`);
-        } else {
-          if (getAttribute(productImage, "loading") !== "lazy") {
-            fail(`${label}: product image must use loading="lazy"`);
-          }
-          if (getAttribute(productImage, "decoding") !== "async") {
-            fail(`${label}: product image must use decoding="async"`);
-          }
-          if (decodeEntities(getAttribute(productImage, "alt")) !== asset.altJa) {
-            fail(`${label}: product image alt must match asset.altJa`);
-          }
-        }
+      if (decodeEntities(getAttribute(productImage, "alt")) !== asset.altJa) {
+        fail(`${label}: product image alt must match asset.altJa`);
       }
     }
   }
+}
+
+for (const itemConfig of [
+  {
+    itemId: "lawson-clear-files",
+    sourceId: "lawson-clear-file",
+    assetId: "lawson-clear-file-main",
+  },
+  {
+    itemId: "lawson-galbo-series",
+    sourceId: "lawson-food",
+    assetId: "lawson-galbo-main",
+  },
+]) {
+  validatePublishedItemPage(itemConfig);
 }
 
 if (errors.length > 0) {
@@ -300,4 +320,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("Data/HTML sync checks passed: Lawson campaign card and clear-file item page match pilot JSON.");
+console.log("Data/HTML sync checks passed: Lawson campaign card and published item pages match pilot JSON.");

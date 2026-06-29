@@ -50,6 +50,12 @@
     "campaignId": "lawson-cinderellagray-campaign-202511",
     "officialNameJa": "明治 ガルボシリーズ",
     "displayNameEn": "Meiji Galbo series",
+    "summaryEn": "Lawson-exclusive Meiji Galbo food-sale group for the Uma Musume Cinderella Gray campaign, covering the three-item lineup, price, original photo-style card bonus, official source, and reference searches.",
+    "page": {
+      "status": "published",
+      "slug": "galbo",
+      "path": "works/umamusume/collabs/lawson-cinderellagray-campaign-202511/items/galbo/"
+    },
     "category": "food",
     "recordType": "group",
     "distributionType": "food-sale",
@@ -61,6 +67,7 @@
     "lineupLabelJa": "全3種 / 各899円（税込）",
     "priceLabel": "各899円（税込）",
     "acquisitionMethodJa": "2025年11月25日よりローソン店頭で順次発売",
+    "availabilityLabel": "2025年11月25日より順次発売、数量限定",
     "startDate": "2025-11-25",
     "endCondition": "while-supplies-last",
     "assetIds": [

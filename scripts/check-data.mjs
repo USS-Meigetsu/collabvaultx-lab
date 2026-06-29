@@ -432,10 +432,13 @@ for (const item of items) {
 
       if (item.page.status === "published") {
         requireString(item, "summaryEn", label);
-        const expectedSegment = `/items/${item.page.slug}/`;
         const hasPagePath = typeof item.page.path === "string" && item.page.path.trim() !== "";
-        if (hasPagePath && !item.page.path.includes(expectedSegment)) {
-          fail(`${pageLabel}: path must include "${expectedSegment}"`);
+        const campaign = campaignMap.get(item.campaignId);
+        if (hasPagePath && campaign) {
+          const expectedPath = `works/${campaign.workId}/collabs/${campaign.slug}/items/${item.page.slug}/`;
+          if (item.page.path !== expectedPath) {
+            fail(`${pageLabel}: path must be "${expectedPath}"`);
+          }
         }
         if (hasPagePath) {
           const htmlPath = path.join(rootDir, item.page.path, "index.html");

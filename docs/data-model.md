@@ -102,6 +102,8 @@ Optional fields:
   - `status`: `published`, `draft`, or `backlog`.
   - `slug`: page slug under the campaign's `items/` directory.
   - `path`: public repo-relative directory path ending in `/`.
+    Published item pages must stay under the parent campaign route:
+    `works/<workId>/collabs/<campaignSlug>/items/<slug>/`.
 - `lineupLabelJa`: confirmed lineup text, such as counts or grouped item names.
 - `priceLabel`: confirmed original price or lottery price.
 - `availabilityLabel`: confirmed store, venue, period, or limited-stock note.

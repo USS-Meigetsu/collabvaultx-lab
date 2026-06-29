@@ -833,6 +833,10 @@ main {
   line-height: 1.6;
 }
 
+.item-fact-list + .market-links {
+  padding-top: 0;
+}
+
 .reference-section {
   margin-top: 26px;
 }
