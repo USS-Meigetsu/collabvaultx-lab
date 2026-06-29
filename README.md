@@ -45,6 +45,16 @@ temporary screenshots, or source-capture PDFs.
 - Keep `data-category` broad and stable: `goods`, `clear-file`, `card`,
   `figure`, and `prize`. Item-specific words belong in `data-search-keywords`.
 
+## English-first display rules
+
+- Keep official Japanese campaign titles and item names intact.
+- Add a short English summary to every published title/collaboration card so
+  English readers can understand the entry before opening the detail page.
+- Add a short `hero-english-summary` to every collaboration detail page.
+- Use `lang="en"` on English summary paragraphs.
+- Do not mass-translate official Japanese names; pair a concise English
+  explanation with the original name instead.
+
 ## Category rules
 
 - `goods`: sale goods, popup shop goods, campaign merchandise, and broad item

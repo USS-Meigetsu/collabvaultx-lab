@@ -38,6 +38,7 @@ $unsafeBlankTargets = New-Object System.Collections.Generic.List[string]
 $unsafeJavascriptLinks = New-Object System.Collections.Generic.List[string]
 $missingMetadata = New-Object System.Collections.Generic.List[string]
 $missingCardMetadata = New-Object System.Collections.Generic.List[string]
+$missingEnglishSummaries = New-Object System.Collections.Generic.List[string]
 $publicPlaceholderText = New-Object System.Collections.Generic.List[string]
 $publicUrls = New-Object System.Collections.Generic.List[string]
 
@@ -99,6 +100,7 @@ function Add-MissingLocalReference([System.IO.FileInfo]$file, [string]$url) {
 foreach ($file in $htmlFiles) {
   $text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
   $relativeFile = Get-RelativePathForReport $file.FullName
+  $repositoryRelativePath = Get-RepositoryRelativePath $file.FullName
 
   if ($text -match $mojibakePattern) {
     $mojibakeFiles.Add($file.FullName)
@@ -107,6 +109,25 @@ foreach ($file in $htmlFiles) {
   foreach ($term in $publicPlaceholderTerms) {
     if ($text.Contains($term)) {
       $publicPlaceholderText.Add("$relativeFile -> $term")
+    }
+  }
+
+  if ($repositoryRelativePath -match '^works/umamusume/collabs/[^/]+/index\.html$' -and
+      $text -notmatch 'class="[^"]*\bhero-english-summary\b[^"]*"\s+lang="en"') {
+    $missingEnglishSummaries.Add("$relativeFile -> missing hero-english-summary lang=en")
+  }
+
+  $availableTitleCardMatches = [regex]::Matches($text, '<article\b(?=[^>]*data-title-card)(?=[^>]*data-status="available")[\s\S]*?</article>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+  foreach ($match in $availableTitleCardMatches) {
+    $article = $match.Value
+    $idMatch = [regex]::Match($article, 'id="([^"]+)"')
+    $articleLabel = "available title card"
+    if ($idMatch.Success) {
+      $articleLabel = $idMatch.Groups[1].Value
+    }
+
+    if ($article -notmatch 'class="[^"]*\benglish-summary\b[^"]*"\s+lang="en"') {
+      $missingEnglishSummaries.Add("$relativeFile -> $articleLabel missing english-summary lang=en")
     }
   }
 
@@ -195,6 +216,9 @@ foreach ($file in $htmlFiles) {
         $missingCardMetadata.Add("$relativeFile -> $articleLabel missing card metadata term: $term")
       }
     }
+    if ($article -notmatch 'class="[^"]*\benglish-summary\b[^"]*"\s+lang="en"') {
+      $missingEnglishSummaries.Add("$relativeFile -> $articleLabel missing english-summary lang=en")
+    }
   }
 }
 
@@ -271,8 +295,12 @@ if ($missingCardMetadata.Count -gt 0) {
   Write-Error ("Missing published card metadata found:`n" + ($missingCardMetadata -join "`n"))
 }
 
+if ($missingEnglishSummaries.Count -gt 0) {
+  Write-Error ("Missing English summary text found:`n" + ($missingEnglishSummaries -join "`n"))
+}
+
 if ($publicPlaceholderText.Count -gt 0) {
   Write-Error ("Public placeholder title text found:`n" + ($publicPlaceholderText -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, English summaries, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."

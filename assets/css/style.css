@@ -158,6 +158,25 @@ input {
   color: var(--muted);
 }
 
+.english-summary,
+.hero-english-summary {
+  color: #d7dfeb;
+  line-height: 1.72;
+}
+
+.hero-english-summary {
+  max-width: min(88%, 62rem);
+  margin: 12px 0 0;
+  font-size: 1rem;
+}
+
+.card-body .english-summary,
+.collab-card-body .english-summary {
+  margin-top: 12px;
+  color: #d7dfeb;
+  font-size: 0.94rem;
+}
+
 main {
   margin-top: 34px;
 }
@@ -1033,7 +1052,8 @@ main {
 }
 
 .subpage-hero-collab-entry .hero-copy,
-.subpage-hero-collab-entry .hero-subcopy {
+.subpage-hero-collab-entry .hero-subcopy,
+.subpage-hero-collab-entry .hero-english-summary {
   max-width: min(88%, 72rem);
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
 }
@@ -1045,6 +1065,10 @@ main {
 
 .subpage-hero-collab-entry .hero-subcopy {
   color: #d7dfeb;
+}
+
+.subpage-hero-collab-entry .hero-english-summary {
+  color: #f3f6fb;
 }
 
 .subpage-hero-collab-entry .hero-meta-stack {
