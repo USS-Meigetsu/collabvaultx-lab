@@ -1,0 +1,28 @@
+# Browser profiles and local automation state
+edge-profile*/
+**/edge-profile*/
+**/edge-profile-*/
+**/Login Data*
+**/Cookies*
+**/History*
+**/Web Data*
+**/Local State
+**/Preferences
+**/Secure Preferences
+**/Crashpad/
+**/Cache/
+**/Code Cache/
+**/GPUCache/
+**/ShaderCache/
+**/DawnGraphiteCache/
+**/DawnWebGPUCache/
+**/GraphiteDawnCache/
+**/GrShaderCache/
+*.pma
+
+# Local scratch and source-capture artifacts
+tmp-*.png
+source.pdf
+page-*-test.png
+sanrio-download-list.tsv
+oracle-handoff-context.md
