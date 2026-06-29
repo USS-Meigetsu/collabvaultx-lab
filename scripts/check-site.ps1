@@ -6,8 +6,9 @@ $repoRoot = Split-Path -Parent $scriptDir
 
 & (Join-Path $scriptDir "check-clean-files.ps1")
 
-$htmlFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter "*.html" -File |
-  Where-Object { $_.FullName -notmatch "\\.git\\" }
+$htmlFiles = @(Get-ChildItem -LiteralPath $repoRoot -Recurse -Filter "*.html" -File |
+  Where-Object { $_.FullName -notmatch "\\.git\\" })
+$cssFiles = @(Get-ChildItem -LiteralPath (Join-Path $repoRoot "assets") -Recurse -Filter "*.css" -File)
 
 $mojibakeMarkers = @(
   [string][char]0x7E67,
@@ -19,9 +20,35 @@ $mojibakeMarkers = @(
   [string][char]0xFFFD
 )
 $mojibakePattern = [string]::Join("|", $mojibakeMarkers)
+
 $missingLinks = New-Object System.Collections.Generic.List[string]
 $mojibakeFiles = New-Object System.Collections.Generic.List[string]
 $placeholderLinks = New-Object System.Collections.Generic.List[string]
+$unsafeBlankTargets = New-Object System.Collections.Generic.List[string]
+
+function Get-RelativePathForReport([string]$path) {
+  return Resolve-Path -LiteralPath $path -Relative
+}
+
+function Test-SkippableUrl([string]$url) {
+  return $url -eq "" -or
+    $url.StartsWith("#") -or
+    $url -match "^(https?:|mailto:|tel:|javascript:|data:)"
+}
+
+function Add-MissingLocalReference([System.IO.FileInfo]$file, [string]$url) {
+  if (Test-SkippableUrl $url) { return }
+
+  $cleanUrl = ($url -split "#")[0]
+  $cleanUrl = ($cleanUrl -split "\?")[0]
+  if ($cleanUrl -eq "") { return }
+
+  $target = [System.IO.Path]::GetFullPath((Join-Path $file.DirectoryName $cleanUrl))
+  if (-not (Test-Path -LiteralPath $target)) {
+    $relativeFile = Get-RelativePathForReport $file.FullName
+    $missingLinks.Add("$relativeFile -> $url")
+  }
+}
 
 foreach ($file in $htmlFiles) {
   $text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
@@ -30,27 +57,47 @@ foreach ($file in $htmlFiles) {
     $mojibakeFiles.Add($file.FullName)
   }
 
-  $matches = [regex]::Matches($text, '(src|href)="([^"]+)"')
-  foreach ($match in $matches) {
+  $attrMatches = [regex]::Matches($text, '(src|href)="([^"]+)"')
+  foreach ($match in $attrMatches) {
     $attr = $match.Groups[1].Value
     $url = $match.Groups[2].Value
     if ($attr -eq "href" -and $url -eq "#") {
-      $relativeFile = Resolve-Path -LiteralPath $file.FullName -Relative
+      $relativeFile = Get-RelativePathForReport $file.FullName
       $placeholderLinks.Add("$relativeFile -> href=`"#`"")
       continue
     }
-    if ($url -eq "" -or $url.StartsWith("#")) { continue }
-    if ($url -match "^(https?:|mailto:|tel:|javascript:)") { continue }
+    Add-MissingLocalReference $file $url
+  }
 
-    $cleanUrl = ($url -split "#")[0]
-    $cleanUrl = ($cleanUrl -split "\?")[0]
-    if ($cleanUrl -eq "") { continue }
-
-    $target = [System.IO.Path]::GetFullPath((Join-Path $file.DirectoryName $cleanUrl))
-    if (-not (Test-Path -LiteralPath $target)) {
-      $relativeFile = Resolve-Path -LiteralPath $file.FullName -Relative
-      $missingLinks.Add("$relativeFile -> $url")
+  $srcsetMatches = [regex]::Matches($text, 'srcset="([^"]+)"')
+  foreach ($match in $srcsetMatches) {
+    $entries = $match.Groups[1].Value -split ","
+    foreach ($entry in $entries) {
+      $candidate = ($entry.Trim() -split "\s+")[0]
+      Add-MissingLocalReference $file $candidate
     }
+  }
+
+  $blankTargetMatches = [regex]::Matches($text, '<a\b[^>]*target="_blank"[^>]*>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  foreach ($match in $blankTargetMatches) {
+    $tag = $match.Value
+    $relMatch = [regex]::Match($tag, 'rel="([^"]*)"', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    $relTokens = @()
+    if ($relMatch.Success) {
+      $relTokens = $relMatch.Groups[1].Value.ToLowerInvariant() -split "\s+"
+    }
+    if (-not ($relTokens -contains "noopener") -or -not ($relTokens -contains "noreferrer")) {
+      $relativeFile = Get-RelativePathForReport $file.FullName
+      $unsafeBlankTargets.Add("$relativeFile -> $tag")
+    }
+  }
+}
+
+foreach ($file in $cssFiles) {
+  $text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
+  $urlMatches = [regex]::Matches($text, 'url\((["'']?)([^"''\)]+)\1\)')
+  foreach ($match in $urlMatches) {
+    Add-MissingLocalReference $file $match.Groups[2].Value.Trim()
   }
 }
 
@@ -66,4 +113,8 @@ if ($placeholderLinks.Count -gt 0) {
   Write-Error ("Placeholder href=`"#`" links found:`n" + ($placeholderLinks -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, no mojibake markers, placeholder links, or missing local links."
+if ($unsafeBlankTargets.Count -gt 0) {
+  Write-Error ("target=`"_blank`" links must include rel=`"noopener noreferrer`":`n" + ($unsafeBlankTargets -join "`n"))
+}
+
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, no mojibake markers, placeholder links, missing local links, or unsafe blank-target links."
