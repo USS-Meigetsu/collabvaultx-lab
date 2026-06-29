@@ -78,6 +78,8 @@ benefits, keep the categories broad and put the detailed item words in
   especially when official campaign pages may disappear later.
 - Use marketplace links as reference searches only; do not present them as
   official purchase sources.
+- Detail pages with marketplace/search links should show a `market-note`
+  before the item cards.
 - Do not add campaign periods, store counts, item rules, or bonus conditions
   unless they are backed by an official source or clearly labeled as a later
   verification target.
