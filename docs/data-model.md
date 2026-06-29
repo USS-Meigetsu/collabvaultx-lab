@@ -245,7 +245,7 @@ Published `MarketplaceSearch` records require:
     "endCondition": "varies-by-item",
     "checkedAt": "2026-06-29",
     "partnerNames": ["ローソン", "HMV", "@Loppi"],
-    "categories": ["clear-file", "food", "figure", "goods", "prize"],
+    "categories": ["card", "clear-file", "food", "figure", "goods", "prize"],
     "heroAssetId": "lawson-cinderellagray-hero",
     "cardMeta": {
       "period": "2025 Nov-Dec",

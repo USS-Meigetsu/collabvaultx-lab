@@ -63,9 +63,14 @@ function extractCardMeta(articleHtml) {
   return meta;
 }
 
-function extractPrimaryLink(articleHtml) {
-  const link = articleHtml.match(/<a\b[^>]*data-collab-slug=["'][^"']+["'][^>]*>/)?.[0];
-  return link ?? "";
+function extractCollabLinks(articleHtml) {
+  return [...articleHtml.matchAll(/<a\b[^>]*data-collab-slug=["'][^"']+["'][^>]*>/g)].map(
+    (match) => match[0],
+  );
+}
+
+function uniqueSorted(values) {
+  return [...new Set(values)].sort((a, b) => a.localeCompare(b, "en"));
 }
 
 const campaign = readJson("data/campaigns/lawson-cinderellagray-campaign-202511.json");
@@ -81,11 +86,10 @@ if (!card) {
     .split(/\s+/)
     .filter(Boolean);
   const searchKeywords = getAttribute(card.openingTag, "data-search-keywords");
-  const categorySet = new Set(categories);
+  const htmlCategorySet = new Set(categories);
+  const jsonCategorySet = new Set(campaign.categories ?? []);
   const meta = extractCardMeta(card.html);
-  const primaryLink = extractPrimaryLink(card.html);
-  const href = decodeEntities(getAttribute(primaryLink, "href"));
-  const dataSlug = getAttribute(primaryLink, "data-collab-slug");
+  const collabLinks = extractCollabLinks(card.html);
 
   if (status !== "published") {
     fail(`${label}: data-status must be published`);
@@ -95,9 +99,14 @@ if (!card) {
     fail(`${label}: data-search-keywords must not be empty`);
   }
 
-  for (const category of campaign.categories ?? []) {
-    if (!categorySet.has(category)) {
-      fail(`${label}: data-category is missing "${category}" from campaign JSON`);
+  for (const category of uniqueSorted(jsonCategorySet)) {
+    if (!htmlCategorySet.has(category)) {
+      fail(`${label}: data-category is missing JSON category "${category}"`);
+    }
+  }
+  for (const category of uniqueSorted(htmlCategorySet)) {
+    if (!jsonCategorySet.has(category)) {
+      fail(`${label}: data-category has extra HTML category "${category}" not present in campaign JSON`);
     }
   }
 
@@ -111,12 +120,21 @@ if (!card) {
     fail(`${label}: card Items "${meta.Items}" does not match campaign.cardMeta.items "${campaign.cardMeta?.items}"`);
   }
 
-  if (dataSlug !== campaign.slug) {
-    fail(`${label}: data-collab-slug "${dataSlug}" does not match campaign.slug "${campaign.slug}"`);
+  if (collabLinks.length === 0) {
+    fail(`${label}: no a[data-collab-slug] links found`);
   }
 
-  if (!href.includes(`/collabs/${campaign.slug}/`) && !href.includes(`./collabs/${campaign.slug}/`)) {
-    fail(`${label}: href "${href}" does not point to campaign slug "${campaign.slug}"`);
+  for (const [index, link] of collabLinks.entries()) {
+    const href = decodeEntities(getAttribute(link, "href"));
+    const dataSlug = getAttribute(link, "data-collab-slug");
+
+    if (dataSlug !== campaign.slug) {
+      fail(`${label}: link ${index + 1} data-collab-slug "${dataSlug}" does not match campaign.slug "${campaign.slug}"`);
+    }
+
+    if (!href.includes(`/collabs/${campaign.slug}/`) && !href.includes(`./collabs/${campaign.slug}/`)) {
+      fail(`${label}: link ${index + 1} href "${href}" does not point to campaign slug "${campaign.slug}"`);
+    }
   }
 }
 

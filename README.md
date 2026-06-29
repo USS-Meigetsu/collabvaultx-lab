@@ -11,6 +11,9 @@ or serve the repository root with any static file server.
 Before committing, run:
 
 ```powershell
+node --check assets/js/site.js
+node --check scripts/check-data.mjs
+node --check scripts/check-data-html-sync.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
