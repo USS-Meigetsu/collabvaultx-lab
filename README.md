@@ -44,3 +44,30 @@ temporary screenshots, or source-capture PDFs.
   names, Japanese names, partner aliases, and major item types.
 - Keep `data-category` broad and stable: `goods`, `clear-file`, `card`,
   `figure`, and `prize`. Item-specific words belong in `data-search-keywords`.
+
+## Category rules
+
+- `goods`: sale goods, popup shop goods, campaign merchandise, and broad item
+  collections.
+- `clear-file`: clear files and clear-file style purchase bonuses.
+- `card`: paper/plastic cards, postcards, and card-shaped bonuses.
+- `figure`: acrylic stands, acrylic panels, standees, and figure-like display
+  goods.
+- `prize`: lottery prizes, crane-game prizes, facility-use bonuses, and other
+  reward-style items.
+
+When an entry mixes sales goods, menu bonuses, lottery prizes, and facility
+benefits, keep the categories broad and put the detailed item words in
+`data-search-keywords` and the detail page body.
+
+## Source rules
+
+- Each detail page should include an `Official source`, `Checked date`, and
+  `Notes` block.
+- Treat page content as a record of what was confirmed on the checked date,
+  especially when official campaign pages may disappear later.
+- Use marketplace links as reference searches only; do not present them as
+  official purchase sources.
+- Do not add campaign periods, store counts, item rules, or bonus conditions
+  unless they are backed by an official source or clearly labeled as a later
+  verification target.
