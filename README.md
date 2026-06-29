@@ -31,6 +31,11 @@ temporary screenshots, or source-capture PDFs.
 - Keep local capture files, browser profiles, and automation state outside the
   repository.
 
+## Data model
+
+The archive schema is documented in `docs/data-model.md`. Keep new campaign
+HTML aligned with that model even before the site is migrated to generated data.
+
 ## Search metadata
 
 - Shared search/filter behavior lives in `assets/js/site.js`.
