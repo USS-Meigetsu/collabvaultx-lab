@@ -66,6 +66,9 @@
               </div>
             </section>
           </div>
+          <div class="filter-actions">
+            <button type="button" class="filter-reset-button" data-filter-reset>リセット</button>
+          </div>
         </section>
 
         <section class="section-heading section-heading-with-meta">
@@ -76,7 +79,7 @@
               公開済みの詳細ページだけを表示します。追加予定の仮カードは下の別枠に分けています。
             </p>
           </div>
-          <p class="list-meta" data-visible-count>Latest first</p>
+          <p class="list-meta" data-visible-count aria-live="polite">Latest first</p>
         </section>
 
         <section class="collab-grid collab-grid-rich" aria-label="ウマ娘コラボ一覧">
@@ -144,7 +147,7 @@
           </article>
 
         </section>
-        <p class="filter-empty" data-filter-empty hidden>該当する公開済みコラボがありません。</p>
+        <p class="filter-empty" data-filter-empty aria-live="polite" hidden>該当する公開済みコラボがありません。</p>
 
         <section class="section-heading section-heading-with-meta planned-heading">
           <div>
@@ -236,6 +239,7 @@
         const keywordInput = document.querySelector("[data-filter-keyword]");
         const visibleCount = document.querySelector("[data-visible-count]");
         const emptyState = document.querySelector("[data-filter-empty]");
+        const resetButton = document.querySelector("[data-filter-reset]");
         const state = { partner: "all", category: "all" };
         const normalize = (value) => value.trim().toLocaleLowerCase("ja-JP");
 
@@ -288,6 +292,16 @@
         });
 
         keywordInput?.addEventListener("input", applyFilters);
+        resetButton?.addEventListener("click", () => {
+          state.partner = "all";
+          state.category = "all";
+          if (keywordInput) {
+            keywordInput.value = "";
+          }
+          syncChipGroup("partner", state.partner);
+          syncChipGroup("category", state.category);
+          applyFilters();
+        });
         applyFilters();
       })();
     </script>
