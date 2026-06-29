@@ -31,7 +31,7 @@
             <p class="section-label">Filter Bar</p>
             <h2 id="filter-heading">絞り込み</h2>
             <p class="section-copy">
-              今後はコラボ先やカテゴリで一覧を絞り込める想定です。現在は見た目のみの試作です。
+              コラボ先、カテゴリ、キーワードを組み合わせて一覧を絞り込めます。
             </p>
           </div>
 
@@ -40,28 +40,33 @@
               <h3 id="filter-keyword-heading">キーワード検索</h3>
               <div class="filter-search-box" aria-label="キーワード検索UIイメージ">
                 <span class="filter-search-icon">Search</span>
-                <input type="text" placeholder="コラボ名・店舗名で探す" aria-label="コラボ名・店舗名で探す" />
+                <input type="search" placeholder="コラボ名・店舗名で探す" aria-label="コラボ名・店舗名で探す" data-filter-keyword />
               </div>
             </section>
 
             <section class="filter-group" aria-labelledby="filter-partner-heading" data-filter-group="partner">
               <h3 id="filter-partner-heading">コラボ先</h3>
               <div class="filter-chip-row">
-                <a href="#" class="filter-chip is-active" data-filter-value="all">すべて</a>
-                <a href="#" class="filter-chip" data-filter-value="cocos">ココス</a>
-                <a href="#" class="filter-chip" data-filter-value="lawson">ローソン</a>
-                <a href="#" class="filter-chip" data-filter-value="family-restaurant-a">ファミレスA</a>
-                <a href="#" class="filter-chip" data-filter-value="family-restaurant-b">ファミレスB</a>
+                <button type="button" class="filter-chip is-active" data-filter-value="all" aria-pressed="true">すべて</button>
+                <button type="button" class="filter-chip" data-filter-value="cocos" aria-pressed="false">ココス</button>
+                <button type="button" class="filter-chip" data-filter-value="sanrio" aria-pressed="false">サンリオ</button>
+                <button type="button" class="filter-chip" data-filter-value="round1" aria-pressed="false">ROUND1</button>
+                <button type="button" class="filter-chip" data-filter-value="lawson" aria-pressed="false">ローソン</button>
+                <button type="button" class="filter-chip" data-filter-value="seven" aria-pressed="false">セブン</button>
+                <button type="button" class="filter-chip" data-filter-value="family-restaurant-a" aria-pressed="false">Family A</button>
+                <button type="button" class="filter-chip" data-filter-value="family-restaurant-b" aria-pressed="false">Family B</button>
               </div>
             </section>
 
             <section class="filter-group" aria-labelledby="filter-category-heading" data-filter-group="category">
               <h3 id="filter-category-heading">カテゴリ</h3>
               <div class="filter-chip-row">
-                <a href="#" class="filter-chip is-active" data-filter-value="all">すべて</a>
-                <a href="#" class="filter-chip" data-filter-value="clear-file">クリアファイル</a>
-                <a href="#" class="filter-chip" data-filter-value="card">カード</a>
-                <a href="#" class="filter-chip" data-filter-value="figure">フィギュア</a>
+                <button type="button" class="filter-chip is-active" data-filter-value="all" aria-pressed="true">すべて</button>
+                <button type="button" class="filter-chip" data-filter-value="goods" aria-pressed="false">グッズ</button>
+                <button type="button" class="filter-chip" data-filter-value="clear-file" aria-pressed="false">クリアファイル</button>
+                <button type="button" class="filter-chip" data-filter-value="card" aria-pressed="false">カード</button>
+                <button type="button" class="filter-chip" data-filter-value="figure" aria-pressed="false">フィギュア</button>
+                <button type="button" class="filter-chip" data-filter-value="prize" aria-pressed="false">景品</button>
               </div>
             </section>
           </div>
@@ -75,11 +80,11 @@
               新しい順に見ていける想定の一覧です。ここから各コラボページへ入る構成を想定しています。
             </p>
           </div>
-          <p class="list-meta">Latest first</p>
+          <p class="list-meta" data-visible-count>Latest first</p>
         </section>
 
         <section class="collab-grid collab-grid-rich" aria-label="ウマ娘コラボ一覧">
-          <article class="collab-card collab-card-rich collab-card-primary" id="collab-cocos-umaimono-fes" data-partner="cocos" data-category="card figure">
+          <article class="collab-card collab-card-rich collab-card-primary" id="collab-cocos-umaimono-fes" data-partner="cocos" data-category="card figure goods">
             <a class="collab-thumb collab-thumb-link" href="./collabs/cocos-umaimono-fes-202601/index.html" data-collab-slug="cocos-umaimono-fes-202601" aria-label="ココスへようこそ！ウマいものフェス！の詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/hero-main.png" alt="ココスへようこそ！ウマいものフェス！のサムネイル" />
             </a>
@@ -93,7 +98,7 @@
             </div>
           </article>
 
-          <article class="collab-card collab-card-rich" id="collab-sanrio-characters-popup-shop" data-partner="sanrio" data-category="clear-file card figure">
+          <article class="collab-card collab-card-rich" id="collab-sanrio-characters-popup-shop" data-partner="sanrio" data-category="clear-file card figure goods">
             <a class="collab-thumb collab-thumb-link" href="./collabs/sanrio-characters-popup-shop-202512/index.html" data-collab-slug="sanrio-characters-popup-shop-202512" aria-label="ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOPの詳細へ移動">
               <img src="../../assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/hero-main.jpg" alt="ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOPのサムネイル" />
             </a>
@@ -104,6 +109,20 @@
                 WEB通販と東京・大阪会場で展開された物販系コラボPOPUPSHOPです。
               </p>
               <a class="card-button" href="./collabs/sanrio-characters-popup-shop-202512/index.html" data-collab-slug="sanrio-characters-popup-shop-202512">詳細を見る</a>
+            </div>
+          </article>
+
+          <article class="collab-card collab-card-rich" id="collab-round1-campaign" data-partner="round1" data-category="card figure goods prize">
+            <a class="collab-thumb collab-thumb-link" href="./collabs/round1-collab-campaign-202510/index.html" data-collab-slug="round1-collab-campaign-202510" aria-label="アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーンの詳細へ移動">
+              <img src="../../assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-hero-main.jpg" alt="アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーンのサムネイル" />
+            </a>
+            <div class="collab-card-body">
+              <p class="card-tag">2025-2026 / ROUND1</p>
+              <h3><a class="card-title-link" href="./collabs/round1-collab-campaign-202510/index.html" data-collab-slug="round1-collab-campaign-202510">アニメ『ウマ娘 シンデレラグレイ』× ROUND1</a></h3>
+              <p>
+                コラボメニュー、施設利用特典、限定グッズ販売、景品施策が行われた総合型コラボキャンペーンです。
+              </p>
+              <a class="card-button" href="./collabs/round1-collab-campaign-202510/index.html" data-collab-slug="round1-collab-campaign-202510">詳細を見る</a>
             </div>
           </article>
 
@@ -177,8 +196,70 @@
             </div>
           </article>
         </section>
+        <p class="filter-empty" data-filter-empty hidden>該当するコラボがありません。</p>
       </main>
     </div>
+    <script>
+      (() => {
+        const cards = Array.from(document.querySelectorAll(".collab-card-rich"));
+        const keywordInput = document.querySelector("[data-filter-keyword]");
+        const visibleCount = document.querySelector("[data-visible-count]");
+        const emptyState = document.querySelector("[data-filter-empty]");
+        const state = { partner: "all", category: "all" };
+        const normalize = (value) => value.trim().toLocaleLowerCase("ja-JP");
+
+        const syncChipGroup = (groupName, value) => {
+          document.querySelectorAll(`[data-filter-group="${groupName}"] .filter-chip`).forEach((chip) => {
+            const isActive = chip.dataset.filterValue === value;
+            chip.classList.toggle("is-active", isActive);
+            chip.setAttribute("aria-pressed", String(isActive));
+          });
+        };
+
+        const applyFilters = () => {
+          const keyword = normalize(keywordInput?.value ?? "");
+          let shown = 0;
+
+          cards.forEach((card) => {
+            const partnerMatches = state.partner === "all" || card.dataset.partner === state.partner;
+            const categories = (card.dataset.category ?? "").split(/\s+/);
+            const categoryMatches = state.category === "all" || categories.includes(state.category);
+            const text = normalize(`${card.textContent} ${card.dataset.partner} ${card.dataset.category}`);
+            const keywordMatches = keyword === "" || text.includes(keyword);
+            const isShown = partnerMatches && categoryMatches && keywordMatches;
+
+            card.hidden = !isShown;
+            if (isShown) shown += 1;
+          });
+
+          if (visibleCount) {
+            visibleCount.textContent = `${shown} / ${cards.length} entries`;
+          }
+          if (emptyState) {
+            emptyState.hidden = shown !== 0;
+          }
+        };
+
+        document.querySelectorAll("[data-filter-group='partner'] .filter-chip").forEach((chip) => {
+          chip.addEventListener("click", () => {
+            state.partner = chip.dataset.filterValue;
+            syncChipGroup("partner", state.partner);
+            applyFilters();
+          });
+        });
+
+        document.querySelectorAll("[data-filter-group='category'] .filter-chip").forEach((chip) => {
+          chip.addEventListener("click", () => {
+            state.category = chip.dataset.filterValue;
+            syncChipGroup("category", state.category);
+            applyFilters();
+          });
+        });
+
+        keywordInput?.addEventListener("input", applyFilters);
+        applyFilters();
+      })();
+    </script>
   </body>
 </html>
 
