@@ -170,6 +170,10 @@ function relativeUrl(fromHtmlPath, targetRepoPath) {
   return relative.startsWith(".") ? relative : `./${relative}`;
 }
 
+function primaryAssetForItem(item) {
+  return (item.assetIds ?? []).map((id) => assetMap.get(id)).find(Boolean) ?? null;
+}
+
 function publicUrlForPath(pagePath) {
   const host = fs.existsSync(path.join(rootDir, "CNAME"))
     ? readText("CNAME").trim()
@@ -460,13 +464,10 @@ function validateCampaignDetailItemCards(campaign) {
     assertTextIncludes(cardText, item.acquisitionMethodJa, label);
     assertTextIncludes(cardText, item.priceLabel, label);
 
-    for (const assetId of item.assetIds ?? []) {
-      const asset = assetMap.get(assetId);
-      if (!asset) {
-        fail(`${label}: assetIds references missing asset "${assetId}"`);
-        continue;
-      }
-
+    const asset = primaryAssetForItem(item);
+    if (!asset) {
+      fail(`${label}: assetIds must include at least one known asset`);
+    } else {
       const expectedImageSrc = relativeUrl(campaignHtmlPath, asset.path);
       assertHtmlIncludes(productCard, `src="${expectedImageSrc}"`, label, "product image");
       assertHtmlIncludes(productCard, `alt="${asset.altJa}"`, label, "product image alt");
@@ -568,9 +569,7 @@ function validatePublishedItemPage(item) {
   const verifyingSources = item.sourceIds
     .map((id) => sourceMap.get(id))
     .filter((candidate) => candidate?.type === "official" || candidate?.type === "partner-official");
-  const assetsForItem = (item.assetIds ?? [])
-    .map((id) => assetMap.get(id))
-    .filter(Boolean);
+  const primaryAsset = primaryAssetForItem(item);
 
   if (getCanonicalUrl(itemHtml) !== itemPublicUrl) {
     fail(`${label}: canonical URL does not match ${itemPublicUrl}`);
@@ -646,15 +645,15 @@ function validatePublishedItemPage(item) {
   validateMarketplaceAnchors(itemHtml, item.marketplaceSearches, label);
   validateMarketplaceFinder(item, itemHtml, label);
 
-  if (assetsForItem.length === 0) {
+  if (!primaryAsset) {
     fail(`${label}: assetIds must include at least one known asset`);
   } else {
-    const expectedOgImage = publicUrlForPath(assetsForItem[0].path);
+    const expectedOgImage = publicUrlForPath(primaryAsset.path);
     if (ogImage !== expectedOgImage) {
       fail(`${label}: og:image must match primary asset URL ${expectedOgImage}`);
     }
 
-    if (getMetaContent(itemHtml, "og:image:alt") !== assetsForItem[0].altJa) {
+    if (getMetaContent(itemHtml, "og:image:alt") !== primaryAsset.altJa) {
       fail(`${label}: og:image:alt must match primary asset.altJa`);
     }
 
@@ -680,22 +679,20 @@ function validatePublishedItemPage(item) {
       ...itemHtml.matchAll(/<div\b(?=[^>]*class=(["'])[^"']*\bproduct-thumb\b[^"']*\1)[^>]*>\s*<img\b([^>]*)>/g),
     ].map((match) => match[2]);
 
-    for (const asset of assetsForItem) {
-      const expectedImageSrc = relativeUrl(itemHtmlPath, asset.path);
-      const productImage = productImages.find((attributes) => decodeEntities(getAttribute(attributes, "src")) === expectedImageSrc);
+    const expectedImageSrc = relativeUrl(itemHtmlPath, primaryAsset.path);
+    const productImage = productImages.find((attributes) => decodeEntities(getAttribute(attributes, "src")) === expectedImageSrc);
 
-      if (!productImage) {
-        fail(`${label}: product image src must match ${expectedImageSrc}`);
-      } else {
-        if (getAttribute(productImage, "loading") !== "lazy") {
-          fail(`${label}: product image must use loading="lazy"`);
-        }
-        if (getAttribute(productImage, "decoding") !== "async") {
-          fail(`${label}: product image must use decoding="async"`);
-        }
-        if (decodeEntities(getAttribute(productImage, "alt")) !== asset.altJa) {
-          fail(`${label}: product image alt must match asset.altJa`);
-        }
+    if (!productImage) {
+      fail(`${label}: product image src must match ${expectedImageSrc}`);
+    } else {
+      if (getAttribute(productImage, "loading") !== "lazy") {
+        fail(`${label}: product image must use loading="lazy"`);
+      }
+      if (getAttribute(productImage, "decoding") !== "async") {
+        fail(`${label}: product image must use decoding="async"`);
+      }
+      if (decodeEntities(getAttribute(productImage, "alt")) !== primaryAsset.altJa) {
+        fail(`${label}: product image alt must match asset.altJa`);
       }
     }
   }

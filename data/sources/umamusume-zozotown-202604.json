@@ -18,5 +18,15 @@
     "language": "ja",
     "scope": "Public special-page route for the campaign. The current page may no longer expose full item detail after the campaign ended; item facts in this package rely on the ZOZO corporate release.",
     "reliability": "primary-route-reference"
+  },
+  {
+    "id": "appbank-zozotown-item-images",
+    "type": "archive-reference",
+    "url": "https://www.appbank.net/2026/04/24/iphone-application/2981992.php",
+    "label": "AppBank ZOZOTOWN item image coverage",
+    "checkedAt": "2026-07-01",
+    "language": "ja",
+    "scope": "Archive reference for item-specific product images when the official ZOZOTOWN item pages are not directly available.",
+    "reliability": "third-party-visual-reference"
   }
 ]

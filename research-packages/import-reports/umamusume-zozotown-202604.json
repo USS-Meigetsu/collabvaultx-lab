@@ -13,8 +13,8 @@
     "works/umamusume/collabs/umamusume-zozotown-202604/items/cheki-sets/index.html"
   ],
   "counts": {
-    "sources": 2,
-    "assets": 5,
+    "sources": 3,
+    "assets": 9,
     "items": 7,
     "generatedItemPages": 3,
     "parentCardOnlyItems": 4,
@@ -81,60 +81,74 @@
     {
       "type": "product-card-image-review",
       "itemId": "zozotown-big-acrylic-stands",
-      "assetId": "zozotown-original-goods-composite",
-      "status": "needs-image-pass",
-      "priority": "official-individual",
-      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "assetId": "zozotown-big-acrylic-stands-reference",
+      "status": "needs-human-review",
+      "priority": "none",
+      "note": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     {
       "type": "product-card-image-review",
       "itemId": "zozotown-can-badge-sets",
-      "assetId": "zozotown-original-goods-composite",
-      "status": "needs-image-pass",
-      "priority": "official-individual",
-      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "assetId": "zozotown-can-badge-sets-reference",
+      "status": "needs-human-review",
+      "priority": "none",
+      "note": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     {
       "type": "product-card-image-review",
       "itemId": "zozotown-cheki-sets",
-      "assetId": "zozotown-original-goods-composite",
-      "status": "needs-image-pass",
-      "priority": "official-individual",
-      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "assetId": "zozotown-cheki-sets-reference",
+      "status": "needs-human-review",
+      "priority": "none",
+      "note": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     {
       "type": "product-card-image-review",
       "itemId": "zozotown-rubber-mats",
-      "assetId": "zozotown-original-goods-composite",
-      "status": "needs-image-pass",
-      "priority": "official-individual",
-      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "assetId": "zozotown-rubber-mats-reference",
+      "status": "needs-human-review",
+      "priority": "none",
+      "note": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     {
       "type": "asset-image-review",
-      "assetId": "zozotown-original-goods-composite",
-      "status": "needs-image-pass",
-      "priority": "official-individual",
+      "assetId": "zozotown-big-acrylic-stands-reference",
+      "status": "needs-human-review",
+      "priority": "none",
       "representedItemIds": [
-        "zozotown-big-acrylic-stands",
-        "zozotown-can-badge-sets",
-        "zozotown-cheki-sets",
-        "zozotown-rubber-mats"
+        "zozotown-big-acrylic-stands"
       ],
-      "note": "Initial generation may use this official composite as a provisional visual. Do not crop it into separate product-card images; search for official item-specific images first, then reviewed reference candidates."
+      "note": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
     },
     {
-      "type": "reused-composite-product-card-image",
-      "assetId": "zozotown-original-goods-composite",
-      "itemIds": [
-        "zozotown-big-acrylic-stands",
-        "zozotown-can-badge-sets",
-        "zozotown-cheki-sets",
+      "type": "asset-image-review",
+      "assetId": "zozotown-can-badge-sets-reference",
+      "status": "needs-human-review",
+      "priority": "none",
+      "representedItemIds": [
+        "zozotown-can-badge-sets"
+      ],
+      "note": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+    },
+    {
+      "type": "asset-image-review",
+      "assetId": "zozotown-cheki-sets-reference",
+      "status": "needs-human-review",
+      "priority": "none",
+      "representedItemIds": [
+        "zozotown-cheki-sets"
+      ],
+      "note": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+    },
+    {
+      "type": "asset-image-review",
+      "assetId": "zozotown-rubber-mats-reference",
+      "status": "needs-human-review",
+      "priority": "none",
+      "representedItemIds": [
         "zozotown-rubber-mats"
       ],
-      "status": "needs-image-pass",
-      "priority": "official-individual",
-      "note": "Initial generation may use this composite as a provisional visual, but final product cards need item-specific images or reviewed reference candidates."
+      "note": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
     }
   ]
 }

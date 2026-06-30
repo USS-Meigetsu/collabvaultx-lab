@@ -153,6 +153,16 @@
       "language": "ja",
       "scope": "Public special-page route for the campaign. The current page may no longer expose full item detail after the campaign ended; item facts in this package rely on the ZOZO corporate release.",
       "reliability": "primary-route-reference"
+    },
+    {
+      "id": "appbank-zozotown-item-images",
+      "type": "archive-reference",
+      "url": "https://www.appbank.net/2026/04/24/iphone-application/2981992.php",
+      "label": "AppBank ZOZOTOWN item image coverage",
+      "checkedAt": "2026-07-01",
+      "language": "ja",
+      "scope": "Archive reference for item-specific product images when the official ZOZOTOWN item pages are not directly available.",
+      "reliability": "third-party-visual-reference"
     }
   ],
   "evidence": [
@@ -323,15 +333,87 @@
       "downloadPolicy": "codex-download-and-compress",
       "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
       "imageKind": "composite",
-      "imageReviewStatus": "needs-image-pass",
+      "imageReviewStatus": "provisional",
       "representedItemIds": [
         "zozotown-big-acrylic-stands",
         "zozotown-can-badge-sets",
         "zozotown-cheki-sets",
         "zozotown-rubber-mats"
       ],
-      "imageImprovementPriority": "official-individual",
-      "imageNotes": "Initial generation may use this official composite as a provisional visual. Do not crop it into separate product-card images; search for official item-specific images first, then reviewed reference candidates."
+      "imageImprovementPriority": "none",
+      "imageNotes": "Retained as the official composite reference. Product cards now use item-specific reference candidates from the post-generation image pass instead of cropping this composite."
+    },
+    {
+      "id": "zozotown-big-acrylic-stands-reference",
+      "role": "product",
+      "sourceId": "appbank-zozotown-item-images",
+      "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_631_02.webp",
+      "localPath": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-big-acrylic-stands-reference.webp",
+      "altJa": "ウマ娘 in ZOZOTOWN ビッグアクリルスタンド ヴィブロスver. 参照画像",
+      "usage": "archive-reference-product-image",
+      "downloadPolicy": "codex-download-and-compress",
+      "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "reference-candidate",
+      "imageReviewStatus": "needs-human-review",
+      "representedItemIds": [
+        "zozotown-big-acrylic-stands"
+      ],
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+    },
+    {
+      "id": "zozotown-can-badge-sets-reference",
+      "role": "product",
+      "sourceId": "appbank-zozotown-item-images",
+      "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_718_03.webp",
+      "localPath": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-can-badge-sets-reference.webp",
+      "altJa": "ウマ娘 in ZOZOTOWN 缶バッジセット saino × 417 EDIFICE ver. 参照画像",
+      "usage": "archive-reference-product-image",
+      "downloadPolicy": "codex-download-and-compress",
+      "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "reference-candidate",
+      "imageReviewStatus": "needs-human-review",
+      "representedItemIds": [
+        "zozotown-can-badge-sets"
+      ],
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+    },
+    {
+      "id": "zozotown-cheki-sets-reference",
+      "role": "product",
+      "sourceId": "appbank-zozotown-item-images",
+      "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_796_04.webp",
+      "localPath": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-cheki-sets-reference.webp",
+      "altJa": "ウマ娘 in ZOZOTOWN チェキセット あるてら × HARE ver. 参照画像",
+      "usage": "archive-reference-product-image",
+      "downloadPolicy": "codex-download-and-compress",
+      "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "reference-candidate",
+      "imageReviewStatus": "needs-human-review",
+      "representedItemIds": [
+        "zozotown-cheki-sets"
+      ],
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+    },
+    {
+      "id": "zozotown-rubber-mats-reference",
+      "role": "product",
+      "sourceId": "appbank-zozotown-item-images",
+      "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_875_05.webp",
+      "localPath": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-rubber-mats-reference.webp",
+      "altJa": "ウマ娘 in ZOZOTOWN ラバーマット 森倉円 × FREAKS STORE ver. 参照画像",
+      "usage": "archive-reference-product-image",
+      "downloadPolicy": "codex-download-and-compress",
+      "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "reference-candidate",
+      "imageReviewStatus": "needs-human-review",
+      "representedItemIds": [
+        "zozotown-rubber-mats"
+      ],
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
     },
     {
       "id": "zozotown-417-edifice-apparel-composite",
@@ -415,6 +497,7 @@
       "startDate": "2026-04-24",
       "endDate": "2026-05-18",
       "assetIds": [
+        "zozotown-big-acrylic-stands-reference",
         "zozotown-original-goods-composite"
       ],
       "variants": [
@@ -435,9 +518,9 @@
           "15種展開",
           "2,200円（税込）"
         ],
-        "imageReviewStatus": "needs-image-pass",
-        "imageImprovementPriority": "official-individual",
-        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+        "imageReviewStatus": "needs-human-review",
+        "imageImprovementPriority": "none",
+        "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
       },
       "pageDecision": {
         "decision": "generate",
@@ -568,6 +651,7 @@
       "startDate": "2026-04-24",
       "endDate": "2026-05-18",
       "assetIds": [
+        "zozotown-can-badge-sets-reference",
         "zozotown-original-goods-composite"
       ],
       "variants": [
@@ -588,9 +672,9 @@
           "3種展開",
           "2,750円（税込）"
         ],
-        "imageReviewStatus": "needs-image-pass",
-        "imageImprovementPriority": "official-individual",
-        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+        "imageReviewStatus": "needs-human-review",
+        "imageImprovementPriority": "none",
+        "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
       },
       "pageDecision": {
         "decision": "generate",
@@ -721,6 +805,7 @@
       "startDate": "2026-04-24",
       "endDate": "2026-05-18",
       "assetIds": [
+        "zozotown-cheki-sets-reference",
         "zozotown-original-goods-composite"
       ],
       "variants": [
@@ -741,9 +826,9 @@
           "3種展開",
           "3,300円（税込）"
         ],
-        "imageReviewStatus": "needs-image-pass",
-        "imageImprovementPriority": "official-individual",
-        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+        "imageReviewStatus": "needs-human-review",
+        "imageImprovementPriority": "none",
+        "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
       },
       "pageDecision": {
         "decision": "generate",
@@ -860,6 +945,7 @@
       "startDate": "2026-04-24",
       "endDate": "2026-05-18",
       "assetIds": [
+        "zozotown-rubber-mats-reference",
         "zozotown-original-goods-composite"
       ],
       "variants": [
@@ -880,9 +966,9 @@
           "3種展開",
           "3,850円（税込）"
         ],
-        "imageReviewStatus": "needs-image-pass",
-        "imageImprovementPriority": "official-individual",
-        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+        "imageReviewStatus": "needs-human-review",
+        "imageImprovementPriority": "none",
+        "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
       },
       "pageDecision": {
         "decision": "parent-card-only",
@@ -1470,6 +1556,7 @@
     "Confirm that official source links and marketplace reference links remain visually and semantically separated.",
     "Confirm that downloaded official images are used only as archive thumbnails for identification and that rights/endorsement notes are visible.",
     "Confirm that the shared original-goods composite image is treated as provisional and queued for a post-generation image pass instead of being cropped into separate product-card images.",
+    "Confirm that item-specific reference-candidate images visually match the intended product cards before marking the ZOZOTOWN image pass final.",
     "Confirm that no character-variant pages are generated for the 15 acrylic stand variants or apparel variants."
   ],
   "publicVerificationNotes": [
@@ -1480,6 +1567,14 @@
       "sourceIds": [
         "zozo-corporate-release",
         "zozotown-special-page"
+      ]
+    },
+    {
+      "id": "pv-reference-candidate-images",
+      "scope": "all-public-pages",
+      "note": "Some product thumbnails use archive reference images from third-party coverage when official item-specific image pages are not directly available.",
+      "sourceIds": [
+        "appbank-zozotown-item-images"
       ]
     }
   ],
@@ -1502,7 +1597,7 @@
     {
       "field": "imageReviewStatus",
       "handling": "preserve-public-data",
-      "note": "Keep image review metadata in imported asset and productGrid data so the post-generation image pass can improve provisional visuals without blocking initial page generation."
+      "note": "Keep image review metadata in imported asset and productGrid data so reference-candidate visuals remain provisional until human review."
     }
   ]
 }

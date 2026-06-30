@@ -25,15 +25,91 @@
     "usage": "archive-thumbnail",
     "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
     "imageKind": "composite",
-    "imageReviewStatus": "needs-image-pass",
+    "imageReviewStatus": "provisional",
     "representedItemIds": [
       "zozotown-big-acrylic-stands",
       "zozotown-can-badge-sets",
       "zozotown-cheki-sets",
       "zozotown-rubber-mats"
     ],
-    "imageImprovementPriority": "official-individual",
-    "imageNotes": "Initial generation may use this official composite as a provisional visual. Do not crop it into separate product-card images; search for official item-specific images first, then reviewed reference candidates."
+    "imageImprovementPriority": "none",
+    "imageNotes": "Retained as the official composite reference. Product cards now use item-specific reference candidates from the post-generation image pass instead of cropping this composite."
+  },
+  {
+    "id": "zozotown-big-acrylic-stands-reference",
+    "path": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-big-acrylic-stands-reference.webp",
+    "role": "product",
+    "altJa": "ウマ娘 in ZOZOTOWN ビッグアクリルスタンド ヴィブロスver. 参照画像",
+    "sourceId": "appbank-zozotown-item-images",
+    "loading": "lazy",
+    "decoding": "async",
+    "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_631_02.webp",
+    "usage": "archive-reference-product-image",
+    "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "reference-candidate",
+    "imageReviewStatus": "needs-human-review",
+    "representedItemIds": [
+      "zozotown-big-acrylic-stands"
+    ],
+    "imageImprovementPriority": "none",
+    "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+  },
+  {
+    "id": "zozotown-can-badge-sets-reference",
+    "path": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-can-badge-sets-reference.webp",
+    "role": "product",
+    "altJa": "ウマ娘 in ZOZOTOWN 缶バッジセット saino × 417 EDIFICE ver. 参照画像",
+    "sourceId": "appbank-zozotown-item-images",
+    "loading": "lazy",
+    "decoding": "async",
+    "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_718_03.webp",
+    "usage": "archive-reference-product-image",
+    "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "reference-candidate",
+    "imageReviewStatus": "needs-human-review",
+    "representedItemIds": [
+      "zozotown-can-badge-sets"
+    ],
+    "imageImprovementPriority": "none",
+    "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+  },
+  {
+    "id": "zozotown-cheki-sets-reference",
+    "path": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-cheki-sets-reference.webp",
+    "role": "product",
+    "altJa": "ウマ娘 in ZOZOTOWN チェキセット あるてら × HARE ver. 参照画像",
+    "sourceId": "appbank-zozotown-item-images",
+    "loading": "lazy",
+    "decoding": "async",
+    "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_796_04.webp",
+    "usage": "archive-reference-product-image",
+    "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "reference-candidate",
+    "imageReviewStatus": "needs-human-review",
+    "representedItemIds": [
+      "zozotown-cheki-sets"
+    ],
+    "imageImprovementPriority": "none",
+    "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
+  },
+  {
+    "id": "zozotown-rubber-mats-reference",
+    "path": "assets/images/works/umamusume/collabs/umamusume-zozotown-202604/zozotown-rubber-mats-reference.webp",
+    "role": "product",
+    "altJa": "ウマ娘 in ZOZOTOWN ラバーマット 森倉円 × FREAKS STORE ver. 参照画像",
+    "sourceId": "appbank-zozotown-item-images",
+    "loading": "lazy",
+    "decoding": "async",
+    "remoteUrl": "https://www.appbank.net/wp-content/uploads/2026/04/20260424_105802_875_05.webp",
+    "usage": "archive-reference-product-image",
+    "rightsNote": "Archive reference thumbnail for identification. Rights remain with the relevant rights holders; source attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "reference-candidate",
+    "imageReviewStatus": "needs-human-review",
+    "representedItemIds": [
+      "zozotown-rubber-mats"
+    ],
+    "imageImprovementPriority": "none",
+    "imageNotes": "Post-generation image pass candidate selected from AppBank coverage because the official release only exposes a shared composite image. Human review should confirm the visual match and rights/attribution posture before final-ready status."
   },
   {
     "id": "zozotown-417-edifice-apparel-composite",

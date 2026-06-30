@@ -25,6 +25,7 @@
     "startDate": "2026-04-24",
     "endDate": "2026-05-18",
     "assetIds": [
+      "zozotown-big-acrylic-stands-reference",
       "zozotown-original-goods-composite"
     ],
     "variants": [
@@ -47,9 +48,9 @@
         "当時の公式掲載価格: 2,200円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ],
-      "imageReviewStatus": "needs-image-pass",
-      "imageImprovementPriority": "official-individual",
-      "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "imageReviewStatus": "needs-human-review",
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     "marketplaceSearches": [
       {
@@ -177,6 +178,7 @@
     "startDate": "2026-04-24",
     "endDate": "2026-05-18",
     "assetIds": [
+      "zozotown-can-badge-sets-reference",
       "zozotown-original-goods-composite"
     ],
     "variants": [
@@ -199,9 +201,9 @@
         "当時の公式掲載価格: 2,750円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ],
-      "imageReviewStatus": "needs-image-pass",
-      "imageImprovementPriority": "official-individual",
-      "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "imageReviewStatus": "needs-human-review",
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     "marketplaceSearches": [
       {
@@ -329,6 +331,7 @@
     "startDate": "2026-04-24",
     "endDate": "2026-05-18",
     "assetIds": [
+      "zozotown-cheki-sets-reference",
       "zozotown-original-goods-composite"
     ],
     "variants": [
@@ -351,9 +354,9 @@
         "当時の公式掲載価格: 3,300円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ],
-      "imageReviewStatus": "needs-image-pass",
-      "imageImprovementPriority": "official-individual",
-      "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "imageReviewStatus": "needs-human-review",
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     "marketplaceSearches": [
       {
@@ -467,6 +470,7 @@
     "startDate": "2026-04-24",
     "endDate": "2026-05-18",
     "assetIds": [
+      "zozotown-rubber-mats-reference",
       "zozotown-original-goods-composite"
     ],
     "variants": [
@@ -489,9 +493,9 @@
         "当時の公式掲載価格: 3,850円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ],
-      "imageReviewStatus": "needs-image-pass",
-      "imageImprovementPriority": "official-individual",
-      "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+      "imageReviewStatus": "needs-human-review",
+      "imageImprovementPriority": "none",
+      "imageNotes": "Post-generation image pass selected an item-specific web reference candidate. Keep this card provisional until human review confirms the match and rights posture."
     },
     "marketplaceSearches": [
       {
