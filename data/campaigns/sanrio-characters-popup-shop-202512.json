@@ -67,5 +67,5 @@
     "sanrio-original-postcards"
   ],
   "marketNoteRequired": true,
-  "notes": "Draft data pilot. Existing public HTML remains the source of truth until Sanrio parent-page data alignment and renderer readiness are reviewed."
+  "notes": "Sanrio product-grid alignment is data-backed. First item-page pilot is published for the purchase-bonus original postcards; remaining Sanrio item pages stay unpublished until reviewed."
 }

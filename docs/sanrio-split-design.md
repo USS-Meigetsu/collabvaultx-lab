@@ -1,15 +1,18 @@
 # Sanrio Split Design
 
 This note defines how the Sanrio Characters popup shop should enter the shared
-CollabVaultX data model. It is intentionally a design and source-inventory
-checkpoint only. Do not generate Sanrio item pages, enable affiliate links, or
-add Sanrio to supported renderers until the split is reviewed.
+CollabVaultX data model. It started as a design and source-inventory
+checkpoint, then moved into a staged rollout: first the parent product grid,
+then a single item-page pilot. Do not enable affiliate links, live marketplace
+listing fetches, or broad Sanrio item-page generation until each step is
+reviewed.
 
 ## Current Route
 
 - Public route:
   `works/umamusume/collabs/sanrio-characters-popup-shop-202512/`
-- Current source of truth: the existing public HTML page at that route.
+- Current source of truth: JSON-backed parent product grid plus the reviewed
+  hand-written HTML page at that route.
 - Data status: Sanrio campaign, source, asset, and item JSON files exist, and
   the campaign product grid is data-backed by
   `scripts/render-campaign-product-grid.mjs`.
@@ -45,8 +48,9 @@ add Sanrio to supported renderers until the split is reviewed.
 - Distribution route differences matter. The plush mascot should not be merged
   into ordinary WEB advance sale goods because the current page says it was a
   venue advance sale and not handled in WEB advance sale.
-- Keep Sanrio out of generated renderer support until the existing card markup
-  can be represented cleanly by the shared product-grid contract.
+- Add Sanrio to shared renderers only for reviewed blocks. The parent
+  product-grid renderer and the first item-page shell pilot are supported; broad
+  Sanrio item-page generation still waits.
 
 ## Proposed Records
 
@@ -121,7 +125,8 @@ sanrio-postcard-06
 ## Renderer Status
 
 Sanrio is now supported by `render-campaign-product-grid.mjs` for the campaign
-product-grid block only.
+product-grid block, and by `render-item-page-shell.mjs` for the first published
+item-page pilot only.
 
 - Existing Sanrio product cards now have `data-item-id` attributes that map to
   the draft item records.
@@ -135,7 +140,9 @@ product-grid block only.
 - The campaign hero uses a desktop/mobile `<picture>` pair. The current
   item-page shell renderer supports item hero media, but this does not prove the
   Sanrio campaign page itself is ready for generation.
-- Sanrio item pages and Marketplace Finder sections remain intentionally absent.
+- `sanrio-original-postcards` is the first published Sanrio item page and
+  renders a Marketplace Finder section. Other Sanrio item pages remain
+  intentionally absent or unpublished.
 
 ## Current Implementation Checkpoint
 
@@ -158,19 +165,31 @@ Completed in the product-grid alignment pilot:
   six `miniGridAssetIds`.
 - The Sanrio campaign product grid is rendered and checked with the shared
   campaign product-grid renderer.
-- No Sanrio `Item.page` or `marketplaceFinder.status` has been published.
+- `sanrio-original-postcards` now has a published `Item.page` and
+  `marketplaceFinder.status`.
+
+Completed in the first item-page pilot:
+
+- `works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/original-postcards/index.html`
+  publishes the purchase-bonus original postcards route.
+- Parent card image and title link to the new item page; no separate detail
+  button is used.
+- The item page keeps all six postcard images visible without splitting them
+  into six records or six pages.
+- Marketplace Finder is enabled with non-affiliate reference searches only.
+- Related-item navigation and item-page shell fragments are renderer-checked.
 
 ## Recommended Next Implementation
 
-1. Review the Sanrio product-grid alignment checkpoint before creating the first
+1. Review the original-postcards item-page pilot before adding any second
    Sanrio item page.
 2. Keep all remaining Sanrio item pages unpublished or absent during this review
    pass.
-3. Do not mark any `marketplaceFinder.status` as `published` until an item page
-   actually renders the Finder UI.
-4. Choose exactly one first Sanrio item page pilot when the next implementation
-   phase starts. Good candidates are the trading hologram can badge, acrylic
-   stand, plush mascot, or original postcards.
+3. Do not mark any additional `marketplaceFinder.status` as `published` until
+   the matching item page actually renders the Finder UI.
+4. If the pilot is accepted, the next likely page candidate is
+   `sanrio-trading-hologram-can-badge`, followed by acrylic stand or plush
+   mascot depending on search value and acquisition-rule complexity.
 
 This keeps Sanrio useful as the first large product-set test without forcing the
 site into premature full page generation.

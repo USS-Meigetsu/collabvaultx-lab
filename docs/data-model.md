@@ -142,7 +142,8 @@ Optional fields:
   not a source of truth.
 - `marketplaceSearches`: secondary-market reference searches.
 - `marketplaceFinder`: item-page Marketplace Finder opt-in. Use
-  `{"status": "published"}` only when the item page renders the full Finder UI.
+  `{"status": "published"}` only when the item page is also published and
+  renders the full Finder UI.
 
 ## Source
 

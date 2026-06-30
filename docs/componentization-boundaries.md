@@ -21,7 +21,8 @@ content model is more stable.
 - Best next step: keep generated-block checks small and targeted before
   attempting broader page generation. ROUND1 now has a complete v1 item-page
   checkpoint across its parent page and nine item pages. Sanrio is the current
-  large product-set product-grid checkpoint before item-page work resumes.
+  large product-set test, now past parent product-grid alignment and into a
+  single original-postcards item-page pilot.
 
 ## Commonize Now
 
@@ -346,9 +347,12 @@ or smooth over them.
    page card hygiene without adding item pages or renderer support.
 19. Done: publish Sanrio data-backed campaign product-grid alignment v0,
    including postcard mini-grid display metadata.
-20. Current: review the Sanrio product-grid checkpoint before choosing the first
-   Sanrio item-page pilot.
-21. Revisit campaign-grid generation beyond the current supported set.
+20. Done: publish the first Sanrio item-page pilot for
+   `sanrio-original-postcards`, including Marketplace Finder and item-page shell
+   checks.
+21. Current: review the Sanrio original-postcards pilot before adding a second
+   Sanrio item page.
+22. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.
