@@ -218,6 +218,11 @@
         "queryLabel": "ウマ娘 ココス B2ポスター",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20B2ポスター"
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "b2-posters",
+      "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/b2-posters/"
+    }
   }
 ]
