@@ -190,6 +190,51 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jp",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "ebay-complete-set",
+        "platform": "ebay",
+        "labelJa": "eBay complete set",
+        "labelEn": "Search eBay complete sets",
+        "query": "Uma Musume Cinderella Gray Sanrio acrylic card complete set",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio acrylic card complete set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+acrylic+card+complete+set",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリ コンプリート",
+        "labelEn": "Search Mercari JP complete sets",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルカード コンプリート",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルカード コンプリート",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%20%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%83%BC%E3%83%88",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
         "labelJa": "メルカリ",
@@ -218,8 +263,31 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマ",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "trading-acrylic-card",
+      "path": "works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/trading-acrylic-card/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "sanrio-trading-parts-acrylic-keyholder",
@@ -267,6 +335,51 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jp",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%AD%E3%83%BC%E3%83%9B%E3%83%AB%E3%83%80%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "ebay-complete-set",
+        "platform": "ebay",
+        "labelJa": "eBay complete set",
+        "labelEn": "Search eBay complete sets",
+        "query": "Uma Musume Cinderella Gray Sanrio acrylic keyholder complete set",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio acrylic keyholder complete set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+acrylic+keyholder+complete+set",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリ コンプリート",
+        "labelEn": "Search Mercari JP complete sets",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー コンプリート",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー コンプリート",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%AD%E3%83%BC%E3%83%9B%E3%83%AB%E3%83%80%E3%83%BC%20%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%83%BC%E3%83%88",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
         "labelJa": "メルカリ",
@@ -295,8 +408,31 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマ",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%AD%E3%83%BC%E3%83%9B%E3%83%AB%E3%83%80%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "trading-parts-acrylic-keyholder",
+      "path": "works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/trading-parts-acrylic-keyholder/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "sanrio-acrylic-stand",
@@ -459,6 +595,21 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jp",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20BIG%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
         "labelJa": "メルカリ",
@@ -487,8 +638,31 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマ",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20BIG%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "big-acrylic-stand",
+      "path": "works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/big-acrylic-stand/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "sanrio-die-cut-smartphone-sticker",
@@ -1229,6 +1403,21 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jp",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%81%AC%E3%81%84%E3%81%90%E3%82%8B%E3%81%BF%E3%83%9E%E3%82%B9%E3%82%B3%E3%83%83%E3%83%88",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
         "labelJa": "メルカリ",
@@ -1257,8 +1446,31 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマ",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%81%AC%E3%81%84%E3%81%90%E3%82%8B%E3%81%BF%E3%83%9E%E3%82%B9%E3%82%B3%E3%83%83%E3%83%88",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "plush-mascot",
+      "path": "works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/plush-mascot/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "sanrio-original-postcards",

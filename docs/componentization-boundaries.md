@@ -22,8 +22,8 @@ content model is more stable.
   attempting broader page generation. ROUND1 now has a complete v1 item-page
   checkpoint across its parent page and nine item pages. Sanrio is the current
   large product-set test, now past parent product-grid alignment and into a
-  three-page item-page pilot covering purchase-bonus, trading, and acrylic
-  retail goods patterns.
+  seven-page item-page pilot covering purchase-bonus, trading, acrylic retail
+  goods, and venue-advance plush mascot patterns.
 
 ## Commonize Now
 
@@ -354,9 +354,12 @@ or smooth over them.
 21. Done: expand the Sanrio pilot to `sanrio-trading-hologram-can-badge` and
    `sanrio-acrylic-stand`, keeping broad Sanrio generation off and validating
    Finder, related navigation, parent card links, and item-page shell fragments.
-22. Current: review the three-page Sanrio pilot set before adding the next
-   high-value Sanrio item-page batch.
-23. Revisit campaign-grid generation beyond the current supported set.
+22. Done: add the Sanrio high-value item pages batch for
+   `sanrio-trading-acrylic-card`, `sanrio-trading-parts-acrylic-keyholder`,
+   `sanrio-big-acrylic-stand`, and `sanrio-plush-mascot`.
+23. Current: review the seven-page Sanrio pilot set with a mid-completion QA
+   before deciding whether to publish the remaining parent-card-first items.
+24. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.

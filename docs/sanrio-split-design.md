@@ -3,9 +3,10 @@
 This note defines how the Sanrio Characters popup shop should enter the shared
 CollabVaultX data model. It started as a design and source-inventory
 checkpoint, then moved into a staged rollout: first the parent product grid,
-then a first item-page pilot, then a two-page trading/acrylic pair pilot. Do not
-enable affiliate links, live marketplace listing fetches, or broad Sanrio
-item-page generation until each step is reviewed.
+then a first item-page pilot, a two-page trading/acrylic pair pilot, and a
+four-page high-value item-page batch. Do not enable affiliate links, live
+marketplace listing fetches, or broad Sanrio item-page generation until each
+step is reviewed.
 
 ## Current Route
 
@@ -140,10 +141,10 @@ published item-page pilots.
 - The campaign hero uses a desktop/mobile `<picture>` pair. The current
   item-page shell renderer supports item hero media, but this does not prove the
   Sanrio campaign page itself is ready for generation.
-- `sanrio-original-postcards`, `sanrio-trading-hologram-can-badge`, and
-  `sanrio-acrylic-stand` are the first three published Sanrio item-page pilots
-  and render Marketplace Finder sections. Other Sanrio item pages remain
-  intentionally absent or unpublished.
+- Seven Sanrio item-page pilots are now published and render Marketplace Finder
+  sections. They cover purchase bonus, random/trading goods, acrylic stand
+  variants, and the venue-advance plush mascot route. Other Sanrio item pages
+  remain intentionally absent or unpublished.
 
 ## Current Implementation Checkpoint
 
@@ -194,17 +195,32 @@ Completed in the trading/acrylic pair pilot:
 - The original postcard mini-grid remains unchanged and renderer-checked.
 - Related-item navigation now covers the three published Sanrio item pages.
 
+Completed in the high-value item-page batch 2:
+
+- `works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/trading-acrylic-card/index.html`
+  publishes the trading acrylic card route.
+- `works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/trading-parts-acrylic-keyholder/index.html`
+  publishes the trading parts acrylic keyholder route.
+- `works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/big-acrylic-stand/index.html`
+  publishes the BIG acrylic stand route.
+- `works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/plush-mascot/index.html`
+  publishes the plush mascot route and keeps the venue-advance-sale caveat
+  visible.
+- Random/trading items include complete-set reference searches where useful;
+  acrylic stand and plush pages stay on product-group searches until
+  character-specific queries are source-reviewed.
+- Related-item navigation now covers the seven published Sanrio item pages.
+
 ## Recommended Next Implementation
 
-1. Review the three-page Sanrio pilot set before adding more Sanrio item pages.
+1. Review the seven-page Sanrio pilot set before adding lower-priority Sanrio
+   item pages.
 2. Keep all remaining Sanrio item pages unpublished or absent during this review
    pass.
 3. Do not mark any additional `marketplaceFinder.status` as `published` until
    the matching item page actually renders the Finder UI.
-4. If the pilot set is accepted, the next likely batch is 3-4 high-value Sanrio
-   item pages such as `sanrio-trading-acrylic-card`,
-   `sanrio-trading-parts-acrylic-keyholder`, `sanrio-big-acrylic-stand`, and
-   `sanrio-plush-mascot`.
+4. If the seven-page pilot set is accepted, run a short Sanrio mid-completion
+   QA before deciding whether to publish the remaining parent-card-first items.
 
 This keeps Sanrio useful as the first large product-set test without forcing the
 site into premature full page generation.
