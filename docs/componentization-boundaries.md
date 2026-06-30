@@ -332,9 +332,11 @@ or smooth over them.
 11. Done: add item-page scaffold v0 for ROUND1 stable shell fragments.
 12. Done: extend item-page shell renderer/checker to Lawson and COCOS.
 13. Done: add shared renderer utility modules for data, path, and HTML helpers.
-14. Current: add the remaining ROUND1 item pages using the stabilized renderer
+14. Done: add the remaining ROUND1 item pages using the stabilized renderer
    checks.
-15. Revisit campaign-grid generation beyond the current supported set.
+15. Current: review the completed ROUND1 item-page set before widening the next
+   generated-block boundary.
+16. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.

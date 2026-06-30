@@ -382,12 +382,16 @@
     "category": "goods",
     "recordType": "group",
     "distributionType": "retail-sale",
-    "sourceIds": ["round1-chugai-event-page"],
+    "sourceIds": [
+      "round1-chugai-event-page"
+    ],
     "confidence": "official",
     "descriptionJa": "トレーディングステッカー。全7種で、一部5店舗販売とEC予約販売の両方あり。トレーディング仕様。",
     "lineupLabelJa": "全7種",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-trading-sticker-main"],
+    "assetIds": [
+      "round1-trading-sticker-main"
+    ],
     "productGrid": {
       "tag": "Goods",
       "factsJa": [
@@ -395,6 +399,108 @@
         "一部5店舗販売 / EC予約販売",
         "トレーディング仕様"
       ]
+    },
+    "summaryEn": "ROUND1 trading sticker retail-sale group for the Uma Musume Cinderella Gray campaign, covering the seven-type trading lineup, limited five-store retail sales, EC reservation route, official source, and reference searches.",
+    "availabilityLabel": "一部5店舗販売 / EC予約販売",
+    "page": {
+      "status": "published",
+      "slug": "trading-sticker",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/trading-sticker/"
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 trading sticker",
+        "queryLabel": "Uma Musume ROUND1 trading sticker",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+trading+sticker",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 トレーディングステッカー",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングステッカー",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%83%83%E3%82%AB%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 トレーディングステッカー",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングステッカー",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%83%83%E3%82%AB%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP set results",
+        "query": "ウマ娘 ROUND1 トレーディングステッカー 全7種",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングステッカー 全7種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%83%83%E3%82%AB%E3%83%BC%20%E5%85%A87%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 トレーディングステッカー",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングステッカー",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%83%83%E3%82%AB%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 トレーディングステッカー",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングステッカー",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%83%83%E3%82%AB%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "marketplaceFinder": {
+      "status": "published"
     }
   },
   {
@@ -405,12 +511,126 @@
     "category": "goods",
     "recordType": "group",
     "distributionType": "retail-sale",
-    "sourceIds": ["round1-chugai-event-page"],
+    "sourceIds": [
+      "round1-chugai-event-page"
+    ],
     "confidence": "official",
     "descriptionJa": "グリッターアクリルアートパネル。全8種で、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "全8種",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-glitter-acrylic-art-panel-main"]
+    "assetIds": [
+      "round1-glitter-acrylic-art-panel-main"
+    ],
+    "summaryEn": "ROUND1 glitter acrylic art panel retail-sale group for the Uma Musume Cinderella Gray campaign, covering the eight-type lineup, limited five-store retail sales, EC reservation route, official source, and reference searches.",
+    "availabilityLabel": "一部5店舗販売 / EC予約販売",
+    "page": {
+      "status": "published",
+      "slug": "glitter-acrylic-art-panel",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/glitter-acrylic-art-panel/"
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 glitter acrylic art panel",
+        "queryLabel": "Uma Musume ROUND1 glitter acrylic art panel",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+glitter+acrylic+art+panel",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "queryLabel": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88%E3%83%91%E3%83%8D%E3%83%AB",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "queryLabel": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88%E3%83%91%E3%83%8D%E3%83%AB",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP set results",
+        "query": "ウマ娘 ROUND1 グリッターアクリルアートパネル 全8種",
+        "queryLabel": "ウマ娘 ROUND1 グリッターアクリルアートパネル 全8種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88%E3%83%91%E3%83%8D%E3%83%AB%20%E5%85%A88%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "queryLabel": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88%E3%83%91%E3%83%8D%E3%83%AB",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "queryLabel": "ウマ娘 ROUND1 グリッターアクリルアートパネル",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88%E3%83%91%E3%83%8D%E3%83%AB",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    },
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全8種",
+        "一部5店舗販売 / EC予約販売",
+        "アクリルパネル系グッズ"
+      ]
+    }
   },
   {
     "id": "round1-b2-tapestry",
@@ -420,18 +640,109 @@
     "category": "goods",
     "recordType": "single",
     "distributionType": "retail-sale",
-    "sourceIds": ["round1-chugai-event-page"],
+    "sourceIds": [
+      "round1-chugai-event-page"
+    ],
     "confidence": "official",
     "descriptionJa": "B2タペストリー。ROUND1コラボver.の販売グッズで、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "ROUND1コラボver.販売グッズ",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-b2-tapestry-main"],
+    "assetIds": [
+      "round1-b2-tapestry-main"
+    ],
     "productGrid": {
       "tag": "Goods",
       "factsJa": [
         "一部5店舗販売 / EC予約販売",
         "ROUND1コラボver.販売グッズ"
       ]
+    },
+    "summaryEn": "ROUND1 B2 tapestry retail-sale item for the Uma Musume Cinderella Gray campaign, covering the ROUND1 collaboration version goods route, limited five-store retail sales, EC reservation route, official source, and reference searches.",
+    "availabilityLabel": "一部5店舗販売 / EC予約販売",
+    "page": {
+      "status": "published",
+      "slug": "b2-tapestry",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/b2-tapestry/"
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 B2 tapestry",
+        "queryLabel": "Uma Musume ROUND1 B2 tapestry",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+B2+tapestry",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 B2タペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2タペストリー",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+B2%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 B2タペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2タペストリー",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20B2%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 B2タペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2タペストリー",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+B2%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 B2タペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2タペストリー",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20B2%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "marketplaceFinder": {
+      "status": "published"
     }
   },
   {
@@ -442,12 +753,126 @@
     "category": "goods",
     "recordType": "group",
     "distributionType": "retail-sale",
-    "sourceIds": ["round1-chugai-event-page"],
+    "sourceIds": [
+      "round1-chugai-event-page"
+    ],
     "confidence": "official",
     "descriptionJa": "B2ハーフタペストリー。全7種で、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "全7種",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-b2-half-tapestry-main"]
+    "assetIds": [
+      "round1-b2-half-tapestry-main"
+    ],
+    "summaryEn": "ROUND1 B2 half tapestry retail-sale group for the Uma Musume Cinderella Gray campaign, covering the seven-type lineup, limited five-store retail sales, EC reservation route, official source, and reference searches.",
+    "availabilityLabel": "一部5店舗販売 / EC予約販売",
+    "page": {
+      "status": "published",
+      "slug": "b2-half-tapestry",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/b2-half-tapestry/"
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 B2 half tapestry",
+        "queryLabel": "Uma Musume ROUND1 B2 half tapestry",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+B2+half+tapestry",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+B2%E3%83%8F%E3%83%BC%E3%83%95%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20B2%E3%83%8F%E3%83%BC%E3%83%95%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP set results",
+        "query": "ウマ娘 ROUND1 B2ハーフタペストリー 全7種",
+        "queryLabel": "ウマ娘 ROUND1 B2ハーフタペストリー 全7種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20B2%E3%83%8F%E3%83%BC%E3%83%95%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%20%E5%85%A87%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+B2%E3%83%8F%E3%83%BC%E3%83%95%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "queryLabel": "ウマ娘 ROUND1 B2ハーフタペストリー",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20B2%E3%83%8F%E3%83%BC%E3%83%95%E3%82%BF%E3%83%9A%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    },
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全7種",
+        "一部5店舗販売 / EC予約販売",
+        "B2ハーフタペストリー"
+      ]
+    }
   },
   {
     "id": "round1-mashikaku-can-badge",

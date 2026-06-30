@@ -148,6 +148,7 @@ input {
   font-size: 1.08rem;
   line-height: 1.9;
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 
 .hero-subcopy {
@@ -156,12 +157,14 @@ input {
   font-size: 0.98rem;
   line-height: 1.7;
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .english-summary,
 .hero-english-summary {
   color: #d7dfeb;
   line-height: 1.72;
+  overflow-wrap: anywhere;
 }
 
 .hero-english-summary {
@@ -210,6 +213,7 @@ main {
   margin: 14px 0 0;
   line-height: 1.75;
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .list-meta {
@@ -709,6 +713,7 @@ main {
 
 .overview-card {
   grid-column: span 4;
+  min-width: 0;
   padding: 24px;
 }
 
@@ -727,6 +732,7 @@ main {
   margin: 14px 0 0;
   line-height: 1.75;
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .overview-card ul {
@@ -752,6 +758,7 @@ main {
 
 .product-card {
   grid-column: span 6;
+  min-width: 0;
   overflow: hidden;
 }
 
@@ -922,6 +929,7 @@ main {
 .marketplace-link {
   display: grid;
   gap: 4px;
+  min-width: 0;
   min-height: 64px;
   padding: 12px 13px;
   border: 1px solid rgba(138, 215, 255, 0.16);
@@ -953,6 +961,7 @@ main {
   font-size: 0.82rem;
   font-weight: 650;
   line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .marketplace-affiliate-note {
@@ -1251,6 +1260,7 @@ main {
   background: rgba(7, 10, 16, 0.46);
   color: #d7dfeb;
   line-height: 1.65;
+  overflow-wrap: anywhere;
   backdrop-filter: blur(4px);
 }
 
