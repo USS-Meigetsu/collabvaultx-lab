@@ -144,17 +144,18 @@
     "campaignId": "cocos-umaimono-fes-202601",
     "officialNameJa": "オリジナルブランケット",
     "displayNameEn": "Original blanket",
-    "summaryEn": "COCOS web-lottery prize record for the original blanket, covering receipt-point entry, lottery window, official source, and reference searches.",
+    "summaryEn": "COCOS web-lottery prize record for the original blanket, covering receipt-code entry, lottery window, official source, and reference searches.",
     "category": "prize",
     "recordType": "single",
     "distributionType": "lottery",
     "sourceIds": [
-      "cocos-umamusume-special-site"
+      "cocos-umamusume-special-site",
+      "cocos-umamusume-qa"
     ],
     "confidence": "official",
-    "descriptionJa": "対象メニューのレシートポイントで応募できたWEB抽選景品。公式特設サイトではオリジナルブランケットとして案内されています。",
+    "descriptionJa": "対象メニュー1品=1pt分としてレシートに印字される応募コードを使って応募できたWEB抽選景品。公式特設サイトではオリジナルブランケットとして案内されています。",
     "lineupLabelJa": "WEB抽選景品",
-    "acquisitionMethodJa": "対象メニューのレシートポイントを使ってWEB抽選に応募",
+    "acquisitionMethodJa": "対象メニュー1品=1pt分としてレシートに印字される応募コードを使ってWEB抽選に応募",
     "availabilityLabel": "レシート印字期間: 2026年1月20日 10:00〜3月17日 5:59 / 応募期間: 2026年1月20日 10:00〜3月23日 23:59",
     "startDate": "2026-01-20",
     "endDate": "2026-03-23",
@@ -177,7 +178,12 @@
         "queryLabel": "ウマ娘 ココス ブランケット",
         "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+ブランケット"
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "original-blanket",
+      "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/original-blanket/"
+    }
   },
   {
     "id": "cocos-b2-posters",
