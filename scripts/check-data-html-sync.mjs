@@ -464,28 +464,44 @@ function validateCampaignDetailItemCards(campaign) {
       assertHtmlIncludes(productCard, `alt="${asset.altJa}"`, label, "product image alt");
     }
 
+    const marketplaceSearches = item.marketplaceSearches ?? [];
     const marketLinksMatch = productCard.match(
       /<div\b(?=[^>]*class=(["'])[^"']*\bmarket-links\b[^"']*\1)[^>]*>([\s\S]*?)<\/div>/,
     );
     if (!marketLinksMatch) {
-      fail(`${label}: market-links block is missing`);
-    } else if (/<span\b/i.test(marketLinksMatch[2])) {
+      if (marketplaceSearches.length > 0) {
+        fail(`${label}: market-links block is missing for an item with marketplaceSearches`);
+      }
+      continue;
+    }
+
+    const marketLinksHtml = marketLinksMatch[2];
+    if (/<span\b/i.test(marketLinksHtml)) {
       fail(`${label}: market-links must contain reference links only, not official fact spans`);
-    } else {
-      const marketplaceUrlMap = new Map((item.marketplaceSearches ?? []).map((search) => [search.url, search]));
-      const marketplaceAnchors = getOpeningTags(marketLinksMatch[2], "a");
-      if ((item.marketplaceSearches ?? []).length > 0 && marketplaceAnchors.length === 0) {
-        fail(`${label}: market-links block must include at least one marketplace search link`);
+    }
+
+    const officialSourceUrls = (item.sourceIds ?? [])
+      .map((id) => sourceMap.get(id)?.url)
+      .filter(Boolean);
+    for (const url of officialSourceUrls) {
+      if (marketLinksHtml.includes(url)) {
+        fail(`${label}: official source URL must not appear inside market-links`);
       }
-      for (const anchor of marketplaceAnchors) {
-        const href = decodeEntities(getAttribute(anchor, "href"));
-        const matchingSearch = marketplaceUrlMap.get(href);
-        if (!matchingSearch) {
-          fail(`${label}: market-links href "${href}" is not present in item.marketplaceSearches`);
-          continue;
-        }
-        assertAnchorRel(anchor, matchingSearch.rel, `${label}: ${matchingSearch.id ?? matchingSearch.platform}`);
+    }
+
+    const marketplaceUrlMap = new Map(marketplaceSearches.map((search) => [search.url, search]));
+    const marketplaceAnchors = getOpeningTags(marketLinksHtml, "a");
+    if (marketplaceSearches.length > 0 && marketplaceAnchors.length === 0) {
+      fail(`${label}: market-links block must include at least one marketplace search link`);
+    }
+    for (const anchor of marketplaceAnchors) {
+      const href = decodeEntities(getAttribute(anchor, "href"));
+      const matchingSearch = marketplaceUrlMap.get(href);
+      if (!matchingSearch) {
+        fail(`${label}: market-links href "${href}" is not present in item.marketplaceSearches`);
+        continue;
       }
+      assertAnchorRel(anchor, matchingSearch.rel, `${label}: ${matchingSearch.id ?? matchingSearch.platform}`);
     }
   }
 }

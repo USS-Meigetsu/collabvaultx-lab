@@ -271,9 +271,11 @@ or smooth over them.
 3. Done: keep related item navigation renderer/checker in sync with
    published item pages.
 4. Done: add ROUND1 data-backed campaign pilot to test another campaign type.
-5. Current: add the first ROUND1 item page pilot.
-6. Revisit item-page scaffold generation.
-7. Revisit campaign-grid generation.
+5. Done: add the first ROUND1 item page pilot for the crane-prize route.
+6. Current: add the second ROUND1 item page pilot for the retail-sale route and
+   clean up empty parent-card `market-links` behavior.
+7. Revisit item-page scaffold generation.
+8. Revisit campaign-grid generation.
 
 This keeps the project efficient without locking the site into a premature
 generator.
