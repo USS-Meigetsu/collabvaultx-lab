@@ -96,6 +96,12 @@ Required fields:
 - `descriptionJa`: source-backed item description.
 - `acquisitionMethodJa`: how it was originally obtained when confirmed.
 
+Future note: official social follow-and-repost prizes currently use
+`distributionType: "lottery"` so published records stay within the validation
+enum. If more social-campaign prize records are added, consider introducing a
+dedicated value such as `social-campaign-prize` and migrating those items
+separately from receipt-code or store lottery records.
+
 Optional fields:
 
 - `displayNameEn`: English display name.
