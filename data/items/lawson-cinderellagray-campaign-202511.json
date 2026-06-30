@@ -207,6 +207,7 @@
     "availabilityLabel": "2025年11月25日〜2026年1月26日、または受付終了まで / お渡し日: 2026年5月28日",
     "startDate": "2025-11-25",
     "endDate": "2026-01-26",
+    "endCondition": "may-close-early",
     "assetIds": [
       "lawson-loppi-hmv-main"
     ],
@@ -233,6 +234,12 @@
     "campaignId": "lawson-cinderellagray-campaign-202511",
     "officialNameJa": "エンタメくじ",
     "displayNameEn": "Entertainment lottery",
+    "summaryEn": "Kujist partner-official entertainment lottery record for the Uma Musume Cinderella Gray Lawson campaign, covering sale date, price, sales channels, official source, prize-list reference, end-status note, and reference searches.",
+    "page": {
+      "status": "published",
+      "slug": "entame-kuji",
+      "path": "works/umamusume/collabs/lawson-cinderellagray-campaign-202511/items/entame-kuji/"
+    },
     "category": "prize",
     "recordType": "lottery-prize-group",
     "distributionType": "lottery",
@@ -243,7 +250,9 @@
     "descriptionJa": "くじストリートで案内された販売くじ。1回770円（税込）で、ローソンとHMVが取扱店舗として案内されています。",
     "priceLabel": "1回770円（税込）",
     "acquisitionMethodJa": "2025年11月25日よりローソンとHMVで発売",
+    "availabilityLabel": "2025年11月25日よりローソン/HMVで発売、公式ページ上は販売終了表示 / なくなり次第終了",
     "startDate": "2025-11-25",
+    "endCondition": "while-supplies-last",
     "assetIds": [
       "lawson-entame-kuji-main"
     ],
