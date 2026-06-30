@@ -25,6 +25,7 @@ jobs:
           node --check scripts/render-marketplace-finder.mjs
           node --check scripts/render-related-items.mjs
           node --check scripts/render-campaign-product-grid.mjs
+          node --check scripts/render-item-page-shell.mjs
 
       - name: Run data checks
         run: node scripts/check-data.mjs
@@ -40,6 +41,9 @@ jobs:
 
       - name: Run campaign product grid renderer checks
         run: node scripts/render-campaign-product-grid.mjs --check
+
+      - name: Run item page shell renderer checks
+        run: node scripts/render-item-page-shell.mjs --check --campaign round1-collab-campaign-202510
 
       - name: Run site checks
         shell: pwsh

@@ -17,17 +17,22 @@ node --check scripts/check-data-html-sync.mjs
 node --check scripts/render-marketplace-finder.mjs
 node --check scripts/render-related-items.mjs
 node --check scripts/render-campaign-product-grid.mjs
+node --check scripts/render-item-page-shell.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
 node scripts/render-marketplace-finder.mjs --check
 node scripts/render-related-items.mjs --check
 node scripts/render-campaign-product-grid.mjs --check
+node scripts/render-item-page-shell.mjs --check --campaign round1-collab-campaign-202510
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
 
 The same check also runs in GitHub Actions on pushes to `main` and pull
 requests.
+
+This repository uses `.nojekyll` so GitHub Pages serves the static files
+directly without Jekyll processing.
 
 Do not commit browser profiles, cookies, login databases, local cache folders,
 temporary screenshots, or source-capture PDFs.
@@ -63,6 +68,8 @@ Related item navigation blocks are rendered/verified by
 `scripts/render-related-items.mjs`.
 Supported campaign product-grid blocks are rendered/verified by
 `scripts/render-campaign-product-grid.mjs`.
+The ROUND1 item-page shell is rendered/verified by
+`scripts/render-item-page-shell.mjs`.
 Marketplace and affiliate link handling is documented in
 `docs/affiliate-link-policy.md`.
 

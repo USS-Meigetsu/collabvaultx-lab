@@ -132,6 +132,9 @@ Optional fields:
     contradict `lineupLabelJa`, `priceLabel`, `availabilityLabel`, or
     `acquisitionMethodJa`.
   - `cardId`: preserved legacy anchor ID when needed.
+  Do not put source URLs, marketplace URLs, long item-page body copy, or new
+  unverified facts in `productGrid`; it is parent-card display metadata only,
+  not a source of truth.
 - `marketplaceSearches`: secondary-market reference searches.
 - `marketplaceFinder`: item-page Marketplace Finder opt-in. Use
   `{"status": "published"}` only when the item page renders the full Finder UI.
