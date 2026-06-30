@@ -75,6 +75,25 @@ const allowedMarketplaceFinderGroups = new Set([
   "other",
 ]);
 const allowedProductGridLayouts = new Set(["wide-mini-grid"]);
+const allowedImageKinds = new Set([
+  "hero",
+  "individual-product",
+  "product-group",
+  "composite",
+  "reference-candidate",
+]);
+const allowedImageReviewStatuses = new Set([
+  "final",
+  "provisional",
+  "needs-image-pass",
+  "needs-human-review",
+]);
+const allowedImageImprovementPriorities = new Set([
+  "official-individual",
+  "same-item-official-edit",
+  "web-reference-candidate",
+  "none",
+]);
 const requiredMarketplaceRelTokens = new Set(["noopener", "noreferrer"]);
 
 const unsafeStringPatterns = [
@@ -186,6 +205,17 @@ function validateIsoDate(value, label, field) {
   if (value === undefined) return;
   if (typeof value !== "string" || !isoDatePattern.test(value)) {
     fail(`${label}: ${field} must be an ISO date (YYYY-MM-DD)`);
+  }
+}
+
+function validateOptionalEnum(record, field, allowedValues, label) {
+  if (record[field] === undefined) return;
+  if (typeof record[field] !== "string" || record[field].trim() === "") {
+    fail(`${label}: ${field} must be a non-empty string`);
+    return;
+  }
+  if (!allowedValues.has(record[field])) {
+    fail(`${label}: unsupported ${field} "${record[field]}"`);
   }
 }
 
@@ -333,6 +363,18 @@ function hasVerifyingSource(ids, sourceMap) {
   );
 }
 
+function primaryAssetIdForItem(item) {
+  if (!Array.isArray(item.assetIds)) return "";
+  return item.assetIds.find((id) => assetMap.has(id)) ?? "";
+}
+
+function isCompositeLikeAsset(asset) {
+  if (!asset) return false;
+  if (asset.imageKind === "composite") return true;
+  const searchable = [asset.id, asset.path, asset.usage, asset.altJa].filter(Boolean).join(" ").toLowerCase();
+  return searchable.includes("composite");
+}
+
 const works = readCollection("works");
 const campaigns = readCollection("campaigns");
 const items = readCollection("items");
@@ -405,6 +447,14 @@ for (const asset of assets) {
     if (asset.decoding !== "async") {
       fail(`${label}: product assets should use decoding=\"async\"`);
     }
+  }
+
+  validateOptionalEnum(asset, "imageKind", allowedImageKinds, label);
+  validateOptionalEnum(asset, "imageReviewStatus", allowedImageReviewStatuses, label);
+  validateOptionalEnum(asset, "imageImprovementPriority", allowedImageImprovementPriorities, label);
+  if (asset.representedItemIds !== undefined) {
+    requireArray(asset, "representedItemIds", label);
+    checkRefs(asset.representedItemIds, itemMap, label, "representedItemIds");
   }
 }
 
@@ -531,6 +581,13 @@ for (const item of items) {
         }
       }
     }
+    validateOptionalEnum(item.productGrid, "imageReviewStatus", allowedImageReviewStatuses, productGridLabel);
+    validateOptionalEnum(
+      item.productGrid,
+      "imageImprovementPriority",
+      allowedImageImprovementPriorities,
+      productGridLabel,
+    );
   }
 
   if (!hasVerifyingSource(item.sourceIds, sourceMap)) {
@@ -631,6 +688,34 @@ for (const campaign of campaigns) {
   );
   if (hasMarketplaceSearches && campaign.marketNoteRequired !== true) {
     fail(`${campaign.__file}:${campaign.id}: marketNoteRequired must be true when items include marketplace searches`);
+  }
+}
+
+for (const campaign of campaigns) {
+  const assetUsage = new Map();
+  for (const itemId of campaign.itemIds ?? []) {
+    const item = itemMap.get(itemId);
+    if (!item) continue;
+    const assetId = primaryAssetIdForItem(item);
+    if (!assetId) continue;
+    if (!assetUsage.has(assetId)) assetUsage.set(assetId, []);
+    assetUsage.get(assetId).push(item);
+  }
+
+  for (const [assetId, campaignItems] of assetUsage.entries()) {
+    if (campaignItems.length < 2) continue;
+    const asset = assetMap.get(assetId);
+    if (!isCompositeLikeAsset(asset)) continue;
+
+    const itemIds = campaignItems.map((item) => item.id).join(", ");
+    const label = `${campaign.__file}:${campaign.id}`;
+    if (asset.imageReviewStatus === "final") {
+      fail(`${label}: composite asset "${assetId}" is reused across product cards but is marked final (${itemIds})`);
+    } else {
+      warn(
+        `${label}: composite asset "${assetId}" is reused across ${campaignItems.length} product cards (${itemIds}); keep initial output provisional and schedule the post-generation image pass`,
+      );
+    }
   }
 }
 

@@ -307,7 +307,10 @@
       "altJa": "ウマ娘 プリティーダービー in ZOZOTOWN キービジュアル",
       "usage": "archive-thumbnail",
       "downloadPolicy": "codex-download-and-compress",
-      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "hero",
+      "imageReviewStatus": "final",
+      "imageImprovementPriority": "none"
     },
     {
       "id": "zozotown-original-goods-composite",
@@ -318,7 +321,17 @@
       "altJa": "ウマ娘 in ZOZOTOWN オリジナルグッズ代表画像",
       "usage": "archive-thumbnail",
       "downloadPolicy": "codex-download-and-compress",
-      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "composite",
+      "imageReviewStatus": "needs-image-pass",
+      "representedItemIds": [
+        "zozotown-big-acrylic-stands",
+        "zozotown-can-badge-sets",
+        "zozotown-cheki-sets",
+        "zozotown-rubber-mats"
+      ],
+      "imageImprovementPriority": "official-individual",
+      "imageNotes": "Initial generation may use this official composite as a provisional visual. Do not crop it into separate product-card images; search for official item-specific images first, then reviewed reference candidates."
     },
     {
       "id": "zozotown-417-edifice-apparel-composite",
@@ -329,7 +342,14 @@
       "altJa": "ウマ娘 × 417 EDIFICE アパレル代表画像",
       "usage": "archive-thumbnail",
       "downloadPolicy": "codex-download-and-compress",
-      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "product-group",
+      "imageReviewStatus": "provisional",
+      "representedItemIds": [
+        "zozotown-417-edifice-apparel"
+      ],
+      "imageImprovementPriority": "none",
+      "imageNotes": "Acceptable as a provisional brand-level group image because the card represents the apparel collection, not separate product cards."
     },
     {
       "id": "zozotown-hare-apparel-composite",
@@ -340,7 +360,14 @@
       "altJa": "ウマ娘 × HARE アパレル代表画像",
       "usage": "archive-thumbnail",
       "downloadPolicy": "codex-download-and-compress",
-      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "product-group",
+      "imageReviewStatus": "provisional",
+      "representedItemIds": [
+        "zozotown-hare-apparel"
+      ],
+      "imageImprovementPriority": "none",
+      "imageNotes": "Acceptable as a provisional brand-level group image because the card represents the apparel collection, not separate product cards."
     },
     {
       "id": "zozotown-freaks-store-apparel-composite",
@@ -351,7 +378,14 @@
       "altJa": "ウマ娘 × FREAK'S STORE アパレル代表画像",
       "usage": "archive-thumbnail",
       "downloadPolicy": "codex-download-and-compress",
-      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+      "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+      "imageKind": "product-group",
+      "imageReviewStatus": "provisional",
+      "representedItemIds": [
+        "zozotown-freaks-store-apparel"
+      ],
+      "imageImprovementPriority": "none",
+      "imageNotes": "Acceptable as a provisional brand-level group image because the card represents the apparel collection, not separate product cards."
     }
   ],
   "items": [
@@ -400,7 +434,10 @@
         "factsJa": [
           "15種展開",
           "2,200円（税込）"
-        ]
+        ],
+        "imageReviewStatus": "needs-image-pass",
+        "imageImprovementPriority": "official-individual",
+        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
       },
       "pageDecision": {
         "decision": "generate",
@@ -550,7 +587,10 @@
         "factsJa": [
           "3種展開",
           "2,750円（税込）"
-        ]
+        ],
+        "imageReviewStatus": "needs-image-pass",
+        "imageImprovementPriority": "official-individual",
+        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
       },
       "pageDecision": {
         "decision": "generate",
@@ -700,7 +740,10 @@
         "factsJa": [
           "3種展開",
           "3,300円（税込）"
-        ]
+        ],
+        "imageReviewStatus": "needs-image-pass",
+        "imageImprovementPriority": "official-individual",
+        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
       },
       "pageDecision": {
         "decision": "generate",
@@ -836,7 +879,10 @@
         "factsJa": [
           "3種展開",
           "3,850円（税込）"
-        ]
+        ],
+        "imageReviewStatus": "needs-image-pass",
+        "imageImprovementPriority": "official-individual",
+        "imageNotes": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
       },
       "pageDecision": {
         "decision": "parent-card-only",
@@ -1423,6 +1469,7 @@
     "Confirm that marketplace links are reference searches only and do not imply live stock, price, authenticity, seller quality, or official sales routes.",
     "Confirm that official source links and marketplace reference links remain visually and semantically separated.",
     "Confirm that downloaded official images are used only as archive thumbnails for identification and that rights/endorsement notes are visible.",
+    "Confirm that the shared original-goods composite image is treated as provisional and queued for a post-generation image pass instead of being cropped into separate product-card images.",
     "Confirm that no character-variant pages are generated for the 15 acrylic stand variants or apparel variants."
   ],
   "publicVerificationNotes": [
@@ -1451,6 +1498,11 @@
       "field": "pageDecision",
       "handling": "derive-generated-output",
       "note": "Use page decisions to derive generated item routes, then remove pageDecision from public item data."
+    },
+    {
+      "field": "imageReviewStatus",
+      "handling": "preserve-public-data",
+      "note": "Keep image review metadata in imported asset and productGrid data so the post-generation image pass can improve provisional visuals without blocking initial page generation."
     }
   ]
 }

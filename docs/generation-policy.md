@@ -51,6 +51,27 @@ These can become generated after the first pilot proves the package quality:
 The generator should still preserve a small reviewed override area for unusual
 campaign caveats.
 
+## Post-Generation Image Pass
+
+Image polish is a separate phase after the first generated output exists. The
+initial page can use source-backed provisional images so the page structure,
+facts, and navigation are reviewable early.
+
+The image pass should:
+
+- prefer official item-specific images,
+- allow same-item official image trimming or quality improvement,
+- use non-official web reference candidates only when clearly labeled and
+  human-reviewed,
+- flag repeated composite images in product cards,
+- avoid cropping one collection/composite image into several separate product
+  card images,
+- avoid image-less or tiny-icon product cards as the routine fallback,
+- never generate product images from scratch.
+
+Composite image reuse should create an improvement queue item. It should not
+block the initial generated page unless the page is being declared final-ready.
+
 ## Keep Manual Or Human-Reviewed
 
 Do not fully automate these decisions yet:

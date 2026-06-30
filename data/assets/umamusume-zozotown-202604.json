@@ -8,7 +8,10 @@
     "loading": "eager",
     "remoteUrl": "https://corp.zozo.com/news/files/images/20260423_umamusume_main.jpg",
     "usage": "archive-thumbnail",
-    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "hero",
+    "imageReviewStatus": "final",
+    "imageImprovementPriority": "none"
   },
   {
     "id": "zozotown-original-goods-composite",
@@ -20,7 +23,17 @@
     "decoding": "async",
     "remoteUrl": "https://corp.zozo.com/news/files/images/20260423_umamusume_item_1.jpg",
     "usage": "archive-thumbnail",
-    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "composite",
+    "imageReviewStatus": "needs-image-pass",
+    "representedItemIds": [
+      "zozotown-big-acrylic-stands",
+      "zozotown-can-badge-sets",
+      "zozotown-cheki-sets",
+      "zozotown-rubber-mats"
+    ],
+    "imageImprovementPriority": "official-individual",
+    "imageNotes": "Initial generation may use this official composite as a provisional visual. Do not crop it into separate product-card images; search for official item-specific images first, then reviewed reference candidates."
   },
   {
     "id": "zozotown-417-edifice-apparel-composite",
@@ -32,7 +45,14 @@
     "decoding": "async",
     "remoteUrl": "https://corp.zozo.com/news/files/images/20260423_umamusume_item_2.jpg",
     "usage": "archive-thumbnail",
-    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "product-group",
+    "imageReviewStatus": "provisional",
+    "representedItemIds": [
+      "zozotown-417-edifice-apparel"
+    ],
+    "imageImprovementPriority": "none",
+    "imageNotes": "Acceptable as a provisional brand-level group image because the card represents the apparel collection, not separate product cards."
   },
   {
     "id": "zozotown-hare-apparel-composite",
@@ -44,7 +64,14 @@
     "decoding": "async",
     "remoteUrl": "https://corp.zozo.com/news/files/images/20260423_umamusume_item_3.jpg",
     "usage": "archive-thumbnail",
-    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "product-group",
+    "imageReviewStatus": "provisional",
+    "representedItemIds": [
+      "zozotown-hare-apparel"
+    ],
+    "imageImprovementPriority": "none",
+    "imageNotes": "Acceptable as a provisional brand-level group image because the card represents the apparel collection, not separate product cards."
   },
   {
     "id": "zozotown-freaks-store-apparel-composite",
@@ -56,6 +83,13 @@
     "decoding": "async",
     "remoteUrl": "https://corp.zozo.com/news/files/images/20260423_umamusume_item_4.jpg",
     "usage": "archive-thumbnail",
-    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership."
+    "rightsNote": "Archive thumbnail for identification. Rights remain with the relevant rights holders; attribution does not imply permission, endorsement, or official partnership.",
+    "imageKind": "product-group",
+    "imageReviewStatus": "provisional",
+    "representedItemIds": [
+      "zozotown-freaks-store-apparel"
+    ],
+    "imageImprovementPriority": "none",
+    "imageNotes": "Acceptable as a provisional brand-level group image because the card represents the apparel collection, not separate product cards."
   }
 ]

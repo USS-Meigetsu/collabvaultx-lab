@@ -11,6 +11,14 @@ const PACKAGE_STATUSES = new Set(["draft", "needs-human-review", "research-ready
 const PAGE_DECISIONS = new Set(["generate", "parent-card-only", "defer", "never"]);
 const PRIORITIES = new Set(["high", "medium", "low", "none"]);
 const RISK_LEVELS = new Set(["high", "medium", "low", "none"]);
+const IMAGE_KINDS = new Set(["hero", "individual-product", "product-group", "composite", "reference-candidate"]);
+const IMAGE_REVIEW_STATUSES = new Set(["final", "provisional", "needs-image-pass", "needs-human-review"]);
+const IMAGE_IMPROVEMENT_PRIORITIES = new Set([
+  "official-individual",
+  "same-item-official-edit",
+  "web-reference-candidate",
+  "none",
+]);
 const REQUIRED_NON_AFFILIATE_REL = ["nofollow", "noopener", "noreferrer"];
 const PAGE_DECISION_SCORE_FIELDS = [
   "searchValue",
@@ -99,6 +107,18 @@ function requireBoolean(parent, key, label, errors) {
     return false;
   }
   return value;
+}
+
+function validateOptionalEnum(parent, key, allowedValues, label, errors) {
+  if (parent?.[key] === undefined) return;
+  const value = parent[key];
+  if (typeof value !== "string" || value.trim() === "") {
+    push(errors, label, `${key} must be a non-empty string`);
+    return;
+  }
+  if (!allowedValues.has(value)) {
+    push(errors, label, `${key} has unsupported value "${value}"`);
+  }
 }
 
 function validateIsoDate(value, label, key, errors) {
@@ -244,6 +264,13 @@ function validateAsset(asset, label, sourceMap, errors) {
   requireString(asset, "usage", label, errors);
   requireString(asset, "downloadPolicy", label, errors);
   requireString(asset, "rightsNote", label, errors);
+  validateOptionalEnum(asset, "imageKind", IMAGE_KINDS, label, errors);
+  validateOptionalEnum(asset, "imageReviewStatus", IMAGE_REVIEW_STATUSES, label, errors);
+  validateOptionalEnum(asset, "imageImprovementPriority", IMAGE_IMPROVEMENT_PRIORITIES, label, errors);
+
+  if (asset.representedItemIds !== undefined) {
+    requireArray(asset, "representedItemIds", label, errors, { minItems: 1 });
+  }
 
   if (!sourceMap.has(sourceId)) {
     push(errors, label, `sourceId references missing source "${sourceId}"`);
@@ -613,6 +640,10 @@ function validatePackage(pkg, filePath) {
 
   const itemMap = indexById(items, `${label}:items`, errors);
   checkRefs(campaignItemIds, itemMap, `${label}:campaign`, "itemIds", errors);
+  for (const [index, asset] of assets.entries()) {
+    if (!isObject(asset) || asset.representedItemIds === undefined) continue;
+    checkRefs(asset.representedItemIds, itemMap, `${label}:assets[${index}]`, "representedItemIds", errors);
+  }
 
   const pageSlugs = new Set();
   const generatedSummaries = new Map();

@@ -140,6 +140,42 @@ Assets in a package are plans, not proof of usage rights. Each asset needs:
 Codex may download, compress, and place images, but it must not publish local
 captures, PDFs, browser profiles, or temporary visual-diff files as assets.
 
+Image quality is a post-generation improvement phase, not a blocker for the
+first generated campaign page. The initial Research Package may use a
+source-backed composite image so Codex can generate a reviewable web page, but
+that output must stay marked as provisional until the image pass is complete.
+
+Image assignment priority:
+
+1. Use official item-specific images when they exist.
+2. Use same-item official image editing only when it improves that specific
+   item image, such as trimming whitespace or improving quality. Do not create
+   a new product image from scratch.
+3. If no official item-specific image exists, search for a better matching web
+   reference candidate and keep it clearly labeled as a reference image until
+   human review.
+4. Do not crop one official collection/composite image into separate product
+   cards as the normal solution.
+5. Do not replace product cards with image-less cards or tiny generic icons just
+   to avoid the problem.
+
+Recommended optional asset metadata:
+
+- `imageKind`: `hero`, `individual-product`, `product-group`, `composite`, or
+  `reference-candidate`.
+- `imageReviewStatus`: `final`, `provisional`, `needs-image-pass`, or
+  `needs-human-review`.
+- `representedItemIds`: item IDs visibly represented by a composite or group
+  image.
+- `imageImprovementPriority`: next preferred image action, such as
+  `official-individual`, `same-item-official-edit`, or
+  `web-reference-candidate`.
+- `imageNotes`: short internal review note.
+
+Codex image audit happens after initial generation. The audit should flag
+reused composite images and create an improvement queue, but it should not fail
+the initial import unless the page is being marked final-ready.
+
 ## Marketplace Searches
 
 Marketplace links are reference searches. They do not verify facts and must not

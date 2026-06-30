@@ -110,17 +110,19 @@ function dataItemFromPackage(item, campaign) {
 }
 
 function dataAssetFromPackage(asset) {
+  const { id, role, sourceId, remoteUrl, localPath, altJa, usage, downloadPolicy, rightsNote, ...metadata } = asset;
   return {
-    id: asset.id,
-    path: asset.localPath,
-    role: asset.role,
-    altJa: asset.altJa,
-    sourceId: asset.sourceId,
-    loading: asset.role === "hero" ? "eager" : "lazy",
-    decoding: asset.role === "hero" ? undefined : "async",
-    remoteUrl: asset.remoteUrl,
-    usage: asset.usage,
-    rightsNote: asset.rightsNote,
+    id,
+    path: localPath,
+    role,
+    altJa,
+    sourceId,
+    loading: role === "hero" ? "eager" : "lazy",
+    decoding: role === "hero" ? undefined : "async",
+    remoteUrl,
+    usage,
+    rightsNote,
+    ...metadata,
   };
 }
 
@@ -134,6 +136,64 @@ function stripUndefined(value) {
     );
   }
   return value;
+}
+
+function isCompositeAsset(asset) {
+  if (!asset) return false;
+  if (asset.imageKind === "composite") return true;
+  return [asset.id, asset.path, asset.usage, asset.altJa].filter(Boolean).join(" ").toLowerCase().includes("composite");
+}
+
+function buildImageReviewQueue({ items, assets }) {
+  const assetsById = new Map(assets.map((asset) => [asset.id, asset]));
+  const usageByPrimaryAsset = new Map();
+  const queue = [];
+
+  for (const item of items) {
+    const assetId = (item.assetIds ?? []).find((id) => assetsById.has(id));
+    if (!assetId) continue;
+    if (!usageByPrimaryAsset.has(assetId)) usageByPrimaryAsset.set(assetId, []);
+    usageByPrimaryAsset.get(assetId).push(item.id);
+
+    if (["needs-image-pass", "needs-human-review"].includes(item.productGrid?.imageReviewStatus)) {
+      queue.push({
+        type: "product-card-image-review",
+        itemId: item.id,
+        assetId,
+        status: item.productGrid.imageReviewStatus,
+        priority: item.productGrid.imageImprovementPriority ?? "official-individual",
+        note: item.productGrid.imageNotes ?? "",
+      });
+    }
+  }
+
+  for (const asset of assets) {
+    if (["needs-image-pass", "needs-human-review"].includes(asset.imageReviewStatus)) {
+      queue.push({
+        type: "asset-image-review",
+        assetId: asset.id,
+        status: asset.imageReviewStatus,
+        priority: asset.imageImprovementPriority ?? "official-individual",
+        representedItemIds: asset.representedItemIds ?? [],
+        note: asset.imageNotes ?? "",
+      });
+    }
+  }
+
+  for (const [assetId, itemIds] of usageByPrimaryAsset.entries()) {
+    const asset = assetsById.get(assetId);
+    if (itemIds.length < 2 || !isCompositeAsset(asset)) continue;
+    queue.push({
+      type: "reused-composite-product-card-image",
+      assetId,
+      itemIds,
+      status: "needs-image-pass",
+      priority: asset?.imageImprovementPriority ?? "official-individual",
+      note: "Initial generation may use this composite as a provisional visual, but final product cards need item-specific images or reviewed reference candidates.",
+    });
+  }
+
+  return queue;
 }
 
 async function downloadAssets(assets) {
@@ -626,6 +686,7 @@ function buildImportReport({ pkg, packagePath, campaign, items, assets, sources,
       "pageDecision removed from data items after generating page paths.",
       "priceLabel rendered publicly as an original official listed price label.",
       "unresolvedQuestions kept out of public HTML; publicVerificationNotes rendered instead.",
+      "image review metadata preserved on assets for the post-generation image pass.",
     ],
     reviewOnlyQuestions: pkg.unresolvedQuestions.map((question) => ({
       id: question.id,
@@ -633,6 +694,7 @@ function buildImportReport({ pkg, packagePath, campaign, items, assets, sources,
       publishBlocking: question.publishBlocking,
       question: question.question,
     })),
+    imageReviewQueue: buildImageReviewQueue({ items, assets }),
   };
 }
 

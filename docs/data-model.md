@@ -185,9 +185,28 @@ Optional fields:
 - `credit`: copyright or official credit text when needed.
 - `loading`: `eager` for hero images, `lazy` for product-list images.
 - `decoding`: usually `async` for product-list images.
+- `imageKind`: visual assignment type. Current values are `hero`,
+  `individual-product`, `product-group`, `composite`, and
+  `reference-candidate`.
+- `imageReviewStatus`: quality state for the visual assignment. Current values
+  are `final`, `provisional`, `needs-image-pass`, and `needs-human-review`.
+- `representedItemIds`: item IDs visibly represented by a group or composite
+  image.
+- `imageImprovementPriority`: next preferred improvement action. Current values
+  are `official-individual`, `same-item-official-edit`,
+  `web-reference-candidate`, and `none`.
+- `imageNotes`: short internal review note for the image pass.
 
 Do not store local capture screenshots, PDFs, browser profiles, or temp visual
 diff artifacts as public assets.
+
+Do not crop one official collection/composite image into separate product cards
+as the default solution. A composite image may be used in the first generated
+page as a provisional review asset, but repeated composite use across product
+cards should be queued for a later image pass. Prefer official item-specific
+images, then same-item official image cleanup, then clearly labeled reference
+image candidates that require human review. Product images must not be generated
+from scratch.
 
 ## MarketplaceSearch
 

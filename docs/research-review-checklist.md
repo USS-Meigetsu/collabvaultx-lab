@@ -31,6 +31,8 @@ Use this checklist before a GPT-researched package becomes generated pages.
 - `publishBlocking: true` unresolved questions fail validation.
 - Public notes do not contain internal Codex/GPT instructions.
 - Existing repo checks still pass after import/generation.
+- Image audit records repeated composite images as an improvement queue item
+  instead of silently treating them as final.
 
 ## Human Review
 
@@ -44,6 +46,10 @@ Use this checklist before a GPT-researched package becomes generated pages.
 - Internal unresolved questions are not visible on public pages.
 - Import reports make raw package to generated output changes traceable.
 - The generated output is reviewable and rollback-friendly.
+- Product images are reviewed after the first generated page exists.
+- Official item-specific images are preferred when available.
+- Same-item official image cleanup is acceptable, but generated-from-scratch
+  product images and collection-image crops are not accepted as routine fixes.
 
 ## GPT Review After Pilot
 
@@ -53,6 +59,7 @@ Ask GPT to review:
 - whether generated pages are too thin or duplicated,
 - whether the schema misses fields needed for future campaigns,
 - whether common components are actually generated rather than hand-copied,
+- whether the image improvement queue is correctly prioritized,
 - what the next generator-hardening step should be.
 
 ## Pilot Acceptance

@@ -225,7 +225,24 @@
         "altJa": { "type": "string", "minLength": 1 },
         "usage": { "type": "string", "minLength": 1 },
         "downloadPolicy": { "type": "string", "minLength": 1 },
-        "rightsNote": { "type": "string", "minLength": 1 }
+        "rightsNote": { "type": "string", "minLength": 1 },
+        "imageKind": {
+          "type": "string",
+          "enum": ["hero", "individual-product", "product-group", "composite", "reference-candidate"]
+        },
+        "imageReviewStatus": {
+          "type": "string",
+          "enum": ["final", "provisional", "needs-image-pass", "needs-human-review"]
+        },
+        "representedItemIds": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/kebabId" }
+        },
+        "imageImprovementPriority": {
+          "type": "string",
+          "enum": ["official-individual", "same-item-official-edit", "web-reference-candidate", "none"]
+        },
+        "imageNotes": { "type": "string" }
       }
     },
     "item": {

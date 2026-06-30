@@ -54,7 +54,8 @@
     "factEvidenceRefs renamed to fieldEvidenceRefs in imported data when present.",
     "pageDecision removed from data items after generating page paths.",
     "priceLabel rendered publicly as an original official listed price label.",
-    "unresolvedQuestions kept out of public HTML; publicVerificationNotes rendered instead."
+    "unresolvedQuestions kept out of public HTML; publicVerificationNotes rendered instead.",
+    "image review metadata preserved on assets for the post-generation image pass."
   ],
   "reviewOnlyQuestions": [
     {
@@ -74,6 +75,66 @@
       "impact": "medium",
       "publishBlocking": false,
       "question": "The brand apparel collections contain multiple apparel SKUs with size/color/variant complexity. Should future versions split apparel into individual item pages or keep brand-level grouped pages?"
+    }
+  ],
+  "imageReviewQueue": [
+    {
+      "type": "product-card-image-review",
+      "itemId": "zozotown-big-acrylic-stands",
+      "assetId": "zozotown-original-goods-composite",
+      "status": "needs-image-pass",
+      "priority": "official-individual",
+      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+    },
+    {
+      "type": "product-card-image-review",
+      "itemId": "zozotown-can-badge-sets",
+      "assetId": "zozotown-original-goods-composite",
+      "status": "needs-image-pass",
+      "priority": "official-individual",
+      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+    },
+    {
+      "type": "product-card-image-review",
+      "itemId": "zozotown-cheki-sets",
+      "assetId": "zozotown-original-goods-composite",
+      "status": "needs-image-pass",
+      "priority": "official-individual",
+      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+    },
+    {
+      "type": "product-card-image-review",
+      "itemId": "zozotown-rubber-mats",
+      "assetId": "zozotown-original-goods-composite",
+      "status": "needs-image-pass",
+      "priority": "official-individual",
+      "note": "Currently uses the shared official original-goods composite. Do not crop the composite for this card; search for an official item-specific image first, then a reviewed reference candidate."
+    },
+    {
+      "type": "asset-image-review",
+      "assetId": "zozotown-original-goods-composite",
+      "status": "needs-image-pass",
+      "priority": "official-individual",
+      "representedItemIds": [
+        "zozotown-big-acrylic-stands",
+        "zozotown-can-badge-sets",
+        "zozotown-cheki-sets",
+        "zozotown-rubber-mats"
+      ],
+      "note": "Initial generation may use this official composite as a provisional visual. Do not crop it into separate product-card images; search for official item-specific images first, then reviewed reference candidates."
+    },
+    {
+      "type": "reused-composite-product-card-image",
+      "assetId": "zozotown-original-goods-composite",
+      "itemIds": [
+        "zozotown-big-acrylic-stands",
+        "zozotown-can-badge-sets",
+        "zozotown-cheki-sets",
+        "zozotown-rubber-mats"
+      ],
+      "status": "needs-image-pass",
+      "priority": "official-individual",
+      "note": "Initial generation may use this composite as a provisional visual, but final product cards need item-specific images or reviewed reference candidates."
     }
   ]
 }
