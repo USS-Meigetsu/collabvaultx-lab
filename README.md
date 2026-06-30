@@ -102,6 +102,9 @@ benefits, keep the categories broad and put the detailed item words in
   official purchase sources.
 - Detail pages and item pages with marketplace/search links should show a
   `market-note` before the item cards or reference searches.
+- Visual assets are archive thumbnails for identification. Rights remain with
+  the relevant rights holders, and source attribution does not imply permission,
+  endorsement, or an official partnership.
 - Do not add campaign periods, store counts, item rules, or bonus conditions
   unless they are backed by an official source or clearly labeled as a later
   verification target.

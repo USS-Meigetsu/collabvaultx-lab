@@ -57,6 +57,11 @@ function getMetaContent(html, propertyName) {
   return tag ? decodeEntities(getAttribute(tag, "content")) : "";
 }
 
+function getNamedMetaContent(html, name) {
+  const tag = getOpeningTags(html, "meta").find((openingTag) => getAttribute(openingTag, "name") === name);
+  return tag ? decodeEntities(getAttribute(tag, "content")) : "";
+}
+
 function extractArticle(html, id) {
   const articlePattern = new RegExp(
     `<article\\b(?=[^>]*\\bid=(["'])${id}\\1)[^>]*>[\\s\\S]*?<\\/article>`,
@@ -231,6 +236,27 @@ if (!card) {
   }
 }
 
+const campaignPagePath = `works/${campaign.workId}/collabs/${campaign.slug}/`;
+const campaignHtmlPath = pagePathToHtmlPath(campaignPagePath);
+const campaignHtml = readText(campaignHtmlPath);
+const campaignLabel = `Lawson campaign page ${campaign.slug}`;
+const campaignOgTitle = getMetaContent(campaignHtml, "og:title");
+const campaignOgDescription = getMetaContent(campaignHtml, "og:description");
+const campaignOgImage = getMetaContent(campaignHtml, "og:image");
+
+if (getMetaContent(campaignHtml, "og:image:alt").trim() === "") {
+  fail(`${campaignLabel}: og:image:alt must not be empty`);
+}
+if (getNamedMetaContent(campaignHtml, "twitter:title") !== campaignOgTitle) {
+  fail(`${campaignLabel}: twitter:title must match og:title`);
+}
+if (getNamedMetaContent(campaignHtml, "twitter:description") !== campaignOgDescription) {
+  fail(`${campaignLabel}: twitter:description must match og:description`);
+}
+if (getNamedMetaContent(campaignHtml, "twitter:image") !== campaignOgImage) {
+  fail(`${campaignLabel}: twitter:image must match og:image`);
+}
+
 function validatePublishedItemPage(item) {
   const label = `Lawson item page ${item.id}`;
   const itemPage = item.page;
@@ -265,6 +291,18 @@ function validatePublishedItemPage(item) {
   }
   if (getMetaContent(itemHtml, "og:url") !== itemPublicUrl) {
     fail(`${label}: og:url does not match ${itemPublicUrl}`);
+  }
+  const ogTitle = getMetaContent(itemHtml, "og:title");
+  const ogDescription = getMetaContent(itemHtml, "og:description");
+  const ogImage = getMetaContent(itemHtml, "og:image");
+  if (getNamedMetaContent(itemHtml, "twitter:title") !== ogTitle) {
+    fail(`${label}: twitter:title must match og:title`);
+  }
+  if (getNamedMetaContent(itemHtml, "twitter:description") !== ogDescription) {
+    fail(`${label}: twitter:description must match og:description`);
+  }
+  if (getNamedMetaContent(itemHtml, "twitter:image") !== ogImage) {
+    fail(`${label}: twitter:image must match og:image`);
   }
   if (!sitemap.includes(`<loc>${itemPublicUrl}</loc>`)) {
     fail(`${label}: sitemap.xml is missing ${itemPublicUrl}`);
@@ -310,6 +348,10 @@ function validatePublishedItemPage(item) {
   if (assetsForItem.length === 0) {
     fail(`${label}: assetIds must include at least one known asset`);
   } else {
+    if (getMetaContent(itemHtml, "og:image:alt") !== assetsForItem[0].altJa) {
+      fail(`${label}: og:image:alt must match primary asset.altJa`);
+    }
+
     const heroImageMatch = itemHtml.match(
       /<picture\b(?=[^>]*class=(["'])[^"']*\bsubpage-hero-collab-media\b[^"']*\1)[\s\S]*?<img\b([^>]*)>/,
     );

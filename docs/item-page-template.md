@@ -16,8 +16,10 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
   - `description`.
   - canonical URL on `https://lab.collabvaultx.com/`.
   - `og:site_name`, `og:type`, `og:title`, `og:description`, `og:url`,
-    `og:image`.
+    `og:image`, and `og:image:alt`.
   - `twitter:card` with `summary_large_image`.
+  - `twitter:title`, `twitter:description`, and `twitter:image` aligned with
+    the matching Open Graph metadata.
   - shared stylesheet path.
 - Hero:
   - breadcrumb links to Top page, work page, and campaign page.
@@ -38,7 +40,12 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
   - `item-fact-list` for official facts.
 - Reference section:
   - `market-note` before secondary-market searches.
-  - `Official source:`, `Checked date:`, and `Notes:` entries.
+  - `Official source:`, `Checked date:`, and `Notes:` entries. For
+    partner-official sources, keep `Official source:` in the label for
+    validation and clarify the partner-official status in the text.
+  - A concise archive/visual-asset note when a page relies on official imagery:
+    thumbnails are for identification, rights remain with the relevant rights
+    holders, and attribution does not imply permission or endorsement.
   - secondary-market links inside `market-links`.
   - related Lawson item-page navigation.
   - back links to the campaign, work page, and Top page.
