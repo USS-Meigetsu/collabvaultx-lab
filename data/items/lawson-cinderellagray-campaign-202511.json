@@ -149,8 +149,8 @@
       {
         "id": "ebay-all-results",
         "platform": "ebay",
-        "labelJa": "eBayで探す",
-        "labelEn": "Search eBay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
         "query": "Uma Musume Cinderella Gray Lawson Galbo card",
         "queryLabel": "Uma Musume Cinderella Gray Lawson Galbo card",
         "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Galbo+card",
@@ -161,14 +161,42 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4+%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3+%E3%82%AC%E3%83%AB%E3%83%9C+%E3%82%AB%E3%83%BC%E3%83%89",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
-        "labelJa": "メルカリで探す",
-        "labelEn": "Search Mercari JP",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
         "query": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20ガルボ%20カード",
         "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-single-item",
+        "platform": "mercari",
+        "labelJa": "メルカリで単品検索",
+        "labelEn": "Search Mercari JP single items",
+        "query": "ウマ娘 シンデレラグレイ ローソン ガルボ フォト風カード",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ フォト風カード",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E3%82%AC%E3%83%AB%E3%83%9C%20%E3%83%95%E3%82%A9%E3%83%88%E9%A2%A8%E3%82%AB%E3%83%BC%E3%83%89",
+        "intent": "single-item",
         "region": "jp",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
@@ -187,8 +215,25 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E3%82%AC%E3%83%AB%E3%83%9C%20%E3%82%AB%E3%83%BC%E3%83%89",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "lawson-glass-peach-jelly",
@@ -222,8 +267,8 @@
       {
         "id": "ebay-all-results",
         "platform": "ebay",
-        "labelJa": "eBayで探す",
-        "labelEn": "Search eBay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
         "query": "Uma Musume Cinderella Gray Lawson glass peach jelly",
         "queryLabel": "Uma Musume Cinderella Gray Lawson glass peach jelly",
         "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+glass+peach+jelly",
@@ -234,14 +279,42 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4+%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3+%E3%82%B0%E3%83%A9%E3%82%B9+%E7%99%BD%E6%A1%83%E3%82%BC%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
-        "labelJa": "メルカリで探す",
-        "labelEn": "Search Mercari JP",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
         "query": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20グラス%20白桃ゼリー",
         "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-single-item",
+        "platform": "mercari",
+        "labelJa": "メルカリで単品検索",
+        "labelEn": "Search Mercari JP single items",
+        "query": "ウマ娘 シンデレラグレイ ローソン グラス",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E3%82%B0%E3%83%A9%E3%82%B9",
+        "intent": "single-item",
         "region": "jp",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
@@ -260,8 +333,25 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E3%82%B0%E3%83%A9%E3%82%B9%20%E7%99%BD%E6%A1%83%E3%82%BC%E3%83%AA%E3%83%BC",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "lawson-acrylic-stand",
@@ -295,8 +385,8 @@
       {
         "id": "ebay-all-results",
         "platform": "ebay",
-        "labelJa": "eBayで探す",
-        "labelEn": "Search eBay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
         "query": "Uma Musume Cinderella Gray Lawson acrylic stand",
         "queryLabel": "Uma Musume Cinderella Gray Lawson acrylic stand",
         "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+acrylic+stand",
@@ -307,14 +397,56 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4+%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3+%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
-        "labelJa": "メルカリで探す",
-        "labelEn": "Search Mercari JP",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
         "query": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20アクリルスタンド",
         "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "ebay-complete-set",
+        "platform": "ebay",
+        "labelJa": "eBayでセット検索",
+        "labelEn": "Search eBay sets",
+        "query": "Uma Musume Cinderella Gray Lawson acrylic stand set",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson acrylic stand set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+acrylic+stand+set",
+        "intent": "complete-set",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP sets",
+        "query": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド 全種",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド 全種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%20%E5%85%A8%E7%A8%AE",
+        "intent": "complete-set",
         "region": "jp",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
@@ -333,8 +465,25 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "lawson-loppi-hmv-reservation-goods",
@@ -368,8 +517,8 @@
       {
         "id": "ebay-all-results",
         "platform": "ebay",
-        "labelJa": "eBayで探す",
-        "labelEn": "Search eBay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
         "query": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
         "queryLabel": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
         "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods",
@@ -380,14 +529,42 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4+%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3+Loppi+HMV+%E3%82%B0%E3%83%83%E3%82%BA",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
-        "labelJa": "メルカリで探す",
-        "labelEn": "Search Mercari JP",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
         "query": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ",
         "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP sets",
+        "query": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ セット",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ セット",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20Loppi%20HMV%20%E3%82%B0%E3%83%83%E3%82%BA%20%E3%82%BB%E3%83%83%E3%83%88",
+        "intent": "complete-set",
         "region": "jp",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
@@ -406,8 +583,25 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20Loppi%20HMV%20%E3%82%B0%E3%83%83%E3%82%BA",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "lawson-entame-kuji",

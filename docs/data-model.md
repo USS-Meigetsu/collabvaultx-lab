@@ -199,12 +199,17 @@ Optional fields:
 
 - `region`: market or language expectation.
 - `affiliateUrl`: commission-bearing URL. Use only when `isAffiliate` is true.
-- `queryLabel`: legacy readable search terms retained during the static HTML
-  migration.
+- `queryLabel`: optional legacy readable search terms retained during the
+  static HTML migration. New records can omit it when `query` is already
+  readable enough for audits.
 - `notes`: known ambiguity or keyword limitation.
 
 Marketplace searches must be accompanied by UI copy that availability, price,
 and authenticity are not verified by CollabVaultX.
+
+Use the `character-specific` intent only when the query contains actual
+character names. For generic searches, use `all-results`, `single-item`,
+`complete-set`, or another non-character intent.
 
 Non-affiliate marketplace links use `rel="nofollow noopener noreferrer"`.
 Affiliate marketplace links use `rel="sponsored noopener noreferrer"` and must
@@ -357,16 +362,37 @@ Published `MarketplaceSearch` records require:
     "assetIds": ["lawson-loppi-hmv-main"],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
         "queryLabel": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   "sources": [
     {
