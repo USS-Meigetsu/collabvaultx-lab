@@ -1,0 +1,22 @@
+[
+  {
+    "id": "zozo-corporate-release",
+    "type": "partner-official",
+    "url": "https://corp.zozo.com/news/20260423-007553/",
+    "label": "株式会社ZOZO公式プレスリリース",
+    "checkedAt": "2026-06-30",
+    "language": "ja",
+    "scope": "Campaign title, order period, ZOZOTOWN collaboration goods overview, participating apparel brands, featured item names, variation counts, prices, delivery-period note, and official campaign special-page URL.",
+    "reliability": "primary"
+  },
+  {
+    "id": "zozotown-special-page",
+    "type": "partner-official",
+    "url": "https://zozo.jp/event/umamusume/",
+    "label": "ZOZOTOWN特設ページ",
+    "checkedAt": "2026-06-30",
+    "language": "ja",
+    "scope": "Public special-page route for the campaign. The current page may no longer expose full item detail after the campaign ended; item facts in this package rely on the ZOZO corporate release.",
+    "reliability": "primary-route-reference"
+  }
+]

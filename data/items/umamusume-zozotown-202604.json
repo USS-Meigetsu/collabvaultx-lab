@@ -1,0 +1,852 @@
+[
+  {
+    "id": "zozotown-big-acrylic-stands",
+    "campaignId": "umamusume-zozotown-202604",
+    "officialNameJa": "〖ウマ娘 × ZOZOTOWN〗ビッグアクリルスタンド",
+    "displayNameEn": "BIG acrylic stands",
+    "summaryEn": "ZOZOTOWN original BIG acrylic stand group for Uma Musume in ZOZOTOWN, covering the 15-type lineup, original price, official source, and reference searches.",
+    "category": "figure",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "confidence": "official",
+    "sourceIds": [
+      "zozo-corporate-release"
+    ],
+    "evidenceRefs": [
+      "ev-original-goods-featured",
+      "ev-order-period"
+    ],
+    "factEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ]
+    },
+    "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたビッグアクリルスタンド。",
+    "lineupLabelJa": "15種展開",
+    "priceLabel": "2,200円（税込）",
+    "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
+    "availabilityLabel": "受注販売期間：2026年4月24日正午〜2026年5月18日11:59",
+    "startDate": "2026-04-24",
+    "endDate": "2026-05-18",
+    "assetIds": [
+      "zozotown-original-goods-composite"
+    ],
+    "variants": [
+      {
+        "labelJa": "15種展開",
+        "variantType": "character-design",
+        "count": 15,
+        "separateItemPages": false,
+        "evidenceRefs": [
+          "ev-original-goods-featured"
+        ]
+      }
+    ],
+    "productGrid": {
+      "tag": "Figure",
+      "descriptionJa": "ZOZOTOWN限定アイテムのビッグアクリルスタンド。",
+      "factsJa": [
+        "15種展開",
+        "2,200円（税込）",
+        "ZOZOTOWN限定コレクションとして受注販売"
+      ]
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ZOZOTOWN BIG acrylic stand",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ZOZOTOWN+BIG+acrylic+stand",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ZOZOTOWN ビッグアクリルスタンド",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ZOZOTOWN%20%E3%83%93%E3%83%83%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリで15種検索",
+        "labelEn": "Search Mercari JP 15-type results",
+        "query": "ウマ娘 ZOZOTOWN ビッグアクリルスタンド 15種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ZOZOTOWN%20%E3%83%93%E3%83%83%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%2015%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ZOZOTOWN ビッグアクリルスタンド",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ZOZOTOWN+%E3%83%93%E3%83%83%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "reviewNotes": [
+      "Use product-group page only; do not generate separate pages for the 15 character variants."
+    ],
+    "page": {
+      "status": "published",
+      "slug": "big-acrylic-stands",
+      "path": "works/umamusume/collabs/umamusume-zozotown-202604/items/big-acrylic-stands/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
+  },
+  {
+    "id": "zozotown-can-badge-sets",
+    "campaignId": "umamusume-zozotown-202604",
+    "officialNameJa": "〖ウマ娘 × ZOZOTOWN〗缶バッジセット",
+    "displayNameEn": "Can badge sets",
+    "summaryEn": "ZOZOTOWN original can badge set group for Uma Musume in ZOZOTOWN, covering the three-type lineup, original price, official source, and reference searches.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "confidence": "official",
+    "sourceIds": [
+      "zozo-corporate-release"
+    ],
+    "evidenceRefs": [
+      "ev-original-goods-featured",
+      "ev-order-period"
+    ],
+    "factEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ]
+    },
+    "descriptionJa": "ZOZOTOWN限定アイテムとして掲載された缶バッジセット。",
+    "lineupLabelJa": "3種展開",
+    "priceLabel": "2,750円（税込）",
+    "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
+    "availabilityLabel": "受注販売期間：2026年4月24日正午〜2026年5月18日11:59",
+    "startDate": "2026-04-24",
+    "endDate": "2026-05-18",
+    "assetIds": [
+      "zozotown-original-goods-composite"
+    ],
+    "variants": [
+      {
+        "labelJa": "3種展開",
+        "variantType": "illustrator-set",
+        "count": 3,
+        "separateItemPages": false,
+        "evidenceRefs": [
+          "ev-original-goods-featured"
+        ]
+      }
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "descriptionJa": "ZOZOTOWN限定アイテムの缶バッジセット。",
+      "factsJa": [
+        "3種展開",
+        "2,750円（税込）",
+        "ZOZOTOWN限定コレクションとして受注販売"
+      ]
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ZOZOTOWN can badge set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ZOZOTOWN+can+badge+set",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ZOZOTOWN 缶バッジセット",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ZOZOTOWN%20%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8%E3%82%BB%E3%83%83%E3%83%88",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリで3種検索",
+        "labelEn": "Search Mercari JP 3-type results",
+        "query": "ウマ娘 ZOZOTOWN 缶バッジセット 3種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ZOZOTOWN%20%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8%E3%82%BB%E3%83%83%E3%83%88%203%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ZOZOTOWN 缶バッジセット",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ZOZOTOWN+%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8%E3%82%BB%E3%83%83%E3%83%88",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "reviewNotes": [
+      "Use one item group page for the three set types; do not generate pages per illustrator version."
+    ],
+    "page": {
+      "status": "published",
+      "slug": "can-badge-sets",
+      "path": "works/umamusume/collabs/umamusume-zozotown-202604/items/can-badge-sets/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
+  },
+  {
+    "id": "zozotown-cheki-sets",
+    "campaignId": "umamusume-zozotown-202604",
+    "officialNameJa": "〖ウマ娘 × ZOZOTOWN〗チェキセット",
+    "displayNameEn": "Cheki sets",
+    "summaryEn": "ZOZOTOWN original Cheki set group for Uma Musume in ZOZOTOWN, covering the three-type lineup, original price, official source, and reference searches.",
+    "category": "card",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "confidence": "official",
+    "sourceIds": [
+      "zozo-corporate-release"
+    ],
+    "evidenceRefs": [
+      "ev-original-goods-featured",
+      "ev-order-period"
+    ],
+    "factEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ]
+    },
+    "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたチェキセット。",
+    "lineupLabelJa": "3種展開",
+    "priceLabel": "3,300円（税込）",
+    "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
+    "availabilityLabel": "受注販売期間：2026年4月24日正午〜2026年5月18日11:59",
+    "startDate": "2026-04-24",
+    "endDate": "2026-05-18",
+    "assetIds": [
+      "zozotown-original-goods-composite"
+    ],
+    "variants": [
+      {
+        "labelJa": "3種展開",
+        "variantType": "illustrator-set",
+        "count": 3,
+        "separateItemPages": false,
+        "evidenceRefs": [
+          "ev-original-goods-featured"
+        ]
+      }
+    ],
+    "productGrid": {
+      "tag": "Card",
+      "descriptionJa": "ZOZOTOWN限定アイテムのチェキセット。",
+      "factsJa": [
+        "3種展開",
+        "3,300円（税込）",
+        "ZOZOTOWN限定コレクションとして受注販売"
+      ]
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ZOZOTOWN cheki set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ZOZOTOWN+cheki+set",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ZOZOTOWN チェキセット",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ZOZOTOWN%20%E3%83%81%E3%82%A7%E3%82%AD%E3%82%BB%E3%83%83%E3%83%88",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ZOZOTOWN チェキセット",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ZOZOTOWN+%E3%83%81%E3%82%A7%E3%82%AD%E3%82%BB%E3%83%83%E3%83%88",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "reviewNotes": [
+      "Cheki-set marketplace naming may vary; review Japanese query wording after first generated page."
+    ],
+    "page": {
+      "status": "published",
+      "slug": "cheki-sets",
+      "path": "works/umamusume/collabs/umamusume-zozotown-202604/items/cheki-sets/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
+  },
+  {
+    "id": "zozotown-rubber-mats",
+    "campaignId": "umamusume-zozotown-202604",
+    "officialNameJa": "〖ウマ娘 × ZOZOTOWN〗ラバーマット",
+    "displayNameEn": "Rubber mats",
+    "summaryEn": "ZOZOTOWN original rubber mat group for Uma Musume in ZOZOTOWN, covering the three-type lineup, original price, official source, and reference searches.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "confidence": "official",
+    "sourceIds": [
+      "zozo-corporate-release"
+    ],
+    "evidenceRefs": [
+      "ev-original-goods-featured",
+      "ev-order-period"
+    ],
+    "factEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ]
+    },
+    "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたラバーマット。",
+    "lineupLabelJa": "3種展開",
+    "priceLabel": "3,850円（税込）",
+    "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
+    "availabilityLabel": "受注販売期間：2026年4月24日正午〜2026年5月18日11:59",
+    "startDate": "2026-04-24",
+    "endDate": "2026-05-18",
+    "assetIds": [
+      "zozotown-original-goods-composite"
+    ],
+    "variants": [
+      {
+        "labelJa": "3種展開",
+        "variantType": "illustrator-set",
+        "count": 3,
+        "separateItemPages": false,
+        "evidenceRefs": [
+          "ev-original-goods-featured"
+        ]
+      }
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "descriptionJa": "ZOZOTOWN限定アイテムのラバーマット。",
+      "factsJa": [
+        "3種展開",
+        "3,850円（税込）",
+        "ZOZOTOWN限定コレクションとして受注販売"
+      ]
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ZOZOTOWN rubber mat",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ZOZOTOWN+rubber+mat",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ZOZOTOWN ラバーマット",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ZOZOTOWN%20%E3%83%A9%E3%83%90%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "reviewNotes": [
+      "Parent-card-only is conservative; promote later if marketplace demand or source detail justifies a route."
+    ]
+  },
+  {
+    "id": "zozotown-417-edifice-apparel",
+    "campaignId": "umamusume-zozotown-202604",
+    "officialNameJa": "〖ウマ娘 × 417 EDIFICE〗アパレルアイテム",
+    "displayNameEn": "417 EDIFICE apparel collection",
+    "summaryEn": "417 EDIFICE apparel collection within Uma Musume in ZOZOTOWN, grouping the VintageTEE, Hand stitch KNIT, Reversible MA1, and Embroidery CAP records.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "confidence": "official",
+    "sourceIds": [
+      "zozo-corporate-release"
+    ],
+    "evidenceRefs": [
+      "ev-417-edifice-items",
+      "ev-order-period"
+    ],
+    "factEvidenceRefs": {
+      "officialNameJa": [
+        "ev-417-edifice-items"
+      ],
+      "descriptionJa": [
+        "ev-417-edifice-items"
+      ],
+      "lineupLabelJa": [
+        "ev-417-edifice-items"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ]
+    },
+    "descriptionJa": "417 EDIFICEとのコラボアパレル群。THE FULL CROWN VintageTEE、Hand stitch KNIT、Reversible MA1、THE FULL CROWN Embroidery CAPが掲載された。",
+    "lineupLabelJa": "4商品グループ",
+    "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
+    "availabilityLabel": "受注販売期間：2026年4月24日正午〜2026年5月18日11:59",
+    "startDate": "2026-04-24",
+    "endDate": "2026-05-18",
+    "assetIds": [
+      "zozotown-417-edifice-apparel-composite"
+    ],
+    "subItems": [
+      {
+        "officialNameJa": "〖ウマ娘 × 417 EDIFICE〗THE FULL CROWN VintageTEE",
+        "lineupLabelJa": "5種展開",
+        "priceLabel": "7,920円（税込）",
+        "evidenceRefs": [
+          "ev-417-edifice-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × 417 EDIFICE〗Hand stitch KNIT",
+        "lineupLabelJa": "2種展開",
+        "priceLabel": "15,400円（税込）",
+        "evidenceRefs": [
+          "ev-417-edifice-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × 417 EDIFICE〗Reversible MA1",
+        "lineupLabelJa": "2種展開",
+        "priceLabel": "26,400円（税込）",
+        "evidenceRefs": [
+          "ev-417-edifice-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × 417 EDIFICE〗THE FULL CROWN Embroidery CAP",
+        "priceLabel": "6,380円（税込）",
+        "evidenceRefs": [
+          "ev-417-edifice-items"
+        ]
+      }
+    ],
+    "productGrid": {
+      "tag": "Apparel",
+      "descriptionJa": "417 EDIFICEとのコラボアパレル群。",
+      "factsJa": [
+        "4商品グループ",
+        "Tシャツ / ニット / MA-1 / キャップ",
+        "ZOZOTOWN限定コレクションとして受注販売"
+      ]
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume 417 EDIFICE ZOZOTOWN",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+417+EDIFICE+ZOZOTOWN",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 417 EDIFICE ZOZOTOWN",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20417%20EDIFICE%20ZOZOTOWN",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "reviewNotes": [
+      "Keep grouped as a brand apparel collection for the pilot; do not create separate item pages for each apparel SKU yet."
+    ]
+  },
+  {
+    "id": "zozotown-hare-apparel",
+    "campaignId": "umamusume-zozotown-202604",
+    "officialNameJa": "〖ウマ娘 × HARE〗アパレルアイテム",
+    "displayNameEn": "HARE apparel collection",
+    "summaryEn": "HARE apparel collection within Uma Musume in ZOZOTOWN, grouping the embroidered oversized shirt, ZIP hoodie, ZIP blouson, and shoulder bag records.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "confidence": "official",
+    "sourceIds": [
+      "zozo-corporate-release"
+    ],
+    "evidenceRefs": [
+      "ev-hare-items",
+      "ev-order-period"
+    ],
+    "factEvidenceRefs": {
+      "officialNameJa": [
+        "ev-hare-items"
+      ],
+      "descriptionJa": [
+        "ev-hare-items"
+      ],
+      "lineupLabelJa": [
+        "ev-hare-items"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ]
+    },
+    "descriptionJa": "HAREとのコラボアパレル群。フラワーシシュウオーバーシャツ、ナイロンキリカエZIPパーカー、レザーキリカエZIPブルゾン、シルエットモチーフショルダーバッグが掲載された。",
+    "lineupLabelJa": "4商品グループ",
+    "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
+    "availabilityLabel": "受注販売期間：2026年4月24日正午〜2026年5月18日11:59",
+    "startDate": "2026-04-24",
+    "endDate": "2026-05-18",
+    "assetIds": [
+      "zozotown-hare-apparel-composite"
+    ],
+    "subItems": [
+      {
+        "officialNameJa": "〖ウマ娘 × HARE〗フラワーシシュウオーバーシャツ",
+        "lineupLabelJa": "5種展開",
+        "priceLabel": "14,300円（税込）",
+        "evidenceRefs": [
+          "ev-hare-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × HARE〗ナイロンキリカエZIPパーカー",
+        "lineupLabelJa": "5種展開",
+        "priceLabel": "17,600円（税込）",
+        "evidenceRefs": [
+          "ev-hare-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × HARE〗レザーキリカエZIPブルゾン",
+        "lineupLabelJa": "3種展開",
+        "priceLabel": "24,200円（税込）",
+        "evidenceRefs": [
+          "ev-hare-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × HARE〗シルエットモチーフショルダーバッグ",
+        "lineupLabelJa": "5種展開",
+        "priceLabel": "5,940円（税込）",
+        "evidenceRefs": [
+          "ev-hare-items"
+        ]
+      }
+    ],
+    "productGrid": {
+      "tag": "Apparel",
+      "descriptionJa": "HAREとのコラボアパレル群。",
+      "factsJa": [
+        "4商品グループ",
+        "シャツ / パーカー / ブルゾン / バッグ",
+        "ZOZOTOWN限定コレクションとして受注販売"
+      ]
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume HARE ZOZOTOWN",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+HARE+ZOZOTOWN",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 HARE ZOZOTOWN",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20HARE%20ZOZOTOWN",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "reviewNotes": [
+      "Do not split into separate pages for each apparel product until apparel template and SEO policy are reviewed."
+    ]
+  },
+  {
+    "id": "zozotown-freaks-store-apparel",
+    "campaignId": "umamusume-zozotown-202604",
+    "officialNameJa": "〖ウマ娘 × FREAK'S STORE〗アパレルアイテム",
+    "displayNameEn": "FREAK'S STORE apparel collection",
+    "summaryEn": "FREAK'S STORE apparel collection within Uma Musume in ZOZOTOWN, grouping the two T-shirts, pullover hoodie, stadium jacket, and tote bag records.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "confidence": "official",
+    "sourceIds": [
+      "zozo-corporate-release"
+    ],
+    "evidenceRefs": [
+      "ev-freaks-store-items",
+      "ev-order-period"
+    ],
+    "factEvidenceRefs": {
+      "officialNameJa": [
+        "ev-freaks-store-items"
+      ],
+      "descriptionJa": [
+        "ev-freaks-store-items"
+      ],
+      "lineupLabelJa": [
+        "ev-freaks-store-items"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ]
+    },
+    "descriptionJa": "FREAK'S STOREとのコラボアパレル群。アーモンドアイ Tシャツ、クロノジェネシス Tシャツ、トレセン学園モチーフ プルオーバーパーカー、トレセン学園モチーフ ワッペンカットソースタジャン、トレセン学園モチーフ ワッペントートバッグが掲載された。",
+    "lineupLabelJa": "5商品グループ",
+    "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
+    "availabilityLabel": "受注販売期間：2026年4月24日正午〜2026年5月18日11:59",
+    "startDate": "2026-04-24",
+    "endDate": "2026-05-18",
+    "assetIds": [
+      "zozotown-freaks-store-apparel-composite"
+    ],
+    "subItems": [
+      {
+        "officialNameJa": "〖ウマ娘 × FREAK'S STORE〗アーモンドアイ Tシャツ",
+        "lineupLabelJa": "2色展開",
+        "priceLabel": "6,996円（税込）",
+        "evidenceRefs": [
+          "ev-freaks-store-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × FREAK'S STORE〗クロノジェネシス Tシャツ",
+        "lineupLabelJa": "2色展開",
+        "priceLabel": "6,996円（税込）",
+        "evidenceRefs": [
+          "ev-freaks-store-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × FREAK'S STORE〗トレセン学園モチーフ プルオーバーパーカー",
+        "lineupLabelJa": "2色展開",
+        "priceLabel": "11,880円（税込）",
+        "evidenceRefs": [
+          "ev-freaks-store-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × FREAK'S STORE〗トレセン学園モチーフ ワッペンカットソースタジャン",
+        "lineupLabelJa": "2色展開",
+        "priceLabel": "17,996円（税込）",
+        "evidenceRefs": [
+          "ev-freaks-store-items"
+        ]
+      },
+      {
+        "officialNameJa": "〖ウマ娘 × FREAK'S STORE〗トレセン学園モチーフ ワッペントートバッグ",
+        "priceLabel": "5,995円（税込）",
+        "evidenceRefs": [
+          "ev-freaks-store-items"
+        ]
+      }
+    ],
+    "productGrid": {
+      "tag": "Apparel",
+      "descriptionJa": "FREAK'S STOREとのコラボアパレル群。",
+      "factsJa": [
+        "5商品グループ",
+        "Tシャツ / パーカー / スタジャン / トートバッグ",
+        "ZOZOTOWN限定コレクションとして受注販売"
+      ]
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume FREAK'S STORE ZOZOTOWN",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+FREAK%27S+STORE+ZOZOTOWN",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 FREAK'S STORE ZOZOTOWN",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20FREAK%27S%20STORE%20ZOZOTOWN",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "reviewNotes": [
+      "Keep grouped by brand for now; split only if future marketplace/SEO review justifies individual apparel pages."
+    ]
+  }
+]

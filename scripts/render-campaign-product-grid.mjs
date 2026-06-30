@@ -14,6 +14,7 @@ export const SUPPORTED_CAMPAIGN_IDS = [
   "lawson-cinderellagray-campaign-202511",
   "cocos-umaimono-fes-202601",
   "sanrio-characters-popup-shop-202512",
+  "umamusume-zozotown-202604",
 ];
 
 const DEFAULT_CAMPAIGN_IDS = SUPPORTED_CAMPAIGN_IDS;
@@ -21,6 +22,7 @@ const PRODUCT_GRID_CLASS_BY_CAMPAIGN_ID = new Map([
   ["lawson-cinderellagray-campaign-202511", "product-grid product-grid-catalog"],
   ["cocos-umaimono-fes-202601", "product-grid product-grid-catalog"],
   ["sanrio-characters-popup-shop-202512", "product-grid product-grid-catalog"],
+  ["umamusume-zozotown-202604", "product-grid product-grid-catalog"],
 ]);
 const MARKET_LINK_PLATFORM_ORDER = ["ebay", "mercari", "suruga-ya"];
 const MARKET_LINK_LABEL_BY_PLATFORM = new Map([

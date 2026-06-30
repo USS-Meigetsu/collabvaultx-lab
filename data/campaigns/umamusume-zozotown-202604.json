@@ -1,0 +1,99 @@
+{
+  "id": "umamusume-zozotown-202604",
+  "workId": "umamusume",
+  "officialTitleJa": "ウマ娘 プリティーダービー in ZOZOTOWN",
+  "displayTitleEn": "Uma Musume in ZOZOTOWN",
+  "slug": "umamusume-zozotown-202604",
+  "status": "published",
+  "periodLabel": "2026 Apr-May order period",
+  "startDate": "2026-04-24",
+  "endDate": "2026-05-18",
+  "endCondition": "order-period-ended-possible-resale",
+  "checkedAt": "2026-06-30",
+  "partnerNames": [
+    "ZOZOTOWN",
+    "417 EDIFICE",
+    "HARE",
+    "FREAK'S STORE"
+  ],
+  "categories": [
+    "card",
+    "figure",
+    "goods"
+  ],
+  "searchKeywords": [
+    "Uma Musume in ZOZOTOWN",
+    "ウマ娘 ZOZOTOWN",
+    "ウマ娘 プリティーダービー in ZOZOTOWN",
+    "417 EDIFICE",
+    "HARE",
+    "FREAK'S STORE",
+    "ビッグアクリルスタンド",
+    "缶バッジセット",
+    "チェキセット",
+    "ラバーマット",
+    "アパレル"
+  ],
+  "heroAssetId": "zozotown-umamusume-hero-main",
+  "summaryJa": "ZOZOTOWNとゲーム『ウマ娘 プリティーダービー』のコラボレーション企画。ZOZOTOWN限定コレクションとして、描き起こしイラストを使用したコラボグッズと、417 EDIFICE、HARE、FREAK'S STOREのアパレルアイテムが受注販売された。",
+  "summaryEn": "ZOZOTOWN collaboration archive for Uma Musume Pretty Derby, covering featured ZOZOTOWN goods, brand apparel collections, official source evidence, and reference marketplace searches.",
+  "sourceIds": [
+    "zozo-corporate-release",
+    "zozotown-special-page"
+  ],
+  "itemIds": [
+    "zozotown-big-acrylic-stands",
+    "zozotown-can-badge-sets",
+    "zozotown-cheki-sets",
+    "zozotown-rubber-mats",
+    "zozotown-417-edifice-apparel",
+    "zozotown-hare-apparel",
+    "zozotown-freaks-store-apparel"
+  ],
+  "marketNoteRequired": true,
+  "cardMeta": {
+    "period": "2026 Apr-May",
+    "source": "Checked 2026-06-30",
+    "items": "ZOZOTOWN goods / brand apparel"
+  },
+  "coverageNote": "This pilot records the campaign-level facts and the item groups explicitly described in the ZOZO corporate release. The release states that seven ZOZOTOWN original goods types and thirteen apparel types were sold, but only some original-goods examples are itemized in the release text.",
+  "factEvidenceRefs": {
+    "officialTitleJa": [
+      "ev-campaign-title-and-sale"
+    ],
+    "summaryJa": [
+      "ev-campaign-title-and-sale",
+      "ev-campaign-lineup-overview",
+      "ev-brand-and-illustrator-info"
+    ],
+    "periodLabel": [
+      "ev-order-period"
+    ],
+    "startDate": [
+      "ev-order-period"
+    ],
+    "endDate": [
+      "ev-order-period"
+    ],
+    "partnerNames": [
+      "ev-brand-and-illustrator-info"
+    ],
+    "categories": [
+      "ev-campaign-lineup-overview",
+      "ev-original-goods-featured",
+      "ev-417-edifice-items",
+      "ev-hare-items",
+      "ev-freaks-store-items"
+    ]
+  },
+  "evidenceRefs": [
+    "ev-campaign-title-and-sale",
+    "ev-campaign-lineup-overview",
+    "ev-order-period",
+    "ev-brand-and-illustrator-info",
+    "ev-original-goods-featured",
+    "ev-417-edifice-items",
+    "ev-hare-items",
+    "ev-freaks-store-items"
+  ]
+}

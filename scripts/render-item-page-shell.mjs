@@ -33,6 +33,7 @@ export const SUPPORTED_ITEM_SHELL_CAMPAIGN_IDS = [
   "lawson-cinderellagray-campaign-202511",
   "cocos-umaimono-fes-202601",
   "sanrio-characters-popup-shop-202512",
+  "umamusume-zozotown-202604",
 ];
 
 const WORK_NAV_LABEL_BY_ID = new Map([["umamusume", "ウマ娘"]]);
@@ -41,6 +42,7 @@ const CAMPAIGN_NAV_LABEL_BY_ID = new Map([
   ["lawson-cinderellagray-campaign-202511", "ローソン"],
   ["cocos-umaimono-fes-202601", "COCOS"],
   ["sanrio-characters-popup-shop-202512", "Sanrio"],
+  ["umamusume-zozotown-202604", "ZOZOTOWN"],
 ]);
 
 function setAttribute(openingTag, name, value) {
