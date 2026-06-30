@@ -45,6 +45,51 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jp",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%83%9B%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "ebay-complete-set",
+        "platform": "ebay",
+        "labelJa": "eBay complete set",
+        "labelEn": "Search eBay complete sets",
+        "query": "Uma Musume Cinderella Gray Sanrio hologram can badge complete set",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio hologram can badge complete set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+hologram+can+badge+complete+set",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリ コンプリート",
+        "labelEn": "Search Mercari JP complete sets",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ コンプリート",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ コンプリート",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%83%9B%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8%20%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%83%BC%E3%83%88",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
         "labelJa": "メルカリ",
@@ -73,8 +118,31 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマ",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%83%9B%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "trading-hologram-can-badge",
+      "path": "works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/trading-hologram-can-badge/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "sanrio-trading-acrylic-card",
@@ -276,6 +344,21 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jp",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
         "labelJa": "メルカリ",
@@ -304,8 +387,31 @@
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマ",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B7%E3%83%B3%E3%83%87%E3%83%AC%E3%83%A9%E3%82%B0%E3%83%AC%E3%82%A4%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "acrylic-stand",
+      "path": "works/umamusume/collabs/sanrio-characters-popup-shop-202512/items/acrylic-stand/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "sanrio-big-acrylic-stand",
