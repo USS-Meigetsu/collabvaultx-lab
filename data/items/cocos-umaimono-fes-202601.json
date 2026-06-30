@@ -102,13 +102,14 @@
     "recordType": "group",
     "distributionType": "retail-sale",
     "sourceIds": [
-      "cocos-umamusume-special-site"
+      "cocos-umamusume-special-site",
+      "cocos-umamusume-qa"
     ],
     "confidence": "official",
     "descriptionJa": "一部店舗限定で販売されたオリジナルアクリルスタンドパネル。前半・後半それぞれランダム全4種として案内されています。",
     "lineupLabelJa": "前半・後半それぞれランダム全4種",
     "acquisitionMethodJa": "一部店舗限定の店頭販売で購入",
-    "availabilityLabel": "前半: 2026年1月20日〜 / 後半: 2026年2月17日〜、なくなり次第終了",
+    "availabilityLabel": "前半: 2026年1月20日〜3月16日 / 後半: 2026年2月17日〜3月16日、なくなり次第終了",
     "startDate": "2026-01-20",
     "endCondition": "while-supplies-last",
     "assetIds": [
@@ -131,7 +132,12 @@
         "queryLabel": "ウマ娘 ココス アクリルスタンドパネル",
         "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+アクリルスタンドパネル"
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "acrylic-stand-panels",
+      "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/acrylic-stand-panels/"
+    }
   },
   {
     "id": "cocos-original-blanket",
