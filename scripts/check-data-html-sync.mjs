@@ -79,6 +79,13 @@ function extractProductCardByItemId(html, itemId) {
   return null;
 }
 
+function extractSectionByAriaLabelledby(html, labelledBy) {
+  const sectionPattern = new RegExp(
+    `<section\\b(?=[^>]*\\baria-labelledby=(["'])${labelledBy}\\1)[^>]*>[\\s\\S]*?<\\/section>`,
+  );
+  return html.match(sectionPattern)?.[0] ?? null;
+}
+
 function extractCardMeta(articleHtml) {
   const meta = {};
   const pairPattern = /<dt>([\s\S]*?)<\/dt>\s*<dd>([\s\S]*?)<\/dd>/g;
@@ -124,14 +131,22 @@ function assertTextIncludes(pageText, expected, label) {
 }
 
 function validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageText, publishedItems, label) {
-  if (!itemHtml.includes('id="related-items-heading"')) {
+  const relatedBlock = extractSectionByAriaLabelledby(itemHtml, "related-items-heading");
+  if (!relatedBlock || !relatedBlock.includes('id="related-items-heading"')) {
     fail(`${label}: related item navigation is missing related-items-heading`);
     return;
   }
+  const relatedBlockText = textContent(relatedBlock);
 
   for (const relatedItem of publishedItems.filter((candidate) => candidate.campaignId === item.campaignId)) {
     if (relatedItem.id === item.id) {
-      if (!itemHtml.includes('aria-current="page"') || !itemPageText.includes(relatedItem.officialNameJa)) {
+      const currentMarkupMatches = [
+        ...relatedBlock.matchAll(/<([a-z][\w:-]*)\b(?=[^>]*\baria-current=(["'])page\2)[^>]*>([\s\S]*?)<\/\1>/gi),
+      ];
+      const currentItemIsMarked = currentMarkupMatches.some((match) =>
+        textContent(match[3]).includes(relatedItem.officialNameJa),
+      );
+      if (!currentItemIsMarked || !relatedBlockText.includes(relatedItem.officialNameJa)) {
         fail(`${label}: related navigation must mark current item "${relatedItem.officialNameJa}" with aria-current="page"`);
       }
       continue;
@@ -139,7 +154,7 @@ function validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageTex
 
     const relatedHtmlPath = pagePathToHtmlPath(relatedItem.page.path);
     const expectedHref = relativeUrl(itemHtmlPath, relatedHtmlPath);
-    if (!itemHtml.includes(`href="${expectedHref}"`)) {
+    if (!relatedBlock.includes(`href="${expectedHref}"`)) {
       fail(`${label}: related navigation is missing link to ${relatedItem.id} (${expectedHref})`);
     }
   }
@@ -295,9 +310,27 @@ function validatePublishedItemPage(item) {
   if (assetsForItem.length === 0) {
     fail(`${label}: assetIds must include at least one known asset`);
   } else {
+    const heroImageMatch = itemHtml.match(
+      /<picture\b(?=[^>]*class=(["'])[^"']*\bsubpage-hero-collab-media\b[^"']*\1)[\s\S]*?<img\b([^>]*)>/,
+    );
+    if (!heroImageMatch) {
+      fail(`${label}: hero image is missing from subpage-hero-collab-media`);
+    } else {
+      const heroImage = heroImageMatch[2];
+      if (getAttribute(heroImage, "loading") !== "eager") {
+        fail(`${label}: hero image must use loading="eager"`);
+      }
+      if (getAttribute(heroImage, "fetchpriority") !== "high") {
+        fail(`${label}: hero image must use fetchpriority="high"`);
+      }
+      if (getAttribute(heroImage, "decoding") !== "async") {
+        fail(`${label}: hero image must use decoding="async"`);
+      }
+    }
+
     const productImages = [
-      ...itemHtml.matchAll(/<div\s+class=["']product-thumb["']>\s*<img\b([^>]*)>/g),
-    ].map((match) => match[1]);
+      ...itemHtml.matchAll(/<div\b(?=[^>]*class=(["'])[^"']*\bproduct-thumb\b[^"']*\1)[^>]*>\s*<img\b([^>]*)>/g),
+    ].map((match) => match[2]);
 
     for (const asset of assetsForItem) {
       const expectedImageSrc = relativeUrl(itemHtmlPath, asset.path);

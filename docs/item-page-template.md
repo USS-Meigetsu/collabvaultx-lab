@@ -93,8 +93,8 @@ git diff --check
 `page.status` is `published`. For each one, it checks page existence, canonical
 URL, `og:url`, sitemap URL, parent `data-item-id` card link, official name,
 English summary, source facts, every official or partner-official source URL,
-marketplace URLs, related item-page navigation, product image metadata, and
-product image path.
+marketplace URLs, related item-page navigation, hero image loading policy,
+product image metadata, and product image path.
 
 ## Browser QA
 
@@ -103,6 +103,8 @@ product image path.
 - Desktop and mobile viewports have no horizontal overflow.
 - Official source links and secondary-market links are visually separated.
 - Product images retain `loading="lazy"` and `decoding="async"`.
+- For visible UI changes, create local red-box before/after screenshots for the
+  changed route and viewport. Keep these review artifacts out of git.
 
 ## Negative Checks
 

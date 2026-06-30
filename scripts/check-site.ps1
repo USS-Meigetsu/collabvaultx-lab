@@ -147,9 +147,9 @@ foreach ($file in $htmlFiles) {
       $missingDetailSourceMetadata.Add("$relativeFile -> missing market-note with lang=en text")
     }
 
-    $productImageMatches = [regex]::Matches($text, '<div\s+class="product-thumb">\s*<img\b([^>]*)>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    $productImageMatches = [regex]::Matches($text, '<div\b(?=[^>]*class=(["''])[^"'']*\bproduct-thumb\b[^"'']*\1)[^>]*>\s*<img\b([^>]*)>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
     foreach ($match in $productImageMatches) {
-      $imgAttributes = $match.Groups[1].Value
+      $imgAttributes = $match.Groups[2].Value
       if ($imgAttributes -notmatch '\bloading="lazy"' -or $imgAttributes -notmatch '\bdecoding="async"') {
         $missingLazyProductImages.Add("$relativeFile -> product image missing loading lazy or async decoding")
       }

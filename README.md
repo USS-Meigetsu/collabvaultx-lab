@@ -26,6 +26,10 @@ requests.
 Do not commit browser profiles, cookies, login databases, local cache folders,
 temporary screenshots, or source-capture PDFs.
 
+For visible UI changes, create local red-box before/after screenshots for review
+and keep them outside the repository. Include the affected route and viewport in
+the artifact name or report.
+
 ## Content workflow
 
 - Add one collaboration detail page under `works/<work>/collabs/<slug>/index.html`.

@@ -142,6 +142,12 @@
     "campaignId": "lawson-cinderellagray-campaign-202511",
     "officialNameJa": "アクリルスタンド",
     "displayNameEn": "Acrylic stands",
+    "summaryEn": "Lawson acrylic stand retail-sale goods group for the Uma Musume Cinderella Gray campaign, covering the six-design lineup, price, store sales timing, official source, and reference searches.",
+    "page": {
+      "status": "published",
+      "slug": "acrylic-stand",
+      "path": "works/umamusume/collabs/lawson-cinderellagray-campaign-202511/items/acrylic-stand/"
+    },
     "category": "figure",
     "recordType": "group",
     "distributionType": "retail-sale",
@@ -153,6 +159,7 @@
     "lineupLabelJa": "全6種 / 各1,650円（税込）",
     "priceLabel": "各1,650円（税込）",
     "acquisitionMethodJa": "2025年11月25日よりローソン店頭で順次発売",
+    "availabilityLabel": "2025年11月25日より順次発売、数量限定",
     "startDate": "2025-11-25",
     "endCondition": "while-supplies-last",
     "assetIds": [
