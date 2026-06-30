@@ -13,12 +13,14 @@ export const SUPPORTED_CAMPAIGN_IDS = [
   "round1-collab-campaign-202510",
   "lawson-cinderellagray-campaign-202511",
   "cocos-umaimono-fes-202601",
+  "sanrio-characters-popup-shop-202512",
 ];
 
 const DEFAULT_CAMPAIGN_IDS = SUPPORTED_CAMPAIGN_IDS;
 const PRODUCT_GRID_CLASS_BY_CAMPAIGN_ID = new Map([
   ["lawson-cinderellagray-campaign-202511", "product-grid product-grid-catalog"],
   ["cocos-umaimono-fes-202601", "product-grid product-grid-catalog"],
+  ["sanrio-characters-popup-shop-202512", "product-grid product-grid-catalog"],
 ]);
 const MARKET_LINK_PLATFORM_ORDER = ["ebay", "mercari", "suruga-ya"];
 const MARKET_LINK_LABEL_BY_PLATFORM = new Map([
@@ -67,11 +69,12 @@ function cardDescriptionForItem(item) {
 }
 
 function renderProductCardOpeningTag(item, indent) {
+  const className = item.productGrid?.layout === "wide-mini-grid" ? "product-card product-card-wide" : "product-card";
   const cardId =
     typeof item.productGrid?.cardId === "string" && item.productGrid.cardId.trim() !== ""
       ? ` id="${escapeAttribute(item.productGrid.cardId)}"`
       : "";
-  return `${indent}<article class="product-card"${cardId} data-item-id="${escapeAttribute(item.id)}">`;
+  return `${indent}<article class="${className}"${cardId} data-item-id="${escapeAttribute(item.id)}">`;
 }
 
 function curatedMarketLinks(item) {
@@ -125,6 +128,25 @@ function renderMarketLinks(item, indent) {
   ];
 }
 
+function renderMiniGrid(item, campaignHtmlPath, assetsById, indent) {
+  if (item.productGrid?.layout !== "wide-mini-grid") return [];
+
+  const assetIds = item.productGrid?.miniGridAssetIds ?? [];
+  if (assetIds.length === 0) return [];
+
+  return [
+    `${indent}<div class="postcard-mini-grid" aria-label="${escapeAttribute(item.officialNameJa)}一覧">`,
+    ...assetIds
+      .map((assetId) => assetsById.get(assetId))
+      .filter(Boolean)
+      .map((asset) => {
+        const src = relativeUrl(campaignHtmlPath, asset.path);
+        return `${indent}  <img src="${escapeAttribute(src)}" alt="${escapeAltAttribute(asset.altJa)}" />`;
+      }),
+    `${indent}</div>`,
+  ];
+}
+
 export function renderCampaignProductGrid(campaign, itemsById, assetsById, options = {}) {
   const indent = options.indent ?? "        ";
   const inner = `${indent}  `;
@@ -143,6 +165,8 @@ export function renderCampaignProductGrid(campaign, itemsById, assetsById, optio
     const isLinked = item.page?.status === "published";
     const factLabels = factLabelsForItem(item);
     const marketLines = renderMarketLinks(item, `${deeper}  `);
+    const miniGridLines = renderMiniGrid(item, campaignHtmlPath, assetsById, `${deeper}  `);
+    const detailsOpen = item.productGrid?.layout === "wide-mini-grid" ? " open" : "";
 
     cards.push(
       [
@@ -154,11 +178,12 @@ export function renderCampaignProductGrid(campaign, itemsById, assetsById, optio
         `${deeper}<p class="card-tag">${escapeText(cardTagForItem(item))}</p>`,
         `${deeper}<h3>${renderTitle(item, campaignHtmlPath)}</h3>`,
         `${deeper}<p>${escapeText(cardDescriptionForItem(item))}</p>`,
-        `${deeper}<details class="product-details">`,
+        `${deeper}<details class="product-details"${detailsOpen}>`,
         `${deeper}  <summary>詳細を見る</summary>`,
         `${deeper}  <div class="item-fact-list">`,
         ...factLabels.map((label) => `${deeper}    <span>${escapeText(label)}</span>`),
         `${deeper}  </div>`,
+        ...miniGridLines,
         ...marketLines,
         `${deeper}</details>`,
         `${deep}</div>`,

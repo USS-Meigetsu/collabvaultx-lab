@@ -74,6 +74,7 @@ const allowedMarketplaceFinderGroups = new Set([
   "price-check",
   "other",
 ]);
+const allowedProductGridLayouts = new Set(["wide-mini-grid"]);
 const requiredMarketplaceRelTokens = new Set(["noopener", "noreferrer"]);
 
 const unsafeStringPatterns = [
@@ -494,6 +495,43 @@ for (const item of items) {
   checkRefs([item.campaignId], campaignMap, label, "campaignId");
   checkRefs(item.sourceIds, sourceMap, label, "sourceIds");
   checkRefs(item.assetIds ?? [], assetMap, label, "assetIds");
+  checkRefs(item.productGrid?.miniGridAssetIds ?? [], assetMap, label, "productGrid.miniGridAssetIds");
+
+  if (item.productGrid !== undefined && requireObject(item, "productGrid", label)) {
+    const productGridLabel = `${label}:productGrid`;
+    if (item.productGrid.layout !== undefined) {
+      requireString(item.productGrid, "layout", productGridLabel);
+      if (
+        typeof item.productGrid.layout === "string" &&
+        !allowedProductGridLayouts.has(item.productGrid.layout)
+      ) {
+        fail(`${productGridLabel}: unsupported layout "${item.productGrid.layout}"`);
+      }
+    }
+    if (item.productGrid.miniGridAssetIds !== undefined) {
+      requireArray(item.productGrid, "miniGridAssetIds", productGridLabel);
+      if (item.productGrid.layout !== "wide-mini-grid") {
+        fail(`${productGridLabel}: miniGridAssetIds requires layout "wide-mini-grid"`);
+      }
+    }
+    if (item.productGrid.layout === "wide-mini-grid") {
+      if (!Array.isArray(item.productGrid.miniGridAssetIds) || item.productGrid.miniGridAssetIds.length === 0) {
+        fail(`${productGridLabel}: layout "wide-mini-grid" requires miniGridAssetIds`);
+      }
+      const itemAssetIds = new Set(item.assetIds ?? []);
+      const miniGridAssetIds = new Set(item.productGrid.miniGridAssetIds ?? []);
+      for (const assetId of itemAssetIds) {
+        if (!miniGridAssetIds.has(assetId)) {
+          fail(`${productGridLabel}: miniGridAssetIds must include item asset "${assetId}"`);
+        }
+      }
+      for (const assetId of miniGridAssetIds) {
+        if (!itemAssetIds.has(assetId)) {
+          fail(`${productGridLabel}: miniGridAssetIds includes asset "${assetId}" not present in item.assetIds`);
+        }
+      }
+    }
+  }
 
   if (!hasVerifyingSource(item.sourceIds, sourceMap)) {
     fail(`${label}: sourceIds must include at least one official or partner-official source`);
@@ -529,6 +567,9 @@ for (const item of items) {
     if (requireObject(item, "marketplaceFinder", label)) {
       const finderLabel = `${label}:marketplaceFinder`;
       validateStatus(item.marketplaceFinder, finderLabel);
+      if (item.marketplaceFinder.status === "published" && item.page?.status !== "published") {
+        fail(`${finderLabel}: published Marketplace Finder requires a published item page`);
+      }
       if (
         item.marketplaceFinder.status === "published" &&
         (!Array.isArray(item.marketplaceSearches) || item.marketplaceSearches.length === 0)

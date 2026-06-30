@@ -27,7 +27,54 @@
         "全6種 / ランダム仕様",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio hologram can badge",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio hologram can badge",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+hologram+can+badge",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20ホログラム缶バッジ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ホログラム缶バッジ",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+ホログラム缶バッジ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-trading-acrylic-card",
@@ -57,7 +104,54 @@
         "全6種 / ランダム仕様",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio acrylic card",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio acrylic card",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+acrylic+card",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20アクリルカード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルカード",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+アクリルカード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-trading-parts-acrylic-keyholder",
@@ -87,7 +181,54 @@
         "全6種 / ランダム仕様",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio acrylic keyholder",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio acrylic keyholder",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+acrylic+keyholder",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20アクリルキーホルダー",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルキーホルダー",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+アクリルキーホルダー",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-acrylic-stand",
@@ -117,7 +258,54 @@
         "全6種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio acrylic stand",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio acrylic stand",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+acrylic+stand",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20アクリルスタンド",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルスタンド",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+アクリルスタンド",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-big-acrylic-stand",
@@ -147,7 +335,54 @@
         "全6種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio big acrylic stand",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio big acrylic stand",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+big+acrylic+stand",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20BIGアクリルスタンド",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ BIGアクリルスタンド",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+BIGアクリルスタンド",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-die-cut-smartphone-sticker",
@@ -177,7 +412,54 @@
         "全6種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio smartphone sticker",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio smartphone sticker",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+smartphone+sticker",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ スマホステッカー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ スマホステッカー",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20スマホステッカー",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ スマホステッカー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ スマホステッカー",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+スマホステッカー",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-clear-file",
@@ -207,7 +489,54 @@
         "全6種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio clear file",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio clear file",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+clear+file",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ クリアファイル",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ クリアファイル",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20クリアファイル",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ クリアファイル",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ クリアファイル",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+クリアファイル",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-premium-card-holder",
@@ -237,7 +566,54 @@
         "全1種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio premium card holder",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio premium card holder",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+premium+card+holder",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ カードホルダー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ カードホルダー",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20カードホルダー",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ カードホルダー",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ カードホルダー",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+カードホルダー",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-trading-name-acrylic-plate-badge",
@@ -267,7 +643,54 @@
         "全6種 / ランダム仕様",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio name acrylic badge",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio name acrylic badge",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+name+acrylic+badge",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ おなまえアクリルプレートバッジ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ おなまえアクリルプレートバッジ",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20おなまえアクリルプレートバッジ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ おなまえアクリルプレートバッジ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ おなまえアクリルプレートバッジ",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+おなまえアクリルプレートバッジ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-mug",
@@ -297,7 +720,54 @@
         "全1種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio mug",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio mug",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+mug",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ マグカップ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ マグカップ",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20マグカップ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ マグカップ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ マグカップ",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+マグカップ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-face-towel",
@@ -327,7 +797,54 @@
         "全1種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio face towel",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio face towel",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+face+towel",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ フェイスタオル",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ フェイスタオル",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20フェイスタオル",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ フェイスタオル",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ フェイスタオル",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+フェイスタオル",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-acrylic-art-board",
@@ -357,7 +874,54 @@
         "全1種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio acrylic art board",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio acrylic art board",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+acrylic+art+board",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルアートボード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルアートボード",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20アクリルアートボード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ アクリルアートボード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ アクリルアートボード",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+アクリルアートボード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-canvas-board",
@@ -387,7 +951,54 @@
         "全6種",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio canvas board",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio canvas board",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+canvas+board",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ キャンバスボード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ キャンバスボード",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20キャンバスボード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ キャンバスボード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ キャンバスボード",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+キャンバスボード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-t-shirt",
@@ -417,7 +1028,54 @@
         "全6種 / L・XL",
         "当時の入手方法: WEB先行通販と会場販売で販売"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio t-shirt",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio t-shirt",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+t-shirt",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ Tシャツ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ Tシャツ",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20Tシャツ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ Tシャツ",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ Tシャツ",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+Tシャツ",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-plush-mascot",
@@ -447,7 +1105,54 @@
         "全6種 / 会場先行販売",
         "当時の入手方法: 会場先行販売。WEB先行通販では取り扱いなし"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio plush mascot",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio plush mascot",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+plush+mascot",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20ぬいぐるみマスコット",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ぬいぐるみマスコット",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+ぬいぐるみマスコット",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   },
   {
     "id": "sanrio-original-postcards",
@@ -481,7 +1186,63 @@
       "factsJa": [
         "全6柄 / ランダム配布 / 1会計最大6枚 / コンプリートセットなし",
         "当時の入手方法: 関連商品2,000円（税込）ごとに1枚配布"
+      ],
+      "layout": "wide-mini-grid",
+      "miniGridAssetIds": [
+        "sanrio-postcard-01",
+        "sanrio-postcard-02",
+        "sanrio-postcard-03",
+        "sanrio-postcard-04",
+        "sanrio-postcard-05",
+        "sanrio-postcard-06"
       ]
-    }
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBay",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume Cinderella Gray Sanrio postcard",
+        "queryLabel": "Uma Musume Cinderella Gray Sanrio postcard",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Sanrio+postcard",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリ",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ポストカード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ポストカード",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20サンリオ%20ポストカード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ サンリオ ポストカード",
+        "queryLabel": "ウマ娘 シンデレラグレイ サンリオ ポストカード",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+サンリオ+ポストカード",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ]
   }
 ]

@@ -21,8 +21,7 @@ content model is more stable.
 - Best next step: keep generated-block checks small and targeted before
   attempting broader page generation. ROUND1 now has a complete v1 item-page
   checkpoint across its parent page and nine item pages. Sanrio is the current
-  large product-set design and draft-data test before widening renderer support
-  again.
+  large product-set product-grid checkpoint before item-page work resumes.
 
 ## Commonize Now
 
@@ -345,9 +344,11 @@ or smooth over them.
    product-set test before creating item pages or generated blocks.
 18. Done: add Sanrio draft campaign/source/asset/item data and normalize parent
    page card hygiene without adding item pages or renderer support.
-19. Current: review the Sanrio draft-data checkpoint before publishing Sanrio
-   data-backed grid alignment.
-20. Revisit campaign-grid generation beyond the current supported set.
+19. Done: publish Sanrio data-backed campaign product-grid alignment v0,
+   including postcard mini-grid display metadata.
+20. Current: review the Sanrio product-grid checkpoint before choosing the first
+   Sanrio item-page pilot.
+21. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.

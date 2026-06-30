@@ -132,6 +132,11 @@ Optional fields:
     contradict `lineupLabelJa`, `priceLabel`, `availabilityLabel`, or
     `acquisitionMethodJa`.
   - `cardId`: preserved legacy anchor ID when needed.
+  - `layout`: optional parent-card display layout. Current supported value:
+    `wide-mini-grid`.
+  - `miniGridAssetIds`: optional ordered asset IDs for a parent-card mini image
+    grid. Use only with `layout: "wide-mini-grid"` when one product card needs
+    multiple visible variant images, such as purchase-bonus postcards.
   Do not put source URLs, marketplace URLs, long item-page body copy, or new
   unverified facts in `productGrid`; it is parent-card display metadata only,
   not a source of truth.
