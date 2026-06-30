@@ -73,7 +73,10 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 ## Parent Campaign Page
 
 - Add `data-item-id="<Item.id>"` to the matching parent `product-card`.
-- Add a visible `card-button` link from the parent item card to the item page.
+- Link the parent card product image with `product-thumb-link` to the item page.
+- Link the parent card item title with `product-title-link` to the item page.
+- Do not add a separate detail-page `card-button` inside item cards; the image
+  and title are the primary item-page navigation.
 - Keep official fact spans in `item-fact-list`.
 - Keep eBay/Mercari/Suruga-ya or similar searches in `market-links`.
 
@@ -106,6 +109,7 @@ product image metadata, and product image path.
 ## Browser QA
 
 - Parent item card link navigates to the item page.
+- Parent item card image and title both navigate to the item page.
 - Related item-page navigation works.
 - Desktop and mobile viewports have no horizontal overflow.
 - Official source links and secondary-market links are visually separated.

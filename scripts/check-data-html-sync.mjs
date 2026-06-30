@@ -458,9 +458,22 @@ function validatePublishedItemPage(item) {
   } else {
     const expectedParentHref = relativeUrl(parentHtmlPath, itemHtmlPath);
     const alternateParentHref = expectedParentHref.replace(/^\.\//, "");
-    const cardLinks = getOpeningTags(productCard, "a").map((tag) => decodeEntities(getAttribute(tag, "href")));
-    if (!cardLinks.includes(expectedParentHref) && !cardLinks.includes(alternateParentHref)) {
-      fail(`${label}: parent product card is missing link to ${expectedParentHref}`);
+    const parentHrefMatches = (href) => href === expectedParentHref || href === alternateParentHref;
+    const thumbLink = getOpeningTags(productCard, "a").find((tag) =>
+      /\bproduct-thumb-link\b/.test(getAttribute(tag, "class")),
+    );
+    const titleLink = getOpeningTags(productCard, "a").find((tag) =>
+      /\bproduct-title-link\b/.test(getAttribute(tag, "class")),
+    );
+
+    if (!thumbLink || !parentHrefMatches(decodeEntities(getAttribute(thumbLink, "href")))) {
+      fail(`${label}: parent product card image link must point to ${expectedParentHref}`);
+    }
+    if (!titleLink || !parentHrefMatches(decodeEntities(getAttribute(titleLink, "href")))) {
+      fail(`${label}: parent product card title link must point to ${expectedParentHref}`);
+    }
+    if (/<a\b[^>]*class=(["'])[^"']*\bcard-button\b[^"']*\1[^>]*>[\s\S]*?詳細ページ[\s\S]*?<\/a>/i.test(productCard)) {
+      fail(`${label}: parent product card should use image/title links instead of a detail-page card-button`);
     }
   }
 

@@ -767,11 +767,48 @@ main {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(6, 9, 14, 0.08), rgba(6, 9, 14, 0.46));
+  pointer-events: none;
 }
 
 .product-thumb img {
   height: 100%;
   object-fit: cover;
+}
+
+.product-thumb-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  color: inherit;
+}
+
+.product-thumb-link img {
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.product-thumb-link:hover img,
+.product-thumb-link:focus-visible img {
+  filter: brightness(1.08);
+  transform: scale(1.035);
+}
+
+.product-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-title-link:hover,
+.product-title-link:focus-visible {
+  color: var(--accent);
+}
+
+.product-thumb-link:focus-visible,
+.product-title-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .product-card-body {
