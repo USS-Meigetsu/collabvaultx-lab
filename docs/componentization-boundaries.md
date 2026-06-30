@@ -19,7 +19,8 @@ content model is more stable.
 - Hand-written now: item page HTML, campaign page HTML, official-source notes,
   item descriptions, overview cards, and page-specific reference/source blocks.
 - Best next step: keep generated-block checks small and targeted before
-  attempting broader page generation.
+  attempting broader page generation. ROUND1 now has a complete v1 item-page
+  checkpoint across its parent page and nine item pages.
 
 ## Commonize Now
 
@@ -334,9 +335,11 @@ or smooth over them.
 13. Done: add shared renderer utility modules for data, path, and HTML helpers.
 14. Done: add the remaining ROUND1 item pages using the stabilized renderer
    checks.
-15. Current: review the completed ROUND1 item-page set before widening the next
-   generated-block boundary.
-16. Revisit campaign-grid generation beyond the current supported set.
+15. Done: review the completed ROUND1 item-page set with a complete v1
+   QA/polish pass before widening the next generated-block boundary.
+16. Current: decide the next boundary from the completed Lawson, COCOS, and
+   ROUND1 campaign checkpoints.
+17. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.
