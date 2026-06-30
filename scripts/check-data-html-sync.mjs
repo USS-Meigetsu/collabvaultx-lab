@@ -4,6 +4,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
+  extractCampaignProductGridSection,
+  normalizeCampaignProductGridHtml,
+  renderCampaignProductGrid,
+} from "./render-campaign-product-grid.mjs";
+import {
   marketplaceFinderGroupKeys,
   normalizeMarketplaceFinderHtml,
   renderMarketplaceFinder,
@@ -433,6 +438,7 @@ function validateCampaignDetailItemCards(campaign) {
   if (!fs.existsSync(campaignHtmlFullPath)) return;
 
   const campaignHtml = readText(campaignHtmlPath);
+  validateCampaignProductGrid(campaign, campaignHtml);
   const campaignItems = (campaign.itemIds ?? [])
     .map((id) => itemMap.get(id))
     .filter(Boolean);
@@ -503,6 +509,22 @@ function validateCampaignDetailItemCards(campaign) {
       }
       assertAnchorRel(anchor, matchingSearch.rel, `${label}: ${matchingSearch.id ?? matchingSearch.platform}`);
     }
+  }
+}
+
+function validateCampaignProductGrid(campaign, campaignHtml) {
+  if (campaign.id !== "round1-collab-campaign-202510") return;
+
+  const label = `campaign page ${campaign.slug} product grid`;
+  const section = extractCampaignProductGridSection(campaignHtml);
+  if (!section) {
+    fail(`${label}: product-grid section is missing`);
+    return;
+  }
+
+  const renderedGrid = renderCampaignProductGrid(campaign, itemMap, assetMap, { indent: section.indent });
+  if (normalizeCampaignProductGridHtml(section.html) !== normalizeCampaignProductGridHtml(renderedGrid)) {
+    fail(`${label}: product-grid must match scripts/render-campaign-product-grid.mjs output`);
   }
 }
 

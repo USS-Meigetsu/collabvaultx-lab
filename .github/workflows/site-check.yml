@@ -24,6 +24,7 @@ jobs:
           node --check scripts/check-data-html-sync.mjs
           node --check scripts/render-marketplace-finder.mjs
           node --check scripts/render-related-items.mjs
+          node --check scripts/render-campaign-product-grid.mjs
 
       - name: Run data checks
         run: node scripts/check-data.mjs
@@ -36,6 +37,9 @@ jobs:
 
       - name: Run related item renderer checks
         run: node scripts/render-related-items.mjs --check
+
+      - name: Run campaign product grid renderer checks
+        run: node scripts/render-campaign-product-grid.mjs --check
 
       - name: Run site checks
         shell: pwsh

@@ -97,6 +97,9 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 - Keep official fact spans in `item-fact-list`.
 - Keep a small curated subset of eBay/Mercari/Suruga-ya or similar searches in
   `market-links`; the item detail page owns the full Marketplace Finder.
+- Keep parent campaign product-grid blocks compatible with
+  `scripts/render-campaign-product-grid.mjs`; for now this renderer verifies the
+  ROUND1 campaign grid only.
 
 ## Sitemap
 
@@ -113,10 +116,12 @@ node --check scripts/check-data.mjs
 node --check scripts/check-data-html-sync.mjs
 node --check scripts/render-marketplace-finder.mjs
 node --check scripts/render-related-items.mjs
+node --check scripts/render-campaign-product-grid.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
 node scripts/render-marketplace-finder.mjs --check
 node scripts/render-related-items.mjs --check
+node scripts/render-campaign-product-grid.mjs --check
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
@@ -132,6 +137,8 @@ Marketplace Finder block matches the canonical JSON-rendered structure.
 `scripts/render-related-items.mjs --check` verifies that every published item
 page's related navigation matches `Campaign.itemIds`, current-item semantics,
 and canonical relative links.
+`scripts/render-campaign-product-grid.mjs --check` verifies that the ROUND1
+parent campaign product grid matches the canonical JSON-rendered structure.
 
 ## Browser QA
 

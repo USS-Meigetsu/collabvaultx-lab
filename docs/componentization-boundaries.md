@@ -105,8 +105,11 @@ Keep this shared through validation now.
 - Product image and title link to the item page.
 - Separate detail-page buttons are not used for item-card navigation.
 - Parent cards may show a curated subset of marketplace links.
+- The ROUND1 parent campaign product grid is rendered/checked by
+  `scripts/render-campaign-product-grid.mjs`.
 
-Generation can wait until campaign page structure is more stable.
+Broader cross-campaign generation can wait until the ROUND1 v0 contract is
+stable.
 
 ### Common Page Metadata Rules
 
@@ -215,12 +218,12 @@ Still reviewed per page:
 - official source notes
 - product details
 
-### Campaign Detail Product Grid
+### Campaign Detail Product Grid Beyond ROUND1
 
 Later target.
 
 The campaign product grid can eventually be generated from `Campaign.itemIds`
-and `Item` records.
+and `Item` records across Lawson, COCOS, and later campaigns.
 
 Wait until:
 
@@ -272,10 +275,11 @@ or smooth over them.
    published item pages.
 4. Done: add ROUND1 data-backed campaign pilot to test another campaign type.
 5. Done: add the first ROUND1 item page pilot for the crane-prize route.
-6. Current: add the second ROUND1 item page pilot for the retail-sale route and
+6. Done: add the second ROUND1 item page pilot for the retail-sale route and
    clean up empty parent-card `market-links` behavior.
-7. Revisit item-page scaffold generation.
-8. Revisit campaign-grid generation.
+7. Current: add campaign product-grid componentization v0 for ROUND1.
+8. Revisit item-page scaffold generation.
+9. Revisit campaign-grid generation beyond ROUND1.
 
 This keeps the project efficient without locking the site into a premature
 generator.
