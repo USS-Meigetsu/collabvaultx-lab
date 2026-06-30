@@ -114,6 +114,14 @@
     },
     "marketplaceFinder": {
       "status": "published"
+    },
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全7種",
+        "一部5店舗販売 / EC予約販売",
+        "ROUND1コラボver.描き下ろし商品"
+      ]
     }
   },
   {
@@ -129,7 +137,117 @@
     "descriptionJa": "トレーディンググリッター缶バッジ。全14種で、一部5店舗販売とEC予約販売の両方あり。トレーディング仕様。",
     "lineupLabelJa": "全14種",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-trading-glitter-can-badge-main"]
+    "assetIds": ["round1-trading-glitter-can-badge-main"],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全14種",
+        "一部5店舗販売 / EC予約販売",
+        "トレーディング仕様"
+      ]
+    },
+    "summaryEn": "ROUND1 trading glitter can badge retail-sale group for the Uma Musume Cinderella Gray campaign, covering the fourteen-type trading lineup, limited five-store retail sales, EC reservation route, official source, and reference searches.",
+    "availabilityLabel": "一部5店舗販売 / EC予約販売",
+    "page": {
+      "status": "published",
+      "slug": "trading-glitter-can-badge",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/trading-glitter-can-badge/"
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 trading glitter can badge",
+        "queryLabel": "Uma Musume ROUND1 trading glitter can badge",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+trading+glitter+can+badge",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP set results",
+        "query": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ 全14種",
+        "queryLabel": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ 全14種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8%20%E5%85%A814%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 トレーディンググリッター缶バッジ",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B0%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "round1-trading-acrylic-stand",
@@ -144,7 +262,117 @@
     "descriptionJa": "トレーディングアクリルスタンド。全7種で、一部5店舗販売とEC予約販売の両方あり。トレーディング仕様。",
     "lineupLabelJa": "全7種",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-trading-acrylic-stand-main"]
+    "assetIds": ["round1-trading-acrylic-stand-main"],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全7種",
+        "一部5店舗販売 / EC予約販売",
+        "トレーディング仕様"
+      ]
+    },
+    "summaryEn": "ROUND1 trading acrylic stand retail-sale group for the Uma Musume Cinderella Gray campaign, covering the seven-type trading lineup, limited five-store retail sales, EC reservation route, official source, and reference searches.",
+    "availabilityLabel": "一部5店舗販売 / EC予約販売",
+    "page": {
+      "status": "published",
+      "slug": "trading-acrylic-stand",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/trading-acrylic-stand/"
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 trading acrylic stand",
+        "queryLabel": "Uma Musume ROUND1 trading acrylic stand",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+trading+acrylic+stand",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP set results",
+        "query": "ウマ娘 ROUND1 トレーディングアクリルスタンド 全7種",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングアクリルスタンド 全7種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%20%E5%85%A87%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 トレーディングアクリルスタンド",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%83%88%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "round1-trading-sticker",
@@ -159,7 +387,15 @@
     "descriptionJa": "トレーディングステッカー。全7種で、一部5店舗販売とEC予約販売の両方あり。トレーディング仕様。",
     "lineupLabelJa": "全7種",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-trading-sticker-main"]
+    "assetIds": ["round1-trading-sticker-main"],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全7種",
+        "一部5店舗販売 / EC予約販売",
+        "トレーディング仕様"
+      ]
+    }
   },
   {
     "id": "round1-glitter-acrylic-art-panel",
@@ -189,7 +425,14 @@
     "descriptionJa": "B2タペストリー。ROUND1コラボver.の販売グッズで、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "ROUND1コラボver.販売グッズ",
     "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
-    "assetIds": ["round1-b2-tapestry-main"]
+    "assetIds": ["round1-b2-tapestry-main"],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "一部5店舗販売 / EC予約販売",
+        "ROUND1コラボver.販売グッズ"
+      ]
+    }
   },
   {
     "id": "round1-b2-half-tapestry",
@@ -219,7 +462,133 @@
     "descriptionJa": "ましかく缶バッジ。全7種のカプセルトイで、4店舗限定。WEB販売なし。",
     "lineupLabelJa": "全7種",
     "acquisitionMethodJa": "カプセルトイ",
-    "assetIds": ["round1-mashikaku-can-badge-main"]
+    "assetIds": ["round1-mashikaku-can-badge-main"],
+    "productGrid": {
+      "tag": "Capsule Toy",
+      "factsJa": [
+        "全7種",
+        "カプセルトイ",
+        "4店舗限定",
+        "WEB販売なし"
+      ]
+    },
+    "summaryEn": "ROUND1 capsule-toy Mashikaku can badge group for the Uma Musume Cinderella Gray campaign, covering the seven-type lineup, four-store limited capsule-toy route, no-web-sale caveat, official source, and reference searches.",
+    "availabilityLabel": "4店舗限定 / WEB販売なし",
+    "page": {
+      "status": "published",
+      "slug": "mashikaku-can-badge",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/mashikaku-can-badge/"
+    },
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 mashikaku can badge",
+        "queryLabel": "Uma Musume ROUND1 mashikaku can badge",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+mashikaku+can+badge",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%81%BE%E3%81%97%E3%81%8B%E3%81%8F%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%81%BE%E3%81%97%E3%81%8B%E3%81%8F%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセット検索",
+        "labelEn": "Search Mercari JP set results",
+        "query": "ウマ娘 ROUND1 ましかく缶バッジ 全7種",
+        "queryLabel": "ウマ娘 ROUND1 ましかく缶バッジ 全7種",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%81%BE%E3%81%97%E3%81%8B%E3%81%8F%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8%20%E5%85%A87%E7%A8%AE",
+        "intent": "complete-set",
+        "finderGroup": "sets",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-single-item",
+        "platform": "mercari",
+        "labelJa": "メルカリで単品検索",
+        "labelEn": "Search Mercari JP single-item results",
+        "query": "ウマ娘 ROUND1 ましかく缶バッジ カプセルトイ",
+        "queryLabel": "ウマ娘 ROUND1 ましかく缶バッジ カプセルトイ",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%81%BE%E3%81%97%E3%81%8B%E3%81%8F%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8%20%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E3%83%88%E3%82%A4",
+        "intent": "single-item",
+        "finderGroup": "single-item",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+%E3%81%BE%E3%81%97%E3%81%8B%E3%81%8F%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "queryLabel": "ウマ娘 ROUND1 ましかく缶バッジ",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20%E3%81%BE%E3%81%97%E3%81%8B%E3%81%8F%E7%BC%B6%E3%83%90%E3%83%83%E3%82%B8",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "round1-big-acrylic-stand",

@@ -27,14 +27,6 @@ const MARKET_LINK_LABEL_BY_PLATFORM = new Map([
   ["suruga-ya", "駿河屋"],
 ]);
 
-const ROUND1_EXTRA_FACTS = new Map([
-  ["round1-acrylic-figure-stand", ["ROUND1コラボver.描き下ろし商品"]],
-  ["round1-trading-glitter-can-badge", ["トレーディング仕様"]],
-  ["round1-trading-acrylic-stand", ["トレーディング仕様"]],
-  ["round1-trading-sticker", ["トレーディング仕様"]],
-  ["round1-mashikaku-can-badge", ["4店舗限定", "WEB販売なし"]],
-]);
-
 function readText(relativePath) {
   return fs.readFileSync(path.join(rootDir, relativePath), "utf8").replace(/^\uFEFF/, "");
 }
@@ -98,7 +90,6 @@ function cardTagForItem(item) {
     return item.productGrid.tag;
   }
 
-  if (item.id === "round1-mashikaku-can-badge") return "Capsule Toy";
   if (item.category === "prize" || item.distributionType === "crane-prize") return "Prize";
   return "Goods";
 }
@@ -108,16 +99,11 @@ function factLabelsForItem(item) {
     return unique(item.productGrid.factsJa);
   }
 
-  if (item.id === "round1-b2-tapestry") {
-    return unique([item.acquisitionMethodJa, item.lineupLabelJa]);
-  }
-
   return unique([
     item.lineupLabelJa,
     item.priceLabel,
     item.acquisitionMethodJa,
     item.availabilityLabel,
-    ...(ROUND1_EXTRA_FACTS.get(item.id) ?? []),
   ]);
 }
 

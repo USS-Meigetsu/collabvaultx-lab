@@ -122,6 +122,16 @@ Optional fields:
 - `endCondition`: text or enum-style value such as `while-supplies-last`,
   `may-close-early`, or `varies-by-store`.
 - `assetIds`: item images.
+- `productGrid`: parent campaign product-card display metadata. Use this only
+  for compact parent-card presentation, not as the primary fact source:
+  - `tag`: short card tag.
+  - `descriptionJa`: shorter parent-card copy when `descriptionJa` is too long
+    for the grid.
+  - `factsJa`: ordered compact facts for the parent card. Values must be copied
+    from source-backed item fields or official-source-backed notes, and must not
+    contradict `lineupLabelJa`, `priceLabel`, `availabilityLabel`, or
+    `acquisitionMethodJa`.
+  - `cardId`: preserved legacy anchor ID when needed.
 - `marketplaceSearches`: secondary-market reference searches.
 - `marketplaceFinder`: item-page Marketplace Finder opt-in. Use
   `{"status": "published"}` only when the item page renders the full Finder UI.

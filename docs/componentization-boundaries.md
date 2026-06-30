@@ -283,10 +283,12 @@ or smooth over them.
    clean up empty parent-card `market-links` behavior.
 7. Done: add campaign product-grid componentization v0 for ROUND1.
 8. Done: extend campaign product-grid componentization to Lawson and COCOS.
-9. Current: add the next 2-3 ROUND1 item pages using the established parent
-   grid and item-page contracts.
-10. Revisit item-page scaffold generation.
-11. Revisit campaign-grid generation beyond the current supported set.
+9. Done: add three more ROUND1 item pages for trading goods and capsule-toy
+   routes, using the established parent grid and item-page contracts.
+10. Current: review the expanded ROUND1 item-page set for scaffold patterns
+   that are stable enough to generate next.
+11. Revisit item-page scaffold generation.
+12. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.

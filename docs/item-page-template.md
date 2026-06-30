@@ -95,6 +95,9 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 - Do not add a separate detail-page `card-button` inside item cards; the image
   and title are the primary item-page navigation.
 - Keep official fact spans in `item-fact-list`.
+- Use `Item.productGrid` only for parent-card display metadata such as compact
+  tags, short card copy, ordered compact facts, or preserved card anchors.
+  Do not put unsourced new facts or marketplace URLs in `Item.productGrid`.
 - Keep a small curated subset of eBay/Mercari/Suruga-ya or similar searches in
   `market-links`; the item detail page owns the full Marketplace Finder.
 - Keep parent campaign product-grid blocks compatible with
