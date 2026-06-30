@@ -175,17 +175,38 @@ recommendation.
 
 Required fields:
 
-- `platform`: `eBay`, `Mercari`, `Suruga-ya`, or another visible label.
+- `id`: stable lowercase slug unique within the parent item, such as
+  `ebay-all-results` or `mercari-complete-set`.
+- `platform`: stable platform ID. Current allowed values are `ebay`,
+  `amazon-jp`, `amazon-us`, `mercari`, `suruga-ya`, `yahoo-fleamarket`, and
+  `rakuma`.
+- `labelJa`: Japanese link label for the visible UI.
+- `labelEn`: English link label for English-first summaries and future
+  generated UI.
+- `query`: the search phrase represented by the URL.
 - `url`: search URL.
-- `queryLabel`: readable search terms.
+- `intent`: search intent. Current allowed values are `all-results`,
+  `single-item`, `complete-set`, `character-specific`, `unopened`, and
+  `price-check`.
+- `isAffiliate`: boolean. Default should be false until a real affiliate URL is
+  present.
+- `rel`: expected outbound-link relationship tokens.
+- `disclosureRequired`: boolean.
 
 Optional fields:
 
 - `region`: market or language expectation.
+- `affiliateUrl`: commission-bearing URL. Use only when `isAffiliate` is true.
+- `queryLabel`: legacy readable search terms retained during the static HTML
+  migration.
 - `notes`: known ambiguity or keyword limitation.
 
 Marketplace searches must be accompanied by UI copy that availability, price,
 and authenticity are not verified by CollabVaultX.
+
+Non-affiliate marketplace links use `rel="nofollow noopener noreferrer"`.
+Affiliate marketplace links use `rel="sponsored noopener noreferrer"` and must
+include visible disclosure. See `docs/affiliate-link-policy.md`.
 
 ## Published record requirements
 
@@ -244,9 +265,17 @@ Published `Asset` records require:
 
 Published `MarketplaceSearch` records require:
 
+- `id`
 - `platform`
+- `labelJa`
+- `labelEn`
+- `query`
 - `queryLabel`
 - `url`
+- `intent`
+- `isAffiliate`
+- `rel`
+- `disclosureRequired`
 
 ## Lawson Cinderella Gray Example
 

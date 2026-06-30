@@ -46,7 +46,9 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
   - A concise archive/visual-asset note when a page relies on official imagery:
     thumbnails are for identification, rights remain with the relevant rights
     holders, and attribution does not imply permission or endorsement.
-  - secondary-market links inside `market-links`.
+  - secondary-market links inside a `marketplace-finder` section when an item
+    needs intent-based search choices. Simple legacy pages may keep
+    `market-links`, but new item pages should prefer the Finder pattern.
   - same-campaign related item-page navigation.
   - back links to the campaign, work page, and Top page.
 
@@ -68,7 +70,9 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
   `acquisitionMethodJa` when the official source supports them.
 - Keep `sourceIds` limited to official or partner-official sources for verified
   facts. Marketplace references do not verify item facts.
-- Keep `marketplaceSearches` as reference searches only.
+- Keep `marketplaceSearches` as reference searches only. Non-affiliate links use
+  `rel="nofollow noopener noreferrer"`; future affiliate links require visible
+  disclosure and `rel="sponsored noopener noreferrer"`.
 
 ## Parent Campaign Page
 
@@ -78,7 +82,8 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 - Do not add a separate detail-page `card-button` inside item cards; the image
   and title are the primary item-page navigation.
 - Keep official fact spans in `item-fact-list`.
-- Keep eBay/Mercari/Suruga-ya or similar searches in `market-links`.
+- Keep a small curated subset of eBay/Mercari/Suruga-ya or similar searches in
+  `market-links`; the item detail page owns the full Marketplace Finder.
 
 ## Sitemap
 
@@ -103,8 +108,8 @@ git diff --check
 `page.status` is `published`. For each one, it checks page existence, canonical
 URL, `og:url`, sitemap URL, parent `data-item-id` card link, official name,
 English summary, source facts, every official or partner-official source URL,
-marketplace URLs, related item-page navigation, hero image loading policy,
-product image metadata, and product image path.
+marketplace URLs and `rel` tokens, related item-page navigation, hero image
+loading policy, product image metadata, and product image path.
 
 ## Browser QA
 
@@ -113,6 +118,7 @@ product image metadata, and product image path.
 - Related item-page navigation works.
 - Desktop and mobile viewports have no horizontal overflow.
 - Official source links and secondary-market links are visually separated.
+- Marketplace Finder groups remain readable on desktop and mobile.
 - Product images retain `loading="lazy"` and `decoding="async"`.
 - For visible UI changes, create local red-box before/after screenshots for the
   changed route and viewport. Keep these review artifacts out of git.

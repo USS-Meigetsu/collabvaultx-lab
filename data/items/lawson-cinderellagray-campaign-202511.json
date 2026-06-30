@@ -29,19 +29,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume Cinderella Gray Lawson clear file",
         "queryLabel": "Uma Musume Cinderella Gray Lawson clear file",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+clear+file"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+clear+file",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20クリアファイル"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20クリアファイル",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+クリアファイル"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+クリアファイル",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ]
   },
@@ -75,19 +102,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume Cinderella Gray Lawson Galbo card",
         "queryLabel": "Uma Musume Cinderella Gray Lawson Galbo card",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Galbo+card"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Galbo+card",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20ガルボ%20カード"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20ガルボ%20カード",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン ガルボ カード",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+ガルボ+カード"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+ガルボ+カード",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ]
   },
@@ -121,19 +175,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume Cinderella Gray Lawson glass peach jelly",
         "queryLabel": "Uma Musume Cinderella Gray Lawson glass peach jelly",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+glass+peach+jelly"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+glass+peach+jelly",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20グラス%20白桃ゼリー"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20グラス%20白桃ゼリー",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン グラス 白桃ゼリー",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+グラス+白桃ゼリー"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+グラス+白桃ゼリー",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ]
   },
@@ -167,19 +248,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume Cinderella Gray Lawson acrylic stand",
         "queryLabel": "Uma Musume Cinderella Gray Lawson acrylic stand",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+acrylic+stand"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+acrylic+stand",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20アクリルスタンド"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20アクリルスタンド",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン アクリルスタンド",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+アクリルスタンド"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+アクリルスタンド",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ]
   },
@@ -213,19 +321,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
         "queryLabel": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+Loppi+HMV+グッズ"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+Loppi+HMV+グッズ",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ]
   },
@@ -258,19 +393,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume Cinderella Gray Lawson entame kuji",
         "queryLabel": "Uma Musume Cinderella Gray Lawson entame kuji",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+entame+kuji"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+entame+kuji",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20エンタメくじ"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20エンタメくじ",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+エンタメくじ"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+シンデレラグレイ+ローソン+エンタメくじ",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ]
   }

@@ -49,6 +49,8 @@ Hand-written item group pages should follow `docs/item-page-template.md`.
 Pilot data lives under `data/` and is validated by `scripts/check-data.mjs`.
 Published-card and item-page sync checks live in
 `scripts/check-data-html-sync.mjs`.
+Marketplace and affiliate link handling is documented in
+`docs/affiliate-link-policy.md`.
 
 ## Search metadata
 
@@ -102,6 +104,9 @@ benefits, keep the categories broad and put the detailed item words in
   official purchase sources.
 - Detail pages and item pages with marketplace/search links should show a
   `market-note` before the item cards or reference searches.
+- Non-affiliate marketplace links should use
+  `rel="nofollow noopener noreferrer"`. Future affiliate links require visible
+  disclosure and `rel="sponsored noopener noreferrer"`.
 - Visual assets are archive thumbnails for identification. Rights remain with
   the relevant rights holders, and source attribution does not imply permission,
   endorsement, or an official partnership.

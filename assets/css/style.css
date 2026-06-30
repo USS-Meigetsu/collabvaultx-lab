@@ -859,6 +859,107 @@ main {
   line-height: 1.6;
 }
 
+.marketplace-finder {
+  padding: 22px;
+  border: 1px solid rgba(138, 215, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(10, 14, 22, 0.56);
+}
+
+.marketplace-finder-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.marketplace-finder-heading h3 {
+  margin-top: 4px;
+}
+
+.marketplace-finder-note,
+.marketplace-affiliate-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.marketplace-finder-note {
+  max-width: 360px;
+  font-size: 0.9rem;
+}
+
+.marketplace-finder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.marketplace-group {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(215, 226, 245, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.marketplace-group-title {
+  margin: 0 0 12px;
+  color: var(--accent-strong);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.marketplace-link-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.marketplace-link {
+  display: grid;
+  gap: 4px;
+  min-height: 64px;
+  padding: 12px 13px;
+  border: 1px solid rgba(138, 215, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(138, 215, 255, 0.07);
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease,
+    background 0.16s ease;
+}
+
+.marketplace-link:hover,
+.marketplace-link:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(255, 211, 111, 0.5);
+  background: rgba(255, 211, 111, 0.11);
+}
+
+.marketplace-link:focus-visible {
+  outline: 3px solid rgba(255, 211, 111, 0.72);
+  outline-offset: 3px;
+}
+
+.marketplace-link-meta {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.marketplace-affiliate-note {
+  margin-top: 16px;
+  font-size: 0.88rem;
+}
+
 .item-fact-list {
   display: grid;
   gap: 10px;
@@ -1215,6 +1316,26 @@ main {
 
 .market-links span {
   font-size: 0.92rem;
+}
+
+.marketplace-finder {
+  padding: 18px;
+}
+
+.marketplace-finder-heading {
+  flex-direction: column;
+}
+
+.marketplace-finder-note {
+  max-width: none;
+}
+
+.marketplace-finder-grid {
+  grid-template-columns: 1fr;
+}
+
+.marketplace-link {
+  min-height: 58px;
 }
 
 .product-grid-catalog .product-card {

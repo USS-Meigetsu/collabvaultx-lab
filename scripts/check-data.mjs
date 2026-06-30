@@ -49,6 +49,24 @@ const allowedConfidence = new Set([
   "source-backed",
   "needs-verification",
 ]);
+const allowedMarketplacePlatforms = new Set([
+  "ebay",
+  "amazon-jp",
+  "amazon-us",
+  "mercari",
+  "suruga-ya",
+  "yahoo-fleamarket",
+  "rakuma",
+]);
+const allowedMarketplaceIntents = new Set([
+  "all-results",
+  "single-item",
+  "complete-set",
+  "character-specific",
+  "unopened",
+  "price-check",
+]);
+const requiredMarketplaceRelTokens = new Set(["noopener", "noreferrer"]);
 
 const unsafeStringPatterns = [
   /AppData/i,
@@ -133,6 +151,14 @@ function requireObject(record, field, label) {
   return true;
 }
 
+function requireBoolean(record, field, label) {
+  if (typeof record[field] !== "boolean") {
+    fail(`${label}: missing required boolean field "${field}"`);
+    return false;
+  }
+  return true;
+}
+
 function validateId(record, label) {
   if (!requireString(record, "id", label)) return;
   if (!idPattern.test(record.id)) {
@@ -167,6 +193,57 @@ function validateUrl(value, label, field) {
     }
   } catch {
     fail(`${label}: invalid URL in "${field}"`);
+  }
+}
+
+function validateMarketplaceSearch(search, label) {
+  validateId(search, label);
+  requireString(search, "platform", label);
+  requireString(search, "labelJa", label);
+  requireString(search, "labelEn", label);
+  requireString(search, "query", label);
+  requireString(search, "queryLabel", label);
+  requireString(search, "intent", label);
+  requireString(search, "rel", label);
+  requireBoolean(search, "isAffiliate", label);
+  requireBoolean(search, "disclosureRequired", label);
+  validateUrl(search.url, label, "url");
+
+  if (typeof search.platform === "string" && !allowedMarketplacePlatforms.has(search.platform)) {
+    fail(`${label}: unsupported marketplace platform "${search.platform}"`);
+  }
+  if (typeof search.intent === "string" && !allowedMarketplaceIntents.has(search.intent)) {
+    fail(`${label}: unsupported marketplace intent "${search.intent}"`);
+  }
+
+  const relTokens = new Set(String(search.rel ?? "").toLowerCase().split(/\s+/).filter(Boolean));
+  for (const token of requiredMarketplaceRelTokens) {
+    if (!relTokens.has(token)) {
+      fail(`${label}: rel must include "${token}"`);
+    }
+  }
+
+  if (search.isAffiliate) {
+    validateUrl(search.affiliateUrl, label, "affiliateUrl");
+    if (!search.disclosureRequired) {
+      fail(`${label}: affiliate links must set disclosureRequired=true`);
+    }
+    if (!relTokens.has("sponsored")) {
+      fail(`${label}: affiliate links must use rel including "sponsored"`);
+    }
+  } else {
+    if (search.affiliateUrl !== undefined && String(search.affiliateUrl).trim() !== "") {
+      fail(`${label}: non-affiliate searches must not include affiliateUrl`);
+    }
+    if (search.disclosureRequired) {
+      fail(`${label}: non-affiliate searches should set disclosureRequired=false`);
+    }
+    if (!relTokens.has("nofollow")) {
+      fail(`${label}: non-affiliate marketplace searches must use rel including "nofollow"`);
+    }
+    if (relTokens.has("sponsored")) {
+      fail(`${label}: non-affiliate marketplace searches must not use rel including "sponsored"`);
+    }
   }
 }
 
@@ -412,11 +489,16 @@ for (const item of items) {
   }
 
   if (Array.isArray(item.marketplaceSearches)) {
+    const marketplaceSearchIds = new Set();
     for (const [index, search] of item.marketplaceSearches.entries()) {
       const searchLabel = `${label}:marketplaceSearches[${index}]`;
-      requireString(search, "platform", searchLabel);
-      requireString(search, "queryLabel", searchLabel);
-      validateUrl(search.url, searchLabel, "url");
+      validateMarketplaceSearch(search, searchLabel);
+      if (typeof search.id === "string") {
+        if (marketplaceSearchIds.has(search.id)) {
+          fail(`${searchLabel}: duplicate marketplace search id "${search.id}"`);
+        }
+        marketplaceSearchIds.add(search.id);
+      }
     }
   }
 

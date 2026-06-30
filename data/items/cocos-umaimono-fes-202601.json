@@ -24,19 +24,102 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume COCOS clear card",
         "queryLabel": "Uma Musume COCOS clear card",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+clear+card"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+clear+card",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
-        "queryLabel": "ウマ娘 ココス クリアカード",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20クリアカード"
+        "id": "ebay-complete-set",
+        "platform": "ebay",
+        "labelJa": "eBayでコンプリートセットを探す",
+        "labelEn": "Search eBay complete sets",
+        "query": "Uma Musume COCOS clear card complete set",
+        "queryLabel": "Uma Musume COCOS clear card complete set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+clear+card+complete+set",
+        "intent": "complete-set",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ココス クリアカード",
         "queryLabel": "ウマ娘 ココス クリアカード",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+クリアカード"
+        "url": "https://www.amazon.co.jp/s?k=ウマ娘+ココス+クリアカード",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ココス クリアカード",
+        "queryLabel": "ウマ娘 ココス クリアカード",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20クリアカード",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでコンプリートセットを探す",
+        "labelEn": "Search Mercari JP complete sets",
+        "query": "ウマ娘 ココス クリアカード コンプリート",
+        "queryLabel": "ウマ娘 ココス クリアカード コンプリート",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20クリアカード%20コンプリート",
+        "intent": "complete-set",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ココス クリアカード",
+        "queryLabel": "ウマ娘 ココス クリアカード",
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+クリアカード",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ココス クリアカード",
+        "queryLabel": "ウマ娘 ココス クリアカード",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20%E3%82%AF%E3%83%AA%E3%82%A2%E3%82%AB%E3%83%BC%E3%83%89",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ],
     "page": {
@@ -71,19 +154,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume COCOS special clear card",
         "queryLabel": "Uma Musume COCOS special clear card",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+special+clear+card"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+special+clear+card",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 ココス スペシャルクリアカード",
         "queryLabel": "ウマ娘 ココス スペシャルクリアカード",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20スペシャルクリアカード"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20スペシャルクリアカード",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ココス スペシャルクリアカード",
         "queryLabel": "ウマ娘 ココス スペシャルクリアカード",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+スペシャルクリアカード"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+スペシャルクリアカード",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ],
     "page": {
@@ -118,19 +228,46 @@
     "saleLimitLabelJa": "おひとり様、前半・後半各4個、最大8個まで",
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume COCOS acrylic panel",
         "queryLabel": "Uma Musume COCOS acrylic panel",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+acrylic+panel"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+acrylic+panel",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 ココス アクリルスタンドパネル",
         "queryLabel": "ウマ娘 ココス アクリルスタンドパネル",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20アクリルスタンドパネル"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20アクリルスタンドパネル",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ココス アクリルスタンドパネル",
         "queryLabel": "ウマ娘 ココス アクリルスタンドパネル",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+アクリルスタンドパネル"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+アクリルスタンドパネル",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ],
     "page": {
@@ -164,19 +301,46 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume COCOS blanket",
         "queryLabel": "Uma Musume COCOS blanket",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+blanket"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+blanket",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 ココス ブランケット",
         "queryLabel": "ウマ娘 ココス ブランケット",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20ブランケット"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20ブランケット",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Suruga-ya",
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ココス ブランケット",
         "queryLabel": "ウマ娘 ココス ブランケット",
-        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+ブランケット"
+        "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+ブランケット",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ],
     "page": {
@@ -209,14 +373,32 @@
     ],
     "marketplaceSearches": [
       {
-        "platform": "eBay",
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで探す",
+        "labelEn": "Search eBay",
+        "query": "Uma Musume COCOS B2 poster",
         "queryLabel": "Uma Musume COCOS B2 poster",
-        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+B2+poster"
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+B2+poster",
+        "intent": "all-results",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       },
       {
-        "platform": "Mercari",
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで探す",
+        "labelEn": "Search Mercari JP",
+        "query": "ウマ娘 ココス B2ポスター",
         "queryLabel": "ウマ娘 ココス B2ポスター",
-        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20B2ポスター"
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20B2ポスター",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
       }
     ],
     "page": {
