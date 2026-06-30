@@ -188,6 +188,12 @@
     "campaignId": "lawson-cinderellagray-campaign-202511",
     "officialNameJa": "@Loppi・HMV限定予約販売グッズ",
     "displayNameEn": "Loppi/HMV reservation goods",
+    "summaryEn": "Lawson @Loppi and HMV reservation-sale goods group for the Uma Musume Cinderella Gray campaign, covering the reservation window, pickup date, lineup groups, official source, order caveats, and reference searches.",
+    "page": {
+      "status": "published",
+      "slug": "loppi-hmv-reservation-goods",
+      "path": "works/umamusume/collabs/lawson-cinderellagray-campaign-202511/items/loppi-hmv-reservation-goods/"
+    },
     "category": "goods",
     "recordType": "group",
     "distributionType": "reservation-sale",
@@ -198,7 +204,9 @@
     "descriptionJa": "@Loppi・HMV&BOOKS online限定の予約販売グッズ。ぬいぐるみ、B2タペストリー、アクリルジオラマ、缶バッジ、フェイスタオル、アクリルスタンドをグループとして記録しています。",
     "lineupLabelJa": "ぬいぐるみ全3種 / B2タペストリー全6種 / アクリルジオラマ / 缶バッジ全6種 / フェイスタオル全2種 / アクリルスタンド全6種",
     "acquisitionMethodJa": "@Loppi・HMV&BOOKS online限定の予約販売",
+    "availabilityLabel": "2025年11月25日〜2026年1月26日、または受付終了まで / お渡し日: 2026年5月28日",
     "startDate": "2025-11-25",
+    "endDate": "2026-01-26",
     "assetIds": [
       "lawson-loppi-hmv-main"
     ],
