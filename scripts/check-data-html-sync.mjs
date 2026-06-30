@@ -492,6 +492,11 @@ function validatePublishedItemPage(item) {
   if (assetsForItem.length === 0) {
     fail(`${label}: assetIds must include at least one known asset`);
   } else {
+    const expectedOgImage = publicUrlForPath(assetsForItem[0].path);
+    if (ogImage !== expectedOgImage) {
+      fail(`${label}: og:image must match primary asset URL ${expectedOgImage}`);
+    }
+
     if (getMetaContent(itemHtml, "og:image:alt") !== assetsForItem[0].altJa) {
       fail(`${label}: og:image:alt must match primary asset.altJa`);
     }

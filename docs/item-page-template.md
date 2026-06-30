@@ -47,7 +47,7 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
     thumbnails are for identification, rights remain with the relevant rights
     holders, and attribution does not imply permission or endorsement.
   - secondary-market links inside `market-links`.
-  - related Lawson item-page navigation.
+  - same-campaign related item-page navigation.
   - back links to the campaign, work page, and Top page.
 
 ## Data Updates

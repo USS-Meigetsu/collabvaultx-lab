@@ -38,7 +38,12 @@
         "queryLabel": "ウマ娘 ココス クリアカード",
         "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+クリアカード"
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "original-clear-cards",
+      "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/original-clear-cards/"
+    }
   },
   {
     "id": "cocos-special-set-menu",
