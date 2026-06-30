@@ -57,7 +57,17 @@
     "items": "ZOZOTOWN goods / brand apparel"
   },
   "coverageNote": "This pilot records the campaign-level facts and the item groups explicitly described in the ZOZO corporate release. The release states that seven ZOZOTOWN original goods types and thirteen apparel types were sold, but only some original-goods examples are itemized in the release text.",
-  "factEvidenceRefs": {
+  "evidenceRefs": [
+    "ev-campaign-title-and-sale",
+    "ev-campaign-lineup-overview",
+    "ev-order-period",
+    "ev-brand-and-illustrator-info",
+    "ev-original-goods-featured",
+    "ev-417-edifice-items",
+    "ev-hare-items",
+    "ev-freaks-store-items"
+  ],
+  "fieldEvidenceRefs": {
     "officialTitleJa": [
       "ev-campaign-title-and-sale"
     ],
@@ -84,16 +94,16 @@
       "ev-417-edifice-items",
       "ev-hare-items",
       "ev-freaks-store-items"
+    ],
+    "summaryEn": [
+      "ev-campaign-title-and-sale",
+      "ev-campaign-lineup-overview",
+      "ev-order-period",
+      "ev-brand-and-illustrator-info",
+      "ev-original-goods-featured",
+      "ev-417-edifice-items",
+      "ev-hare-items",
+      "ev-freaks-store-items"
     ]
-  },
-  "evidenceRefs": [
-    "ev-campaign-title-and-sale",
-    "ev-campaign-lineup-overview",
-    "ev-order-period",
-    "ev-brand-and-illustrator-info",
-    "ev-original-goods-featured",
-    "ev-417-edifice-items",
-    "ev-hare-items",
-    "ev-freaks-store-items"
-  ]
+  }
 }

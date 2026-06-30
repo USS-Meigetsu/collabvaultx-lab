@@ -1,0 +1,79 @@
+{
+  "reportVersion": "0.1",
+  "packageId": "umamusume-zozotown-202604",
+  "packagePath": "research-packages/incoming/umamusume-zozotown-202604.json",
+  "importedFiles": [
+    "data/campaigns/umamusume-zozotown-202604.json",
+    "data/sources/umamusume-zozotown-202604.json",
+    "data/assets/umamusume-zozotown-202604.json",
+    "data/items/umamusume-zozotown-202604.json",
+    "works/umamusume/collabs/umamusume-zozotown-202604/index.html",
+    "works/umamusume/collabs/umamusume-zozotown-202604/items/big-acrylic-stands/index.html",
+    "works/umamusume/collabs/umamusume-zozotown-202604/items/can-badge-sets/index.html",
+    "works/umamusume/collabs/umamusume-zozotown-202604/items/cheki-sets/index.html"
+  ],
+  "counts": {
+    "sources": 2,
+    "assets": 5,
+    "items": 7,
+    "generatedItemPages": 3,
+    "parentCardOnlyItems": 4,
+    "deferredItems": 0
+  },
+  "generatedRoutes": {
+    "campaignPage": "works/umamusume/collabs/umamusume-zozotown-202604/",
+    "itemPages": [
+      "works/umamusume/collabs/umamusume-zozotown-202604/items/big-acrylic-stands/",
+      "works/umamusume/collabs/umamusume-zozotown-202604/items/can-badge-sets/",
+      "works/umamusume/collabs/umamusume-zozotown-202604/items/cheki-sets/"
+    ]
+  },
+  "skippedItems": [
+    {
+      "id": "zozotown-rubber-mats",
+      "decision": "parent-card-only",
+      "reason": "Confirmed item group, but the public facts are thin and can remain on the parent campaign page for the first pilot."
+    },
+    {
+      "id": "zozotown-417-edifice-apparel",
+      "decision": "parent-card-only",
+      "reason": "Brand-apparel collection has useful parent-card value, but item-page copy would be a matrix of apparel variants and prices; defer route generation until apparel template policy is reviewed."
+    },
+    {
+      "id": "zozotown-hare-apparel",
+      "decision": "parent-card-only",
+      "reason": "Brand-apparel collection has useful parent-card value, but item-page generation should wait for apparel grouping rules."
+    },
+    {
+      "id": "zozotown-freaks-store-apparel",
+      "decision": "parent-card-only",
+      "reason": "Brand-apparel collection should remain parent-card-only for the first pilot because individual apparel SKUs would create a large variant matrix."
+    }
+  ],
+  "normalizedFields": [
+    "factEvidenceRefs renamed to fieldEvidenceRefs in imported data when present.",
+    "pageDecision removed from data items after generating page paths.",
+    "priceLabel rendered publicly as an original official listed price label.",
+    "unresolvedQuestions kept out of public HTML; publicVerificationNotes rendered instead."
+  ],
+  "reviewOnlyQuestions": [
+    {
+      "id": "uq-original-goods-full-seven-types",
+      "impact": "medium",
+      "publishBlocking": false,
+      "question": "The ZOZO corporate release states that seven ZOZOTOWN collaboration goods types were sold, but the visible release text itemizes four featured original goods groups. Should Codex inspect the special page archive or product-level ZOZOTOWN pages before claiming the full seven-type original-goods lineup?"
+    },
+    {
+      "id": "uq-special-page-ended",
+      "impact": "low",
+      "publishBlocking": false,
+      "question": "The current ZOZOTOWN special page may only show that the special event has ended. Should the archive rely on the ZOZO corporate release as the primary evidence for item facts?"
+    },
+    {
+      "id": "uq-apparel-template-policy",
+      "impact": "medium",
+      "publishBlocking": false,
+      "question": "The brand apparel collections contain multiple apparel SKUs with size/color/variant complexity. Should future versions split apparel into individual item pages or keep brand-level grouped pages?"
+    }
+  ]
+}

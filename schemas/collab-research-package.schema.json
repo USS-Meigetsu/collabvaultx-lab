@@ -19,6 +19,7 @@
     "items",
     "pageGenerationPolicy",
     "marketplacePolicy",
+    "publicVerificationNotes",
     "unresolvedQuestions",
     "humanReviewChecklist"
   ],
@@ -64,6 +65,15 @@
     },
     "pageGenerationPolicy": { "$ref": "#/$defs/pageGenerationPolicy" },
     "marketplacePolicy": { "$ref": "#/$defs/marketplacePolicy" },
+    "publicVerificationNotes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/publicVerificationNote" }
+    },
+    "normalizationExpectations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/normalizationExpectation" }
+    },
     "unresolvedQuestions": {
       "type": "array",
       "items": { "$ref": "#/$defs/unresolvedQuestion" }
@@ -148,7 +158,9 @@
           "type": "array",
           "minItems": 1,
           "items": { "$ref": "#/$defs/kebabId" }
-        }
+        },
+        "fieldEvidenceRefs": { "$ref": "#/$defs/fieldEvidenceRefs" },
+        "factEvidenceRefs": { "$ref": "#/$defs/fieldEvidenceRefs" }
       }
     },
     "source": {
@@ -262,6 +274,8 @@
         "descriptionJa": { "type": "string", "minLength": 1 },
         "acquisitionMethodJa": { "type": "string", "minLength": 1 },
         "pageDecision": { "$ref": "#/$defs/pageDecision" },
+        "fieldEvidenceRefs": { "$ref": "#/$defs/fieldEvidenceRefs" },
+        "factEvidenceRefs": { "$ref": "#/$defs/fieldEvidenceRefs" },
         "marketplaceSearches": {
           "type": "array",
           "items": { "$ref": "#/$defs/marketplaceSearch" }
@@ -271,7 +285,16 @@
     "pageDecision": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["decision", "priority", "reason"],
+      "required": [
+        "decision",
+        "priority",
+        "reason",
+        "searchValue",
+        "factDepth",
+        "acquisitionComplexity",
+        "variantExplosionRisk",
+        "thinPageRisk"
+      ],
       "properties": {
         "decision": {
           "type": "string",
@@ -282,7 +305,12 @@
           "enum": ["high", "medium", "low", "none"]
         },
         "reason": { "type": "string", "minLength": 1 },
-        "slug": { "$ref": "#/$defs/kebabId" }
+        "slug": { "$ref": "#/$defs/kebabId" },
+        "searchValue": { "$ref": "#/$defs/riskLevel" },
+        "factDepth": { "$ref": "#/$defs/riskLevel" },
+        "acquisitionComplexity": { "$ref": "#/$defs/riskLevel" },
+        "variantExplosionRisk": { "$ref": "#/$defs/riskLevel" },
+        "thinPageRisk": { "$ref": "#/$defs/riskLevel" }
       }
     },
     "marketplaceSearch": {
@@ -334,11 +362,30 @@
         "itemPages": {
           "type": "object",
           "additionalProperties": true,
-          "required": ["generateForDecisions", "deferParentCardOnly", "doNotGenerateVariantPages"],
+          "required": [
+            "generateForDecisions",
+            "selectedItemIds",
+            "parentCardOnlyItemIds",
+            "deferredItemIds",
+            "deferParentCardOnly",
+            "doNotGenerateVariantPages"
+          ],
           "properties": {
             "generateForDecisions": {
               "type": "array",
               "items": { "type": "string" }
+            },
+            "selectedItemIds": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/kebabId" }
+            },
+            "parentCardOnlyItemIds": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/kebabId" }
+            },
+            "deferredItemIds": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/kebabId" }
             },
             "deferParentCardOnly": { "type": "boolean" },
             "doNotGenerateVariantPages": { "type": "boolean" }
@@ -390,6 +437,45 @@
         "impact": { "type": "string", "enum": ["high", "medium", "low"] },
         "publishBlocking": { "type": "boolean" }
       }
+    },
+    "publicVerificationNote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "note", "scope"],
+      "properties": {
+        "id": { "$ref": "#/$defs/kebabId" },
+        "note": { "type": "string", "minLength": 1 },
+        "scope": { "type": "string", "enum": ["campaign-page", "item-pages", "all-public-pages"] },
+        "sourceIds": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/kebabId" }
+        }
+      }
+    },
+    "normalizationExpectation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "handling"],
+      "properties": {
+        "field": { "type": "string", "minLength": 1 },
+        "handling": {
+          "type": "string",
+          "enum": ["preserve-public-data", "preserve-review-only", "derive-generated-output", "drop-after-import"]
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "fieldEvidenceRefs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": { "$ref": "#/$defs/kebabId" }
+      }
+    },
+    "riskLevel": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "none"]
     }
   }
 }

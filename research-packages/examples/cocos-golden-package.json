@@ -81,7 +81,49 @@
       "ev-campaign-title",
       "ev-campaign-period",
       "ev-campaign-lineup"
-    ]
+    ],
+    "fieldEvidenceRefs": {
+      "officialTitleJa": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ],
+      "periodLabel": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ],
+      "startDate": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ],
+      "endDate": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ],
+      "partnerNames": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ],
+      "categories": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ],
+      "summaryJa": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ],
+      "summaryEn": [
+        "ev-campaign-title",
+        "ev-campaign-period",
+        "ev-campaign-lineup"
+      ]
+    }
   },
   "sources": [
     {
@@ -558,7 +600,49 @@
         "decision": "generate",
         "priority": "high",
         "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
-        "slug": "original-clear-cards"
+        "slug": "original-clear-cards",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
+      },
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-cocos-original-clear-cards-name",
+          "ev-cocos-original-clear-cards-acquisition",
+          "ev-cocos-original-clear-cards-availability"
+        ],
+        "descriptionJa": [
+          "ev-cocos-original-clear-cards-name",
+          "ev-cocos-original-clear-cards-acquisition",
+          "ev-cocos-original-clear-cards-availability"
+        ],
+        "lineupLabelJa": [
+          "ev-cocos-original-clear-cards-name",
+          "ev-cocos-original-clear-cards-acquisition",
+          "ev-cocos-original-clear-cards-availability"
+        ],
+        "acquisitionMethodJa": [
+          "ev-cocos-original-clear-cards-name",
+          "ev-cocos-original-clear-cards-acquisition",
+          "ev-cocos-original-clear-cards-availability"
+        ],
+        "availabilityLabel": [
+          "ev-cocos-original-clear-cards-name",
+          "ev-cocos-original-clear-cards-acquisition",
+          "ev-cocos-original-clear-cards-availability"
+        ],
+        "startDate": [
+          "ev-cocos-original-clear-cards-name",
+          "ev-cocos-original-clear-cards-acquisition",
+          "ev-cocos-original-clear-cards-availability"
+        ],
+        "endDate": [
+          "ev-cocos-original-clear-cards-name",
+          "ev-cocos-original-clear-cards-acquisition",
+          "ev-cocos-original-clear-cards-availability"
+        ]
       }
     },
     {
@@ -717,7 +801,49 @@
         "decision": "generate",
         "priority": "high",
         "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
-        "slug": "special-set-menu"
+        "slug": "special-set-menu",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
+      },
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-cocos-special-set-menu-name",
+          "ev-cocos-special-set-menu-acquisition",
+          "ev-cocos-special-set-menu-availability"
+        ],
+        "descriptionJa": [
+          "ev-cocos-special-set-menu-name",
+          "ev-cocos-special-set-menu-acquisition",
+          "ev-cocos-special-set-menu-availability"
+        ],
+        "lineupLabelJa": [
+          "ev-cocos-special-set-menu-name",
+          "ev-cocos-special-set-menu-acquisition",
+          "ev-cocos-special-set-menu-availability"
+        ],
+        "acquisitionMethodJa": [
+          "ev-cocos-special-set-menu-name",
+          "ev-cocos-special-set-menu-acquisition",
+          "ev-cocos-special-set-menu-availability"
+        ],
+        "availabilityLabel": [
+          "ev-cocos-special-set-menu-name",
+          "ev-cocos-special-set-menu-acquisition",
+          "ev-cocos-special-set-menu-availability"
+        ],
+        "startDate": [
+          "ev-cocos-special-set-menu-name",
+          "ev-cocos-special-set-menu-acquisition",
+          "ev-cocos-special-set-menu-availability"
+        ],
+        "endDate": [
+          "ev-cocos-special-set-menu-name",
+          "ev-cocos-special-set-menu-acquisition",
+          "ev-cocos-special-set-menu-availability"
+        ]
       }
     },
     {
@@ -863,7 +989,44 @@
         "decision": "generate",
         "priority": "high",
         "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
-        "slug": "acrylic-stand-panels"
+        "slug": "acrylic-stand-panels",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
+      },
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-cocos-acrylic-stand-panels-name",
+          "ev-cocos-acrylic-stand-panels-acquisition",
+          "ev-cocos-acrylic-stand-panels-availability"
+        ],
+        "descriptionJa": [
+          "ev-cocos-acrylic-stand-panels-name",
+          "ev-cocos-acrylic-stand-panels-acquisition",
+          "ev-cocos-acrylic-stand-panels-availability"
+        ],
+        "lineupLabelJa": [
+          "ev-cocos-acrylic-stand-panels-name",
+          "ev-cocos-acrylic-stand-panels-acquisition",
+          "ev-cocos-acrylic-stand-panels-availability"
+        ],
+        "acquisitionMethodJa": [
+          "ev-cocos-acrylic-stand-panels-name",
+          "ev-cocos-acrylic-stand-panels-acquisition",
+          "ev-cocos-acrylic-stand-panels-availability"
+        ],
+        "availabilityLabel": [
+          "ev-cocos-acrylic-stand-panels-name",
+          "ev-cocos-acrylic-stand-panels-acquisition",
+          "ev-cocos-acrylic-stand-panels-availability"
+        ],
+        "startDate": [
+          "ev-cocos-acrylic-stand-panels-name",
+          "ev-cocos-acrylic-stand-panels-acquisition",
+          "ev-cocos-acrylic-stand-panels-availability"
+        ]
       }
     },
     {
@@ -1008,7 +1171,49 @@
         "decision": "generate",
         "priority": "high",
         "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
-        "slug": "original-blanket"
+        "slug": "original-blanket",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
+      },
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-cocos-original-blanket-name",
+          "ev-cocos-original-blanket-acquisition",
+          "ev-cocos-original-blanket-availability"
+        ],
+        "descriptionJa": [
+          "ev-cocos-original-blanket-name",
+          "ev-cocos-original-blanket-acquisition",
+          "ev-cocos-original-blanket-availability"
+        ],
+        "lineupLabelJa": [
+          "ev-cocos-original-blanket-name",
+          "ev-cocos-original-blanket-acquisition",
+          "ev-cocos-original-blanket-availability"
+        ],
+        "acquisitionMethodJa": [
+          "ev-cocos-original-blanket-name",
+          "ev-cocos-original-blanket-acquisition",
+          "ev-cocos-original-blanket-availability"
+        ],
+        "availabilityLabel": [
+          "ev-cocos-original-blanket-name",
+          "ev-cocos-original-blanket-acquisition",
+          "ev-cocos-original-blanket-availability"
+        ],
+        "startDate": [
+          "ev-cocos-original-blanket-name",
+          "ev-cocos-original-blanket-acquisition",
+          "ev-cocos-original-blanket-availability"
+        ],
+        "endDate": [
+          "ev-cocos-original-blanket-name",
+          "ev-cocos-original-blanket-acquisition",
+          "ev-cocos-original-blanket-availability"
+        ]
       }
     },
     {
@@ -1151,7 +1356,49 @@
         "decision": "generate",
         "priority": "high",
         "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
-        "slug": "b2-posters"
+        "slug": "b2-posters",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
+      },
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-cocos-b2-posters-name",
+          "ev-cocos-b2-posters-acquisition",
+          "ev-cocos-b2-posters-availability"
+        ],
+        "descriptionJa": [
+          "ev-cocos-b2-posters-name",
+          "ev-cocos-b2-posters-acquisition",
+          "ev-cocos-b2-posters-availability"
+        ],
+        "lineupLabelJa": [
+          "ev-cocos-b2-posters-name",
+          "ev-cocos-b2-posters-acquisition",
+          "ev-cocos-b2-posters-availability"
+        ],
+        "acquisitionMethodJa": [
+          "ev-cocos-b2-posters-name",
+          "ev-cocos-b2-posters-acquisition",
+          "ev-cocos-b2-posters-availability"
+        ],
+        "availabilityLabel": [
+          "ev-cocos-b2-posters-name",
+          "ev-cocos-b2-posters-acquisition",
+          "ev-cocos-b2-posters-availability"
+        ],
+        "startDate": [
+          "ev-cocos-b2-posters-name",
+          "ev-cocos-b2-posters-acquisition",
+          "ev-cocos-b2-posters-availability"
+        ],
+        "endDate": [
+          "ev-cocos-b2-posters-name",
+          "ev-cocos-b2-posters-acquisition",
+          "ev-cocos-b2-posters-availability"
+        ]
       }
     }
   ],
@@ -1165,7 +1412,16 @@
         "generate"
       ],
       "deferParentCardOnly": true,
-      "doNotGenerateVariantPages": true
+      "doNotGenerateVariantPages": true,
+      "selectedItemIds": [
+        "cocos-original-clear-cards",
+        "cocos-special-set-menu",
+        "cocos-acrylic-stand-panels",
+        "cocos-original-blanket",
+        "cocos-b2-posters"
+      ],
+      "parentCardOnlyItemIds": [],
+      "deferredItemIds": []
     },
     "sitemap": {
       "includeGeneratedPages": true
@@ -1196,5 +1452,32 @@
     "Marketplace searches remain reference-only and non-affiliate.",
     "Evidence records point only to official COCOS sources.",
     "The package can be used as a golden replay fixture before new GPT research is attempted."
+  ],
+  "publicVerificationNotes": [
+    {
+      "id": "pv-source-scope",
+      "scope": "campaign-page",
+      "note": "This archive page summarizes facts that are backed by the listed official or partner-official sources.",
+      "sourceIds": [
+        "cocos-umamusume-special-site"
+      ]
+    }
+  ],
+  "normalizationExpectations": [
+    {
+      "field": "fieldEvidenceRefs",
+      "handling": "preserve-public-data",
+      "note": "Keep field-level evidence links in imported data so public facts remain auditable."
+    },
+    {
+      "field": "unresolvedQuestions",
+      "handling": "preserve-review-only",
+      "note": "Do not render internal unresolved questions directly on public pages."
+    },
+    {
+      "field": "pageDecision",
+      "handling": "derive-generated-output",
+      "note": "Use page decisions to derive generated item routes, then remove pageDecision from public item data."
+    }
   ]
 }

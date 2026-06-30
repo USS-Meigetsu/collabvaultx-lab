@@ -8,9 +8,13 @@ Use this checklist before a GPT-researched package becomes generated pages.
   and `language`.
 - Each campaign fact has an `evidenceRefs` entry.
 - Each item fact has an `evidenceRefs` entry.
+- Public facts have `fieldEvidenceRefs` for the specific field being shown.
 - Marketplace search links are not used as official evidence.
 - Uncertain details are moved to `unresolvedQuestions`.
+- Public caveats are moved to `publicVerificationNotes`.
 - Every item has a `pageDecision` and reason.
+- Every `pageDecision` includes search value, fact depth, acquisition
+  complexity, variant explosion risk, and thin-page risk.
 - Generated item pages are limited to goods with clear value.
 - Character variants are grouped unless there is a reviewed reason to split.
 
@@ -22,6 +26,10 @@ Use this checklist before a GPT-researched package becomes generated pages.
 - Generated item slugs are unique.
 - Affiliate and marketplace policies are consistent.
 - No official fact is verified only by a marketplace reference.
+- `pageGenerationPolicy.itemPages` generated/parent/deferred id lists match
+  item `pageDecision` values.
+- `publishBlocking: true` unresolved questions fail validation.
+- Public notes do not contain internal Codex/GPT instructions.
 - Existing repo checks still pass after import/generation.
 
 ## Human Review
@@ -32,6 +40,9 @@ Use this checklist before a GPT-researched package becomes generated pages.
 - Parent-card-only items do not need separate pages yet.
 - Asset use is acceptable for archive/identification purposes.
 - Marketplace searches are useful without implying price, stock, or authenticity.
+- Original listed prices do not read as current marketplace prices.
+- Internal unresolved questions are not visible on public pages.
+- Import reports make raw package to generated output changes traceable.
 - The generated output is reviewable and rollback-friendly.
 
 ## GPT Review After Pilot

@@ -27,7 +27,14 @@
     "summaryEn": "Small invalid fixture used to prove missing item evidence references fail validation.",
     "sourceIds": ["test-official-source"],
     "itemIds": ["test-item"],
-    "evidenceRefs": ["ev-campaign-title"]
+    "evidenceRefs": ["ev-campaign-title"],
+    "fieldEvidenceRefs": {
+      "officialTitleJa": ["ev-campaign-title"],
+      "periodLabel": ["ev-campaign-title"],
+      "partnerNames": ["ev-campaign-title"],
+      "categories": ["ev-campaign-title"],
+      "summaryEn": ["ev-campaign-title"]
+    }
   },
   "sources": [
     {
@@ -84,7 +91,17 @@
         "decision": "generate",
         "priority": "high",
         "reason": "Fixture item used to prove missing evidenceRefs fails.",
-        "slug": "test-item"
+        "slug": "test-item",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
+      },
+      "fieldEvidenceRefs": {
+        "officialNameJa": ["ev-campaign-title"],
+        "descriptionJa": ["ev-campaign-title"],
+        "acquisitionMethodJa": ["ev-campaign-title"]
       },
       "marketplaceSearches": [
         {
@@ -111,6 +128,9 @@
     },
     "itemPages": {
       "generateForDecisions": ["generate"],
+      "selectedItemIds": ["test-item"],
+      "parentCardOnlyItemIds": [],
+      "deferredItemIds": [],
       "deferParentCardOnly": true,
       "doNotGenerateVariantPages": true
     },
@@ -129,6 +149,14 @@
     "noPriceOrAuthenticityClaims": true,
     "affiliateEnabled": false
   },
+  "publicVerificationNotes": [
+    {
+      "id": "pv-fixture-source-scope",
+      "scope": "campaign-page",
+      "note": "This fixture uses a test official source and is not intended for publication.",
+      "sourceIds": ["test-official-source"]
+    }
+  ],
   "unresolvedQuestions": [],
   "humanReviewChecklist": [
     "This fixture must fail validation because item evidenceRefs is missing."

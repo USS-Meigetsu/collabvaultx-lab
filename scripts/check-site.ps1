@@ -43,6 +43,7 @@ $missingDetailSourceMetadata = New-Object System.Collections.Generic.List[string
 $missingLazyProductImages = New-Object System.Collections.Generic.List[string]
 $mixedMarketLinkContent = New-Object System.Collections.Generic.List[string]
 $publicPlaceholderText = New-Object System.Collections.Generic.List[string]
+$nonNormalizedRelativeUrls = New-Object System.Collections.Generic.List[string]
 $publicUrls = New-Object System.Collections.Generic.List[string]
 
 function Join-Chars([int[]]$codes) {
@@ -216,6 +217,9 @@ foreach ($file in $htmlFiles) {
       $unsafeJavascriptLinks.Add("$relativeFile -> $url")
       continue
     }
+    if ($url -match '(^\./\./|/\./)') {
+      $nonNormalizedRelativeUrls.Add("$relativeFile -> $attr=$url")
+    }
     Add-MissingLocalReference $file $url
   }
 
@@ -363,4 +367,8 @@ if ($publicPlaceholderText.Count -gt 0) {
   Write-Error ("Public placeholder title text found:`n" + ($publicPlaceholderText -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, English summaries, detail source metadata, lazy product images, market-link structure, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."
+if ($nonNormalizedRelativeUrls.Count -gt 0) {
+  Write-Error ("Non-normalized relative URLs found:`n" + ($nonNormalizedRelativeUrls -join "`n"))
+}
+
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, English summaries, detail source metadata, lazy product images, market-link structure, no mojibake markers, public placeholder title text, placeholder links, javascript links, non-normalized relative URLs, missing local links, or unsafe blank-target links."

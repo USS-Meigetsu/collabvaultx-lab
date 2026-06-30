@@ -10,7 +10,36 @@ const SOURCE_TYPES = new Set(["official", "partner-official", "marketplace-refer
 const PACKAGE_STATUSES = new Set(["draft", "needs-human-review", "research-ready-for-codex"]);
 const PAGE_DECISIONS = new Set(["generate", "parent-card-only", "defer", "never"]);
 const PRIORITIES = new Set(["high", "medium", "low", "none"]);
+const RISK_LEVELS = new Set(["high", "medium", "low", "none"]);
 const REQUIRED_NON_AFFILIATE_REL = ["nofollow", "noopener", "noreferrer"];
+const PAGE_DECISION_SCORE_FIELDS = [
+  "searchValue",
+  "factDepth",
+  "acquisitionComplexity",
+  "variantExplosionRisk",
+  "thinPageRisk",
+];
+const CAMPAIGN_FIELD_EVIDENCE_FIELDS = [
+  "officialTitleJa",
+  "periodLabel",
+  "startDate",
+  "endDate",
+  "partnerNames",
+  "categories",
+  "summaryJa",
+  "summaryEn",
+];
+const ITEM_FIELD_EVIDENCE_FIELDS = [
+  "officialNameJa",
+  "descriptionJa",
+  "lineupLabelJa",
+  "priceLabel",
+  "acquisitionMethodJa",
+  "availabilityLabel",
+  "startDate",
+  "endDate",
+];
+const INTERNAL_PUBLIC_NOTE_PATTERN = /\b(should codex|codex should|gpt|internal|review-only|inspect)\b/i;
 
 function isObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
@@ -114,6 +143,58 @@ function hasOfficialSource(ids, sourceMap) {
 
 function relTokens(rel) {
   return new Set(String(rel ?? "").split(/\s+/).filter(Boolean));
+}
+
+function hasPublicValue(value) {
+  if (typeof value === "string") return value.trim() !== "";
+  if (Array.isArray(value)) return value.length > 0;
+  return value !== undefined && value !== null;
+}
+
+function sortedDifference(left, right) {
+  return [...left].filter((value) => !right.has(value)).sort();
+}
+
+function setFromStrings(values) {
+  return new Set((Array.isArray(values) ? values : []).filter((value) => typeof value === "string"));
+}
+
+function validateFieldEvidenceRefs(entry, fields, label, evidenceMap, errors) {
+  const refsByField = isObject(entry.fieldEvidenceRefs)
+    ? entry.fieldEvidenceRefs
+    : isObject(entry.factEvidenceRefs)
+      ? entry.factEvidenceRefs
+      : null;
+
+  if (!refsByField) {
+    push(errors, label, "fieldEvidenceRefs is required for public fact fields");
+    return;
+  }
+
+  const entryEvidenceRefs = setFromStrings(entry.evidenceRefs);
+  for (const field of fields) {
+    if (!hasPublicValue(entry[field])) continue;
+
+    const refs = refsByField[field];
+    const fieldLabel = `${label}:fieldEvidenceRefs.${field}`;
+    if (!Array.isArray(refs) || refs.length === 0) {
+      push(errors, fieldLabel, "must contain at least one evidence id");
+      continue;
+    }
+
+    for (const ref of refs) {
+      if (typeof ref !== "string" || ref.trim() === "") {
+        push(errors, fieldLabel, "contains a non-string evidence id");
+        continue;
+      }
+      if (!evidenceMap.has(ref)) {
+        push(errors, fieldLabel, `references missing evidence "${ref}"`);
+      }
+      if (entryEvidenceRefs.size > 0 && !entryEvidenceRefs.has(ref)) {
+        push(errors, fieldLabel, `references "${ref}" which is not listed in evidenceRefs`);
+      }
+    }
+  }
 }
 
 function validateSource(source, label, errors) {
@@ -227,9 +308,18 @@ function validatePageDecision(item, label, errors) {
   }
 
   requireString(pageDecision, "reason", `${label}:pageDecision`, errors);
+  for (const field of PAGE_DECISION_SCORE_FIELDS) {
+    const value = requireString(pageDecision, field, `${label}:pageDecision`, errors);
+    if (value && !RISK_LEVELS.has(value)) {
+      push(errors, `${label}:pageDecision`, `${field} must be high, medium, low, or none`);
+    }
+  }
 
   if (decision === "generate") {
     requireString(pageDecision, "slug", `${label}:pageDecision`, errors, { kebab: true });
+    if (pageDecision.thinPageRisk === "high") {
+      push(errors, `${label}:pageDecision`, "decision=generate is not allowed when thinPageRisk=high");
+    }
   }
 
   if (decision !== "generate" && typeof pageDecision.slug === "string") {
@@ -276,6 +366,7 @@ function validateItem(item, context) {
       push(errors, label, `evidenceRefs includes non-official evidence "${evidenceId}"`);
     }
   }
+  validateFieldEvidenceRefs(item, ITEM_FIELD_EVIDENCE_FIELDS, label, evidenceMap, errors);
 
   const decision = validatePageDecision(item, label, errors);
   const searches = Array.isArray(item.marketplaceSearches) ? item.marketplaceSearches : [];
@@ -308,6 +399,78 @@ function validateItem(item, context) {
   };
 }
 
+function validateIdSetMatches(actualValues, expectedValues, label, fieldName, errors) {
+  const actual = setFromStrings(actualValues);
+  const expected = setFromStrings(expectedValues);
+  const missing = sortedDifference(expected, actual);
+  const extra = sortedDifference(actual, expected);
+
+  if (missing.length > 0) {
+    push(errors, label, `${fieldName} is missing ${missing.join(", ")}`);
+  }
+  if (extra.length > 0) {
+    push(errors, label, `${fieldName} includes unexpected ${extra.join(", ")}`);
+  }
+}
+
+function validatePageGenerationAlignment(pageGenerationPolicy, itemResults, label, errors) {
+  const itemPages = pageGenerationPolicy.itemPages ?? {};
+  const itemIds = setFromStrings(itemResults.map((item) => item.id));
+  for (const field of ["selectedItemIds", "parentCardOnlyItemIds", "deferredItemIds"]) {
+    for (const itemId of itemPages[field] ?? []) {
+      if (!itemIds.has(itemId)) {
+        push(errors, `${label}:pageGenerationPolicy.itemPages`, `${field} references missing item "${itemId}"`);
+      }
+    }
+  }
+
+  validateIdSetMatches(
+    itemPages.selectedItemIds,
+    itemResults.filter((item) => item.decision === "generate").map((item) => item.id),
+    `${label}:pageGenerationPolicy.itemPages`,
+    "selectedItemIds",
+    errors,
+  );
+  validateIdSetMatches(
+    itemPages.parentCardOnlyItemIds,
+    itemResults.filter((item) => item.decision === "parent-card-only").map((item) => item.id),
+    `${label}:pageGenerationPolicy.itemPages`,
+    "parentCardOnlyItemIds",
+    errors,
+  );
+  validateIdSetMatches(
+    itemPages.deferredItemIds,
+    itemResults.filter((item) => item.decision === "defer").map((item) => item.id),
+    `${label}:pageGenerationPolicy.itemPages`,
+    "deferredItemIds",
+    errors,
+  );
+}
+
+function validatePublicVerificationNotes(pkg, label, sourceMap, errors) {
+  const notes = requireArray(pkg, "publicVerificationNotes", label, errors, { minItems: 1 });
+  for (const [index, note] of notes.entries()) {
+    const noteLabel = `${label}:publicVerificationNotes[${index}]`;
+    if (!isObject(note)) {
+      push(errors, noteLabel, "entry must be an object");
+      continue;
+    }
+
+    requireString(note, "id", noteLabel, errors, { kebab: true });
+    const text = requireString(note, "note", noteLabel, errors);
+    const scope = requireString(note, "scope", noteLabel, errors);
+    if (scope && !["campaign-page", "item-pages", "all-public-pages"].includes(scope)) {
+      push(errors, noteLabel, "scope must be campaign-page, item-pages, or all-public-pages");
+    }
+    if (text && INTERNAL_PUBLIC_NOTE_PATTERN.test(text)) {
+      push(errors, noteLabel, "public note must not contain internal review or Codex/GPT instruction wording");
+    }
+    if (Array.isArray(note.sourceIds)) {
+      checkRefs(note.sourceIds, sourceMap, noteLabel, "sourceIds", errors);
+    }
+  }
+}
+
 function validatePolicies(pkg, label, errors) {
   const pageGenerationPolicy = requireObject(pkg, "pageGenerationPolicy", label, errors) ?? {};
   const campaignPage = requireObject(pageGenerationPolicy, "campaignPage", `${label}:pageGenerationPolicy`, errors) ?? {};
@@ -330,6 +493,9 @@ function validatePolicies(pkg, label, errors) {
   if (!generateForDecisions.includes("generate")) {
     push(errors, `${label}:pageGenerationPolicy.itemPages`, "generateForDecisions must include generate");
   }
+  requireArray(itemPages, "selectedItemIds", `${label}:pageGenerationPolicy.itemPages`, errors);
+  requireArray(itemPages, "parentCardOnlyItemIds", `${label}:pageGenerationPolicy.itemPages`, errors);
+  requireArray(itemPages, "deferredItemIds", `${label}:pageGenerationPolicy.itemPages`, errors);
   if (requireBoolean(itemPages, "deferParentCardOnly", `${label}:pageGenerationPolicy.itemPages`, errors) !== true) {
     push(errors, `${label}:pageGenerationPolicy.itemPages`, "deferParentCardOnly must be true");
   }
@@ -391,7 +557,7 @@ function validatePackage(pkg, filePath) {
   const items = requireArray(pkg, "items", label, errors, { minItems: 1 });
   const unresolvedQuestions = requireArray(pkg, "unresolvedQuestions", label, errors);
   requireArray(pkg, "humanReviewChecklist", label, errors, { minItems: 1 });
-  const { marketplacePolicy } = validatePolicies(pkg, label, errors);
+  const { pageGenerationPolicy, marketplacePolicy } = validatePolicies(pkg, label, errors);
 
   requireString(work, "id", `${label}:work`, errors, { kebab: true });
   requireString(work, "officialNameJa", `${label}:work`, errors);
@@ -442,12 +608,15 @@ function validatePackage(pkg, filePath) {
       push(errors, `${label}:campaign`, `evidenceRefs includes non-official evidence "${evidenceId}"`);
     }
   }
+  validateFieldEvidenceRefs(campaign, CAMPAIGN_FIELD_EVIDENCE_FIELDS, `${label}:campaign`, evidenceMap, errors);
+  validatePublicVerificationNotes(pkg, label, sourceMap, errors);
 
   const itemMap = indexById(items, `${label}:items`, errors);
   checkRefs(campaignItemIds, itemMap, `${label}:campaign`, "itemIds", errors);
 
   const pageSlugs = new Set();
   const generatedSummaries = new Map();
+  const itemResults = [];
   for (const [index, item] of items.entries()) {
     if (!isObject(item)) {
       push(errors, `${label}:items[${index}]`, "entry must be an object");
@@ -462,6 +631,7 @@ function validatePackage(pkg, filePath) {
       marketplacePolicy,
       errors,
     });
+    itemResults.push(result);
     if (result.decision === "generate" && result.slug) {
       if (pageSlugs.has(result.slug)) {
         push(errors, `${label}:items[${index}]`, `duplicate generated page slug "${result.slug}"`);
@@ -480,6 +650,7 @@ function validatePackage(pkg, filePath) {
       }
     }
   }
+  validatePageGenerationAlignment(pageGenerationPolicy, itemResults, label, errors);
 
   for (const [index, question] of unresolvedQuestions.entries()) {
     const qLabel = `${label}:unresolvedQuestions[${index}]`;
@@ -490,7 +661,10 @@ function validatePackage(pkg, filePath) {
     requireString(question, "id", qLabel, errors, { kebab: true });
     requireString(question, "question", qLabel, errors);
     requireString(question, "impact", qLabel, errors);
-    requireBoolean(question, "publishBlocking", qLabel, errors);
+    const publishBlocking = requireBoolean(question, "publishBlocking", qLabel, errors);
+    if (publishBlocking === true) {
+      push(errors, qLabel, "publishBlocking=true blocks generation");
+    }
   }
 
   return errors;

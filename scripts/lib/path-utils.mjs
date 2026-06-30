@@ -6,11 +6,17 @@ export function pagePathToHtmlPath(pagePath) {
   return pagePath.endsWith("/") ? `${pagePath}index.html` : pagePath;
 }
 
+function normalizeUrlPath(value) {
+  return value.replace(/\\/g, "/").replace(/^\.\/+/, "").replace(/\/\.\//g, "/");
+}
+
 export function relativeUrl(fromHtmlPath, targetRepoPath) {
-  const fromDir = path.posix.dirname(fromHtmlPath.replace(/\\/g, "/"));
-  const target = targetRepoPath.replace(/\\/g, "/");
+  const fromDir = path.posix.dirname(normalizeUrlPath(fromHtmlPath));
+  const target = normalizeUrlPath(targetRepoPath);
   const relative = path.posix.relative(fromDir, target);
-  return relative.startsWith(".") ? relative : `./${relative}`;
+  const href = relative === "" ? "." : relative;
+  const prefixed = href.startsWith(".") ? href : `./${href}`;
+  return prefixed.replace(/^\.(?:\/\.)+\//, "./").replace(/\/\.\//g, "/");
 }
 
 export function publicUrlForPath(pagePath) {

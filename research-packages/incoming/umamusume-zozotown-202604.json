@@ -83,7 +83,17 @@
       "items": "ZOZOTOWN goods / brand apparel"
     },
     "coverageNote": "This pilot records the campaign-level facts and the item groups explicitly described in the ZOZO corporate release. The release states that seven ZOZOTOWN original goods types and thirteen apparel types were sold, but only some original-goods examples are itemized in the release text.",
-    "factEvidenceRefs": {
+    "evidenceRefs": [
+      "ev-campaign-title-and-sale",
+      "ev-campaign-lineup-overview",
+      "ev-order-period",
+      "ev-brand-and-illustrator-info",
+      "ev-original-goods-featured",
+      "ev-417-edifice-items",
+      "ev-hare-items",
+      "ev-freaks-store-items"
+    ],
+    "fieldEvidenceRefs": {
       "officialTitleJa": [
         "ev-campaign-title-and-sale"
       ],
@@ -110,18 +120,18 @@
         "ev-417-edifice-items",
         "ev-hare-items",
         "ev-freaks-store-items"
+      ],
+      "summaryEn": [
+        "ev-campaign-title-and-sale",
+        "ev-campaign-lineup-overview",
+        "ev-order-period",
+        "ev-brand-and-illustrator-info",
+        "ev-original-goods-featured",
+        "ev-417-edifice-items",
+        "ev-hare-items",
+        "ev-freaks-store-items"
       ]
-    },
-    "evidenceRefs": [
-      "ev-campaign-title-and-sale",
-      "ev-campaign-lineup-overview",
-      "ev-order-period",
-      "ev-brand-and-illustrator-info",
-      "ev-original-goods-featured",
-      "ev-417-edifice-items",
-      "ev-hare-items",
-      "ev-freaks-store-items"
-    ]
+    }
   },
   "sources": [
     {
@@ -360,26 +370,9 @@
       ],
       "evidenceRefs": [
         "ev-original-goods-featured",
-        "ev-order-period"
+        "ev-order-period",
+        "ev-campaign-title-and-sale"
       ],
-      "factEvidenceRefs": {
-        "officialNameJa": [
-          "ev-original-goods-featured"
-        ],
-        "descriptionJa": [
-          "ev-original-goods-featured"
-        ],
-        "lineupLabelJa": [
-          "ev-original-goods-featured"
-        ],
-        "priceLabel": [
-          "ev-original-goods-featured"
-        ],
-        "acquisitionMethodJa": [
-          "ev-campaign-title-and-sale",
-          "ev-order-period"
-        ]
-      },
       "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたビッグアクリルスタンド。",
       "lineupLabelJa": "15種展開",
       "priceLabel": "2,200円（税込）",
@@ -413,7 +406,12 @@
         "decision": "generate",
         "priority": "high",
         "slug": "big-acrylic-stands",
-        "reason": "High-value acrylic stand group with clear lineup count, price, official source, and strong marketplace-search value."
+        "reason": "High-value acrylic stand group with clear lineup count, price, official source, and strong marketplace-search value.",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
       },
       "marketplaceSearches": [
         {
@@ -475,7 +473,37 @@
       ],
       "reviewNotes": [
         "Use product-group page only; do not generate separate pages for the 15 character variants."
-      ]
+      ],
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-original-goods-featured"
+        ],
+        "descriptionJa": [
+          "ev-original-goods-featured"
+        ],
+        "lineupLabelJa": [
+          "ev-original-goods-featured"
+        ],
+        "priceLabel": [
+          "ev-original-goods-featured"
+        ],
+        "acquisitionMethodJa": [
+          "ev-campaign-title-and-sale",
+          "ev-order-period"
+        ],
+        "availabilityLabel": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "startDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "endDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ]
+      }
     },
     {
       "id": "zozotown-can-badge-sets",
@@ -492,26 +520,9 @@
       ],
       "evidenceRefs": [
         "ev-original-goods-featured",
-        "ev-order-period"
+        "ev-order-period",
+        "ev-campaign-title-and-sale"
       ],
-      "factEvidenceRefs": {
-        "officialNameJa": [
-          "ev-original-goods-featured"
-        ],
-        "descriptionJa": [
-          "ev-original-goods-featured"
-        ],
-        "lineupLabelJa": [
-          "ev-original-goods-featured"
-        ],
-        "priceLabel": [
-          "ev-original-goods-featured"
-        ],
-        "acquisitionMethodJa": [
-          "ev-campaign-title-and-sale",
-          "ev-order-period"
-        ]
-      },
       "descriptionJa": "ZOZOTOWN限定アイテムとして掲載された缶バッジセット。",
       "lineupLabelJa": "3種展開",
       "priceLabel": "2,750円（税込）",
@@ -545,7 +556,12 @@
         "decision": "generate",
         "priority": "high",
         "slug": "can-badge-sets",
-        "reason": "Badge-set group has clear price, three-type lineup, and useful complete-set reference searches."
+        "reason": "Badge-set group has clear price, three-type lineup, and useful complete-set reference searches.",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
       },
       "marketplaceSearches": [
         {
@@ -607,7 +623,37 @@
       ],
       "reviewNotes": [
         "Use one item group page for the three set types; do not generate pages per illustrator version."
-      ]
+      ],
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-original-goods-featured"
+        ],
+        "descriptionJa": [
+          "ev-original-goods-featured"
+        ],
+        "lineupLabelJa": [
+          "ev-original-goods-featured"
+        ],
+        "priceLabel": [
+          "ev-original-goods-featured"
+        ],
+        "acquisitionMethodJa": [
+          "ev-campaign-title-and-sale",
+          "ev-order-period"
+        ],
+        "availabilityLabel": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "startDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "endDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ]
+      }
     },
     {
       "id": "zozotown-cheki-sets",
@@ -624,26 +670,9 @@
       ],
       "evidenceRefs": [
         "ev-original-goods-featured",
-        "ev-order-period"
+        "ev-order-period",
+        "ev-campaign-title-and-sale"
       ],
-      "factEvidenceRefs": {
-        "officialNameJa": [
-          "ev-original-goods-featured"
-        ],
-        "descriptionJa": [
-          "ev-original-goods-featured"
-        ],
-        "lineupLabelJa": [
-          "ev-original-goods-featured"
-        ],
-        "priceLabel": [
-          "ev-original-goods-featured"
-        ],
-        "acquisitionMethodJa": [
-          "ev-campaign-title-and-sale",
-          "ev-order-period"
-        ]
-      },
       "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたチェキセット。",
       "lineupLabelJa": "3種展開",
       "priceLabel": "3,300円（税込）",
@@ -677,7 +706,12 @@
         "decision": "generate",
         "priority": "medium",
         "slug": "cheki-sets",
-        "reason": "Card-shaped set group has distinct marketplace wording and complete-set search value."
+        "reason": "Card-shaped set group has distinct marketplace wording and complete-set search value.",
+        "searchValue": "high",
+        "factDepth": "high",
+        "acquisitionComplexity": "medium",
+        "variantExplosionRisk": "low",
+        "thinPageRisk": "low"
       },
       "marketplaceSearches": [
         {
@@ -725,7 +759,37 @@
       ],
       "reviewNotes": [
         "Cheki-set marketplace naming may vary; review Japanese query wording after first generated page."
-      ]
+      ],
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-original-goods-featured"
+        ],
+        "descriptionJa": [
+          "ev-original-goods-featured"
+        ],
+        "lineupLabelJa": [
+          "ev-original-goods-featured"
+        ],
+        "priceLabel": [
+          "ev-original-goods-featured"
+        ],
+        "acquisitionMethodJa": [
+          "ev-campaign-title-and-sale",
+          "ev-order-period"
+        ],
+        "availabilityLabel": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "startDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "endDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ]
+      }
     },
     {
       "id": "zozotown-rubber-mats",
@@ -742,26 +806,9 @@
       ],
       "evidenceRefs": [
         "ev-original-goods-featured",
-        "ev-order-period"
+        "ev-order-period",
+        "ev-campaign-title-and-sale"
       ],
-      "factEvidenceRefs": {
-        "officialNameJa": [
-          "ev-original-goods-featured"
-        ],
-        "descriptionJa": [
-          "ev-original-goods-featured"
-        ],
-        "lineupLabelJa": [
-          "ev-original-goods-featured"
-        ],
-        "priceLabel": [
-          "ev-original-goods-featured"
-        ],
-        "acquisitionMethodJa": [
-          "ev-campaign-title-and-sale",
-          "ev-order-period"
-        ]
-      },
       "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたラバーマット。",
       "lineupLabelJa": "3種展開",
       "priceLabel": "3,850円（税込）",
@@ -794,7 +841,12 @@
       "pageDecision": {
         "decision": "parent-card-only",
         "priority": "medium",
-        "reason": "Confirmed item group, but the public facts are thin and can remain on the parent campaign page for the first pilot."
+        "reason": "Confirmed item group, but the public facts are thin and can remain on the parent campaign page for the first pilot.",
+        "searchValue": "medium",
+        "factDepth": "medium",
+        "acquisitionComplexity": "low",
+        "variantExplosionRisk": "high",
+        "thinPageRisk": "high"
       },
       "marketplaceSearches": [
         {
@@ -828,7 +880,37 @@
       ],
       "reviewNotes": [
         "Parent-card-only is conservative; promote later if marketplace demand or source detail justifies a route."
-      ]
+      ],
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-original-goods-featured"
+        ],
+        "descriptionJa": [
+          "ev-original-goods-featured"
+        ],
+        "lineupLabelJa": [
+          "ev-original-goods-featured"
+        ],
+        "priceLabel": [
+          "ev-original-goods-featured"
+        ],
+        "acquisitionMethodJa": [
+          "ev-campaign-title-and-sale",
+          "ev-order-period"
+        ],
+        "availabilityLabel": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "startDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ],
+        "endDate": [
+          "ev-original-goods-featured",
+          "ev-order-period"
+        ]
+      }
     },
     {
       "id": "zozotown-417-edifice-apparel",
@@ -845,23 +927,9 @@
       ],
       "evidenceRefs": [
         "ev-417-edifice-items",
-        "ev-order-period"
+        "ev-order-period",
+        "ev-campaign-title-and-sale"
       ],
-      "factEvidenceRefs": {
-        "officialNameJa": [
-          "ev-417-edifice-items"
-        ],
-        "descriptionJa": [
-          "ev-417-edifice-items"
-        ],
-        "lineupLabelJa": [
-          "ev-417-edifice-items"
-        ],
-        "acquisitionMethodJa": [
-          "ev-campaign-title-and-sale",
-          "ev-order-period"
-        ]
-      },
       "descriptionJa": "417 EDIFICEとのコラボアパレル群。THE FULL CROWN VintageTEE、Hand stitch KNIT、Reversible MA1、THE FULL CROWN Embroidery CAPが掲載された。",
       "lineupLabelJa": "4商品グループ",
       "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
@@ -915,7 +983,12 @@
       "pageDecision": {
         "decision": "parent-card-only",
         "priority": "medium",
-        "reason": "Brand-apparel collection has useful parent-card value, but item-page copy would be a matrix of apparel variants and prices; defer route generation until apparel template policy is reviewed."
+        "reason": "Brand-apparel collection has useful parent-card value, but item-page copy would be a matrix of apparel variants and prices; defer route generation until apparel template policy is reviewed.",
+        "searchValue": "medium",
+        "factDepth": "medium",
+        "acquisitionComplexity": "low",
+        "variantExplosionRisk": "high",
+        "thinPageRisk": "high"
       },
       "marketplaceSearches": [
         {
@@ -949,7 +1022,34 @@
       ],
       "reviewNotes": [
         "Keep grouped as a brand apparel collection for the pilot; do not create separate item pages for each apparel SKU yet."
-      ]
+      ],
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-417-edifice-items"
+        ],
+        "descriptionJa": [
+          "ev-417-edifice-items"
+        ],
+        "lineupLabelJa": [
+          "ev-417-edifice-items"
+        ],
+        "acquisitionMethodJa": [
+          "ev-campaign-title-and-sale",
+          "ev-order-period"
+        ],
+        "availabilityLabel": [
+          "ev-417-edifice-items",
+          "ev-order-period"
+        ],
+        "startDate": [
+          "ev-417-edifice-items",
+          "ev-order-period"
+        ],
+        "endDate": [
+          "ev-417-edifice-items",
+          "ev-order-period"
+        ]
+      }
     },
     {
       "id": "zozotown-hare-apparel",
@@ -966,23 +1066,9 @@
       ],
       "evidenceRefs": [
         "ev-hare-items",
-        "ev-order-period"
+        "ev-order-period",
+        "ev-campaign-title-and-sale"
       ],
-      "factEvidenceRefs": {
-        "officialNameJa": [
-          "ev-hare-items"
-        ],
-        "descriptionJa": [
-          "ev-hare-items"
-        ],
-        "lineupLabelJa": [
-          "ev-hare-items"
-        ],
-        "acquisitionMethodJa": [
-          "ev-campaign-title-and-sale",
-          "ev-order-period"
-        ]
-      },
       "descriptionJa": "HAREとのコラボアパレル群。フラワーシシュウオーバーシャツ、ナイロンキリカエZIPパーカー、レザーキリカエZIPブルゾン、シルエットモチーフショルダーバッグが掲載された。",
       "lineupLabelJa": "4商品グループ",
       "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
@@ -1037,7 +1123,12 @@
       "pageDecision": {
         "decision": "parent-card-only",
         "priority": "medium",
-        "reason": "Brand-apparel collection has useful parent-card value, but item-page generation should wait for apparel grouping rules."
+        "reason": "Brand-apparel collection has useful parent-card value, but item-page generation should wait for apparel grouping rules.",
+        "searchValue": "medium",
+        "factDepth": "medium",
+        "acquisitionComplexity": "low",
+        "variantExplosionRisk": "high",
+        "thinPageRisk": "high"
       },
       "marketplaceSearches": [
         {
@@ -1071,7 +1162,34 @@
       ],
       "reviewNotes": [
         "Do not split into separate pages for each apparel product until apparel template and SEO policy are reviewed."
-      ]
+      ],
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-hare-items"
+        ],
+        "descriptionJa": [
+          "ev-hare-items"
+        ],
+        "lineupLabelJa": [
+          "ev-hare-items"
+        ],
+        "acquisitionMethodJa": [
+          "ev-campaign-title-and-sale",
+          "ev-order-period"
+        ],
+        "availabilityLabel": [
+          "ev-hare-items",
+          "ev-order-period"
+        ],
+        "startDate": [
+          "ev-hare-items",
+          "ev-order-period"
+        ],
+        "endDate": [
+          "ev-hare-items",
+          "ev-order-period"
+        ]
+      }
     },
     {
       "id": "zozotown-freaks-store-apparel",
@@ -1088,23 +1206,9 @@
       ],
       "evidenceRefs": [
         "ev-freaks-store-items",
-        "ev-order-period"
+        "ev-order-period",
+        "ev-campaign-title-and-sale"
       ],
-      "factEvidenceRefs": {
-        "officialNameJa": [
-          "ev-freaks-store-items"
-        ],
-        "descriptionJa": [
-          "ev-freaks-store-items"
-        ],
-        "lineupLabelJa": [
-          "ev-freaks-store-items"
-        ],
-        "acquisitionMethodJa": [
-          "ev-campaign-title-and-sale",
-          "ev-order-period"
-        ]
-      },
       "descriptionJa": "FREAK'S STOREとのコラボアパレル群。アーモンドアイ Tシャツ、クロノジェネシス Tシャツ、トレセン学園モチーフ プルオーバーパーカー、トレセン学園モチーフ ワッペンカットソースタジャン、トレセン学園モチーフ ワッペントートバッグが掲載された。",
       "lineupLabelJa": "5商品グループ",
       "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
@@ -1166,7 +1270,12 @@
       "pageDecision": {
         "decision": "parent-card-only",
         "priority": "medium",
-        "reason": "Brand-apparel collection should remain parent-card-only for the first pilot because individual apparel SKUs would create a large variant matrix."
+        "reason": "Brand-apparel collection should remain parent-card-only for the first pilot because individual apparel SKUs would create a large variant matrix.",
+        "searchValue": "medium",
+        "factDepth": "medium",
+        "acquisitionComplexity": "low",
+        "variantExplosionRisk": "high",
+        "thinPageRisk": "high"
       },
       "marketplaceSearches": [
         {
@@ -1200,7 +1309,34 @@
       ],
       "reviewNotes": [
         "Keep grouped by brand for now; split only if future marketplace/SEO review justifies individual apparel pages."
-      ]
+      ],
+      "fieldEvidenceRefs": {
+        "officialNameJa": [
+          "ev-freaks-store-items"
+        ],
+        "descriptionJa": [
+          "ev-freaks-store-items"
+        ],
+        "lineupLabelJa": [
+          "ev-freaks-store-items"
+        ],
+        "acquisitionMethodJa": [
+          "ev-campaign-title-and-sale",
+          "ev-order-period"
+        ],
+        "availabilityLabel": [
+          "ev-freaks-store-items",
+          "ev-order-period"
+        ],
+        "startDate": [
+          "ev-freaks-store-items",
+          "ev-order-period"
+        ],
+        "endDate": [
+          "ev-freaks-store-items",
+          "ev-order-period"
+        ]
+      }
     }
   ],
   "pageGenerationPolicy": {
@@ -1288,5 +1424,33 @@
     "Confirm that official source links and marketplace reference links remain visually and semantically separated.",
     "Confirm that downloaded official images are used only as archive thumbnails for identification and that rights/endorsement notes are visible.",
     "Confirm that no character-variant pages are generated for the 15 acrylic stand variants or apparel variants."
+  ],
+  "publicVerificationNotes": [
+    {
+      "id": "pv-source-scope",
+      "scope": "campaign-page",
+      "note": "This archive page summarizes facts that are backed by the listed official or partner-official sources.",
+      "sourceIds": [
+        "zozo-corporate-release",
+        "zozotown-special-page"
+      ]
+    }
+  ],
+  "normalizationExpectations": [
+    {
+      "field": "fieldEvidenceRefs",
+      "handling": "preserve-public-data",
+      "note": "Keep field-level evidence links in imported data so public facts remain auditable."
+    },
+    {
+      "field": "unresolvedQuestions",
+      "handling": "preserve-review-only",
+      "note": "Do not render internal unresolved questions directly on public pages."
+    },
+    {
+      "field": "pageDecision",
+      "handling": "derive-generated-output",
+      "note": "Use page decisions to derive generated item routes, then remove pageDecision from public item data."
+    }
   ]
 }

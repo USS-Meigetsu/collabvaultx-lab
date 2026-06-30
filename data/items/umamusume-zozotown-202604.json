@@ -14,26 +14,9 @@
     ],
     "evidenceRefs": [
       "ev-original-goods-featured",
-      "ev-order-period"
+      "ev-order-period",
+      "ev-campaign-title-and-sale"
     ],
-    "factEvidenceRefs": {
-      "officialNameJa": [
-        "ev-original-goods-featured"
-      ],
-      "descriptionJa": [
-        "ev-original-goods-featured"
-      ],
-      "lineupLabelJa": [
-        "ev-original-goods-featured"
-      ],
-      "priceLabel": [
-        "ev-original-goods-featured"
-      ],
-      "acquisitionMethodJa": [
-        "ev-campaign-title-and-sale",
-        "ev-order-period"
-      ]
-    },
     "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたビッグアクリルスタンド。",
     "lineupLabelJa": "15種展開",
     "priceLabel": "2,200円（税込）",
@@ -61,6 +44,7 @@
       "factsJa": [
         "15種展開",
         "2,200円（税込）",
+        "当時の公式掲載価格: 2,200円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ]
     },
@@ -125,6 +109,36 @@
     "reviewNotes": [
       "Use product-group page only; do not generate separate pages for the 15 character variants."
     ],
+    "fieldEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ],
+      "availabilityLabel": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "startDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "endDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "big-acrylic-stands",
@@ -149,26 +163,9 @@
     ],
     "evidenceRefs": [
       "ev-original-goods-featured",
-      "ev-order-period"
+      "ev-order-period",
+      "ev-campaign-title-and-sale"
     ],
-    "factEvidenceRefs": {
-      "officialNameJa": [
-        "ev-original-goods-featured"
-      ],
-      "descriptionJa": [
-        "ev-original-goods-featured"
-      ],
-      "lineupLabelJa": [
-        "ev-original-goods-featured"
-      ],
-      "priceLabel": [
-        "ev-original-goods-featured"
-      ],
-      "acquisitionMethodJa": [
-        "ev-campaign-title-and-sale",
-        "ev-order-period"
-      ]
-    },
     "descriptionJa": "ZOZOTOWN限定アイテムとして掲載された缶バッジセット。",
     "lineupLabelJa": "3種展開",
     "priceLabel": "2,750円（税込）",
@@ -196,6 +193,7 @@
       "factsJa": [
         "3種展開",
         "2,750円（税込）",
+        "当時の公式掲載価格: 2,750円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ]
     },
@@ -260,6 +258,36 @@
     "reviewNotes": [
       "Use one item group page for the three set types; do not generate pages per illustrator version."
     ],
+    "fieldEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ],
+      "availabilityLabel": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "startDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "endDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "can-badge-sets",
@@ -284,26 +312,9 @@
     ],
     "evidenceRefs": [
       "ev-original-goods-featured",
-      "ev-order-period"
+      "ev-order-period",
+      "ev-campaign-title-and-sale"
     ],
-    "factEvidenceRefs": {
-      "officialNameJa": [
-        "ev-original-goods-featured"
-      ],
-      "descriptionJa": [
-        "ev-original-goods-featured"
-      ],
-      "lineupLabelJa": [
-        "ev-original-goods-featured"
-      ],
-      "priceLabel": [
-        "ev-original-goods-featured"
-      ],
-      "acquisitionMethodJa": [
-        "ev-campaign-title-and-sale",
-        "ev-order-period"
-      ]
-    },
     "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたチェキセット。",
     "lineupLabelJa": "3種展開",
     "priceLabel": "3,300円（税込）",
@@ -331,6 +342,7 @@
       "factsJa": [
         "3種展開",
         "3,300円（税込）",
+        "当時の公式掲載価格: 3,300円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ]
     },
@@ -381,6 +393,36 @@
     "reviewNotes": [
       "Cheki-set marketplace naming may vary; review Japanese query wording after first generated page."
     ],
+    "fieldEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ],
+      "availabilityLabel": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "startDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "endDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "cheki-sets",
@@ -405,26 +447,9 @@
     ],
     "evidenceRefs": [
       "ev-original-goods-featured",
-      "ev-order-period"
+      "ev-order-period",
+      "ev-campaign-title-and-sale"
     ],
-    "factEvidenceRefs": {
-      "officialNameJa": [
-        "ev-original-goods-featured"
-      ],
-      "descriptionJa": [
-        "ev-original-goods-featured"
-      ],
-      "lineupLabelJa": [
-        "ev-original-goods-featured"
-      ],
-      "priceLabel": [
-        "ev-original-goods-featured"
-      ],
-      "acquisitionMethodJa": [
-        "ev-campaign-title-and-sale",
-        "ev-order-period"
-      ]
-    },
     "descriptionJa": "ZOZOTOWN限定アイテムとして掲載されたラバーマット。",
     "lineupLabelJa": "3種展開",
     "priceLabel": "3,850円（税込）",
@@ -452,6 +477,7 @@
       "factsJa": [
         "3種展開",
         "3,850円（税込）",
+        "当時の公式掲載価格: 3,850円（税込）",
         "ZOZOTOWN限定コレクションとして受注販売"
       ]
     },
@@ -487,7 +513,37 @@
     ],
     "reviewNotes": [
       "Parent-card-only is conservative; promote later if marketplace demand or source detail justifies a route."
-    ]
+    ],
+    "fieldEvidenceRefs": {
+      "officialNameJa": [
+        "ev-original-goods-featured"
+      ],
+      "descriptionJa": [
+        "ev-original-goods-featured"
+      ],
+      "lineupLabelJa": [
+        "ev-original-goods-featured"
+      ],
+      "priceLabel": [
+        "ev-original-goods-featured"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ],
+      "availabilityLabel": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "startDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ],
+      "endDate": [
+        "ev-original-goods-featured",
+        "ev-order-period"
+      ]
+    }
   },
   {
     "id": "zozotown-417-edifice-apparel",
@@ -504,23 +560,9 @@
     ],
     "evidenceRefs": [
       "ev-417-edifice-items",
-      "ev-order-period"
+      "ev-order-period",
+      "ev-campaign-title-and-sale"
     ],
-    "factEvidenceRefs": {
-      "officialNameJa": [
-        "ev-417-edifice-items"
-      ],
-      "descriptionJa": [
-        "ev-417-edifice-items"
-      ],
-      "lineupLabelJa": [
-        "ev-417-edifice-items"
-      ],
-      "acquisitionMethodJa": [
-        "ev-campaign-title-and-sale",
-        "ev-order-period"
-      ]
-    },
     "descriptionJa": "417 EDIFICEとのコラボアパレル群。THE FULL CROWN VintageTEE、Hand stitch KNIT、Reversible MA1、THE FULL CROWN Embroidery CAPが掲載された。",
     "lineupLabelJa": "4商品グループ",
     "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
@@ -604,7 +646,34 @@
     ],
     "reviewNotes": [
       "Keep grouped as a brand apparel collection for the pilot; do not create separate item pages for each apparel SKU yet."
-    ]
+    ],
+    "fieldEvidenceRefs": {
+      "officialNameJa": [
+        "ev-417-edifice-items"
+      ],
+      "descriptionJa": [
+        "ev-417-edifice-items"
+      ],
+      "lineupLabelJa": [
+        "ev-417-edifice-items"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ],
+      "availabilityLabel": [
+        "ev-417-edifice-items",
+        "ev-order-period"
+      ],
+      "startDate": [
+        "ev-417-edifice-items",
+        "ev-order-period"
+      ],
+      "endDate": [
+        "ev-417-edifice-items",
+        "ev-order-period"
+      ]
+    }
   },
   {
     "id": "zozotown-hare-apparel",
@@ -621,23 +690,9 @@
     ],
     "evidenceRefs": [
       "ev-hare-items",
-      "ev-order-period"
+      "ev-order-period",
+      "ev-campaign-title-and-sale"
     ],
-    "factEvidenceRefs": {
-      "officialNameJa": [
-        "ev-hare-items"
-      ],
-      "descriptionJa": [
-        "ev-hare-items"
-      ],
-      "lineupLabelJa": [
-        "ev-hare-items"
-      ],
-      "acquisitionMethodJa": [
-        "ev-campaign-title-and-sale",
-        "ev-order-period"
-      ]
-    },
     "descriptionJa": "HAREとのコラボアパレル群。フラワーシシュウオーバーシャツ、ナイロンキリカエZIPパーカー、レザーキリカエZIPブルゾン、シルエットモチーフショルダーバッグが掲載された。",
     "lineupLabelJa": "4商品グループ",
     "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
@@ -722,7 +777,34 @@
     ],
     "reviewNotes": [
       "Do not split into separate pages for each apparel product until apparel template and SEO policy are reviewed."
-    ]
+    ],
+    "fieldEvidenceRefs": {
+      "officialNameJa": [
+        "ev-hare-items"
+      ],
+      "descriptionJa": [
+        "ev-hare-items"
+      ],
+      "lineupLabelJa": [
+        "ev-hare-items"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ],
+      "availabilityLabel": [
+        "ev-hare-items",
+        "ev-order-period"
+      ],
+      "startDate": [
+        "ev-hare-items",
+        "ev-order-period"
+      ],
+      "endDate": [
+        "ev-hare-items",
+        "ev-order-period"
+      ]
+    }
   },
   {
     "id": "zozotown-freaks-store-apparel",
@@ -739,23 +821,9 @@
     ],
     "evidenceRefs": [
       "ev-freaks-store-items",
-      "ev-order-period"
+      "ev-order-period",
+      "ev-campaign-title-and-sale"
     ],
-    "factEvidenceRefs": {
-      "officialNameJa": [
-        "ev-freaks-store-items"
-      ],
-      "descriptionJa": [
-        "ev-freaks-store-items"
-      ],
-      "lineupLabelJa": [
-        "ev-freaks-store-items"
-      ],
-      "acquisitionMethodJa": [
-        "ev-campaign-title-and-sale",
-        "ev-order-period"
-      ]
-    },
     "descriptionJa": "FREAK'S STOREとのコラボアパレル群。アーモンドアイ Tシャツ、クロノジェネシス Tシャツ、トレセン学園モチーフ プルオーバーパーカー、トレセン学園モチーフ ワッペンカットソースタジャン、トレセン学園モチーフ ワッペントートバッグが掲載された。",
     "lineupLabelJa": "5商品グループ",
     "acquisitionMethodJa": "ZOZOTOWN限定コレクションとして受注販売",
@@ -847,6 +915,33 @@
     ],
     "reviewNotes": [
       "Keep grouped by brand for now; split only if future marketplace/SEO review justifies individual apparel pages."
-    ]
+    ],
+    "fieldEvidenceRefs": {
+      "officialNameJa": [
+        "ev-freaks-store-items"
+      ],
+      "descriptionJa": [
+        "ev-freaks-store-items"
+      ],
+      "lineupLabelJa": [
+        "ev-freaks-store-items"
+      ],
+      "acquisitionMethodJa": [
+        "ev-campaign-title-and-sale",
+        "ev-order-period"
+      ],
+      "availabilityLabel": [
+        "ev-freaks-store-items",
+        "ev-order-period"
+      ],
+      "startDate": [
+        "ev-freaks-store-items",
+        "ev-order-period"
+      ],
+      "endDate": [
+        "ev-freaks-store-items",
+        "ev-order-period"
+      ]
+    }
   }
 ]
