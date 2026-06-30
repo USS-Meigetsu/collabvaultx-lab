@@ -103,7 +103,7 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 - Keep parent campaign product-grid blocks compatible with
   `scripts/render-campaign-product-grid.mjs`; the renderer verifies the
   supported campaign grids listed in that script.
-- For ROUND1 item pages, keep the stable page shell compatible with
+- For supported item pages, keep the stable page shell compatible with
   `scripts/render-item-page-shell.mjs`; the checker verifies head metadata,
   breadcrumbs, hero media/link wrapper, Marketplace Finder, related navigation,
   and bottom back links while leaving page-specific body content hand-written.
@@ -130,7 +130,7 @@ node scripts/check-data-html-sync.mjs
 node scripts/render-marketplace-finder.mjs --check
 node scripts/render-related-items.mjs --check
 node scripts/render-campaign-product-grid.mjs --check
-node scripts/render-item-page-shell.mjs --check --campaign round1-collab-campaign-202510
+node scripts/render-item-page-shell.mjs --check
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
@@ -148,9 +148,9 @@ page's related navigation matches `Campaign.itemIds`, current-item semantics,
 and canonical relative links.
 `scripts/render-campaign-product-grid.mjs --check` verifies that supported
 parent campaign product grids match the canonical JSON-rendered structure.
-`scripts/render-item-page-shell.mjs --check --campaign round1-collab-campaign-202510`
-verifies the stable ROUND1 item-page shell fragments from JSON while hero copy,
-overview cards, product details, and official source notes remain hand-written.
+`scripts/render-item-page-shell.mjs --check` verifies stable supported
+item-page shell fragments from JSON while hero copy, overview cards, product
+details, and official source notes remain hand-written.
 
 ## Browser QA
 

@@ -43,7 +43,7 @@ jobs:
         run: node scripts/render-campaign-product-grid.mjs --check
 
       - name: Run item page shell renderer checks
-        run: node scripts/render-item-page-shell.mjs --check --campaign round1-collab-campaign-202510
+        run: node scripts/render-item-page-shell.mjs --check
 
       - name: Run site checks
         shell: pwsh

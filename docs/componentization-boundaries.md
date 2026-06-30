@@ -14,7 +14,7 @@ content model is more stable.
   expectations, metadata validation, marketplace link validation, item-page sync
   checks, the Marketplace Finder renderer/checker, the related item navigation
   renderer/checker, supported campaign product-grid renderer/checker, and the
-  ROUND1 item-page shell renderer/checker.
+  supported item-page shell renderer/checker.
 - Hand-written now: item page HTML, campaign page HTML, official-source notes,
   item descriptions, overview cards, and page-specific reference/source blocks.
 - Best next step: keep generated-block checks small and targeted before
@@ -118,7 +118,7 @@ is stable.
 
 ### Common Page Metadata Rules
 
-Keep as shared validation now. ROUND1 item pages also use the item-page shell
+Keep as shared validation now. Supported item pages also use the item-page shell
 renderer/checker for the stable metadata and navigation shell.
 
 - canonical URL
@@ -131,7 +131,7 @@ Generation can wait until page templates stabilize.
 
 ### Item Page Scaffold V0
 
-Commonize the stable shell for ROUND1 item pages only.
+Commonize the stable shell for supported item pages.
 
 - Source: `Item.page`, `Item.summaryEn`, primary `Asset`, parent `Campaign`,
   Marketplace Finder data, and published same-campaign items.
@@ -152,7 +152,7 @@ Commonize the stable shell for ROUND1 item pages only.
 Current workflow:
 
 ```text
-node scripts/render-item-page-shell.mjs --check --campaign round1-collab-campaign-202510
+node scripts/render-item-page-shell.mjs --check
 ```
 
 ## Keep Page-Specific For Now
@@ -225,12 +225,12 @@ language.
 
 These are good targets, but not before the Finder and related navigation settle.
 
-### Item Page Scaffold Beyond ROUND1 V0
+### Item Page Scaffold Beyond The Current Supported Set
 
 Later target.
 
-Extend the repeated page structure after the ROUND1 shell checker proves stable
-and Lawson/COCOS item pages use the same Finder contract.
+Extend the repeated page structure after the current supported shell checker
+proves stable across more campaign types.
 
 Candidate generated sections:
 
@@ -315,8 +315,9 @@ or smooth over them.
    routes, using the established parent grid and item-page contracts.
 10. Done: review the expanded ROUND1 item-page set for scaffold patterns that
    are stable enough to generate next.
-11. Current: add item-page scaffold v0 for ROUND1 stable shell fragments.
-12. Revisit campaign-grid generation beyond the current supported set.
+11. Done: add item-page scaffold v0 for ROUND1 stable shell fragments.
+12. Current: extend item-page shell renderer/checker to Lawson and COCOS.
+13. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.

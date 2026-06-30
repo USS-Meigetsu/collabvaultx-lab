@@ -23,7 +23,7 @@ node scripts/check-data-html-sync.mjs
 node scripts/render-marketplace-finder.mjs --check
 node scripts/render-related-items.mjs --check
 node scripts/render-campaign-product-grid.mjs --check
-node scripts/render-item-page-shell.mjs --check --campaign round1-collab-campaign-202510
+node scripts/render-item-page-shell.mjs --check
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
@@ -68,7 +68,7 @@ Related item navigation blocks are rendered/verified by
 `scripts/render-related-items.mjs`.
 Supported campaign product-grid blocks are rendered/verified by
 `scripts/render-campaign-product-grid.mjs`.
-The ROUND1 item-page shell is rendered/verified by
+Supported item-page shells are rendered/verified by
 `scripts/render-item-page-shell.mjs`.
 Marketplace and affiliate link handling is documented in
 `docs/affiliate-link-policy.md`.
