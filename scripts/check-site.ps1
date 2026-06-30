@@ -41,6 +41,7 @@ $missingCardMetadata = New-Object System.Collections.Generic.List[string]
 $missingEnglishSummaries = New-Object System.Collections.Generic.List[string]
 $missingDetailSourceMetadata = New-Object System.Collections.Generic.List[string]
 $missingLazyProductImages = New-Object System.Collections.Generic.List[string]
+$mixedMarketLinkContent = New-Object System.Collections.Generic.List[string]
 $publicPlaceholderText = New-Object System.Collections.Generic.List[string]
 $publicUrls = New-Object System.Collections.Generic.List[string]
 
@@ -145,6 +146,14 @@ foreach ($file in $htmlFiles) {
     if ($text -match 'class="[^"]*\bmarket-links\b[^"]*"' -and
         $text -notmatch 'class="[^"]*\bmarket-note\b[^"]*"[\s\S]*?<span\s+lang="en">') {
       $missingDetailSourceMetadata.Add("$relativeFile -> missing market-note with lang=en text")
+    }
+
+    $marketLinkMatches = [regex]::Matches($text, '<div\b(?=[^>]*class=(["''])[^"'']*\bmarket-links\b[^"'']*\1)[^>]*>([\s\S]*?)</div>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    foreach ($match in $marketLinkMatches) {
+      $marketLinkContent = $match.Groups[2].Value
+      if ($marketLinkContent -match '<span\b' -or $marketLinkContent -match 'class=(["''])[^"'']*\bpostcard-mini-grid\b') {
+        $mixedMarketLinkContent.Add("$relativeFile -> market-links must contain marketplace anchors only")
+      }
     }
 
     $productImageMatches = [regex]::Matches($text, '<div\b(?=[^>]*class=(["''])[^"'']*\bproduct-thumb\b[^"'']*\1)[^>]*>\s*<img\b([^>]*)>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
@@ -346,8 +355,12 @@ if ($missingLazyProductImages.Count -gt 0) {
   Write-Error ("Missing lazy product image attributes found:`n" + ($missingLazyProductImages -join "`n"))
 }
 
+if ($mixedMarketLinkContent.Count -gt 0) {
+  Write-Error ("market-links must not contain non-marketplace fact or mini-grid content:`n" + ($mixedMarketLinkContent -join "`n"))
+}
+
 if ($publicPlaceholderText.Count -gt 0) {
   Write-Error ("Public placeholder title text found:`n" + ($publicPlaceholderText -join "`n"))
 }
 
-Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, English summaries, detail source metadata, lazy product images, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."
+Write-Output "Site checks passed: $($htmlFiles.Count) HTML files, $($cssFiles.Count) CSS files, $($jsFiles.Count) JS files, metadata, sitemap, robots, published card metadata, English summaries, detail source metadata, lazy product images, market-link structure, no mojibake markers, public placeholder title text, placeholder links, javascript links, missing local links, or unsafe blank-target links."

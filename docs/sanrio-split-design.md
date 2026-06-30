@@ -10,8 +10,8 @@ add Sanrio to supported renderers until the split is reviewed.
 - Public route:
   `works/umamusume/collabs/sanrio-characters-popup-shop-202512/`
 - Current source of truth: the existing public HTML page at that route.
-- Data status: no `data/items/sanrio-characters-popup-shop-202512.json` file
-  exists yet.
+- Data status: draft Sanrio campaign, source, asset, and item JSON files exist.
+  They are intentionally not published renderer input yet.
 - Visible units: 15 goods cards plus 1 purchase-bonus postcard card.
 - Local assets: 23 images under
   `assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/`.
@@ -121,29 +121,42 @@ sanrio-postcard-06
 
 Sanrio should not be added to `render-campaign-product-grid.mjs` yet.
 
-- Existing Sanrio product cards do not have `data-item-id` attributes.
-- Current Sanrio cards place fact `<span>` elements inside `.market-links`,
-  while the shared product-grid output separates facts from marketplace links.
-- Marketplace links currently use `rel="noopener noreferrer"`. Data-backed
-  marketplace links should use `nofollow noopener noreferrer` while they are
+- Existing Sanrio product cards now have `data-item-id` attributes that map to
+  the draft item records.
+- Sanrio product-card facts have been split into `.item-fact-list`, and
+  `.market-links` is reserved for marketplace anchors.
+- Marketplace links now use `rel="nofollow noopener noreferrer"` while they are
   non-affiliate reference searches.
 - The postcard card uses `product-card-wide` plus an inline mini image grid.
   The current product-grid renderer does not model that mini-grid.
 - The campaign hero uses a desktop/mobile `<picture>` pair. The current
   item-page shell renderer supports item hero media, but this does not prove the
   Sanrio campaign page itself is ready for generation.
-- No Sanrio JSON exists, so `check-data-html-sync` cannot validate the product
-  cards yet.
+- Sanrio JSON remains draft, so `check-data-html-sync` does not validate Sanrio
+  product cards yet.
+
+## Current Implementation Checkpoint
+
+Completed in the draft data pilot:
+
+- `data/campaigns/sanrio-characters-popup-shop-202512.json`
+- `data/sources/sanrio-characters-popup-shop-202512.json`
+- `data/assets/sanrio-characters-popup-shop-202512.json`
+- `data/items/sanrio-characters-popup-shop-202512.json`
+- Sanrio parent product cards have `data-item-id`.
+- Sanrio parent facts and marketplace links use the shared structural pattern.
+- The postcard mini-grid remains hand-written and outside `.market-links`.
 
 ## Recommended Next Implementation
 
-1. Create a draft Sanrio campaign JSON file with the campaign, source, assets,
-   and item records above.
-2. Keep all Sanrio item pages unpublished or absent during the first data pass.
+1. Review the draft data and parent-page hygiene checkpoint before publishing
+   Sanrio data-backed grid alignment.
+2. Keep all Sanrio item pages unpublished or absent during this review pass.
 3. Do not mark any `marketplaceFinder.status` as `published` until an item page
    actually renders the Finder UI.
-4. Convert the public Sanrio parent page to data-backed item ids only after the
-   draft JSON passes validation.
+4. Decide whether the postcard mini-grid should become
+   `productGrid.miniGridAssetIds`, `productGrid.variantAssetIds`, or remain a
+   manual exception.
 5. Revisit product-grid renderer support after the postcard mini-grid and
    `.market-links` structure are represented by data or intentionally preserved.
 

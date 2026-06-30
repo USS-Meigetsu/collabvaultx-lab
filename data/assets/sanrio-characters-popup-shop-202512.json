@@ -1,0 +1,207 @@
+[
+  {
+    "id": "sanrio-hero-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/hero-main.jpg",
+    "role": "hero",
+    "altJa": "ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOP キービジュアル",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "eager"
+  },
+  {
+    "id": "sanrio-hero-main-sp",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/hero-main-sp.jpg",
+    "role": "hero",
+    "altJa": "ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOP スマートフォン向けキービジュアル",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "eager"
+  },
+  {
+    "id": "sanrio-hologram-can-badge-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-holo-can-badge-main.jpg",
+    "role": "product",
+    "altJa": "トレーディングホログラム缶バッジ代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-trading-acrylic-card-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-trading-acrylic-card-main.jpg",
+    "role": "product",
+    "altJa": "トレーディングアクリルカード代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-parts-acrylic-keyholder-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-parts-acrylic-keyholder-main.jpg",
+    "role": "product",
+    "altJa": "トレーディングパーツ付きアクリルキーホルダー代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-acrylic-stand-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-acrylic-stand-main.jpg",
+    "role": "product",
+    "altJa": "アクリルスタンド代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-big-acrylic-stand-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-big-acrylic-stand-main.jpg",
+    "role": "product",
+    "altJa": "BIGアクリルスタンド代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-smartphone-sticker-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-smartphone-sticker-main.jpg",
+    "role": "product",
+    "altJa": "ダイカットスマホステッカー代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-clear-file-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-clear-file-main.jpg",
+    "role": "product",
+    "altJa": "クリアファイル代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-premium-card-holder-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-premium-card-holder-main.jpg",
+    "role": "product",
+    "altJa": "プレミアムカードホルダー代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-name-acrylic-badge-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-name-acrylic-badge-main.jpg",
+    "role": "product",
+    "altJa": "トレーディングおなまえアクリルプレートバッジ代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-mug-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-mug-main.jpg",
+    "role": "product",
+    "altJa": "マグカップ代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-face-towel-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-face-towel-main.jpg",
+    "role": "product",
+    "altJa": "フェイスタオル代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-acrylic-art-board-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-acrylic-art-board-main.jpg",
+    "role": "product",
+    "altJa": "アクリルアートボード代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-canvas-board-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-canvas-board-main.jpg",
+    "role": "product",
+    "altJa": "キャンバスボード代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-t-shirt-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-tshirt-main.jpg",
+    "role": "product",
+    "altJa": "Tシャツ代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-plush-mascot-main",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-plush-mascot-main.jpg",
+    "role": "product",
+    "altJa": "ぬいぐるみマスコット代表画像",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-postcard-01",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-postcard-01.jpg",
+    "role": "product",
+    "altJa": "購入特典オリジナルポストカード1",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-postcard-02",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-postcard-02.jpg",
+    "role": "product",
+    "altJa": "購入特典オリジナルポストカード2",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-postcard-03",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-postcard-03.jpg",
+    "role": "product",
+    "altJa": "購入特典オリジナルポストカード3",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-postcard-04",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-postcard-04.jpg",
+    "role": "product",
+    "altJa": "購入特典オリジナルポストカード4",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-postcard-05",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-postcard-05.jpg",
+    "role": "product",
+    "altJa": "購入特典オリジナルポストカード5",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "sanrio-postcard-06",
+    "path": "assets/images/works/umamusume/collabs/sanrio-characters-popup-shop-202512/item-postcard-06.jpg",
+    "role": "product",
+    "altJa": "購入特典オリジナルポストカード6",
+    "sourceId": "sanrio-animaru-special-page",
+    "loading": "lazy",
+    "decoding": "async"
+  }
+]

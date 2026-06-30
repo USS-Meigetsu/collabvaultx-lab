@@ -1,0 +1,71 @@
+{
+  "id": "sanrio-characters-popup-shop-202512",
+  "workId": "umamusume",
+  "officialTitleJa": "ウマ娘 シンデレラグレイ × サンリオキャラクターズ コラボPOPUPSHOP",
+  "displayTitleEn": "Cinderella Gray x Sanrio Characters popup shop",
+  "relatedTitleJa": "ウマ娘 シンデレラグレイ",
+  "relatedTitleEn": "Uma Musume Cinderella Gray",
+  "slug": "sanrio-characters-popup-shop-202512",
+  "status": "draft",
+  "periodLabel": "2025 Dec-2026 Mar",
+  "startDate": "2025-12-24",
+  "endDate": "2026-03-31",
+  "checkedAt": "2026-06-29",
+  "partnerNames": [
+    "サンリオキャラクターズ",
+    "アニまるっ！"
+  ],
+  "categories": [
+    "card",
+    "clear-file",
+    "figure",
+    "goods"
+  ],
+  "heroAssetId": "sanrio-hero-main",
+  "cardMeta": {
+    "period": "2025 Dec-2026 Mar",
+    "source": "Checked 2026-06-29",
+    "items": "Goods / purchase bonus"
+  },
+  "summaryJa": "ウマ娘 シンデレラグレイとサンリオキャラクターズのコラボPOPUP SHOP。オリジナルグッズ販売と購入特典ポストカード配布が行われた。",
+  "summaryEn": "Cinderella Gray x Sanrio Characters popup shop archive covering original goods, postcard purchase bonuses, and online plus venue sales.",
+  "searchKeywords": [
+    "sanrio",
+    "sanrio characters",
+    "サンリオ",
+    "popup shop",
+    "pop up shop",
+    "cinderella gray",
+    "シンデレラグレイ",
+    "uma musume",
+    "ウマ娘",
+    "acrylic stand",
+    "postcard",
+    "clear file",
+    "plush mascot",
+    "goods"
+  ],
+  "sourceIds": [
+    "sanrio-animaru-special-page"
+  ],
+  "itemIds": [
+    "sanrio-trading-hologram-can-badge",
+    "sanrio-trading-acrylic-card",
+    "sanrio-trading-parts-acrylic-keyholder",
+    "sanrio-acrylic-stand",
+    "sanrio-big-acrylic-stand",
+    "sanrio-die-cut-smartphone-sticker",
+    "sanrio-clear-file",
+    "sanrio-premium-card-holder",
+    "sanrio-trading-name-acrylic-plate-badge",
+    "sanrio-mug",
+    "sanrio-face-towel",
+    "sanrio-acrylic-art-board",
+    "sanrio-canvas-board",
+    "sanrio-t-shirt",
+    "sanrio-plush-mascot",
+    "sanrio-original-postcards"
+  ],
+  "marketNoteRequired": true,
+  "notes": "Draft data pilot. Existing public HTML remains the source of truth until Sanrio parent-page data alignment and renderer readiness are reviewed."
+}

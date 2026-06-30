@@ -1,0 +1,487 @@
+[
+  {
+    "id": "sanrio-trading-hologram-can-badge",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "トレーディングホログラム缶バッジ",
+    "displayNameEn": "Trading hologram can badges",
+    "summaryEn": "Sanrio Characters popup shop trading hologram can badge group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のランダム仕様のホログラム缶バッジ。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種 / ランダム仕様",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-hologram-can-badge-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種 / ランダム仕様",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-trading-acrylic-card",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "トレーディングアクリルカード",
+    "displayNameEn": "Trading acrylic cards",
+    "summaryEn": "Sanrio Characters popup shop trading acrylic card group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "card",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のランダム仕様のアクリルカード。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種 / ランダム仕様",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-trading-acrylic-card-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種 / ランダム仕様",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-trading-parts-acrylic-keyholder",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "トレーディングパーツ付きアクリルキーホルダー",
+    "displayNameEn": "Trading acrylic keyholders with parts",
+    "summaryEn": "Sanrio Characters popup shop trading acrylic keyholder group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のランダム仕様のパーツ付きアクリルキーホルダー。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種 / ランダム仕様",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-parts-acrylic-keyholder-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種 / ランダム仕様",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-acrylic-stand",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "アクリルスタンド",
+    "displayNameEn": "Acrylic stands",
+    "summaryEn": "Sanrio Characters popup shop acrylic stand group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "figure",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のアクリルスタンド。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-acrylic-stand-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-big-acrylic-stand",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "BIGアクリルスタンド",
+    "displayNameEn": "Big acrylic stands",
+    "summaryEn": "Sanrio Characters popup shop BIG acrylic stand group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "figure",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のBIGアクリルスタンド。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-big-acrylic-stand-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-die-cut-smartphone-sticker",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "ダイカットスマホステッカー",
+    "displayNameEn": "Die-cut smartphone stickers",
+    "summaryEn": "Sanrio Characters popup shop die-cut smartphone sticker group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のダイカットスマホステッカー。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-smartphone-sticker-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-clear-file",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "クリアファイル",
+    "displayNameEn": "Clear files",
+    "summaryEn": "Sanrio Characters popup shop clear-file group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "clear-file",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のクリアファイル。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-clear-file-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-premium-card-holder",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "プレミアムカードホルダー",
+    "displayNameEn": "Premium card holder",
+    "summaryEn": "Sanrio Characters popup shop premium card holder record for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "single",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全1種のプレミアムカードホルダー。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全1種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-premium-card-holder-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全1種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-trading-name-acrylic-plate-badge",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "トレーディングおなまえアクリルプレートバッジ",
+    "displayNameEn": "Trading name acrylic plate badges",
+    "summaryEn": "Sanrio Characters popup shop trading name acrylic plate badge group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のランダム仕様のおなまえアクリルプレートバッジ。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種 / ランダム仕様",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-name-acrylic-badge-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種 / ランダム仕様",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-mug",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "マグカップ",
+    "displayNameEn": "Mug",
+    "summaryEn": "Sanrio Characters popup shop mug record for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "single",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全1種のマグカップ。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全1種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-mug-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全1種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-face-towel",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "フェイスタオル",
+    "displayNameEn": "Face towel",
+    "summaryEn": "Sanrio Characters popup shop face towel record for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "single",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全1種のフェイスタオル。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全1種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-face-towel-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全1種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-acrylic-art-board",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "アクリルアートボード",
+    "displayNameEn": "Acrylic art board",
+    "summaryEn": "Sanrio Characters popup shop acrylic art board record for the Uma Musume Cinderella Gray collaboration.",
+    "category": "figure",
+    "recordType": "single",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全1種のアクリルアートボード。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全1種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-acrylic-art-board-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全1種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-canvas-board",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "キャンバスボード",
+    "displayNameEn": "Canvas boards",
+    "summaryEn": "Sanrio Characters popup shop canvas board group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のキャンバスボード。WEB先行通販と会場販売の両方で販売。",
+    "lineupLabelJa": "全6種",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-canvas-board-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-t-shirt",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "Tシャツ",
+    "displayNameEn": "T-shirts",
+    "summaryEn": "Sanrio Characters popup shop T-shirt group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のTシャツ。WEB先行通販と会場販売の両方で販売。L / XLサイズ。",
+    "lineupLabelJa": "全6種 / L・XL",
+    "acquisitionMethodJa": "WEB先行通販と会場販売で販売",
+    "availabilityLabel": "WEB先行通販 / 会場販売 / WEBアフター通販",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-t-shirt-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種 / L・XL",
+        "当時の入手方法: WEB先行通販と会場販売で販売"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-plush-mascot",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "ぬいぐるみマスコット",
+    "displayNameEn": "Plush mascots",
+    "summaryEn": "Sanrio Characters popup shop plush mascot group for the Uma Musume Cinderella Gray collaboration, covering the venue-advance sale route.",
+    "category": "goods",
+    "recordType": "group",
+    "distributionType": "retail-sale",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6種のぬいぐるみマスコット。会場先行販売で、WEB先行通販では取り扱いなし。",
+    "lineupLabelJa": "全6種 / 会場先行販売",
+    "acquisitionMethodJa": "会場先行販売。WEB先行通販では取り扱いなし",
+    "availabilityLabel": "会場先行販売 / WEBアフター通販",
+    "startDate": "2026-02-13",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-plush-mascot-main"
+    ],
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種 / 会場先行販売",
+        "当時の入手方法: 会場先行販売。WEB先行通販では取り扱いなし"
+      ]
+    }
+  },
+  {
+    "id": "sanrio-original-postcards",
+    "campaignId": "sanrio-characters-popup-shop-202512",
+    "officialNameJa": "購入特典オリジナルポストカード",
+    "displayNameEn": "Original postcard purchase bonus",
+    "summaryEn": "Sanrio Characters popup shop original postcard purchase-bonus group for the Uma Musume Cinderella Gray collaboration.",
+    "category": "card",
+    "recordType": "group",
+    "distributionType": "purchase-bonus",
+    "sourceIds": [
+      "sanrio-animaru-special-page"
+    ],
+    "confidence": "official",
+    "descriptionJa": "全6柄のポストカード。関連商品2,000円（税込）ごとの購入特典としてランダム配布。",
+    "lineupLabelJa": "全6柄 / ランダム配布 / 1会計最大6枚 / コンプリートセットなし",
+    "acquisitionMethodJa": "関連商品2,000円（税込）ごとに1枚配布",
+    "availabilityLabel": "WEB通販と会場販売の関連商品購入特典",
+    "startDate": "2025-12-24",
+    "endDate": "2026-03-31",
+    "assetIds": [
+      "sanrio-postcard-01",
+      "sanrio-postcard-02",
+      "sanrio-postcard-03",
+      "sanrio-postcard-04",
+      "sanrio-postcard-05",
+      "sanrio-postcard-06"
+    ],
+    "productGrid": {
+      "tag": "Purchase Bonus",
+      "factsJa": [
+        "全6柄 / ランダム配布 / 1会計最大6枚 / コンプリートセットなし",
+        "当時の入手方法: 関連商品2,000円（税込）ごとに1枚配布"
+      ]
+    }
+  }
+]
