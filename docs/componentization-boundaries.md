@@ -270,9 +270,10 @@ or smooth over them.
    Finder-enabled item pages.
 3. Done: keep related item navigation renderer/checker in sync with
    published item pages.
-4. Current: add ROUND1 data-backed campaign pilot to test another campaign type.
-5. Revisit item-page scaffold generation.
-6. Revisit campaign-grid generation.
+4. Done: add ROUND1 data-backed campaign pilot to test another campaign type.
+5. Current: add the first ROUND1 item page pilot.
+6. Revisit item-page scaffold generation.
+7. Revisit campaign-grid generation.
 
 This keeps the project efficient without locking the site into a premature
 generator.

@@ -11,7 +11,7 @@
     "confidence": "official",
     "descriptionJa": "アクリルフィギュアスタンド。全7種で、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "全7種",
-    "acquisitionMethodJa": "一部5店舗販売",
+    "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
     "assetIds": ["round1-acrylic-figure-stand-main"]
   },
   {
@@ -26,7 +26,7 @@
     "confidence": "official",
     "descriptionJa": "トレーディンググリッター缶バッジ。全14種で、一部5店舗販売とEC予約販売の両方あり。トレーディング仕様。",
     "lineupLabelJa": "全14種",
-    "acquisitionMethodJa": "一部5店舗販売",
+    "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
     "assetIds": ["round1-trading-glitter-can-badge-main"]
   },
   {
@@ -41,7 +41,7 @@
     "confidence": "official",
     "descriptionJa": "トレーディングアクリルスタンド。全7種で、一部5店舗販売とEC予約販売の両方あり。トレーディング仕様。",
     "lineupLabelJa": "全7種",
-    "acquisitionMethodJa": "一部5店舗販売",
+    "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
     "assetIds": ["round1-trading-acrylic-stand-main"]
   },
   {
@@ -56,7 +56,7 @@
     "confidence": "official",
     "descriptionJa": "トレーディングステッカー。全7種で、一部5店舗販売とEC予約販売の両方あり。トレーディング仕様。",
     "lineupLabelJa": "全7種",
-    "acquisitionMethodJa": "一部5店舗販売",
+    "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
     "assetIds": ["round1-trading-sticker-main"]
   },
   {
@@ -71,7 +71,7 @@
     "confidence": "official",
     "descriptionJa": "グリッターアクリルアートパネル。全8種で、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "全8種",
-    "acquisitionMethodJa": "一部5店舗販売",
+    "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
     "assetIds": ["round1-glitter-acrylic-art-panel-main"]
   },
   {
@@ -86,7 +86,7 @@
     "confidence": "official",
     "descriptionJa": "B2タペストリー。ROUND1コラボver.の販売グッズで、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "ROUND1コラボver.販売グッズ",
-    "acquisitionMethodJa": "一部5店舗販売",
+    "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
     "assetIds": ["round1-b2-tapestry-main"]
   },
   {
@@ -101,7 +101,7 @@
     "confidence": "official",
     "descriptionJa": "B2ハーフタペストリー。全7種で、一部5店舗販売とEC予約販売の両方あり。",
     "lineupLabelJa": "全7種",
-    "acquisitionMethodJa": "一部5店舗販売",
+    "acquisitionMethodJa": "一部5店舗販売 / EC予約販売",
     "assetIds": ["round1-b2-half-tapestry-main"]
   },
   {
@@ -124,6 +124,7 @@
     "campaignId": "round1-collab-campaign-202510",
     "officialNameJa": "BIGアクリルスタンド",
     "displayNameEn": "BIG acrylic stands",
+    "summaryEn": "ROUND1 amusement-prize BIG acrylic stand group for the Uma Musume Cinderella Gray campaign, covering the seven-type crane-game prize lineup, 98 participating amusement locations, official source, and reference searches.",
     "category": "prize",
     "recordType": "group",
     "distributionType": "crane-prize",
@@ -132,6 +133,108 @@
     "descriptionJa": "BIGアクリルスタンド。全7種のクレーンゲームプライズで、アミューズメント設置98店舗で展開。",
     "lineupLabelJa": "全7種",
     "acquisitionMethodJa": "クレーンゲームプライズ",
-    "assetIds": ["round1-big-acrylic-stand-main"]
+    "availabilityLabel": "アミューズメント設置98店舗で展開",
+    "priceLabel": "クレーンゲームプライズ",
+    "assetIds": ["round1-big-acrylic-stand-main"],
+    "marketplaceSearches": [
+      {
+        "id": "ebay-all-results",
+        "platform": "ebay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
+        "query": "Uma Musume ROUND1 BIG acrylic stand",
+        "queryLabel": "Uma Musume ROUND1 BIG acrylic stand",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+ROUND1+BIG+acrylic+stand",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+BIG%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-all-results",
+        "platform": "mercari",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
+        "query": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20BIG%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "overview",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-prize-search",
+        "platform": "mercari",
+        "labelJa": "メルカリでプライズ検索",
+        "labelEn": "Search Mercari JP prize listings",
+        "query": "ウマ娘 ROUND1 BIGアクリルスタンド プライズ",
+        "queryLabel": "ウマ娘 ROUND1 BIGアクリルスタンド プライズ",
+        "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20BIG%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%20%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA",
+        "intent": "single-item",
+        "finderGroup": "single-item",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "suruga-ya-all-results",
+        "platform": "suruga-ya",
+        "labelJa": "駿河屋で探す",
+        "labelEn": "Search Suruga-ya",
+        "query": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+ROUND1+BIG%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "yahoo-fleamarket-all-results",
+        "platform": "yahoo-fleamarket",
+        "labelJa": "Yahoo!フリマで探す",
+        "labelEn": "Search Yahoo! Fleamarket",
+        "query": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "queryLabel": "ウマ娘 ROUND1 BIGアクリルスタンド",
+        "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20ROUND1%20BIG%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89",
+        "intent": "all-results",
+        "finderGroup": "jp-marketplaces",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      }
+    ],
+    "page": {
+      "status": "published",
+      "slug": "big-acrylic-stand",
+      "path": "works/umamusume/collabs/round1-collab-campaign-202510/items/big-acrylic-stand/"
+    },
+    "marketplaceFinder": {
+      "status": "published"
+    }
   }
 ]
