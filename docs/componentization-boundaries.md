@@ -73,7 +73,7 @@ Keep the policy shared.
 
 ### Related Item Navigation
 
-Commonize after Marketplace Finder.
+Commonized after Marketplace Finder.
 
 - Source: published items in the same campaign.
 - Output: the `section[aria-labelledby="related-items-heading"]` block.
@@ -268,9 +268,9 @@ or smooth over them.
 1. Done: finish Marketplace Finder rollout for Lawson/COCOS.
 2. Done: keep the focused Marketplace Finder renderer/checker in sync with
    Finder-enabled item pages.
-3. Current: keep related item navigation renderer/checker in sync with
+3. Done: keep related item navigation renderer/checker in sync with
    published item pages.
-4. Next: add ROUND1 data/item pilot to test another campaign type.
+4. Current: add ROUND1 data-backed campaign pilot to test another campaign type.
 5. Revisit item-page scaffold generation.
 6. Revisit campaign-grid generation.
 

@@ -1,0 +1,65 @@
+{
+  "id": "round1-collab-campaign-202510",
+  "workId": "umamusume",
+  "officialTitleJa": "アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーン",
+  "displayTitleEn": "ROUND1 Cinderella Gray campaign",
+  "relatedTitleJa": "ウマ娘 シンデレラグレイ",
+  "relatedTitleEn": "Uma Musume Cinderella Gray",
+  "slug": "round1-collab-campaign-202510",
+  "status": "published",
+  "periodLabel": "2025 Oct-2026 Jan",
+  "startDate": "2025-10-24",
+  "endDate": "2026-01-15",
+  "checkedAt": "2026-06-29",
+  "partnerNames": [
+    "ROUND1",
+    "ラウンドワン"
+  ],
+  "categories": [
+    "card",
+    "figure",
+    "food",
+    "goods",
+    "prize"
+  ],
+  "heroAssetId": "round1-hero-main",
+  "cardMeta": {
+    "period": "2025 Oct-2026 Jan",
+    "source": "Checked 2026-06-29",
+    "items": "Menus / goods / prizes"
+  },
+  "summaryJa": "アニメ『ウマ娘 シンデレラグレイ』と ROUND1 のコラボキャンペーン。コラボメニュー、施設利用特典、限定グッズ販売、景品施策が行われた。",
+  "summaryEn": "ROUND1 campaign archive covering collaboration menus, facility-use bonuses, limited goods, and amusement prizes.",
+  "searchKeywords": [
+    "round1",
+    "round one",
+    "ラウンドワン",
+    "cinderella gray",
+    "シンデレラグレイ",
+    "uma musume",
+    "ウマ娘",
+    "amusement",
+    "capsule toy",
+    "prize",
+    "goods",
+    "tapestry",
+    "acrylic stand",
+    "can badge",
+    "sticker"
+  ],
+  "sourceIds": [
+    "round1-chugai-event-page",
+    "round1-campaign-site"
+  ],
+  "itemIds": [
+    "round1-acrylic-figure-stand",
+    "round1-trading-glitter-can-badge",
+    "round1-trading-acrylic-stand",
+    "round1-trading-sticker",
+    "round1-glitter-acrylic-art-panel",
+    "round1-b2-tapestry",
+    "round1-b2-half-tapestry",
+    "round1-mashikaku-can-badge",
+    "round1-big-acrylic-stand"
+  ]
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "id": "round1-hero-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-hero-main.jpg",
+    "role": "hero",
+    "altJa": "アニメ『ウマ娘 シンデレラグレイ』× ROUND1 コラボキャンペーン キービジュアル",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "eager"
+  },
+  {
+    "id": "round1-acrylic-figure-stand-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-acrylic-figure-stand.jpg",
+    "role": "product",
+    "altJa": "アクリルフィギュアスタンドのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-trading-glitter-can-badge-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-trading-glitter-can-badge.jpg",
+    "role": "product",
+    "altJa": "トレーディンググリッター缶バッジのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-trading-acrylic-stand-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-trading-acrylic-stand.jpg",
+    "role": "product",
+    "altJa": "トレーディングアクリルスタンドのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-trading-sticker-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-trading-sticker.jpg",
+    "role": "product",
+    "altJa": "トレーディングステッカーのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-glitter-acrylic-art-panel-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-glitter-acrylic-art-panel.jpg",
+    "role": "product",
+    "altJa": "グリッターアクリルアートパネルのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-b2-tapestry-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-b2-tapestry.jpg",
+    "role": "product",
+    "altJa": "B2タペストリーのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-b2-half-tapestry-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-b2-half-tapestry.jpg",
+    "role": "product",
+    "altJa": "B2ハーフタペストリーのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-mashikaku-can-badge-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-mashikaku-can-badge.jpg",
+    "role": "product",
+    "altJa": "ましかく缶バッジのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "round1-big-acrylic-stand-main",
+    "path": "assets/images/works/umamusume/collabs/round1-collab-campaign-202510/round1-card-big-acrylic-stand.jpg",
+    "role": "product",
+    "altJa": "BIGアクリルスタンドのイメージ画像",
+    "sourceId": "round1-chugai-event-page",
+    "loading": "lazy",
+    "decoding": "async"
+  }
+]

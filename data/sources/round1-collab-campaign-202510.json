@@ -1,0 +1,20 @@
+[
+  {
+    "id": "round1-chugai-event-page",
+    "type": "partner-official",
+    "url": "https://www.chugai-contents.jp/blog/event/cinderellagray_round1/",
+    "label": "中外鉱業公式イベントページ",
+    "checkedAt": "2026-06-29",
+    "scope": "ROUND1 collaboration campaign overview, product lineup, sales routes, capsule toy, and amusement prize information.",
+    "language": "ja"
+  },
+  {
+    "id": "round1-campaign-site",
+    "type": "official",
+    "url": "https://www.round1.co.jp/collaboration/uma-musume/index.html",
+    "label": "ROUND1特設サイト",
+    "checkedAt": "2026-06-29",
+    "scope": "ROUND1 collaboration campaign site and venue campaign context.",
+    "language": "ja"
+  }
+]
