@@ -7,5 +7,14 @@
     "checkedAt": "2026-06-30",
     "scope": "Campaign overview, schedule, clear-card phases, special menu bonuses, web lottery, official X poster campaigns, store-limited acrylic panel sales, and campaign caveats.",
     "language": "ja"
+  },
+  {
+    "id": "cocos-umamusume-qa",
+    "type": "official",
+    "url": "https://umamusume2026.cocos.jp/qa.html",
+    "label": "ココス×ウマ娘キャンペーンQ&A",
+    "checkedAt": "2026-06-30",
+    "scope": "Special menu schedule, set contents, clear-card bonus, recovery-item serial-code handling, purchase limits, and campaign caveats.",
+    "language": "ja"
   }
 ]

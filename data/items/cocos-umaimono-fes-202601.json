@@ -50,15 +50,16 @@
     "campaignId": "cocos-umaimono-fes-202601",
     "officialNameJa": "ウマいものフェス特別メニュー",
     "displayNameEn": "Umaimono Festival special menu",
-    "summaryEn": "COCOS special menu set record covering the special clear-card bonus, recovery item bonus, front-half/back-half changeover, official source, and reference searches.",
+    "summaryEn": "COCOS special menu set record covering the special clear-card bonus, recovery-item serial-code bonus, front-half/back-half changeover, official source, and reference searches.",
     "category": "food",
     "recordType": "set",
     "distributionType": "food-sale",
     "sourceIds": [
-      "cocos-umamusume-special-site"
+      "cocos-umamusume-special-site",
+      "cocos-umamusume-qa"
     ],
     "confidence": "official",
-    "descriptionJa": "ウマいものフェス特別メニュー。スペシャルクリアカードと回復アイテム風の特典が付属し、前半・後半でデザイン違いが案内されています。",
+    "descriptionJa": "ウマいものフェス特別メニュー。スペシャルクリアカードと、ココスオリジナル回復アイテムを取得できるシリアルコードが付属し、前半・後半でデザイン違いが案内されています。",
     "lineupLabelJa": "前半・後半でデザイン違い / 特別セットメニュー付属",
     "acquisitionMethodJa": "ウマいものフェス特別メニューを注文",
     "availabilityLabel": "2026年1月20日〜3月16日、または在庫がなくなり次第終了",
@@ -84,7 +85,12 @@
         "queryLabel": "ウマ娘 ココス スペシャルクリアカード",
         "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+スペシャルクリアカード"
       }
-    ]
+    ],
+    "page": {
+      "status": "published",
+      "slug": "special-set-menu",
+      "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/special-set-menu/"
+    }
   },
   {
     "id": "cocos-acrylic-stand-panels",
