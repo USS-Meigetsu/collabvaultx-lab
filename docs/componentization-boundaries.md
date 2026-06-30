@@ -15,15 +15,15 @@ content model is more stable.
   checks, the Marketplace Finder renderer/checker, the related item navigation
   renderer/checker, supported campaign product-grid renderer/checker, and the
   supported item-page shell renderer/checker. Renderer scripts share small
-  data, path, and HTML utility modules under `scripts/lib/`.
+  data, path, and HTML utility modules under `scripts/lib/`. Research Package
+  validation now defines the pre-import contract for GPT-researched campaign
+  packages.
 - Hand-written now: item page HTML, campaign page HTML, official-source notes,
   item descriptions, overview cards, and page-specific reference/source blocks.
-- Best next step: keep generated-block checks small and targeted before
-  attempting broader page generation. ROUND1 now has a complete v1 item-page
-  checkpoint across its parent page and nine item pages. Sanrio is the current
-  large product-set test, now past parent product-grid alignment and into a
-  seven-page item-page pilot covering purchase-bonus, trading, acrylic retail
-  goods, and venue-advance plush mascot patterns.
+- Best next step: stop using manual item-page additions as the main development
+  path. Use the existing ROUND1, Lawson, COCOS, and Sanrio pages as examples
+  while the site moves toward a GPT-researched Research Package -> Codex
+  validate/import/generate workflow.
 
 ## Commonize Now
 
@@ -357,9 +357,15 @@ or smooth over them.
 22. Done: add the Sanrio high-value item pages batch for
    `sanrio-trading-acrylic-card`, `sanrio-trading-parts-acrylic-keyholder`,
    `sanrio-big-acrylic-stand`, and `sanrio-plush-mascot`.
-23. Current: review the seven-page Sanrio pilot set with a mid-completion QA
-   before deciding whether to publish the remaining parent-card-first items.
-24. Revisit campaign-grid generation beyond the current supported set.
+23. Done: pause the seven-page Sanrio pilot as a large-product-set reference
+   instead of continuing manual Sanrio item-page expansion.
+24. Current: define Research Package Spec and Validator v0 with a COCOS golden
+   replay package so GPT research can become structured generator input.
+25. Next: add a package import/generation path that can produce campaign pages,
+   selected item pages, metadata, related navigation, Marketplace Finder blocks,
+   and sitemap entries from validated package data.
+26. After the generator path exists, ask GPT Pro to research one new campaign as
+   a package and stop for user/GPT review after Codex generates the pilot.
 
 This keeps the project efficient without locking the site into a premature
 generator.

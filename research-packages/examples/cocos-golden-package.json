@@ -1,0 +1,1200 @@
+{
+  "packageVersion": "0.1",
+  "packageId": "cocos-umaimono-fes-202601-golden",
+  "createdAt": "2026-06-30",
+  "createdBy": "codex-golden-replay",
+  "status": "research-ready-for-codex",
+  "language": {
+    "official": "ja",
+    "summary": "en"
+  },
+  "work": {
+    "id": "umamusume",
+    "officialNameJa": "ウマ娘 プリティーダービー",
+    "displayNameEn": "Uma Musume Pretty Derby",
+    "slug": "umamusume",
+    "aliases": [
+      "Uma Musume",
+      "Umamusume",
+      "ウマ娘"
+    ]
+  },
+  "campaign": {
+    "id": "cocos-umaimono-fes-202601",
+    "workId": "umamusume",
+    "officialTitleJa": "ココスへようこそ！ウマいものフェス！",
+    "displayTitleEn": "COCOS Umaimono Festival campaign",
+    "relatedTitleJa": "ウマ娘 プリティーダービー",
+    "relatedTitleEn": "Uma Musume Pretty Derby",
+    "slug": "cocos-umaimono-fes-202601",
+    "status": "published",
+    "periodLabel": "2026 Jan-Mar",
+    "startDate": "2026-01-20",
+    "endDate": "2026-03-16",
+    "checkedAt": "2026-06-30",
+    "partnerNames": [
+      "ココス",
+      "COCOS"
+    ],
+    "categories": [
+      "card",
+      "figure",
+      "food",
+      "goods",
+      "prize"
+    ],
+    "heroAssetId": "cocos-umaimono-fes-hero",
+    "cardMeta": {
+      "period": "2026 Jan-Mar",
+      "source": "Checked 2026-06-30",
+      "items": "Menu / cards / prizes / goods"
+    },
+    "summaryJa": "ココスで開催されたウマ娘コラボ。対象メニューのクリアカード配布、特別メニュー、WEB抽選景品、一部店舗限定のアクリルスタンドパネル販売、公式Xキャンペーンをまとめています。",
+    "summaryEn": "COCOS campaign archive covering menu-order clear cards, special set bonuses, web-lottery prizes, official-X poster prizes, and limited store goods.",
+    "searchKeywords": [
+      "Uma Musume COCOS",
+      "ウマ娘 ココス",
+      "ウマいものフェス",
+      "clear card",
+      "クリアカード",
+      "special clear card",
+      "スペシャルクリアカード",
+      "acrylic panel",
+      "アクリルスタンドパネル",
+      "blanket",
+      "ブランケット",
+      "B2 poster",
+      "B2ポスター"
+    ],
+    "sourceIds": [
+      "cocos-umamusume-special-site"
+    ],
+    "itemIds": [
+      "cocos-original-clear-cards",
+      "cocos-special-set-menu",
+      "cocos-acrylic-stand-panels",
+      "cocos-original-blanket",
+      "cocos-b2-posters"
+    ],
+    "marketNoteRequired": true,
+    "evidenceRefs": [
+      "ev-campaign-title",
+      "ev-campaign-period",
+      "ev-campaign-lineup"
+    ]
+  },
+  "sources": [
+    {
+      "id": "cocos-umamusume-special-site",
+      "type": "official",
+      "url": "https://umamusume2026.cocos.jp/",
+      "label": "ココス×ウマ娘キャンペーン公式特設サイト",
+      "checkedAt": "2026-06-30",
+      "scope": "Campaign overview, schedule, clear-card phases, special menu bonuses, web lottery, official X poster campaigns, store-limited acrylic panel sales, and campaign caveats.",
+      "language": "ja",
+      "reliability": "primary"
+    },
+    {
+      "id": "cocos-umamusume-qa",
+      "type": "official",
+      "url": "https://umamusume2026.cocos.jp/qa.html",
+      "label": "ココス×ウマ娘キャンペーンQ&A",
+      "checkedAt": "2026-06-30",
+      "scope": "Special menu schedule, set contents, clear-card bonus, recovery-item serial-code handling, WEB lottery receipt-code printing window, web-entry window, original blanket prize, store-goods sales limits, acrylic panel purchase limits, and campaign caveats.",
+      "language": "ja",
+      "reliability": "primary"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-campaign-title",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "campaign-title",
+      "claimJa": "ココスへようこそ！ウマいものフェス！",
+      "claimEn": "COCOS Umaimono Festival campaign",
+      "sourceLocator": {
+        "sectionLabel": "Campaign title / main visual",
+        "note": "Golden replay evidence derived from the existing verified COCOS data fixture."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-campaign-period",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "campaign-period",
+      "claimEn": "2026 Jan-Mar",
+      "sourceLocator": {
+        "sectionLabel": "Campaign schedule",
+        "note": "Golden replay evidence derived from the existing verified COCOS data fixture."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-campaign-lineup",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "campaign-lineup",
+      "claimEn": "COCOS campaign archive covering menu-order clear cards, special set bonuses, web-lottery prizes, official-X poster prizes, and limited store goods.",
+      "sourceLocator": {
+        "sectionLabel": "Goods and campaign overview",
+        "note": "Golden replay evidence derived from the existing verified COCOS data fixture."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-original-clear-cards-name",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-name",
+      "claimJa": "オリジナルクリアカード",
+      "claimEn": "Original clear cards",
+      "sourceLocator": {
+        "sectionLabel": "Item lineup",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-original-clear-cards-acquisition",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-acquisition-method",
+      "claimJa": "対象メニュー1品ごとの注文特典としてランダム配布",
+      "sourceLocator": {
+        "sectionLabel": "How to obtain",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-original-clear-cards-availability",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-availability",
+      "claimJa": "2026年1月20日〜3月16日、または各弾の在庫がなくなり次第終了",
+      "sourceLocator": {
+        "sectionLabel": "Availability / schedule",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-special-set-menu-name",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-name",
+      "claimJa": "ウマいものフェス特別メニュー",
+      "claimEn": "Umaimono Festival special menu",
+      "sourceLocator": {
+        "sectionLabel": "Item lineup",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-special-set-menu-acquisition",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-acquisition-method",
+      "claimJa": "ウマいものフェス特別メニューを注文",
+      "sourceLocator": {
+        "sectionLabel": "How to obtain",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-special-set-menu-availability",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-availability",
+      "claimJa": "2026年1月20日〜3月16日、または在庫がなくなり次第終了",
+      "sourceLocator": {
+        "sectionLabel": "Availability / schedule",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-acrylic-stand-panels-name",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-name",
+      "claimJa": "オリジナルアクリルスタンドパネル",
+      "claimEn": "Original acrylic stand panels",
+      "sourceLocator": {
+        "sectionLabel": "Item lineup",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-acrylic-stand-panels-acquisition",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-acquisition-method",
+      "claimJa": "一部店舗限定の店頭販売で購入",
+      "sourceLocator": {
+        "sectionLabel": "How to obtain",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-acrylic-stand-panels-availability",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-availability",
+      "claimJa": "前半: 2026年1月20日〜3月16日 / 後半: 2026年2月17日〜3月16日、なくなり次第終了",
+      "sourceLocator": {
+        "sectionLabel": "Availability / schedule",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-original-blanket-name",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-name",
+      "claimJa": "オリジナルブランケット",
+      "claimEn": "Original blanket",
+      "sourceLocator": {
+        "sectionLabel": "Item lineup",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-original-blanket-acquisition",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-acquisition-method",
+      "claimJa": "対象メニュー1品=1pt分としてレシートに印字される応募コードを使ってWEB抽選に応募",
+      "sourceLocator": {
+        "sectionLabel": "How to obtain",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-original-blanket-availability",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-availability",
+      "claimJa": "レシート印字期間: 2026年1月20日 10:00〜3月17日 5:59 / 応募期間: 2026年1月20日 10:00〜3月23日 23:59",
+      "sourceLocator": {
+        "sectionLabel": "Availability / schedule",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-b2-posters-name",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-name",
+      "claimJa": "コラボ限定B2ポスター",
+      "claimEn": "Collaboration-exclusive B2 posters",
+      "sourceLocator": {
+        "sectionLabel": "Item lineup",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-b2-posters-acquisition",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-acquisition-method",
+      "claimJa": "ココス公式Xをフォローし、対象投稿をリポスト",
+      "sourceLocator": {
+        "sectionLabel": "How to obtain",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    },
+    {
+      "id": "ev-cocos-b2-posters-availability",
+      "sourceId": "cocos-umamusume-special-site",
+      "factType": "item-availability",
+      "claimJa": "第1弾〜第4弾の各フォロー＆リポスト期間、最終第4弾は2026年3月9日まで",
+      "sourceLocator": {
+        "sectionLabel": "Availability / schedule",
+        "note": "Golden replay evidence derived from the existing verified COCOS item data."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    }
+  ],
+  "assets": [
+    {
+      "id": "cocos-umaimono-fes-hero",
+      "role": "hero",
+      "sourceId": "cocos-umamusume-special-site",
+      "localPath": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/hero-main.png",
+      "altJa": "ココスへようこそ！ウマいものフェス！のキービジュアル",
+      "usage": "campaign-hero",
+      "downloadPolicy": "already-present-local-asset",
+      "rightsNote": "Golden replay uses the existing local archive asset; rights remain with the original holders.",
+      "loading": "eager"
+    },
+    {
+      "id": "cocos-clear-card-main",
+      "role": "product",
+      "sourceId": "cocos-umamusume-special-site",
+      "localPath": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-clear-card-main.png",
+      "altJa": "オリジナルクリアカード代表画像",
+      "usage": "archive-product-image",
+      "downloadPolicy": "already-present-local-asset",
+      "rightsNote": "Golden replay uses the existing local archive asset; rights remain with the original holders.",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "id": "cocos-special-clear-card-main",
+      "role": "product",
+      "sourceId": "cocos-umamusume-special-site",
+      "localPath": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-special-clear-card-main.png",
+      "altJa": "スペシャルクリアカード代表画像",
+      "usage": "archive-product-image",
+      "downloadPolicy": "already-present-local-asset",
+      "rightsNote": "Golden replay uses the existing local archive asset; rights remain with the original holders.",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "id": "cocos-acrylic-panel-main",
+      "role": "product",
+      "sourceId": "cocos-umamusume-special-site",
+      "localPath": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-acrylic-panel-main.png",
+      "altJa": "オリジナルアクリルスタンドパネル代表画像",
+      "usage": "archive-product-image",
+      "downloadPolicy": "already-present-local-asset",
+      "rightsNote": "Golden replay uses the existing local archive asset; rights remain with the original holders.",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "id": "cocos-blanket-main",
+      "role": "product",
+      "sourceId": "cocos-umamusume-special-site",
+      "localPath": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-blanket-main.png",
+      "altJa": "オリジナルブランケット代表画像",
+      "usage": "archive-product-image",
+      "downloadPolicy": "already-present-local-asset",
+      "rightsNote": "Golden replay uses the existing local archive asset; rights remain with the original holders.",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    {
+      "id": "cocos-b2-poster-main",
+      "role": "product",
+      "sourceId": "cocos-umamusume-special-site",
+      "localPath": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-b2-poster-main.png",
+      "altJa": "コラボ限定B2ポスター公式Xキャンペーン告知画像",
+      "usage": "archive-product-image",
+      "downloadPolicy": "already-present-local-asset",
+      "rightsNote": "Golden replay uses the existing local archive asset; rights remain with the original holders.",
+      "loading": "lazy",
+      "decoding": "async"
+    }
+  ],
+  "items": [
+    {
+      "id": "cocos-original-clear-cards",
+      "campaignId": "cocos-umaimono-fes-202601",
+      "officialNameJa": "オリジナルクリアカード",
+      "displayNameEn": "Original clear cards",
+      "summaryEn": "COCOS menu-order clear-card bonus group for the Uma Musume Umaimono Festival campaign, covering the four-phase 20-card lineup, random distribution rule, official source, and reference searches.",
+      "productGrid": {
+        "tag": "Menu Bonus",
+        "descriptionJa": "オリジナルクリアカード。全20種で、対象メニュー1品ごとの注文特典としてランダム配布。",
+        "factsJa": [
+          "全20種 / 第1弾〜第4弾 各5種",
+          "当時の入手方法: 対象メニュー1品ごとの注文特典としてランダム配布"
+        ]
+      },
+      "category": "card",
+      "recordType": "group",
+      "distributionType": "purchase-bonus",
+      "sourceIds": [
+        "cocos-umamusume-special-site"
+      ],
+      "confidence": "official",
+      "descriptionJa": "対象メニュー1品ごとの注文特典としてランダム配布されたオリジナルクリアカード。第1弾〜第4弾の各5種、合計20種として案内されています。",
+      "lineupLabelJa": "全20種 / 第1弾〜第4弾 各5種",
+      "acquisitionMethodJa": "対象メニュー1品ごとの注文特典としてランダム配布",
+      "availabilityLabel": "2026年1月20日〜3月16日、または各弾の在庫がなくなり次第終了",
+      "startDate": "2026-01-20",
+      "endDate": "2026-03-16",
+      "endCondition": "while-supplies-last",
+      "assetIds": [
+        "cocos-clear-card-main"
+      ],
+      "marketplaceSearches": [
+        {
+          "id": "ebay-all-results",
+          "platform": "ebay",
+          "labelJa": "eBayで全体検索",
+          "labelEn": "Search eBay results",
+          "query": "Uma Musume COCOS clear card",
+          "queryLabel": "Uma Musume COCOS clear card",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+clear+card",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "ebay-complete-set",
+          "platform": "ebay",
+          "labelJa": "eBayでコンプリートセットを探す",
+          "labelEn": "Search eBay complete sets",
+          "query": "Uma Musume COCOS clear card complete set",
+          "queryLabel": "Uma Musume COCOS clear card complete set",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+clear+card+complete+set",
+          "intent": "complete-set",
+          "finderGroup": "sets",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "amazon-jp-all-results",
+          "platform": "amazon-jp",
+          "labelJa": "Amazon.co.jpで探す",
+          "labelEn": "Search Amazon JP",
+          "query": "ウマ娘 ココス クリアカード",
+          "queryLabel": "ウマ娘 ココス クリアカード",
+          "url": "https://www.amazon.co.jp/s?k=ウマ娘+ココス+クリアカード",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-all-results",
+          "platform": "mercari",
+          "labelJa": "メルカリで全体検索",
+          "labelEn": "Search Mercari JP results",
+          "query": "ウマ娘 ココス クリアカード",
+          "queryLabel": "ウマ娘 ココス クリアカード",
+          "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20クリアカード",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-complete-set",
+          "platform": "mercari",
+          "labelJa": "メルカリでコンプリートセットを探す",
+          "labelEn": "Search Mercari JP complete sets",
+          "query": "ウマ娘 ココス クリアカード コンプリート",
+          "queryLabel": "ウマ娘 ココス クリアカード コンプリート",
+          "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20クリアカード%20コンプリート",
+          "intent": "complete-set",
+          "finderGroup": "sets",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "suruga-ya-all-results",
+          "platform": "suruga-ya",
+          "labelJa": "駿河屋で探す",
+          "labelEn": "Search Suruga-ya",
+          "query": "ウマ娘 ココス クリアカード",
+          "queryLabel": "ウマ娘 ココス クリアカード",
+          "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+クリアカード",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "yahoo-fleamarket-all-results",
+          "platform": "yahoo-fleamarket",
+          "labelJa": "Yahoo!フリマで探す",
+          "labelEn": "Search Yahoo! Fleamarket",
+          "query": "ウマ娘 ココス クリアカード",
+          "queryLabel": "ウマ娘 ココス クリアカード",
+          "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20%E3%82%AF%E3%83%AA%E3%82%A2%E3%82%AB%E3%83%BC%E3%83%89",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        }
+      ],
+      "page": {
+        "status": "published",
+        "slug": "original-clear-cards",
+        "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/original-clear-cards/"
+      },
+      "marketplaceFinder": {
+        "status": "published"
+      },
+      "evidenceRefs": [
+        "ev-cocos-original-clear-cards-name",
+        "ev-cocos-original-clear-cards-acquisition",
+        "ev-cocos-original-clear-cards-availability"
+      ],
+      "pageDecision": {
+        "decision": "generate",
+        "priority": "high",
+        "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
+        "slug": "original-clear-cards"
+      }
+    },
+    {
+      "id": "cocos-special-set-menu",
+      "campaignId": "cocos-umaimono-fes-202601",
+      "officialNameJa": "ウマいものフェス特別メニュー",
+      "displayNameEn": "Umaimono Festival special menu",
+      "summaryEn": "COCOS special menu set record covering the special clear-card bonus, recovery-item serial-code bonus, front-half/back-half changeover, official source, and reference searches.",
+      "productGrid": {
+        "tag": "Special Menu",
+        "descriptionJa": "ウマいものフェス特別メニュー。スペシャルクリアカードと、ココスオリジナル回復アイテムを取得できるシリアルコードが付属し、前半・後半でデザインが異なる。",
+        "factsJa": [
+          "前半・後半でデザイン違い / 特別セットメニュー付属",
+          "当時の入手方法: ウマいものフェス特別メニューを注文"
+        ]
+      },
+      "category": "food",
+      "recordType": "set",
+      "distributionType": "food-sale",
+      "sourceIds": [
+        "cocos-umamusume-special-site",
+        "cocos-umamusume-qa"
+      ],
+      "confidence": "official",
+      "descriptionJa": "ウマいものフェス特別メニュー。スペシャルクリアカードと、ココスオリジナル回復アイテムを取得できるシリアルコードが付属し、前半・後半でデザイン違いが案内されています。",
+      "lineupLabelJa": "前半・後半でデザイン違い / 特別セットメニュー付属",
+      "acquisitionMethodJa": "ウマいものフェス特別メニューを注文",
+      "availabilityLabel": "2026年1月20日〜3月16日、または在庫がなくなり次第終了",
+      "startDate": "2026-01-20",
+      "endDate": "2026-03-16",
+      "endCondition": "while-supplies-last",
+      "assetIds": [
+        "cocos-special-clear-card-main"
+      ],
+      "marketplaceSearches": [
+        {
+          "id": "ebay-all-results",
+          "platform": "ebay",
+          "labelJa": "eBayで全体検索",
+          "labelEn": "Search eBay results",
+          "query": "Uma Musume COCOS special clear card",
+          "queryLabel": "Uma Musume COCOS special clear card",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+special+clear+card",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "amazon-jp-all-results",
+          "platform": "amazon-jp",
+          "labelJa": "Amazon.co.jpで探す",
+          "labelEn": "Search Amazon JP",
+          "query": "ウマ娘 ココス スペシャルクリアカード",
+          "queryLabel": "ウマ娘 ココス スペシャルクリアカード",
+          "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B3%E3%82%B3%E3%82%B9+%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%AF%E3%83%AA%E3%82%A2%E3%82%AB%E3%83%BC%E3%83%89",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-all-results",
+          "platform": "mercari",
+          "labelJa": "メルカリで全体検索",
+          "labelEn": "Search Mercari JP results",
+          "query": "ウマ娘 ココス スペシャルクリアカード",
+          "queryLabel": "ウマ娘 ココス スペシャルクリアカード",
+          "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20スペシャルクリアカード",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "ebay-complete-set",
+          "platform": "ebay",
+          "labelJa": "eBayでセット検索",
+          "labelEn": "Search eBay sets",
+          "query": "Uma Musume COCOS special clear card complete set",
+          "queryLabel": "Uma Musume COCOS special clear card complete set",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+special+clear+card+complete+set",
+          "intent": "complete-set",
+          "finderGroup": "sets",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-complete-set",
+          "platform": "mercari",
+          "labelJa": "メルカリでセット検索",
+          "labelEn": "Search Mercari JP sets",
+          "query": "ウマ娘 ココス スペシャルクリアカード コンプリート",
+          "queryLabel": "ウマ娘 ココス スペシャルクリアカード コンプリート",
+          "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%AF%E3%83%AA%E3%82%A2%E3%82%AB%E3%83%BC%E3%83%89%20%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AA%E3%83%BC%E3%83%88",
+          "intent": "complete-set",
+          "finderGroup": "sets",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "suruga-ya-all-results",
+          "platform": "suruga-ya",
+          "labelJa": "駿河屋で探す",
+          "labelEn": "Search Suruga-ya",
+          "query": "ウマ娘 ココス スペシャルクリアカード",
+          "queryLabel": "ウマ娘 ココス スペシャルクリアカード",
+          "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+スペシャルクリアカード",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "yahoo-fleamarket-all-results",
+          "platform": "yahoo-fleamarket",
+          "labelJa": "Yahoo!フリマで探す",
+          "labelEn": "Search Yahoo! Fleamarket",
+          "query": "ウマ娘 ココス スペシャルクリアカード",
+          "queryLabel": "ウマ娘 ココス スペシャルクリアカード",
+          "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%AF%E3%83%AA%E3%82%A2%E3%82%AB%E3%83%BC%E3%83%89",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        }
+      ],
+      "page": {
+        "status": "published",
+        "slug": "special-set-menu",
+        "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/special-set-menu/"
+      },
+      "marketplaceFinder": {
+        "status": "published"
+      },
+      "evidenceRefs": [
+        "ev-cocos-special-set-menu-name",
+        "ev-cocos-special-set-menu-acquisition",
+        "ev-cocos-special-set-menu-availability"
+      ],
+      "pageDecision": {
+        "decision": "generate",
+        "priority": "high",
+        "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
+        "slug": "special-set-menu"
+      }
+    },
+    {
+      "id": "cocos-acrylic-stand-panels",
+      "campaignId": "cocos-umaimono-fes-202601",
+      "officialNameJa": "オリジナルアクリルスタンドパネル",
+      "displayNameEn": "Original acrylic stand panels",
+      "summaryEn": "COCOS store-limited acrylic stand panel sales group covering front-half/back-half random lineups, store-limited sales caveats, official source, and reference searches.",
+      "productGrid": {
+        "tag": "Store Goods",
+        "descriptionJa": "オリジナルアクリルスタンドパネル。前半・後半それぞれランダム全4種で、一部店舗限定で販売。",
+        "factsJa": [
+          "前半・後半それぞれランダム全4種",
+          "当時の入手方法: 一部店舗限定の店頭販売で購入",
+          "販売期間: 前半: 2026年1月20日〜3月16日 / 後半: 2026年2月17日〜3月16日、なくなり次第終了",
+          "おひとり様、前半・後半各4個、最大8個まで"
+        ]
+      },
+      "category": "figure",
+      "recordType": "group",
+      "distributionType": "retail-sale",
+      "sourceIds": [
+        "cocos-umamusume-special-site",
+        "cocos-umamusume-qa"
+      ],
+      "confidence": "official",
+      "descriptionJa": "一部店舗限定で販売されたオリジナルアクリルスタンドパネル。前半・後半それぞれランダム全4種として案内されています。",
+      "lineupLabelJa": "前半・後半それぞれランダム全4種",
+      "acquisitionMethodJa": "一部店舗限定の店頭販売で購入",
+      "availabilityLabel": "前半: 2026年1月20日〜3月16日 / 後半: 2026年2月17日〜3月16日、なくなり次第終了",
+      "startDate": "2026-01-20",
+      "endCondition": "while-supplies-last",
+      "assetIds": [
+        "cocos-acrylic-panel-main"
+      ],
+      "saleLimitLabelJa": "おひとり様、前半・後半各4個、最大8個まで",
+      "marketplaceSearches": [
+        {
+          "id": "ebay-all-results",
+          "platform": "ebay",
+          "labelJa": "eBayで全体検索",
+          "labelEn": "Search eBay results",
+          "query": "Uma Musume COCOS acrylic stand panel",
+          "queryLabel": "Uma Musume COCOS acrylic stand panel",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+acrylic+stand+panel",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "ebay-single-item",
+          "platform": "ebay",
+          "labelJa": "eBayで単品検索",
+          "labelEn": "Search eBay single items",
+          "query": "Uma Musume COCOS acrylic stand panel single item",
+          "queryLabel": "Uma Musume COCOS acrylic stand panel single item",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+acrylic+stand+panel+single+item",
+          "intent": "single-item",
+          "finderGroup": "single-item",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "amazon-jp-all-results",
+          "platform": "amazon-jp",
+          "labelJa": "Amazon.co.jpで探す",
+          "labelEn": "Search Amazon JP",
+          "query": "ウマ娘 ココス アクリルスタンドパネル",
+          "queryLabel": "ウマ娘 ココス アクリルスタンドパネル",
+          "url": "https://www.amazon.co.jp/s?k=ウマ娘+ココス+アクリルスタンドパネル",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-all-results",
+          "platform": "mercari",
+          "labelJa": "メルカリで全体検索",
+          "labelEn": "Search Mercari JP results",
+          "query": "ウマ娘 ココス アクリルスタンドパネル",
+          "queryLabel": "ウマ娘 ココス アクリルスタンドパネル",
+          "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20アクリルスタンドパネル",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "suruga-ya-all-results",
+          "platform": "suruga-ya",
+          "labelJa": "駿河屋で探す",
+          "labelEn": "Search Suruga-ya",
+          "query": "ウマ娘 ココス アクリルスタンドパネル",
+          "queryLabel": "ウマ娘 ココス アクリルスタンドパネル",
+          "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+アクリルスタンドパネル",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "yahoo-fleamarket-all-results",
+          "platform": "yahoo-fleamarket",
+          "labelJa": "Yahoo!フリマで探す",
+          "labelEn": "Search Yahoo! Fleamarket",
+          "query": "ウマ娘 ココス アクリルスタンドパネル",
+          "queryLabel": "ウマ娘 ココス アクリルスタンドパネル",
+          "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%E3%83%91%E3%83%8D%E3%83%AB",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        }
+      ],
+      "page": {
+        "status": "published",
+        "slug": "acrylic-stand-panels",
+        "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/acrylic-stand-panels/"
+      },
+      "marketplaceFinder": {
+        "status": "published"
+      },
+      "evidenceRefs": [
+        "ev-cocos-acrylic-stand-panels-name",
+        "ev-cocos-acrylic-stand-panels-acquisition",
+        "ev-cocos-acrylic-stand-panels-availability"
+      ],
+      "pageDecision": {
+        "decision": "generate",
+        "priority": "high",
+        "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
+        "slug": "acrylic-stand-panels"
+      }
+    },
+    {
+      "id": "cocos-original-blanket",
+      "campaignId": "cocos-umaimono-fes-202601",
+      "officialNameJa": "オリジナルブランケット",
+      "displayNameEn": "Original blanket",
+      "summaryEn": "COCOS web-lottery prize record for the original blanket, covering receipt-code entry, lottery window, official source, and reference searches.",
+      "productGrid": {
+        "tag": "Web Lottery",
+        "descriptionJa": "オリジナルブランケット。レシートに印字される応募コードを使うWEB抽選景品。",
+        "factsJa": [
+          "WEB抽選景品",
+          "当時の入手方法: 対象メニュー1品=1pt分としてレシートに印字される応募コードを使ってWEB抽選に応募",
+          "レシート印字期間: 2026年1月20日 10:00〜3月17日 5:59 / 応募期間: 2026年1月20日 10:00〜3月23日 23:59",
+          "当選数: 300名"
+        ]
+      },
+      "category": "prize",
+      "recordType": "single",
+      "distributionType": "lottery",
+      "sourceIds": [
+        "cocos-umamusume-special-site",
+        "cocos-umamusume-qa"
+      ],
+      "confidence": "official",
+      "descriptionJa": "対象メニュー1品=1pt分としてレシートに印字される応募コードを使って応募できたWEB抽選景品。公式特設サイトではオリジナルブランケットとして案内されています。",
+      "lineupLabelJa": "WEB抽選景品",
+      "acquisitionMethodJa": "対象メニュー1品=1pt分としてレシートに印字される応募コードを使ってWEB抽選に応募",
+      "availabilityLabel": "レシート印字期間: 2026年1月20日 10:00〜3月17日 5:59 / 応募期間: 2026年1月20日 10:00〜3月23日 23:59",
+      "startDate": "2026-01-20",
+      "endDate": "2026-03-23",
+      "assetIds": [
+        "cocos-blanket-main"
+      ],
+      "marketplaceSearches": [
+        {
+          "id": "ebay-all-results",
+          "platform": "ebay",
+          "labelJa": "eBayで全体検索",
+          "labelEn": "Search eBay results",
+          "query": "Uma Musume COCOS blanket",
+          "queryLabel": "Uma Musume COCOS blanket",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+blanket",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "amazon-jp-all-results",
+          "platform": "amazon-jp",
+          "labelJa": "Amazon.co.jpで探す",
+          "labelEn": "Search Amazon JP",
+          "query": "ウマ娘 ココス ブランケット",
+          "queryLabel": "ウマ娘 ココス ブランケット",
+          "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B3%E3%82%B3%E3%82%B9+%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B1%E3%83%83%E3%83%88",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-all-results",
+          "platform": "mercari",
+          "labelJa": "メルカリで全体検索",
+          "labelEn": "Search Mercari JP results",
+          "query": "ウマ娘 ココス ブランケット",
+          "queryLabel": "ウマ娘 ココス ブランケット",
+          "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20ブランケット",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-single-item",
+          "platform": "mercari",
+          "labelJa": "メルカリで単品検索",
+          "labelEn": "Search Mercari JP single items",
+          "query": "ウマ娘 ココス オリジナルブランケット",
+          "queryLabel": "ウマ娘 ココス オリジナルブランケット",
+          "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B1%E3%83%83%E3%83%88",
+          "intent": "single-item",
+          "finderGroup": "single-item",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "suruga-ya-all-results",
+          "platform": "suruga-ya",
+          "labelJa": "駿河屋で探す",
+          "labelEn": "Search Suruga-ya",
+          "query": "ウマ娘 ココス ブランケット",
+          "queryLabel": "ウマ娘 ココス ブランケット",
+          "url": "https://www.suruga-ya.jp/search?search_word=ウマ娘+ココス+ブランケット",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "yahoo-fleamarket-all-results",
+          "platform": "yahoo-fleamarket",
+          "labelJa": "Yahoo!フリマで探す",
+          "labelEn": "Search Yahoo! Fleamarket",
+          "query": "ウマ娘 ココス ブランケット",
+          "queryLabel": "ウマ娘 ココス ブランケット",
+          "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B1%E3%83%83%E3%83%88",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        }
+      ],
+      "page": {
+        "status": "published",
+        "slug": "original-blanket",
+        "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/original-blanket/"
+      },
+      "marketplaceFinder": {
+        "status": "published"
+      },
+      "evidenceRefs": [
+        "ev-cocos-original-blanket-name",
+        "ev-cocos-original-blanket-acquisition",
+        "ev-cocos-original-blanket-availability"
+      ],
+      "pageDecision": {
+        "decision": "generate",
+        "priority": "high",
+        "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
+        "slug": "original-blanket"
+      }
+    },
+    {
+      "id": "cocos-b2-posters",
+      "campaignId": "cocos-umaimono-fes-202601",
+      "officialNameJa": "コラボ限定B2ポスター",
+      "displayNameEn": "Collaboration-exclusive B2 posters",
+      "summaryEn": "COCOS official-X follow-and-repost lottery prize group covering four campaign periods, one winner per period, official source, and reference searches.",
+      "productGrid": {
+        "tag": "Campaign Prize",
+        "descriptionJa": "コラボ限定B2ポスター。ココス公式Xのフォロー＆リポストキャンペーンで、各期間1名に抽選配布された景品。",
+        "factsJa": [
+          "第1弾〜第4弾の各期間 / 各1名",
+          "当時の入手方法: ココス公式Xをフォローし、対象投稿をリポスト",
+          "応募期間: 第1弾〜第4弾の各フォロー＆リポスト期間、最終第4弾は2026年3月9日まで"
+        ]
+      },
+      "category": "prize",
+      "recordType": "group",
+      "distributionType": "lottery",
+      "sourceIds": [
+        "cocos-umamusume-special-site"
+      ],
+      "confidence": "official",
+      "descriptionJa": "ココス公式Xのフォロー＆リポストキャンペーン景品。第1弾〜第4弾の各期間で、コラボ限定B2ポスターが抽選1名に案内されています。",
+      "lineupLabelJa": "第1弾〜第4弾の各期間 / 各1名",
+      "acquisitionMethodJa": "ココス公式Xをフォローし、対象投稿をリポスト",
+      "availabilityLabel": "第1弾〜第4弾の各フォロー＆リポスト期間、最終第4弾は2026年3月9日まで",
+      "startDate": "2026-01-20",
+      "endDate": "2026-03-09",
+      "assetIds": [
+        "cocos-b2-poster-main"
+      ],
+      "marketplaceSearches": [
+        {
+          "id": "ebay-all-results",
+          "platform": "ebay",
+          "labelJa": "eBayで全体検索",
+          "labelEn": "Search eBay results",
+          "query": "Uma Musume COCOS B2 poster",
+          "queryLabel": "Uma Musume COCOS B2 poster",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+COCOS+B2+poster",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "amazon-jp-all-results",
+          "platform": "amazon-jp",
+          "labelJa": "Amazon.co.jpで探す",
+          "labelEn": "Search Amazon JP",
+          "query": "ウマ娘 ココス B2ポスター",
+          "queryLabel": "ウマ娘 ココス B2ポスター",
+          "url": "https://www.amazon.co.jp/s?k=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B3%E3%82%B3%E3%82%B9+B2%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-all-results",
+          "platform": "mercari",
+          "labelJa": "メルカリで全体検索",
+          "labelEn": "Search Mercari JP results",
+          "query": "ウマ娘 ココス B2ポスター",
+          "queryLabel": "ウマ娘 ココス B2ポスター",
+          "url": "https://jp.mercari.com/search?keyword=ウマ娘%20ココス%20B2ポスター",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "mercari-single-item",
+          "platform": "mercari",
+          "labelJa": "メルカリで単品検索",
+          "labelEn": "Search Mercari JP single items",
+          "query": "ウマ娘 ココス B2ポスター 当選",
+          "queryLabel": "ウマ娘 ココス B2ポスター 当選",
+          "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20B2%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC%20%E5%BD%93%E9%81%B8",
+          "intent": "single-item",
+          "finderGroup": "single-item",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "suruga-ya-all-results",
+          "platform": "suruga-ya",
+          "labelJa": "駿河屋で探す",
+          "labelEn": "Search Suruga-ya",
+          "query": "ウマ娘 ココス B2ポスター",
+          "queryLabel": "ウマ娘 ココス B2ポスター",
+          "url": "https://www.suruga-ya.jp/search?search_word=%E3%82%A6%E3%83%9E%E5%A8%98+%E3%82%B3%E3%82%B3%E3%82%B9+B2%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        },
+        {
+          "id": "yahoo-fleamarket-all-results",
+          "platform": "yahoo-fleamarket",
+          "labelJa": "Yahoo!フリマで探す",
+          "labelEn": "Search Yahoo! Fleamarket",
+          "query": "ウマ娘 ココス B2ポスター",
+          "queryLabel": "ウマ娘 ココス B2ポスター",
+          "url": "https://paypayfleamarket.yahoo.co.jp/search/%E3%82%A6%E3%83%9E%E5%A8%98%20%E3%82%B3%E3%82%B3%E3%82%B9%20B2%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC",
+          "intent": "all-results",
+          "finderGroup": "jp-marketplaces",
+          "region": "jp",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        }
+      ],
+      "page": {
+        "status": "published",
+        "slug": "b2-posters",
+        "path": "works/umamusume/collabs/cocos-umaimono-fes-202601/items/b2-posters/"
+      },
+      "marketplaceFinder": {
+        "status": "published"
+      },
+      "evidenceRefs": [
+        "ev-cocos-b2-posters-name",
+        "ev-cocos-b2-posters-acquisition",
+        "ev-cocos-b2-posters-availability"
+      ],
+      "pageDecision": {
+        "decision": "generate",
+        "priority": "high",
+        "reason": "Golden replay item already has a published COCOS item page and enough source-backed acquisition/search value to test generated output.",
+        "slug": "b2-posters"
+      }
+    }
+  ],
+  "pageGenerationPolicy": {
+    "campaignPage": {
+      "generate": true,
+      "route": "works/umamusume/collabs/cocos-umaimono-fes-202601/"
+    },
+    "itemPages": {
+      "generateForDecisions": [
+        "generate"
+      ],
+      "deferParentCardOnly": true,
+      "doNotGenerateVariantPages": true
+    },
+    "sitemap": {
+      "includeGeneratedPages": true
+    },
+    "seo": {
+      "avoidThinPages": true,
+      "requireUniqueSummaryEn": true,
+      "requireEvidenceForFacts": true
+    }
+  },
+  "marketplacePolicy": {
+    "officialSourcesSeparate": true,
+    "noLiveAvailabilityClaims": true,
+    "noPriceOrAuthenticityClaims": true,
+    "affiliateEnabled": false
+  },
+  "unresolvedQuestions": [
+    {
+      "id": "uq-golden-replay-source-granularity",
+      "question": "This golden package replays existing verified COCOS data; a fresh GPT research package should provide finer source locators and short source quotes where possible.",
+      "impact": "low",
+      "publishBlocking": false
+    }
+  ],
+  "humanReviewChecklist": [
+    "Campaign title, period, and partner names match the current COCOS page.",
+    "All five COCOS items are marked generate because the current site already publishes those item pages.",
+    "Marketplace searches remain reference-only and non-affiliate.",
+    "Evidence records point only to official COCOS sources.",
+    "The package can be used as a golden replay fixture before new GPT research is attempted."
+  ]
+}

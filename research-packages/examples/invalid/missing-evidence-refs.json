@@ -1,0 +1,136 @@
+{
+  "packageVersion": "0.1",
+  "packageId": "invalid-missing-evidence-refs",
+  "createdAt": "2026-06-30",
+  "createdBy": "codex-validator-fixture",
+  "status": "research-ready-for-codex",
+  "language": {
+    "official": "ja",
+    "summary": "en"
+  },
+  "work": {
+    "id": "test-work",
+    "officialNameJa": "Test Work",
+    "displayNameEn": "Test Work",
+    "slug": "test-work"
+  },
+  "campaign": {
+    "id": "test-campaign-202601",
+    "workId": "test-work",
+    "officialTitleJa": "Test Campaign",
+    "displayTitleEn": "Test campaign",
+    "slug": "test-campaign-202601",
+    "periodLabel": "2026 Jan",
+    "checkedAt": "2026-06-30",
+    "partnerNames": ["Test Partner"],
+    "categories": ["goods"],
+    "summaryEn": "Small invalid fixture used to prove missing item evidence references fail validation.",
+    "sourceIds": ["test-official-source"],
+    "itemIds": ["test-item"],
+    "evidenceRefs": ["ev-campaign-title"]
+  },
+  "sources": [
+    {
+      "id": "test-official-source",
+      "type": "official",
+      "url": "https://example.com/test",
+      "label": "Test official source",
+      "checkedAt": "2026-06-30",
+      "scope": "Test fixture source.",
+      "language": "ja"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-campaign-title",
+      "sourceId": "test-official-source",
+      "factType": "campaign-title",
+      "claimEn": "Test campaign title.",
+      "sourceLocator": {
+        "sectionLabel": "Title",
+        "note": "Fixture evidence."
+      },
+      "confidence": "official",
+      "reviewRequired": false
+    }
+  ],
+  "assets": [
+    {
+      "id": "test-asset",
+      "role": "product",
+      "sourceId": "test-official-source",
+      "localPath": "assets/images/test-work/test-asset.jpg",
+      "altJa": "Test asset",
+      "usage": "archive-product-image",
+      "downloadPolicy": "fixture-only",
+      "rightsNote": "Fixture asset only."
+    }
+  ],
+  "items": [
+    {
+      "id": "test-item",
+      "campaignId": "test-campaign-202601",
+      "officialNameJa": "Test Item",
+      "displayNameEn": "Test item",
+      "summaryEn": "This generated item is otherwise valid, but intentionally omits evidenceRefs.",
+      "category": "goods",
+      "recordType": "single",
+      "distributionType": "retail-sale",
+      "sourceIds": ["test-official-source"],
+      "assetIds": ["test-asset"],
+      "descriptionJa": "Test item description.",
+      "acquisitionMethodJa": "Test acquisition method.",
+      "pageDecision": {
+        "decision": "generate",
+        "priority": "high",
+        "reason": "Fixture item used to prove missing evidenceRefs fails.",
+        "slug": "test-item"
+      },
+      "marketplaceSearches": [
+        {
+          "id": "ebay-all-results",
+          "platform": "ebay",
+          "labelJa": "Search eBay",
+          "labelEn": "Search eBay",
+          "query": "Test item",
+          "url": "https://www.ebay.com/sch/i.html?_nkw=Test+item",
+          "intent": "all-results",
+          "finderGroup": "overview",
+          "region": "global",
+          "isAffiliate": false,
+          "rel": "nofollow noopener noreferrer",
+          "disclosureRequired": false
+        }
+      ]
+    }
+  ],
+  "pageGenerationPolicy": {
+    "campaignPage": {
+      "generate": true,
+      "route": "works/test-work/collabs/test-campaign-202601/"
+    },
+    "itemPages": {
+      "generateForDecisions": ["generate"],
+      "deferParentCardOnly": true,
+      "doNotGenerateVariantPages": true
+    },
+    "sitemap": {
+      "includeGeneratedPages": true
+    },
+    "seo": {
+      "avoidThinPages": true,
+      "requireUniqueSummaryEn": true,
+      "requireEvidenceForFacts": true
+    }
+  },
+  "marketplacePolicy": {
+    "officialSourcesSeparate": true,
+    "noLiveAvailabilityClaims": true,
+    "noPriceOrAuthenticityClaims": true,
+    "affiliateEnabled": false
+  },
+  "unresolvedQuestions": [],
+  "humanReviewChecklist": [
+    "This fixture must fail validation because item evidenceRefs is missing."
+  ]
+}

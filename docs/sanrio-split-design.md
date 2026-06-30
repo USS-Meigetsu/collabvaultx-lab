@@ -211,16 +211,54 @@ Completed in the high-value item-page batch 2:
   character-specific queries are source-reviewed.
 - Related-item navigation now covers the seven published Sanrio item pages.
 
+## Mid-Completion QA
+
+The seven published Sanrio item pages are enough to prove the major item-page
+patterns without forcing every remaining product into a route:
+
+- Purchase bonus: `sanrio-original-postcards`
+- Random/trading goods: `sanrio-trading-hologram-can-badge`,
+  `sanrio-trading-acrylic-card`, and
+  `sanrio-trading-parts-acrylic-keyholder`
+- Acrylic stand goods: `sanrio-acrylic-stand` and
+  `sanrio-big-acrylic-stand`
+- Venue-advance route caveat: `sanrio-plush-mascot`
+
+QA decision:
+
+- Keep the seven published pages as the current Sanrio item-page set.
+- Do not add character-level item records.
+- Do not add affiliate links or live marketplace listings.
+- Keep remaining routes unpublished until their page value is higher than the
+  parent-card maintenance cost.
+- Watch related navigation length. Seven entries are still acceptable; if the
+  Sanrio set grows beyond ten published item pages, revisit compact related-nav
+  rendering before expanding further.
+
+## Remaining Item Decision Table
+
+| Item id | Decision | Finder value | Reason / risk |
+| --- | --- | --- | --- |
+| `sanrio-die-cut-smartphone-sticker` | Keep parent-card only for now | Low to medium | Six variants, but the parent card already carries the main fact. Page value is lower than trading or display goods unless marketplace demand appears. |
+| `sanrio-clear-file` | Publish in next focused batch | Medium | Clear-file is a stable archive category and a common marketplace term. A page is useful without adding new model complexity. |
+| `sanrio-premium-card-holder` | Keep parent-card only | Low | Single design and ordinary retail route. Parent-card treatment is enough until marketplace behavior proves otherwise. |
+| `sanrio-trading-name-acrylic-plate-badge` | Publish in next focused batch | High | Random/trading item with a long official name. A page can preserve official wording, complete-set search terms, and source-backed naming. |
+| `sanrio-mug` | Keep parent-card only | Low | Single design, ordinary retail route, and no special acquisition rule. |
+| `sanrio-face-towel` | Keep parent-card only | Low | Single design, ordinary retail route, and low page-specific complexity. |
+| `sanrio-acrylic-art-board` | Defer | Medium | Display acrylic item, but single design. Revisit if acrylic display goods become a dedicated page group. |
+| `sanrio-canvas-board` | Publish in next focused batch | Medium | Six variants and display-item search behavior make a focused route useful, but it can stay grouped as one item page. |
+| `sanrio-t-shirt` | Defer | Medium | Six designs plus L/XL size variants. Useful later if apparel-size variant handling needs a tested page pattern. |
+
 ## Recommended Next Implementation
 
-1. Review the seven-page Sanrio pilot set before adding lower-priority Sanrio
-   item pages.
-2. Keep all remaining Sanrio item pages unpublished or absent during this review
-   pass.
-3. Do not mark any additional `marketplaceFinder.status` as `published` until
-   the matching item page actually renders the Finder UI.
-4. If the seven-page pilot set is accepted, run a short Sanrio mid-completion
-   QA before deciding whether to publish the remaining parent-card-first items.
+1. Pause further hand-made Sanrio item-page expansion.
+2. Keep the seven published Sanrio pages as a large-product-set reference while
+   the Research Package pipeline is defined.
+3. Do not mark any additional `marketplaceFinder.status` as `published` until a
+   validated package and generator decide that the matching item page should be
+   generated.
+4. Revisit the remaining Sanrio items after the package workflow can express
+   `generate`, `parent-card-only`, `defer`, and `never` decisions cleanly.
 
-This keeps Sanrio useful as the first large product-set test without forcing the
-site into premature full page generation.
+This keeps Sanrio useful as a product-set test without letting it pull the site
+back into premature manual page generation.
