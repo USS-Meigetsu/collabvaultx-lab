@@ -3,6 +3,18 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { readCollection, rootDir } from "./lib/data-readers.mjs";
+import {
+  decodeEntities,
+  escapeAttribute,
+  escapeRegExp,
+  escapeText,
+  getAttribute,
+  getOpeningTags,
+  normalizeHtml,
+  sectionIndent,
+} from "./lib/html-utils.mjs";
+import { pagePathToHtmlPath, publicUrlForPath, relativeUrl } from "./lib/path-utils.mjs";
 import {
   extractMarketplaceFinderSection,
   normalizeMarketplaceFinderHtml,
@@ -15,11 +27,6 @@ import {
   renderRelatedItems,
   validateRelatedItemsStructure,
 } from "./render-related-items.mjs";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const rootDir = process.env.COLLABVAULTX_ROOT_DIR
-  ? path.resolve(process.env.COLLABVAULTX_ROOT_DIR)
-  : path.resolve(__dirname, "..");
 
 export const SUPPORTED_ITEM_SHELL_CAMPAIGN_IDS = [
   "round1-collab-campaign-202510",
@@ -34,81 +41,6 @@ const CAMPAIGN_NAV_LABEL_BY_ID = new Map([
   ["cocos-umaimono-fes-202601", "COCOS"],
 ]);
 
-function readText(relativePath) {
-  return fs.readFileSync(path.join(rootDir, relativePath), "utf8").replace(/^\uFEFF/, "");
-}
-
-function readJson(relativePath) {
-  return JSON.parse(readText(relativePath));
-}
-
-function readCollection(relativeDir) {
-  const fullDir = path.join(rootDir, "data", relativeDir);
-  return fs
-    .readdirSync(fullDir)
-    .filter((name) => name.endsWith(".json"))
-    .sort()
-    .flatMap((name) => {
-      const parsed = readJson(path.posix.join("data", relativeDir, name));
-      return Array.isArray(parsed) ? parsed : [parsed];
-    });
-}
-
-function pagePathToHtmlPath(pagePath) {
-  return pagePath.endsWith("/") ? `${pagePath}index.html` : pagePath;
-}
-
-function relativeUrl(fromHtmlPath, targetRepoPath) {
-  const fromDir = path.posix.dirname(fromHtmlPath.replace(/\\/g, "/"));
-  const target = targetRepoPath.replace(/\\/g, "/");
-  const relative = path.posix.relative(fromDir, target);
-  return relative.startsWith(".") ? relative : `./${relative}`;
-}
-
-function publicUrlForPath(pagePath) {
-  const host = fs.existsSync(path.join(rootDir, "CNAME")) ? readText("CNAME").trim() : "";
-  const normalized = pagePath.replace(/^\/+/, "");
-  return host ? `https://${host}/${normalized}` : `/${normalized}`;
-}
-
-function escapeText(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
-
-function escapeAttribute(value) {
-  return escapeText(value).replace(/"/g, "&quot;");
-}
-
-function escapeRegExp(value) {
-  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-function decodeEntities(value) {
-  return String(value ?? "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
-}
-
-function normalizeHtml(html) {
-  return String(html ?? "")
-    .replace(/\r\n/g, "\n")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .join("\n");
-}
-
-function getAttribute(openingTag, name) {
-  const pattern = new RegExp(`${name}=(["'])(.*?)\\1`);
-  return openingTag.match(pattern)?.[2] ?? "";
-}
-
 function setAttribute(openingTag, name, value) {
   const escaped = escapeAttribute(value);
   const pattern = new RegExp(`\\b${name}=(["'])(.*?)\\1`);
@@ -117,10 +49,6 @@ function setAttribute(openingTag, name, value) {
   }
 
   return openingTag.replace(/\s*\/?>$/, (ending) => ` ${name}="${escaped}"${ending}`);
-}
-
-function getOpeningTags(html, tagName) {
-  return [...html.matchAll(new RegExp(`<${tagName}\\b[^>]*>`, "g"))].map((match) => match[0]);
 }
 
 function getCanonicalUrl(html) {
@@ -236,11 +164,6 @@ function validateMetadata(html, metadata, label, errors) {
   assertEqual(errors, `${label} twitter:description`, getNamedMetaContent(html, "twitter:description"), metadata.twitterDescription);
   assertEqual(errors, `${label} twitter:image`, getNamedMetaContent(html, "twitter:image"), metadata.twitterImage);
   assertEqual(errors, `${label} twitter:card`, getNamedMetaContent(html, "twitter:card"), metadata.twitterCard);
-}
-
-function sectionIndent(html, sectionStart) {
-  const lineStart = html.lastIndexOf("\n", sectionStart) + 1;
-  return html.slice(lineStart, sectionStart).match(/^\s*/)?.[0] ?? "          ";
 }
 
 function extractBlock(html, startPattern, endTag, label) {

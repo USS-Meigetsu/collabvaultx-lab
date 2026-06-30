@@ -3,78 +3,19 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { readCollection, rootDir } from "./lib/data-readers.mjs";
+import {
+  decodeEntities,
+  escapeAttribute,
+  escapeText,
+  getAttribute,
+  normalizeHtml,
+  sectionIndent,
+  textContent,
+} from "./lib/html-utils.mjs";
+import { pagePathToHtmlPath, relativeUrl } from "./lib/path-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const rootDir = process.env.COLLABVAULTX_ROOT_DIR
-  ? path.resolve(process.env.COLLABVAULTX_ROOT_DIR)
-  : path.resolve(__dirname, "..");
-
-function readText(relativePath) {
-  return fs.readFileSync(path.join(rootDir, relativePath), "utf8").replace(/^\uFEFF/, "");
-}
-
-function readJson(relativePath) {
-  return JSON.parse(readText(relativePath));
-}
-
-function readCollection(relativeDir) {
-  const fullDir = path.join(rootDir, "data", relativeDir);
-  return fs
-    .readdirSync(fullDir)
-    .filter((name) => name.endsWith(".json"))
-    .sort()
-    .flatMap((name) => {
-      const parsed = readJson(path.posix.join("data", relativeDir, name));
-      return Array.isArray(parsed) ? parsed : [parsed];
-    });
-}
-
-export function pagePathToHtmlPath(pagePath) {
-  return pagePath.endsWith("/") ? `${pagePath}index.html` : pagePath;
-}
-
-export function relativeUrl(fromHtmlPath, targetRepoPath) {
-  const fromDir = path.posix.dirname(fromHtmlPath.replace(/\\/g, "/"));
-  const target = targetRepoPath.replace(/\\/g, "/");
-  const relative = path.posix.relative(fromDir, target);
-  return relative.startsWith(".") ? relative : `./${relative}`;
-}
-
-function escapeText(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
-
-function escapeAttribute(value) {
-  return escapeText(value).replace(/"/g, "&quot;");
-}
-
-function decodeEntities(value) {
-  return String(value ?? "")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
-}
-
-function textContent(html) {
-  return decodeEntities(String(html ?? "").replace(/<[^>]+>/g, " "))
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function getAttribute(openingTag, name) {
-  const pattern = new RegExp(`${name}=(["'])(.*?)\\1`);
-  return openingTag.match(pattern)?.[2] ?? "";
-}
-
-function sectionIndent(html, sectionStart) {
-  const lineStart = html.lastIndexOf("\n", sectionStart) + 1;
-  return html.slice(lineStart, sectionStart).match(/^\s*/)?.[0] ?? "            ";
-}
 
 function campaignRelatedLabel(campaign) {
   const englishLead = String(campaign.displayTitleEn ?? "").match(/^([A-Za-z0-9@&.+-]+)/)?.[1];
@@ -141,12 +82,7 @@ export function extractRelatedItemsSection(html) {
 }
 
 export function normalizeRelatedItemsHtml(html) {
-  return String(html ?? "")
-    .replace(/\r\n/g, "\n")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .join("\n");
+  return normalizeHtml(html);
 }
 
 function extractListItems(sectionHtml) {

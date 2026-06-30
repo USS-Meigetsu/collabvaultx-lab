@@ -12,6 +12,9 @@ Before committing, run:
 
 ```powershell
 node --check assets/js/site.js
+node --check scripts/lib/data-readers.mjs
+node --check scripts/lib/path-utils.mjs
+node --check scripts/lib/html-utils.mjs
 node --check scripts/check-data.mjs
 node --check scripts/check-data-html-sync.mjs
 node --check scripts/render-marketplace-finder.mjs

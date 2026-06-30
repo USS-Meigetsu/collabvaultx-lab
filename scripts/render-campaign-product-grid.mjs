@@ -3,11 +3,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { readCollection, rootDir } from "./lib/data-readers.mjs";
+import { escapeAltAttribute, escapeAttribute, escapeText, normalizeHtml } from "./lib/html-utils.mjs";
+import { pagePathToHtmlPath, relativeUrl } from "./lib/path-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const rootDir = process.env.COLLABVAULTX_ROOT_DIR
-  ? path.resolve(process.env.COLLABVAULTX_ROOT_DIR)
-  : path.resolve(__dirname, "..");
 
 export const SUPPORTED_CAMPAIGN_IDS = [
   "round1-collab-campaign-202510",
@@ -26,55 +26,6 @@ const MARKET_LINK_LABEL_BY_PLATFORM = new Map([
   ["mercari", "メルカリ"],
   ["suruga-ya", "駿河屋"],
 ]);
-
-function readText(relativePath) {
-  return fs.readFileSync(path.join(rootDir, relativePath), "utf8").replace(/^\uFEFF/, "");
-}
-
-function readJson(relativePath) {
-  return JSON.parse(readText(relativePath));
-}
-
-function readCollection(relativeDir) {
-  const fullDir = path.join(rootDir, "data", relativeDir);
-  return fs
-    .readdirSync(fullDir)
-    .filter((name) => name.endsWith(".json"))
-    .sort()
-    .flatMap((name) => {
-      const parsed = readJson(path.posix.join("data", relativeDir, name));
-      return Array.isArray(parsed) ? parsed : [parsed];
-    });
-}
-
-function escapeText(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
-
-function escapeAttribute(value) {
-  return escapeText(value).replace(/"/g, "&quot;");
-}
-
-function escapeAltAttribute(value) {
-  return String(value ?? "")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-function pagePathToHtmlPath(pagePath) {
-  return pagePath.endsWith("/") ? `${pagePath}index.html` : pagePath;
-}
-
-function relativeUrl(fromHtmlPath, targetRepoPath) {
-  const fromDir = path.posix.dirname(fromHtmlPath.replace(/\\/g, "/"));
-  const target = targetRepoPath.replace(/\\/g, "/");
-  const relative = path.posix.relative(fromDir, target);
-  return relative.startsWith(".") ? relative : `./${relative}`;
-}
 
 function unique(values) {
   const seen = new Set();
@@ -241,12 +192,7 @@ export function extractCampaignProductGridSection(html) {
 }
 
 export function normalizeCampaignProductGridHtml(html) {
-  return String(html ?? "")
-    .replace(/\r\n/g, "\n")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .join("\n");
+  return normalizeHtml(html);
 }
 
 function parseArgs(argv) {

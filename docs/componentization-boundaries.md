@@ -14,7 +14,8 @@ content model is more stable.
   expectations, metadata validation, marketplace link validation, item-page sync
   checks, the Marketplace Finder renderer/checker, the related item navigation
   renderer/checker, supported campaign product-grid renderer/checker, and the
-  supported item-page shell renderer/checker.
+  supported item-page shell renderer/checker. Renderer scripts share small
+  data, path, and HTML utility modules under `scripts/lib/`.
 - Hand-written now: item page HTML, campaign page HTML, official-source notes,
   item descriptions, overview cards, and page-specific reference/source blocks.
 - Best next step: keep generated-block checks small and targeted before
@@ -71,6 +72,19 @@ Keep the policy shared.
 - Future affiliate links use `sponsored noopener noreferrer`.
 - Affiliate links require visible disclosure.
 - Official source links never count as marketplace links.
+
+### Renderer Utility Modules
+
+Keep renderer helper logic small and shared.
+
+- `scripts/lib/data-readers.mjs`: repository root, text/JSON reads, and data
+  collection loading.
+- `scripts/lib/path-utils.mjs`: page path, relative URL, and public URL helpers.
+- `scripts/lib/html-utils.mjs`: escaping, attribute reads, entity decoding, and
+  normalized HTML comparison helpers.
+
+Do not grow this into a framework. Add helpers only when multiple renderer or
+checker scripts genuinely need the same behavior.
 
 ### Related Item Navigation
 
@@ -316,8 +330,11 @@ or smooth over them.
 10. Done: review the expanded ROUND1 item-page set for scaffold patterns that
    are stable enough to generate next.
 11. Done: add item-page scaffold v0 for ROUND1 stable shell fragments.
-12. Current: extend item-page shell renderer/checker to Lawson and COCOS.
-13. Revisit campaign-grid generation beyond the current supported set.
+12. Done: extend item-page shell renderer/checker to Lawson and COCOS.
+13. Done: add shared renderer utility modules for data, path, and HTML helpers.
+14. Current: add the remaining ROUND1 item pages using the stabilized renderer
+   checks.
+15. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.

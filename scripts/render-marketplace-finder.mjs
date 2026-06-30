@@ -3,11 +3,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { readCollection, rootDir } from "./lib/data-readers.mjs";
+import { escapeAttribute, escapeText, normalizeHtml, sectionIndent } from "./lib/html-utils.mjs";
+import { pagePathToHtmlPath } from "./lib/path-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const rootDir = process.env.COLLABVAULTX_ROOT_DIR
-  ? path.resolve(process.env.COLLABVAULTX_ROOT_DIR)
-  : path.resolve(__dirname, "..");
 
 export const MARKETPLACE_FINDER_GROUPS = [
   { id: "overview", titleJa: "まず全体を探す" },
@@ -24,51 +24,11 @@ export const ALLOWED_MARKETPLACE_FINDER_GROUPS = new Set(
 
 const GROUP_TITLE_BY_ID = new Map(MARKETPLACE_FINDER_GROUPS.map((group) => [group.id, group.titleJa]));
 
-function readText(relativePath) {
-  return fs.readFileSync(path.join(rootDir, relativePath), "utf8").replace(/^\uFEFF/, "");
-}
-
-function readJson(relativePath) {
-  return JSON.parse(readText(relativePath));
-}
-
-function readCollection(relativeDir) {
-  const fullDir = path.join(rootDir, "data", relativeDir);
-  return fs
-    .readdirSync(fullDir)
-    .filter((name) => name.endsWith(".json"))
-    .sort()
-    .flatMap((name) => {
-      const parsed = readJson(path.posix.join("data", relativeDir, name));
-      return Array.isArray(parsed) ? parsed : [parsed];
-    });
-}
-
-function pagePathToHtmlPath(pagePath) {
-  return pagePath.endsWith("/") ? `${pagePath}index.html` : pagePath;
-}
-
-function escapeText(value) {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
-
-function escapeAttribute(value) {
-  return escapeText(value).replace(/"/g, "&quot;");
-}
-
 function regionLabel(region) {
   if (region === "global") return "Global";
   if (region === "jp") return "JP";
   if (region === "us") return "US";
   return region ? String(region).toUpperCase() : "Reference";
-}
-
-function sectionIndent(html, sectionStart) {
-  const lineStart = html.lastIndexOf("\n", sectionStart) + 1;
-  return html.slice(lineStart, sectionStart).match(/^\s*/)?.[0] ?? "            ";
 }
 
 export function marketplaceFinderGroupKeys(searches = []) {
@@ -182,12 +142,7 @@ export function extractMarketplaceFinderSection(html) {
 }
 
 export function normalizeMarketplaceFinderHtml(html) {
-  return String(html ?? "")
-    .replace(/\r\n/g, "\n")
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .join("\n");
+  return normalizeHtml(html);
 }
 
 function validateGroups(item, actualHtml, errors, label) {
