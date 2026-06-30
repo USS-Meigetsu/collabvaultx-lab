@@ -292,6 +292,8 @@ Published `MarketplaceSearch` records require:
 - `query`
 - `url`
 - `intent`
+- `finderGroup`, when the parent `Item` has
+  `marketplaceFinder.status="published"`
 - `isAffiliate`
 - `rel`
 - `disclosureRequired`

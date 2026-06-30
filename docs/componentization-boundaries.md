@@ -12,11 +12,12 @@ content model is more stable.
 
 - Shared now: global CSS, visual component classes, JSON data records, sitemap
   expectations, metadata validation, marketplace link validation, item-page sync
-  checks, and the Marketplace Finder renderer/checker.
+  checks, the Marketplace Finder renderer/checker, and the related item
+  navigation renderer/checker.
 - Hand-written now: item page HTML, campaign page HTML, official-source notes,
   item descriptions, overview cards, and page-specific reference/source blocks.
-- Best next step: use the Marketplace Finder renderer/checker as the first
-  generated-block boundary before attempting broader page generation.
+- Best next step: keep generated-block checks small and targeted before
+  attempting broader page generation.
 
 ## Commonize Now
 
@@ -75,15 +76,27 @@ Keep the policy shared.
 Commonize after Marketplace Finder.
 
 - Source: published items in the same campaign.
-- Output: the related item navigation list.
+- Output: the `section[aria-labelledby="related-items-heading"]` block.
 - Shared behavior:
   - current page uses `aria-current="page"`
   - sibling pages link by relative URL
   - order follows `Campaign.itemIds`
+  - same-campaign published items appear exactly once
+  - cross-campaign items are rejected
 
 Keep item-specific:
 
 - display labels still come from the official item names in JSON.
+
+Current workflow:
+
+```text
+node scripts/render-related-items.mjs --check
+```
+
+The checker compares each published item page's related navigation with the
+canonical renderer output. `--write` may update only that block, and the diff
+must be reviewed before commit.
 
 ### Parent Campaign Item Card Links
 
@@ -253,10 +266,11 @@ or smooth over them.
 ## Practical Roadmap
 
 1. Done: finish Marketplace Finder rollout for Lawson/COCOS.
-2. Current: keep the focused Marketplace Finder renderer/checker in sync with
+2. Done: keep the focused Marketplace Finder renderer/checker in sync with
    Finder-enabled item pages.
-3. Next: add related item navigation generation or stricter verification.
-4. Add ROUND1 data/item pilot to test another campaign type.
+3. Current: keep related item navigation renderer/checker in sync with
+   published item pages.
+4. Next: add ROUND1 data/item pilot to test another campaign type.
 5. Revisit item-page scaffold generation.
 6. Revisit campaign-grid generation.
 

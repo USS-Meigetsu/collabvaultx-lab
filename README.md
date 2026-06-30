@@ -15,9 +15,11 @@ node --check assets/js/site.js
 node --check scripts/check-data.mjs
 node --check scripts/check-data-html-sync.mjs
 node --check scripts/render-marketplace-finder.mjs
+node --check scripts/render-related-items.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
 node scripts/render-marketplace-finder.mjs --check
+node scripts/render-related-items.mjs --check
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
@@ -55,6 +57,8 @@ Published-card and item-page sync checks live in
 `scripts/check-data-html-sync.mjs`.
 Marketplace Finder blocks are rendered/verified by
 `scripts/render-marketplace-finder.mjs`.
+Related item navigation blocks are rendered/verified by
+`scripts/render-related-items.mjs`.
 Marketplace and affiliate link handling is documented in
 `docs/affiliate-link-policy.md`.
 

@@ -8,6 +8,13 @@ import {
   normalizeMarketplaceFinderHtml,
   renderMarketplaceFinder,
 } from "./render-marketplace-finder.mjs";
+import {
+  extractRelatedItemsSection,
+  normalizeRelatedItemsHtml,
+  relatedItemsForCampaign,
+  renderRelatedItems,
+  validateRelatedItemsStructure,
+} from "./render-related-items.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = process.env.COLLABVAULTX_ROOT_DIR
@@ -262,33 +269,29 @@ function validateMarketplaceFinder(item, itemHtml, label) {
   validateMarketplaceAnchors(finder, item.marketplaceSearches, `${label}: Marketplace Finder`);
 }
 
-function validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageText, publishedItems, label) {
-  const relatedBlock = extractSectionByAriaLabelledby(itemHtml, "related-items-heading");
-  if (!relatedBlock || !relatedBlock.includes('id="related-items-heading"')) {
+function validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, campaign, publishedItems, label) {
+  const section = extractRelatedItemsSection(itemHtml);
+  const relatedBlock = section?.html ?? "";
+  if (!section || !relatedBlock.includes('id="related-items-heading"')) {
     fail(`${label}: related item navigation is missing related-items-heading`);
     return;
   }
-  const relatedBlockText = textContent(relatedBlock);
 
-  for (const relatedItem of publishedItems.filter((candidate) => candidate.campaignId === item.campaignId)) {
-    if (relatedItem.id === item.id) {
-      const currentMarkupMatches = [
-        ...relatedBlock.matchAll(/<([a-z][\w:-]*)\b(?=[^>]*\baria-current=(["'])page\2)[^>]*>([\s\S]*?)<\/\1>/gi),
-      ];
-      const currentItemIsMarked = currentMarkupMatches.some((match) =>
-        textContent(match[3]).includes(relatedItem.officialNameJa),
-      );
-      if (!currentItemIsMarked || !relatedBlockText.includes(relatedItem.officialNameJa)) {
-        fail(`${label}: related navigation must mark current item "${relatedItem.officialNameJa}" with aria-current="page"`);
-      }
-      continue;
-    }
+  const relatedItems = relatedItemsForCampaign(campaign, publishedItems);
+  const renderedRelatedItems = renderRelatedItems(item, campaign, relatedItems, { indent: section.indent });
+  if (normalizeRelatedItemsHtml(relatedBlock) !== normalizeRelatedItemsHtml(renderedRelatedItems)) {
+    fail(`${label}: related item navigation must match scripts/render-related-items.mjs output`);
+  }
 
-    const relatedHtmlPath = pagePathToHtmlPath(relatedItem.page.path);
-    const expectedHref = relativeUrl(itemHtmlPath, relatedHtmlPath);
-    if (!relatedBlock.includes(`href="${expectedHref}"`)) {
-      fail(`${label}: related navigation is missing link to ${relatedItem.id} (${expectedHref})`);
-    }
+  for (const error of validateRelatedItemsStructure({
+    item,
+    campaign,
+    relatedItems,
+    sectionHtml: relatedBlock,
+    itemHtmlPath,
+    label,
+  })) {
+    fail(error);
   }
 }
 
@@ -593,7 +596,7 @@ function validatePublishedItemPage(item) {
     }
   }
 
-  validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageText, publishedItemPageItems, label);
+  validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, campaign, publishedItemPageItems, label);
 
   for (const search of item.marketplaceSearches ?? []) {
     if (!itemHtml.includes(search.url)) {

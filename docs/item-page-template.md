@@ -83,6 +83,9 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 - For Finder-enabled items, add `finderGroup` to every `marketplaceSearches`
   entry. `finderGroup` controls visual grouping in
   `scripts/render-marketplace-finder.mjs`; `intent` remains the search intent.
+- Keep same-campaign related navigation compatible with
+  `scripts/render-related-items.mjs`; order follows `Campaign.itemIds`, current
+  item uses `aria-current="page"`, and sibling links use relative URLs.
 
 ## Parent Campaign Page
 
@@ -109,9 +112,11 @@ node --check assets/js/site.js
 node --check scripts/check-data.mjs
 node --check scripts/check-data-html-sync.mjs
 node --check scripts/render-marketplace-finder.mjs
+node --check scripts/render-related-items.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
 node scripts/render-marketplace-finder.mjs --check
+node scripts/render-related-items.mjs --check
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
@@ -124,6 +129,9 @@ marketplace URLs and `rel` tokens, related item-page navigation, hero image
 loading policy, product image metadata, and product image path.
 `scripts/render-marketplace-finder.mjs --check` verifies that every published
 Marketplace Finder block matches the canonical JSON-rendered structure.
+`scripts/render-related-items.mjs --check` verifies that every published item
+page's related navigation matches `Campaign.itemIds`, current-item semantics,
+and canonical relative links.
 
 ## Browser QA
 
@@ -150,4 +158,6 @@ Use a temp copy, not the working tree, to confirm failures:
   validation.
 - Moving a Marketplace Finder link into the wrong rendered group fails renderer
   sync.
+- Removing, duplicating, reordering, or mislinking a related item entry fails
+  related item renderer sync.
 - Removing product image `loading` or `decoding` fails Site Check.
