@@ -166,6 +166,12 @@ function assertTextIncludes(pageText, expected, label) {
   }
 }
 
+function assertHtmlIncludes(html, expected, label, field) {
+  if (typeof expected === "string" && expected.trim() !== "" && !html.includes(expected)) {
+    fail(`${label}: ${field} is missing "${expected}"`);
+  }
+}
+
 function validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageText, publishedItems, label) {
   const relatedBlock = extractSectionByAriaLabelledby(itemHtml, "related-items-heading");
   if (!relatedBlock || !relatedBlock.includes('id="related-items-heading"')) {
@@ -295,6 +301,7 @@ function validateCampaignPageMetadata(campaign) {
   const campaignOgTitle = getMetaContent(campaignHtml, "og:title");
   const campaignOgDescription = getMetaContent(campaignHtml, "og:description");
   const campaignOgImage = getMetaContent(campaignHtml, "og:image");
+  const heroAsset = assetMap.get(campaign.heroAssetId);
 
   if (getCanonicalUrl(campaignHtml) !== campaignPublicUrl) {
     fail(`${campaignLabel}: canonical URL does not match ${campaignPublicUrl}`);
@@ -302,8 +309,19 @@ function validateCampaignPageMetadata(campaign) {
   if (getMetaContent(campaignHtml, "og:url") !== campaignPublicUrl) {
     fail(`${campaignLabel}: og:url does not match ${campaignPublicUrl}`);
   }
-  if (getMetaContent(campaignHtml, "og:image:alt").trim() === "") {
-    fail(`${campaignLabel}: og:image:alt must not be empty`);
+  if (!readText("sitemap.xml").includes(`<loc>${campaignPublicUrl}</loc>`)) {
+    fail(`${campaignLabel}: sitemap.xml is missing ${campaignPublicUrl}`);
+  }
+  if (!heroAsset) {
+    fail(`${campaignLabel}: heroAssetId "${campaign.heroAssetId}" does not resolve to an asset`);
+  } else {
+    const expectedOgImage = publicUrlForPath(heroAsset.path);
+    if (campaignOgImage !== expectedOgImage) {
+      fail(`${campaignLabel}: og:image must match hero asset URL ${expectedOgImage}`);
+    }
+    if (getMetaContent(campaignHtml, "og:image:alt") !== heroAsset.altJa) {
+      fail(`${campaignLabel}: og:image:alt must match hero asset altJa`);
+    }
   }
   if (getNamedMetaContent(campaignHtml, "twitter:title") !== campaignOgTitle) {
     fail(`${campaignLabel}: twitter:title must match og:title`);
@@ -316,9 +334,64 @@ function validateCampaignPageMetadata(campaign) {
   }
 }
 
+function validateCampaignDetailItemCards(campaign) {
+  const campaignHtmlPath = pagePathToHtmlPath(`works/${campaign.workId}/collabs/${campaign.slug}/`);
+  const campaignHtmlFullPath = path.join(rootDir, campaignHtmlPath);
+  if (!fs.existsSync(campaignHtmlFullPath)) return;
+
+  const campaignHtml = readText(campaignHtmlPath);
+  const campaignItems = (campaign.itemIds ?? [])
+    .map((id) => itemMap.get(id))
+    .filter(Boolean);
+
+  for (const item of campaignItems) {
+    const label = `campaign page ${campaign.slug} item card ${item.id}`;
+    const productCard = extractProductCardByItemId(campaignHtml, item.id);
+
+    if (!productCard) {
+      fail(`${label}: missing product-card with data-item-id="${item.id}"`);
+      continue;
+    }
+
+    const cardText = textContent(productCard);
+    assertTextIncludes(cardText, item.officialNameJa, label);
+    assertTextIncludes(cardText, item.lineupLabelJa, label);
+    assertTextIncludes(cardText, item.acquisitionMethodJa, label);
+    assertTextIncludes(cardText, item.priceLabel, label);
+
+    for (const assetId of item.assetIds ?? []) {
+      const asset = assetMap.get(assetId);
+      if (!asset) {
+        fail(`${label}: assetIds references missing asset "${assetId}"`);
+        continue;
+      }
+
+      const expectedImageSrc = relativeUrl(campaignHtmlPath, asset.path);
+      assertHtmlIncludes(productCard, `src="${expectedImageSrc}"`, label, "product image");
+      assertHtmlIncludes(productCard, `alt="${asset.altJa}"`, label, "product image alt");
+    }
+
+    const marketLinksMatch = productCard.match(
+      /<div\b(?=[^>]*class=(["'])[^"']*\bmarket-links\b[^"']*\1)[^>]*>([\s\S]*?)<\/div>/,
+    );
+    if (!marketLinksMatch) {
+      fail(`${label}: market-links block is missing`);
+    } else if (/<span\b/i.test(marketLinksMatch[2])) {
+      fail(`${label}: market-links must contain reference links only, not official fact spans`);
+    }
+
+    for (const search of item.marketplaceSearches ?? []) {
+      if (!productCard.includes(search.url)) {
+        fail(`${label}: product card is missing marketplace URL for ${search.platform}`);
+      }
+    }
+  }
+}
+
 for (const campaign of campaigns.filter((candidate) => candidate.status === "published")) {
   validateCampaignCard(campaign);
   validateCampaignPageMetadata(campaign);
+  validateCampaignDetailItemCards(campaign);
 }
 
 function validatePublishedItemPage(item) {

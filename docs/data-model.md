@@ -65,6 +65,8 @@ Optional fields:
 - `heroAssetId`: hero image asset.
 - `startDate`: ISO start date when confirmed.
 - `endDate`: ISO end date when a single campaign-level end date is confirmed.
+  Use this for the main campaign/storefront period, not later item-specific
+  redemption, application, or delivery deadlines.
 - `endCondition`: text or enum-style value such as `while-supplies-last` or
   `varies-by-item`.
 - `cardMeta`: display metadata for archive list cards: `period`, `source`, and
@@ -107,6 +109,12 @@ Optional fields:
 - `lineupLabelJa`: confirmed lineup text, such as counts or grouped item names.
 - `priceLabel`: confirmed original price or lottery price.
 - `availabilityLabel`: confirmed store, venue, period, or limited-stock note.
+- `startDate`: ISO date when this item, bonus, lottery, or application window
+  started.
+- `endDate`: ISO date when this item-specific sale, distribution, application,
+  or lottery window ended. This may be later or earlier than `Campaign.endDate`.
+- `endCondition`: text or enum-style value such as `while-supplies-last`,
+  `may-close-early`, or `varies-by-store`.
 - `assetIds`: item images.
 - `marketplaceSearches`: secondary-market reference searches.
 
