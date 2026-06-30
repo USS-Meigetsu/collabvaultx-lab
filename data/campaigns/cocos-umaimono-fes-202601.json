@@ -1,0 +1,59 @@
+{
+  "id": "cocos-umaimono-fes-202601",
+  "workId": "umamusume",
+  "officialTitleJa": "ココスへようこそ！ウマいものフェス！",
+  "displayTitleEn": "COCOS Umaimono Festival campaign",
+  "relatedTitleJa": "ウマ娘 プリティーダービー",
+  "relatedTitleEn": "Uma Musume Pretty Derby",
+  "slug": "cocos-umaimono-fes-202601",
+  "status": "published",
+  "periodLabel": "2026 Jan-Mar",
+  "startDate": "2026-01-20",
+  "endDate": "2026-03-16",
+  "checkedAt": "2026-06-30",
+  "partnerNames": [
+    "ココス",
+    "COCOS"
+  ],
+  "categories": [
+    "card",
+    "figure",
+    "food",
+    "goods",
+    "prize"
+  ],
+  "heroAssetId": "cocos-umaimono-fes-hero",
+  "cardMeta": {
+    "period": "2026 Jan-Mar",
+    "source": "Checked 2026-06-30",
+    "items": "Menu / cards / prizes / goods"
+  },
+  "summaryJa": "ココスで開催されたウマ娘コラボ。対象メニューのクリアカード配布、特別メニュー、WEB抽選景品、一部店舗限定のアクリルスタンドパネル販売、公式Xキャンペーンをまとめています。",
+  "summaryEn": "COCOS campaign archive covering menu-order clear cards, special set bonuses, web-lottery prizes, official-X poster prizes, and limited store goods.",
+  "searchKeywords": [
+    "Uma Musume COCOS",
+    "ウマ娘 ココス",
+    "ウマいものフェス",
+    "clear card",
+    "クリアカード",
+    "special clear card",
+    "スペシャルクリアカード",
+    "acrylic panel",
+    "アクリルスタンドパネル",
+    "blanket",
+    "ブランケット",
+    "B2 poster",
+    "B2ポスター"
+  ],
+  "sourceIds": [
+    "cocos-umamusume-special-site"
+  ],
+  "itemIds": [
+    "cocos-original-clear-cards",
+    "cocos-special-set-menu",
+    "cocos-acrylic-stand-panels",
+    "cocos-original-blanket",
+    "cocos-b2-posters"
+  ],
+  "marketNoteRequired": true
+}

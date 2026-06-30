@@ -1,0 +1,55 @@
+[
+  {
+    "id": "cocos-umaimono-fes-hero",
+    "path": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/hero-main.png",
+    "role": "hero",
+    "altJa": "ココスへようこそ！ウマいものフェス！のキービジュアル",
+    "sourceId": "cocos-umamusume-special-site",
+    "loading": "eager"
+  },
+  {
+    "id": "cocos-clear-card-main",
+    "path": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-clear-card-main.png",
+    "role": "product",
+    "altJa": "オリジナルクリアカード代表画像",
+    "sourceId": "cocos-umamusume-special-site",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "cocos-special-clear-card-main",
+    "path": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-special-clear-card-main.png",
+    "role": "product",
+    "altJa": "スペシャルクリアカード代表画像",
+    "sourceId": "cocos-umamusume-special-site",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "cocos-acrylic-panel-main",
+    "path": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-acrylic-panel-main.png",
+    "role": "product",
+    "altJa": "オリジナルアクリルスタンドパネル代表画像",
+    "sourceId": "cocos-umamusume-special-site",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "cocos-blanket-main",
+    "path": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-blanket-main.png",
+    "role": "product",
+    "altJa": "オリジナルブランケット代表画像",
+    "sourceId": "cocos-umamusume-special-site",
+    "loading": "lazy",
+    "decoding": "async"
+  },
+  {
+    "id": "cocos-b2-poster-main",
+    "path": "assets/images/works/umamusume/collabs/cocos-umaimono-fes-202601/item-b2-poster-main.png",
+    "role": "product",
+    "altJa": "コラボ限定B2ポスター代表画像",
+    "sourceId": "cocos-umamusume-special-site",
+    "loading": "lazy",
+    "decoding": "async"
+  }
+]

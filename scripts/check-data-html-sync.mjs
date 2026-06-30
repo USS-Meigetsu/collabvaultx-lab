@@ -23,6 +23,18 @@ function readJson(relativePath) {
   return JSON.parse(readText(relativePath));
 }
 
+function readCollection(relativeDir) {
+  const fullDir = path.join(rootDir, "data", relativeDir);
+  return fs
+    .readdirSync(fullDir)
+    .filter((name) => name.endsWith(".json"))
+    .sort()
+    .flatMap((name) => {
+      const parsed = readJson(path.posix.join("data", relativeDir, name));
+      return Array.isArray(parsed) ? parsed : [parsed];
+    });
+}
+
 function decodeEntities(value) {
   return value
     .replace(/&amp;/g, "&")
@@ -73,6 +85,17 @@ function extractArticle(html, id) {
   return { html: article, openingTag };
 }
 
+function extractCampaignCardBySlug(html, slug) {
+  const articlePattern = /<article\b[^>]*>[\s\S]*?<\/article>/g;
+  for (const match of html.matchAll(articlePattern)) {
+    if (match[0].includes(`data-collab-slug="${slug}"`) || match[0].includes(`data-collab-slug='${slug}'`)) {
+      const openingTag = match[0].match(/^<article\b[^>]*>/)?.[0] ?? "";
+      return { html: match[0], openingTag };
+    }
+  }
+  return null;
+}
+
 function extractProductCardByItemId(html, itemId) {
   const articlePattern = /<article\b(?=[^>]*class=["'][^"']*\bproduct-card\b)[^>]*>[\s\S]*?<\/article>/g;
   for (const match of html.matchAll(articlePattern)) {
@@ -108,6 +131,14 @@ function extractCollabLinks(articleHtml) {
 
 function uniqueSorted(values) {
   return [...new Set(values)].sort((a, b) => a.localeCompare(b, "en"));
+}
+
+function normalizeKeyword(value) {
+  return String(value ?? "")
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function pagePathToHtmlPath(pagePath) {
@@ -165,20 +196,26 @@ function validateRelatedItemNavigation(item, itemHtml, itemHtmlPath, itemPageTex
   }
 }
 
-const campaign = readJson("data/campaigns/lawson-cinderellagray-campaign-202511.json");
-const items = readJson("data/items/lawson-cinderellagray-campaign-202511.json");
-const sources = readJson("data/sources/lawson-cinderellagray-campaign-202511.json");
-const assets = readJson("data/assets/lawson-cinderellagray-campaign-202511.json");
-const html = readText("works/umamusume/index.html");
-const card = extractArticle(html, "collab-lawson-cinderellagray-campaign");
+const campaigns = readCollection("campaigns");
+const items = readCollection("items");
+const sources = readCollection("sources");
+const assets = readCollection("assets");
+const campaignMap = new Map(campaigns.map((campaign) => [campaign.id, campaign]));
 const itemMap = new Map(items.map((item) => [item.id, item]));
 const sourceMap = new Map(sources.map((source) => [source.id, source]));
 const assetMap = new Map(assets.map((asset) => [asset.id, asset]));
 
-if (!card) {
-  fail("Lawson campaign card is missing from works/umamusume/index.html");
-} else {
-  const label = "works/umamusume/index.html#collab-lawson-cinderellagray-campaign";
+function validateCampaignCard(campaign) {
+  const workIndexPath = `works/${campaign.workId}/index.html`;
+  const html = readText(workIndexPath);
+  const card = extractCampaignCardBySlug(html, campaign.slug);
+  const label = `${workIndexPath}#${campaign.slug}`;
+
+  if (!card) {
+    fail(`${label}: published campaign card is missing`);
+    return;
+  }
+
   const status = getAttribute(card.openingTag, "data-status");
   const categories = getAttribute(card.openingTag, "data-category")
     .split(/\s+/)
@@ -195,6 +232,12 @@ if (!card) {
 
   if (searchKeywords.trim() === "") {
     fail(`${label}: data-search-keywords must not be empty`);
+  }
+  const normalizedHtmlKeywords = normalizeKeyword(searchKeywords);
+  for (const keyword of campaign.searchKeywords ?? []) {
+    if (!normalizedHtmlKeywords.includes(normalizeKeyword(keyword))) {
+      fail(`${label}: data-search-keywords is missing campaign.searchKeywords entry "${keyword}"`);
+    }
   }
 
   for (const category of uniqueSorted(jsonCategorySet)) {
@@ -236,30 +279,58 @@ if (!card) {
   }
 }
 
-const campaignPagePath = `works/${campaign.workId}/collabs/${campaign.slug}/`;
-const campaignHtmlPath = pagePathToHtmlPath(campaignPagePath);
-const campaignHtml = readText(campaignHtmlPath);
-const campaignLabel = `Lawson campaign page ${campaign.slug}`;
-const campaignOgTitle = getMetaContent(campaignHtml, "og:title");
-const campaignOgDescription = getMetaContent(campaignHtml, "og:description");
-const campaignOgImage = getMetaContent(campaignHtml, "og:image");
+function validateCampaignPageMetadata(campaign) {
+  const campaignPagePath = `works/${campaign.workId}/collabs/${campaign.slug}/`;
+  const campaignHtmlPath = pagePathToHtmlPath(campaignPagePath);
+  const campaignHtmlFullPath = path.join(rootDir, campaignHtmlPath);
+  const campaignLabel = `campaign page ${campaign.slug}`;
 
-if (getMetaContent(campaignHtml, "og:image:alt").trim() === "") {
-  fail(`${campaignLabel}: og:image:alt must not be empty`);
+  if (!fs.existsSync(campaignHtmlFullPath)) {
+    fail(`${campaignLabel}: ${campaignHtmlPath} is missing`);
+    return;
+  }
+
+  const campaignHtml = readText(campaignHtmlPath);
+  const campaignPublicUrl = publicUrlForPath(campaignPagePath);
+  const campaignOgTitle = getMetaContent(campaignHtml, "og:title");
+  const campaignOgDescription = getMetaContent(campaignHtml, "og:description");
+  const campaignOgImage = getMetaContent(campaignHtml, "og:image");
+
+  if (getCanonicalUrl(campaignHtml) !== campaignPublicUrl) {
+    fail(`${campaignLabel}: canonical URL does not match ${campaignPublicUrl}`);
+  }
+  if (getMetaContent(campaignHtml, "og:url") !== campaignPublicUrl) {
+    fail(`${campaignLabel}: og:url does not match ${campaignPublicUrl}`);
+  }
+  if (getMetaContent(campaignHtml, "og:image:alt").trim() === "") {
+    fail(`${campaignLabel}: og:image:alt must not be empty`);
+  }
+  if (getNamedMetaContent(campaignHtml, "twitter:title") !== campaignOgTitle) {
+    fail(`${campaignLabel}: twitter:title must match og:title`);
+  }
+  if (getNamedMetaContent(campaignHtml, "twitter:description") !== campaignOgDescription) {
+    fail(`${campaignLabel}: twitter:description must match og:description`);
+  }
+  if (getNamedMetaContent(campaignHtml, "twitter:image") !== campaignOgImage) {
+    fail(`${campaignLabel}: twitter:image must match og:image`);
+  }
 }
-if (getNamedMetaContent(campaignHtml, "twitter:title") !== campaignOgTitle) {
-  fail(`${campaignLabel}: twitter:title must match og:title`);
-}
-if (getNamedMetaContent(campaignHtml, "twitter:description") !== campaignOgDescription) {
-  fail(`${campaignLabel}: twitter:description must match og:description`);
-}
-if (getNamedMetaContent(campaignHtml, "twitter:image") !== campaignOgImage) {
-  fail(`${campaignLabel}: twitter:image must match og:image`);
+
+for (const campaign of campaigns.filter((candidate) => candidate.status === "published")) {
+  validateCampaignCard(campaign);
+  validateCampaignPageMetadata(campaign);
 }
 
 function validatePublishedItemPage(item) {
-  const label = `Lawson item page ${item.id}`;
+  const campaign = campaignMap.get(item.campaignId);
+  const label = `${campaign?.slug ?? item.campaignId} item page ${item.id}`;
   const itemPage = item.page;
+
+  if (!campaign) {
+    fail(`${label}: campaign metadata is missing`);
+    return;
+  }
+
   if (!itemPage || itemPage.status !== "published" || !itemPage.slug || !itemPage.path) {
     fail(`${label}: item must have published page metadata`);
     return;
@@ -276,13 +347,13 @@ function validatePublishedItemPage(item) {
 
   const itemHtml = readText(itemHtmlPath);
   const itemPageText = textContent(itemHtml);
-  const parentHtmlPath = `works/umamusume/collabs/${campaign.slug}/index.html`;
+  const parentHtmlPath = `works/${campaign.workId}/collabs/${campaign.slug}/index.html`;
   const parentHtml = readText(parentHtmlPath);
   const sitemap = readText("sitemap.xml");
   const verifyingSources = item.sourceIds
     .map((id) => sourceMap.get(id))
     .filter((candidate) => candidate?.type === "official" || candidate?.type === "partner-official");
-  const assetsForItem = item.assetIds
+  const assetsForItem = (item.assetIds ?? [])
     .map((id) => assetMap.get(id))
     .filter(Boolean);
 
@@ -310,7 +381,7 @@ function validatePublishedItemPage(item) {
 
   const productCard = extractProductCardByItemId(parentHtml, item.id);
   if (!productCard) {
-    fail(`${label}: parent Lawson page is missing product card with data-item-id="${item.id}"`);
+    fail(`${label}: parent campaign page is missing product card with data-item-id="${item.id}"`);
   } else {
     const expectedParentHref = relativeUrl(parentHtmlPath, itemHtmlPath);
     const alternateParentHref = expectedParentHref.replace(/^\.\//, "");
@@ -408,4 +479,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("Data/HTML sync checks passed: Lawson campaign card and published item pages match pilot JSON.");
+console.log("Data/HTML sync checks passed: published campaign cards and item pages match pilot JSON.");
