@@ -37,6 +37,8 @@ When a marketplace URL becomes an affiliate URL:
 - `affiliateUrl` must be present.
 - `disclosureRequired` must be `true`.
 - The page must include a visible affiliate disclosure near the links.
+- Rendered HTML should use `affiliateUrl` for the outbound `href`, while `url`
+  remains the canonical non-affiliate search URL for auditing.
 - The link must use:
 
 ```html

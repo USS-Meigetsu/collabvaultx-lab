@@ -202,12 +202,14 @@ function validateMarketplaceSearch(search, label) {
   requireString(search, "labelJa", label);
   requireString(search, "labelEn", label);
   requireString(search, "query", label);
-  requireString(search, "queryLabel", label);
   requireString(search, "intent", label);
   requireString(search, "rel", label);
   requireBoolean(search, "isAffiliate", label);
   requireBoolean(search, "disclosureRequired", label);
   validateUrl(search.url, label, "url");
+  if (search.queryLabel !== undefined) {
+    requireString(search, "queryLabel", label);
+  }
 
   if (typeof search.platform === "string" && !allowedMarketplacePlatforms.has(search.platform)) {
     fail(`${label}: unsupported marketplace platform "${search.platform}"`);
@@ -498,6 +500,19 @@ for (const item of items) {
           fail(`${searchLabel}: duplicate marketplace search id "${search.id}"`);
         }
         marketplaceSearchIds.add(search.id);
+      }
+    }
+  }
+
+  if (item.marketplaceFinder !== undefined) {
+    if (requireObject(item, "marketplaceFinder", label)) {
+      const finderLabel = `${label}:marketplaceFinder`;
+      validateStatus(item.marketplaceFinder, finderLabel);
+      if (
+        item.marketplaceFinder.status === "published" &&
+        (!Array.isArray(item.marketplaceSearches) || item.marketplaceSearches.length === 0)
+      ) {
+        fail(`${finderLabel}: published Marketplace Finder requires marketplaceSearches`);
       }
     }
   }

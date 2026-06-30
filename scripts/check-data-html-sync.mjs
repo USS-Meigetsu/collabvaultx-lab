@@ -200,11 +200,11 @@ function validateMarketplaceAnchors(html, searches, label) {
 }
 
 function validateMarketplaceFinder(item, itemHtml, label) {
-  if (item.id !== "cocos-original-clear-cards") return;
+  if (item.marketplaceFinder?.status !== "published") return;
 
   const finder = extractSectionByAriaLabelledby(itemHtml, "marketplace-finder-heading");
-  if (!finder || !finder.includes('data-marketplace-finder="cocos-original-clear-cards"')) {
-    fail(`${label}: Marketplace Finder section is missing for the pilot item`);
+  if (!finder || !finder.includes(`data-marketplace-finder="${item.id}"`)) {
+    fail(`${label}: Marketplace Finder section is missing for this enabled item`);
     return;
   }
 

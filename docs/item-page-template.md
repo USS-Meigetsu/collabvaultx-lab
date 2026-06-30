@@ -73,6 +73,8 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 - Keep `marketplaceSearches` as reference searches only. Non-affiliate links use
   `rel="nofollow noopener noreferrer"`; future affiliate links require visible
   disclosure and `rel="sponsored noopener noreferrer"`.
+- Add `marketplaceFinder: { "status": "published" }` only when the item page
+  renders the full Marketplace Finder section.
 
 ## Parent Campaign Page
 

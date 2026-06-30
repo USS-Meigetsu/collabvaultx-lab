@@ -123,6 +123,8 @@ Optional fields:
   `may-close-early`, or `varies-by-store`.
 - `assetIds`: item images.
 - `marketplaceSearches`: secondary-market reference searches.
+- `marketplaceFinder`: item-page Marketplace Finder opt-in. Use
+  `{"status": "published"}` only when the item page renders the full Finder UI.
 
 ## Source
 
@@ -208,6 +210,10 @@ Non-affiliate marketplace links use `rel="nofollow noopener noreferrer"`.
 Affiliate marketplace links use `rel="sponsored noopener noreferrer"` and must
 include visible disclosure. See `docs/affiliate-link-policy.md`.
 
+When `isAffiliate` becomes true, rendered HTML should use `affiliateUrl` for the
+outbound `href`, while `url` remains the canonical non-affiliate search URL for
+reference and auditing.
+
 ## Published record requirements
 
 Published records have stricter requirements than draft or backlog records.
@@ -270,7 +276,6 @@ Published `MarketplaceSearch` records require:
 - `labelJa`
 - `labelEn`
 - `query`
-- `queryLabel`
 - `url`
 - `intent`
 - `isAffiliate`

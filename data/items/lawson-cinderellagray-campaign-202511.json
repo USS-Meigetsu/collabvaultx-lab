@@ -31,8 +31,8 @@
       {
         "id": "ebay-all-results",
         "platform": "ebay",
-        "labelJa": "eBayで探す",
-        "labelEn": "Search eBay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
         "query": "Uma Musume Cinderella Gray Lawson clear file",
         "queryLabel": "Uma Musume Cinderella Gray Lawson clear file",
         "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+clear+file",
@@ -43,14 +43,56 @@
         "disclosureRequired": false
       },
       {
+        "id": "ebay-complete-set",
+        "platform": "ebay",
+        "labelJa": "eBayでセットを探す",
+        "labelEn": "Search eBay sets",
+        "query": "Uma Musume Cinderella Gray Lawson clear file set",
+        "queryLabel": "Uma Musume Cinderella Gray Lawson clear file set",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+clear+file+set",
+        "intent": "complete-set",
+        "region": "global",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
+        "url": "https://www.amazon.co.jp/s?k=ウマ娘+シンデレラグレイ+ローソン+クリアファイル",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
-        "labelJa": "メルカリで探す",
-        "labelEn": "Search Mercari JP",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
         "query": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン クリアファイル",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20クリアファイル",
         "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-complete-set",
+        "platform": "mercari",
+        "labelJa": "メルカリでセットを探す",
+        "labelEn": "Search Mercari JP sets",
+        "query": "ウマ娘 シンデレラグレイ ローソン クリアファイル 全種",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン クリアファイル 全種",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20クリアファイル%20全種",
+        "intent": "complete-set",
         "region": "jp",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
@@ -70,7 +112,10 @@
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
       }
-    ]
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   },
   {
     "id": "lawson-galbo-series",
@@ -395,8 +440,8 @@
       {
         "id": "ebay-all-results",
         "platform": "ebay",
-        "labelJa": "eBayで探す",
-        "labelEn": "Search eBay",
+        "labelJa": "eBayで全体検索",
+        "labelEn": "Search eBay results",
         "query": "Uma Musume Cinderella Gray Lawson entame kuji",
         "queryLabel": "Uma Musume Cinderella Gray Lawson entame kuji",
         "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+entame+kuji",
@@ -407,14 +452,42 @@
         "disclosureRequired": false
       },
       {
+        "id": "amazon-jp-all-results",
+        "platform": "amazon-jp",
+        "labelJa": "Amazon.co.jpで探す",
+        "labelEn": "Search Amazon JP",
+        "query": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
+        "url": "https://www.amazon.co.jp/s?k=ウマ娘+シンデレラグレイ+ローソン+エンタメくじ",
+        "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
         "id": "mercari-all-results",
         "platform": "mercari",
-        "labelJa": "メルカリで探す",
-        "labelEn": "Search Mercari JP",
+        "labelJa": "メルカリで全体検索",
+        "labelEn": "Search Mercari JP results",
         "query": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン エンタメくじ",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20エンタメくじ",
         "intent": "all-results",
+        "region": "jp",
+        "isAffiliate": false,
+        "rel": "nofollow noopener noreferrer",
+        "disclosureRequired": false
+      },
+      {
+        "id": "mercari-prize-set",
+        "platform": "mercari",
+        "labelJa": "メルカリで景品セットを探す",
+        "labelEn": "Search Mercari JP prize sets",
+        "query": "ウマ娘 シンデレラグレイ ローソン エンタメくじ セット",
+        "queryLabel": "ウマ娘 シンデレラグレイ ローソン エンタメくじ セット",
+        "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20エンタメくじ%20セット",
+        "intent": "complete-set",
         "region": "jp",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
@@ -434,6 +507,9 @@
         "rel": "nofollow noopener noreferrer",
         "disclosureRequired": false
       }
-    ]
+    ],
+    "marketplaceFinder": {
+      "status": "published"
+    }
   }
 ]
