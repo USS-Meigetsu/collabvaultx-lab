@@ -20,7 +20,8 @@ content model is more stable.
   item descriptions, overview cards, and page-specific reference/source blocks.
 - Best next step: keep generated-block checks small and targeted before
   attempting broader page generation. ROUND1 now has a complete v1 item-page
-  checkpoint across its parent page and nine item pages.
+  checkpoint across its parent page and nine item pages. Sanrio is the current
+  large product-set design test before widening renderer support again.
 
 ## Commonize Now
 
@@ -337,9 +338,11 @@ or smooth over them.
    checks.
 15. Done: review the completed ROUND1 item-page set with a complete v1
    QA/polish pass before widening the next generated-block boundary.
-16. Current: decide the next boundary from the completed Lawson, COCOS, and
+16. Done: decide the next boundary from the completed Lawson, COCOS, and
    ROUND1 campaign checkpoints.
-17. Revisit campaign-grid generation beyond the current supported set.
+17. Current: design the Sanrio split and source inventory as the first large
+   product-set test before creating item pages or generated blocks.
+18. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.
