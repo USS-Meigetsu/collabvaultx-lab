@@ -3,6 +3,11 @@
 This project still publishes hand-written static HTML. Item JSON is a validation
 and future-generation scaffold, not the page generator yet.
 
+Before turning a repeated section into generated markup, check
+`docs/componentization-boundaries.md`. Marketplace Finder is the first shared
+HTML block candidate; hero copy, overview cards, product details, and official
+source notes remain page-specific for now.
+
 Use this checklist when adding a published item group page under:
 
 ```text
