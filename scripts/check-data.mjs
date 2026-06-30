@@ -66,6 +66,14 @@ const allowedMarketplaceIntents = new Set([
   "unopened",
   "price-check",
 ]);
+const allowedMarketplaceFinderGroups = new Set([
+  "overview",
+  "sets",
+  "single-item",
+  "jp-marketplaces",
+  "price-check",
+  "other",
+]);
 const requiredMarketplaceRelTokens = new Set(["noopener", "noreferrer"]);
 
 const unsafeStringPatterns = [
@@ -210,12 +218,21 @@ function validateMarketplaceSearch(search, label) {
   if (search.queryLabel !== undefined) {
     requireString(search, "queryLabel", label);
   }
+  if (search.finderGroup !== undefined) {
+    requireString(search, "finderGroup", label);
+  }
 
   if (typeof search.platform === "string" && !allowedMarketplacePlatforms.has(search.platform)) {
     fail(`${label}: unsupported marketplace platform "${search.platform}"`);
   }
   if (typeof search.intent === "string" && !allowedMarketplaceIntents.has(search.intent)) {
     fail(`${label}: unsupported marketplace intent "${search.intent}"`);
+  }
+  if (
+    typeof search.finderGroup === "string" &&
+    !allowedMarketplaceFinderGroups.has(search.finderGroup)
+  ) {
+    fail(`${label}: unsupported marketplace finderGroup "${search.finderGroup}"`);
   }
 
   const relTokens = new Set(String(search.rel ?? "").toLowerCase().split(/\s+/).filter(Boolean));
@@ -448,6 +465,7 @@ for (const campaign of campaigns) {
 
 for (const item of items) {
   const label = `${item.__file}:${item.id}`;
+  const finderPublished = item.marketplaceFinder?.status === "published";
   requireString(item, "campaignId", label);
   requireString(item, "officialNameJa", label);
   requireString(item, "category", label);
@@ -495,6 +513,9 @@ for (const item of items) {
     for (const [index, search] of item.marketplaceSearches.entries()) {
       const searchLabel = `${label}:marketplaceSearches[${index}]`;
       validateMarketplaceSearch(search, searchLabel);
+      if (finderPublished) {
+        requireString(search, "finderGroup", searchLabel);
+      }
       if (typeof search.id === "string") {
         if (marketplaceSearchIds.has(search.id)) {
           fail(`${searchLabel}: duplicate marketplace search id "${search.id}"`);

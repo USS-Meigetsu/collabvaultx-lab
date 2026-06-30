@@ -14,8 +14,10 @@ Before committing, run:
 node --check assets/js/site.js
 node --check scripts/check-data.mjs
 node --check scripts/check-data-html-sync.mjs
+node --check scripts/render-marketplace-finder.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
+node scripts/render-marketplace-finder.mjs --check
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
@@ -51,6 +53,8 @@ Commonization and page-specific boundaries are documented in
 Pilot data lives under `data/` and is validated by `scripts/check-data.mjs`.
 Published-card and item-page sync checks live in
 `scripts/check-data-html-sync.mjs`.
+Marketplace Finder blocks are rendered/verified by
+`scripts/render-marketplace-finder.mjs`.
 Marketplace and affiliate link handling is documented in
 `docs/affiliate-link-policy.md`.
 

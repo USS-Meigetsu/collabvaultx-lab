@@ -22,12 +22,16 @@ jobs:
           node --check assets/js/site.js
           node --check scripts/check-data.mjs
           node --check scripts/check-data-html-sync.mjs
+          node --check scripts/render-marketplace-finder.mjs
 
       - name: Run data checks
         run: node scripts/check-data.mjs
 
       - name: Run data and HTML sync checks
         run: node scripts/check-data-html-sync.mjs
+
+      - name: Run Marketplace Finder renderer checks
+        run: node scripts/render-marketplace-finder.mjs --check
 
       - name: Run site checks
         shell: pwsh

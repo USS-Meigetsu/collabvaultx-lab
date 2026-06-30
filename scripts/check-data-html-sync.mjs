@@ -3,6 +3,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  marketplaceFinderGroupKeys,
+  normalizeMarketplaceFinderHtml,
+  renderMarketplaceFinder,
+} from "./render-marketplace-finder.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = process.env.COLLABVAULTX_ROOT_DIR
@@ -235,6 +240,23 @@ function validateMarketplaceFinder(item, itemHtml, label) {
     if (!finderText.includes(search.labelJa) && !finderText.includes(search.labelEn)) {
       fail(`${label}: Marketplace Finder is missing label for ${search.id}`);
     }
+  }
+
+  const groupTags = getOpeningTags(finder, "article").filter((tag) =>
+    /\bmarketplace-group\b/.test(getAttribute(tag, "class")),
+  );
+  const actualGroups = groupTags.map((tag) => getAttribute(tag, "data-marketplace-group"));
+  const expectedGroups = marketplaceFinderGroupKeys(item.marketplaceSearches ?? []);
+  if (actualGroups.join(",") !== expectedGroups.join(",")) {
+    fail(`${label}: Marketplace Finder groups must match JSON finderGroup order (${expectedGroups.join(",")})`);
+  }
+  if (groupTags.some((tag) => getAttribute(tag, "data-marketplace-intent") !== "")) {
+    fail(`${label}: Marketplace Finder groups should use data-marketplace-group, not data-marketplace-intent`);
+  }
+
+  const renderedFinder = renderMarketplaceFinder(item);
+  if (normalizeMarketplaceFinderHtml(finder) !== normalizeMarketplaceFinderHtml(renderedFinder)) {
+    fail(`${label}: Marketplace Finder must match scripts/render-marketplace-finder.mjs output`);
   }
 
   validateMarketplaceAnchors(finder, item.marketplaceSearches, `${label}: Marketplace Finder`);

@@ -80,6 +80,9 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
   disclosure and `rel="sponsored noopener noreferrer"`.
 - Add `marketplaceFinder: { "status": "published" }` only when the item page
   renders the full Marketplace Finder section.
+- For Finder-enabled items, add `finderGroup` to every `marketplaceSearches`
+  entry. `finderGroup` controls visual grouping in
+  `scripts/render-marketplace-finder.mjs`; `intent` remains the search intent.
 
 ## Parent Campaign Page
 
@@ -105,8 +108,10 @@ Run before commit:
 node --check assets/js/site.js
 node --check scripts/check-data.mjs
 node --check scripts/check-data-html-sync.mjs
+node --check scripts/render-marketplace-finder.mjs
 node scripts/check-data.mjs
 node scripts/check-data-html-sync.mjs
+node scripts/render-marketplace-finder.mjs --check
 powershell -ExecutionPolicy Bypass -File scripts/check-site.ps1
 git diff --check
 ```
@@ -117,6 +122,8 @@ URL, `og:url`, sitemap URL, parent `data-item-id` card link, official name,
 English summary, source facts, every official or partner-official source URL,
 marketplace URLs and `rel` tokens, related item-page navigation, hero image
 loading policy, product image metadata, and product image path.
+`scripts/render-marketplace-finder.mjs --check` verifies that every published
+Marketplace Finder block matches the canonical JSON-rendered structure.
 
 ## Browser QA
 
@@ -139,4 +146,8 @@ Use a temp copy, not the working tree, to confirm failures:
 - Changing canonical or `og:url` fails sync.
 - Removing the official source URL fails sync.
 - Removing one marketplace URL fails sync.
+- Removing `finderGroup` from a Finder-enabled marketplace search fails data
+  validation.
+- Moving a Marketplace Finder link into the wrong rendered group fails renderer
+  sync.
 - Removing product image `loading` or `decoding` fails Site Check.

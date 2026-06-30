@@ -190,6 +190,11 @@ Required fields:
 - `intent`: search intent. Current allowed values are `all-results`,
   `single-item`, `complete-set`, `character-specific`, `unopened`, and
   `price-check`.
+- `finderGroup`: visual group used by the Marketplace Finder renderer. Required
+  for every `marketplaceSearches` entry when the parent item has
+  `marketplaceFinder.status="published"`. Current allowed values are
+  `overview`, `sets`, `single-item`, `jp-marketplaces`, `price-check`, and
+  `other`.
 - `isAffiliate`: boolean. Default should be false until a real affiliate URL is
   present.
 - `rel`: expected outbound-link relationship tokens.
@@ -206,6 +211,10 @@ Optional fields:
 
 Marketplace searches must be accompanied by UI copy that availability, price,
 and authenticity are not verified by CollabVaultX.
+
+Keep `intent` and `finderGroup` separate. `intent` describes what the search is
+trying to find; `finderGroup` controls where the link appears in the rendered
+Marketplace Finder UI.
 
 Use the `character-specific` intent only when the query contains actual
 character names. For generic searches, use `all-results`, `single-item`,
@@ -370,6 +379,7 @@ Published `MarketplaceSearch` records require:
         "queryLabel": "Uma Musume Cinderella Gray Lawson Loppi HMV goods",
         "url": "https://www.ebay.com/sch/i.html?_nkw=Uma+Musume+Cinderella+Gray+Lawson+Loppi+HMV+goods",
         "intent": "all-results",
+        "finderGroup": "overview",
         "region": "global",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",
@@ -384,6 +394,7 @@ Published `MarketplaceSearch` records require:
         "queryLabel": "ウマ娘 シンデレラグレイ ローソン Loppi HMV グッズ",
         "url": "https://jp.mercari.com/search?keyword=ウマ娘%20シンデレラグレイ%20ローソン%20Loppi%20HMV%20グッズ",
         "intent": "all-results",
+        "finderGroup": "overview",
         "region": "jp",
         "isAffiliate": false,
         "rel": "nofollow noopener noreferrer",

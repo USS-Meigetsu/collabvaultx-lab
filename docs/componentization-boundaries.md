@@ -11,12 +11,12 @@ content model is more stable.
 ## Current Position
 
 - Shared now: global CSS, visual component classes, JSON data records, sitemap
-  expectations, metadata validation, marketplace link validation, and
-  item-page sync checks.
+  expectations, metadata validation, marketplace link validation, item-page sync
+  checks, and the Marketplace Finder renderer/checker.
 - Hand-written now: item page HTML, campaign page HTML, official-source notes,
-  item descriptions, overview cards, and Marketplace Finder markup.
-- Best next step: componentize the Marketplace Finder before attempting full
-  page generation.
+  item descriptions, overview cards, and page-specific reference/source blocks.
+- Best next step: use the Marketplace Finder renderer/checker as the first
+  generated-block boundary before attempting broader page generation.
 
 ## Commonize Now
 
@@ -30,14 +30,16 @@ Commonize first.
 - Output: the `section.marketplace-finder` block.
 - Shared behavior:
   - grouped marketplace links
+  - `finderGroup` visual grouping
   - `data-marketplace-finder`
   - `data-marketplace-id`
+  - `data-marketplace-group`
   - rel tokens
   - non-affiliate and future-affiliate rules
   - reference-search disclaimer
 - Keep item-specific:
   - exact search queries
-  - grouping labels when the item type needs them
+  - `finderGroup` assignment when item type or marketplace behavior needs it
   - which platforms are useful for that item
 
 Recommended implementation:
@@ -48,6 +50,16 @@ scripts/render-marketplace-finder.mjs
 
 The script should render or verify the Finder block for Finder-enabled items
 without generating the whole item page.
+
+Current workflow:
+
+```text
+node scripts/render-marketplace-finder.mjs --check
+```
+
+The checker compares each published Finder block with the canonical renderer
+output. This keeps item pages hand-written while preventing drift in the shared
+Finder section.
 
 ### Marketplace Link Policy
 
@@ -240,9 +252,10 @@ or smooth over them.
 
 ## Practical Roadmap
 
-1. Finish Marketplace Finder rollout for Lawson/COCOS.
-2. Add a focused Marketplace Finder renderer or verifier.
-3. Add related item navigation generation or stricter verification.
+1. Done: finish Marketplace Finder rollout for Lawson/COCOS.
+2. Current: keep the focused Marketplace Finder renderer/checker in sync with
+   Finder-enabled item pages.
+3. Next: add related item navigation generation or stricter verification.
 4. Add ROUND1 data/item pilot to test another campaign type.
 5. Revisit item-page scaffold generation.
 6. Revisit campaign-grid generation.
