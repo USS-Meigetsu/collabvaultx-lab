@@ -12,8 +12,8 @@ content model is more stable.
 
 - Shared now: global CSS, visual component classes, JSON data records, sitemap
   expectations, metadata validation, marketplace link validation, item-page sync
-  checks, the Marketplace Finder renderer/checker, and the related item
-  navigation renderer/checker.
+  checks, the Marketplace Finder renderer/checker, the related item navigation
+  renderer/checker, and supported campaign product-grid renderer/checker.
 - Hand-written now: item page HTML, campaign page HTML, official-source notes,
   item descriptions, overview cards, and page-specific reference/source blocks.
 - Best next step: keep generated-block checks small and targeted before
@@ -105,11 +105,15 @@ Keep this shared through validation now.
 - Product image and title link to the item page.
 - Separate detail-page buttons are not used for item-card navigation.
 - Parent cards may show a curated subset of marketplace links.
-- The ROUND1 parent campaign product grid is rendered/checked by
-  `scripts/render-campaign-product-grid.mjs`.
+- The ROUND1, Lawson, and COCOS parent campaign product grids are
+  rendered/checked by `scripts/render-campaign-product-grid.mjs`.
+- Parent-card-only display copy can use `Item.productGrid.descriptionJa` when it
+  needs to stay shorter than the item-page description.
+- Parent-card-only tags, facts, and preserved anchors can use `Item.productGrid`
+  so the generated block stays data-backed without generating the whole page.
 
-Broader cross-campaign generation can wait until the ROUND1 v0 contract is
-stable.
+Broader full-page generation can wait until this focused product-grid contract
+is stable.
 
 ### Common Page Metadata Rules
 
@@ -218,18 +222,18 @@ Still reviewed per page:
 - official source notes
 - product details
 
-### Campaign Detail Product Grid Beyond ROUND1
+### Campaign Detail Product Grid Beyond The Current Set
 
 Later target.
 
 The campaign product grid can eventually be generated from `Campaign.itemIds`
-and `Item` records across Lawson, COCOS, and later campaigns.
+and `Item` records across later campaign types.
 
 Wait until:
 
-- Marketplace Finder is present on all existing item pages.
 - parent card curated marketplace-link rules are stable.
-- ROUND1 or another campaign type confirms the model outside Lawson/COCOS.
+- at least one more campaign type confirms the model outside ROUND1, Lawson,
+  and COCOS.
 
 ### Sitemap Generation
 
@@ -277,9 +281,12 @@ or smooth over them.
 5. Done: add the first ROUND1 item page pilot for the crane-prize route.
 6. Done: add the second ROUND1 item page pilot for the retail-sale route and
    clean up empty parent-card `market-links` behavior.
-7. Current: add campaign product-grid componentization v0 for ROUND1.
-8. Revisit item-page scaffold generation.
-9. Revisit campaign-grid generation beyond ROUND1.
+7. Done: add campaign product-grid componentization v0 for ROUND1.
+8. Done: extend campaign product-grid componentization to Lawson and COCOS.
+9. Current: add the next 2-3 ROUND1 item pages using the established parent
+   grid and item-page contracts.
+10. Revisit item-page scaffold generation.
+11. Revisit campaign-grid generation beyond the current supported set.
 
 This keeps the project efficient without locking the site into a premature
 generator.

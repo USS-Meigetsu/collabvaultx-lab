@@ -7,6 +7,7 @@ import {
   extractCampaignProductGridSection,
   normalizeCampaignProductGridHtml,
   renderCampaignProductGrid,
+  SUPPORTED_CAMPAIGN_IDS,
 } from "./render-campaign-product-grid.mjs";
 import {
   marketplaceFinderGroupKeys,
@@ -308,6 +309,7 @@ const campaignMap = new Map(campaigns.map((campaign) => [campaign.id, campaign])
 const itemMap = new Map(items.map((item) => [item.id, item]));
 const sourceMap = new Map(sources.map((source) => [source.id, source]));
 const assetMap = new Map(assets.map((asset) => [asset.id, asset]));
+const supportedCampaignProductGridIds = new Set(SUPPORTED_CAMPAIGN_IDS);
 
 function validateCampaignCard(campaign) {
   const workIndexPath = `works/${campaign.workId}/index.html`;
@@ -513,7 +515,7 @@ function validateCampaignDetailItemCards(campaign) {
 }
 
 function validateCampaignProductGrid(campaign, campaignHtml) {
-  if (campaign.id !== "round1-collab-campaign-202510") return;
+  if (!supportedCampaignProductGridIds.has(campaign.id)) return;
 
   const label = `campaign page ${campaign.slug} product grid`;
   const section = extractCampaignProductGridSection(campaignHtml);

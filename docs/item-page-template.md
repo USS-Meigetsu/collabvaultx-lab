@@ -98,8 +98,8 @@ works/<workId>/collabs/<campaignSlug>/items/<itemSlug>/index.html
 - Keep a small curated subset of eBay/Mercari/Suruga-ya or similar searches in
   `market-links`; the item detail page owns the full Marketplace Finder.
 - Keep parent campaign product-grid blocks compatible with
-  `scripts/render-campaign-product-grid.mjs`; for now this renderer verifies the
-  ROUND1 campaign grid only.
+  `scripts/render-campaign-product-grid.mjs`; the renderer verifies the
+  supported campaign grids listed in that script.
 
 ## Sitemap
 
@@ -137,8 +137,8 @@ Marketplace Finder block matches the canonical JSON-rendered structure.
 `scripts/render-related-items.mjs --check` verifies that every published item
 page's related navigation matches `Campaign.itemIds`, current-item semantics,
 and canonical relative links.
-`scripts/render-campaign-product-grid.mjs --check` verifies that the ROUND1
-parent campaign product grid matches the canonical JSON-rendered structure.
+`scripts/render-campaign-product-grid.mjs --check` verifies that supported
+parent campaign product grids match the canonical JSON-rendered structure.
 
 ## Browser QA
 

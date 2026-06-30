@@ -9,7 +9,17 @@ const rootDir = process.env.COLLABVAULTX_ROOT_DIR
   ? path.resolve(process.env.COLLABVAULTX_ROOT_DIR)
   : path.resolve(__dirname, "..");
 
-const DEFAULT_CAMPAIGN_IDS = ["round1-collab-campaign-202510"];
+export const SUPPORTED_CAMPAIGN_IDS = [
+  "round1-collab-campaign-202510",
+  "lawson-cinderellagray-campaign-202511",
+  "cocos-umaimono-fes-202601",
+];
+
+const DEFAULT_CAMPAIGN_IDS = SUPPORTED_CAMPAIGN_IDS;
+const PRODUCT_GRID_CLASS_BY_CAMPAIGN_ID = new Map([
+  ["lawson-cinderellagray-campaign-202511", "product-grid product-grid-catalog"],
+  ["cocos-umaimono-fes-202601", "product-grid product-grid-catalog"],
+]);
 const MARKET_LINK_PLATFORM_ORDER = ["ebay", "mercari", "suruga-ya"];
 const MARKET_LINK_LABEL_BY_PLATFORM = new Map([
   ["ebay", "eBay"],
@@ -56,6 +66,13 @@ function escapeAttribute(value) {
   return escapeText(value).replace(/"/g, "&quot;");
 }
 
+function escapeAltAttribute(value) {
+  return String(value ?? "")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 function pagePathToHtmlPath(pagePath) {
   return pagePath.endsWith("/") ? `${pagePath}index.html` : pagePath;
 }
@@ -77,12 +94,20 @@ function unique(values) {
 }
 
 function cardTagForItem(item) {
+  if (typeof item.productGrid?.tag === "string" && item.productGrid.tag.trim() !== "") {
+    return item.productGrid.tag;
+  }
+
   if (item.id === "round1-mashikaku-can-badge") return "Capsule Toy";
   if (item.category === "prize" || item.distributionType === "crane-prize") return "Prize";
   return "Goods";
 }
 
 function factLabelsForItem(item) {
+  if (Array.isArray(item.productGrid?.factsJa) && item.productGrid.factsJa.length > 0) {
+    return unique(item.productGrid.factsJa);
+  }
+
   if (item.id === "round1-b2-tapestry") {
     return unique([item.acquisitionMethodJa, item.lineupLabelJa]);
   }
@@ -96,6 +121,22 @@ function factLabelsForItem(item) {
   ]);
 }
 
+function cardDescriptionForItem(item) {
+  if (typeof item.productGrid?.descriptionJa === "string" && item.productGrid.descriptionJa.trim() !== "") {
+    return item.productGrid.descriptionJa;
+  }
+
+  return item.descriptionJa;
+}
+
+function renderProductCardOpeningTag(item, indent) {
+  const cardId =
+    typeof item.productGrid?.cardId === "string" && item.productGrid.cardId.trim() !== ""
+      ? ` id="${escapeAttribute(item.productGrid.cardId)}"`
+      : "";
+  return `${indent}<article class="product-card"${cardId} data-item-id="${escapeAttribute(item.id)}">`;
+}
+
 function curatedMarketLinks(item) {
   const searches = item.marketplaceSearches ?? [];
   const links = [];
@@ -106,16 +147,20 @@ function curatedMarketLinks(item) {
   return links;
 }
 
+function productGridSectionClass(campaign) {
+  return PRODUCT_GRID_CLASS_BY_CAMPAIGN_ID.get(campaign.id) ?? "product-grid";
+}
+
 function renderImage(item, campaignHtmlPath, asset, indent, inner, linked) {
   const src = relativeUrl(campaignHtmlPath, asset.path);
-  const img = `<img loading="lazy" decoding="async" src="${escapeAttribute(src)}" alt="${escapeAttribute(asset.altJa)}" />`;
+  const img = `<img loading="lazy" decoding="async" src="${escapeAttribute(src)}" alt="${escapeAltAttribute(asset.altJa)}" />`;
   if (!linked) return `${inner}${img}`;
 
   const itemHtmlPath = pagePathToHtmlPath(item.page.path);
   const href = relativeUrl(campaignHtmlPath, itemHtmlPath);
   return [
     `${inner}<a class="product-thumb-link" href="${escapeAttribute(href)}">`,
-    `${indent}  ${img}`,
+    `${inner}  ${img}`,
     `${inner}</a>`,
   ].join("\n");
 }
@@ -160,18 +205,18 @@ export function renderCampaignProductGrid(campaign, itemsById, assetsById, optio
 
     const isLinked = item.page?.status === "published";
     const factLabels = factLabelsForItem(item);
-    const marketLines = renderMarketLinks(item, deeper);
+    const marketLines = renderMarketLinks(item, `${deeper}  `);
 
     cards.push(
       [
-        `${inner}<article class="product-card" data-item-id="${escapeAttribute(item.id)}">`,
+        renderProductCardOpeningTag(item, inner),
         `${deep}<div class="product-thumb">`,
         renderImage(item, campaignHtmlPath, asset, deep, deeper, isLinked),
         `${deep}</div>`,
         `${deep}<div class="product-card-body">`,
         `${deeper}<p class="card-tag">${escapeText(cardTagForItem(item))}</p>`,
         `${deeper}<h3>${renderTitle(item, campaignHtmlPath)}</h3>`,
-        `${deeper}<p>${escapeText(item.descriptionJa)}</p>`,
+        `${deeper}<p>${escapeText(cardDescriptionForItem(item))}</p>`,
         `${deeper}<details class="product-details">`,
         `${deeper}  <summary>詳細を見る</summary>`,
         `${deeper}  <div class="item-fact-list">`,
@@ -186,7 +231,7 @@ export function renderCampaignProductGrid(campaign, itemsById, assetsById, optio
   }
 
   return [
-    `${indent}<section class="product-grid" aria-label="関連アイテム一覧">`,
+    `${indent}<section class="${escapeAttribute(productGridSectionClass(campaign))}" aria-label="関連アイテム一覧">`,
     cards.join("\n\n"),
     `${indent}</section>`,
   ].join("\n");
@@ -199,12 +244,13 @@ export function extractCampaignProductGridSection(html) {
   const sectionStart = html.lastIndexOf("<section", markerIndex);
   const sectionEnd = html.indexOf("</section>", markerIndex);
   if (sectionStart === -1 || sectionEnd === -1) return null;
+  const sectionLineStart = html.lastIndexOf("\n", sectionStart) + 1;
 
   return {
-    html: html.slice(sectionStart, sectionEnd + "</section>".length),
-    start: sectionStart,
+    html: html.slice(sectionLineStart, sectionEnd + "</section>".length),
+    start: sectionLineStart,
     end: sectionEnd + "</section>".length,
-    indent: sectionIndent(html, sectionStart),
+    indent: html.slice(sectionLineStart, sectionStart).match(/^\s*/)?.[0] ?? "",
   };
 }
 
@@ -215,11 +261,6 @@ export function normalizeCampaignProductGridHtml(html) {
     .map((line) => line.trim())
     .filter(Boolean)
     .join("\n");
-}
-
-function sectionIndent(html, sectionStart) {
-  const lineStart = html.lastIndexOf("\n", sectionStart) + 1;
-  return html.slice(lineStart, sectionStart).match(/^\s*/)?.[0] ?? "        ";
 }
 
 function parseArgs(argv) {
@@ -316,7 +357,7 @@ function checkOrWrite({ write = false, campaignIds = DEFAULT_CAMPAIGN_IDS } = {}
   );
 }
 
-if (fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
   try {
     const options = parseArgs(process.argv.slice(2));
     checkOrWrite({ write: options.write, campaignIds: options.campaignIds });

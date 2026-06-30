@@ -5,6 +5,13 @@
     "officialNameJa": "オリジナルクリアファイル",
     "displayNameEn": "Original clear files",
     "summaryEn": "Lawson clear-file purchase bonus record for the Uma Musume Cinderella Gray campaign, covering lineup count, acquisition rule, period, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Clear File",
+      "factsJa": [
+        "全7種 / 各店計21枚",
+        "当時の入手方法: 対象の明治のお菓子3点と好きなクリアファイル1枚をレジへ持参"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "clear-file",
@@ -129,6 +136,13 @@
     "officialNameJa": "明治 ガルボシリーズ",
     "displayNameEn": "Meiji Galbo series",
     "summaryEn": "Lawson-exclusive Meiji Galbo food-sale group for the Uma Musume Cinderella Gray campaign, covering the three-item lineup, price, original photo-style card bonus, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Food",
+      "factsJa": [
+        "全3種 / 各899円（税込）",
+        "当時の入手方法: 2025年11月25日よりローソン店頭で順次発売"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "galbo",
@@ -253,6 +267,13 @@
     "officialNameJa": "グラス&白桃ゼリー",
     "displayNameEn": "Glass and peach jelly",
     "summaryEn": "Lawson glass and peach jelly food-sale group for the Uma Musume Cinderella Gray campaign, covering the two glass designs, price, sale timing, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Food",
+      "factsJa": [
+        "グラスデザイン全2種 / 各968円（税込）",
+        "当時の入手方法: 2025年11月25日よりローソン店頭で順次発売"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "glass-peach-jelly",
@@ -377,6 +398,13 @@
     "officialNameJa": "アクリルスタンド",
     "displayNameEn": "Acrylic stands",
     "summaryEn": "Lawson acrylic stand retail-sale goods group for the Uma Musume Cinderella Gray campaign, covering the six-design lineup, price, store sales timing, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Goods",
+      "factsJa": [
+        "全6種 / 各1,650円（税込）",
+        "当時の入手方法: 2025年11月25日よりローソン店頭で順次発売"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "acrylic-stand",
@@ -516,6 +544,15 @@
     "officialNameJa": "@Loppi・HMV限定予約販売グッズ",
     "displayNameEn": "Loppi/HMV reservation goods",
     "summaryEn": "Lawson @Loppi and HMV reservation-sale goods group for the Uma Musume Cinderella Gray campaign, covering the reservation window, pickup date, lineup groups, official source, order caveats, and reference searches.",
+    "productGrid": {
+      "cardId": "lawson-loppi-hmv-reservation-goods",
+      "tag": "Reservation Goods",
+      "factsJa": [
+        "ぬいぐるみ全3種 / B2タペストリー全6種 / アクリルジオラマ / 缶バッジ全6種 / フェイスタオル全2種 / アクリルスタンド全6種",
+        "当時の入手方法: @Loppi・HMV&BOOKS online限定の予約販売",
+        "受付期間: 2025年11月25日〜2026年1月26日 / お渡し日: 2026年5月28日"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "loppi-hmv-reservation-goods",
@@ -640,6 +677,14 @@
     "officialNameJa": "エンタメくじ",
     "displayNameEn": "Entertainment lottery",
     "summaryEn": "Kujist partner-official entertainment lottery record for the Uma Musume Cinderella Gray Lawson campaign, covering sale date, price, sales channels, official source, prize-list reference, end-status note, and reference searches.",
+    "productGrid": {
+      "tag": "Prize",
+      "factsJa": [
+        "1回770円（税込）",
+        "当時の入手方法: 2025年11月25日よりローソンとHMVで発売",
+        "公式ページ上は販売終了表示 / なくなり次第終了"
+      ]
+    },
     "page": {
       "status": "published",
       "slug": "entame-kuji",

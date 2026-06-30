@@ -61,7 +61,7 @@ Marketplace Finder blocks are rendered/verified by
 `scripts/render-marketplace-finder.mjs`.
 Related item navigation blocks are rendered/verified by
 `scripts/render-related-items.mjs`.
-ROUND1 campaign product-grid blocks are rendered/verified by
+Supported campaign product-grid blocks are rendered/verified by
 `scripts/render-campaign-product-grid.mjs`.
 Marketplace and affiliate link handling is documented in
 `docs/affiliate-link-policy.md`.

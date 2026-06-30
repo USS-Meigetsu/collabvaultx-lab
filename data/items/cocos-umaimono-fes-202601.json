@@ -5,6 +5,14 @@
     "officialNameJa": "オリジナルクリアカード",
     "displayNameEn": "Original clear cards",
     "summaryEn": "COCOS menu-order clear-card bonus group for the Uma Musume Umaimono Festival campaign, covering the four-phase 20-card lineup, random distribution rule, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Menu Bonus",
+      "descriptionJa": "オリジナルクリアカード。全20種で、対象メニュー1品ごとの注文特典としてランダム配布。",
+      "factsJa": [
+        "全20種 / 第1弾〜第4弾 各5種",
+        "当時の入手方法: 対象メニュー1品ごとの注文特典としてランダム配布"
+      ]
+    },
     "category": "card",
     "recordType": "group",
     "distributionType": "purchase-bonus",
@@ -144,6 +152,14 @@
     "officialNameJa": "ウマいものフェス特別メニュー",
     "displayNameEn": "Umaimono Festival special menu",
     "summaryEn": "COCOS special menu set record covering the special clear-card bonus, recovery-item serial-code bonus, front-half/back-half changeover, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Special Menu",
+      "descriptionJa": "ウマいものフェス特別メニュー。スペシャルクリアカードと、ココスオリジナル回復アイテムを取得できるシリアルコードが付属し、前半・後半でデザインが異なる。",
+      "factsJa": [
+        "前半・後半でデザイン違い / 特別セットメニュー付属",
+        "当時の入手方法: ウマいものフェス特別メニューを注文"
+      ]
+    },
     "category": "food",
     "recordType": "set",
     "distributionType": "food-sale",
@@ -284,6 +300,16 @@
     "officialNameJa": "オリジナルアクリルスタンドパネル",
     "displayNameEn": "Original acrylic stand panels",
     "summaryEn": "COCOS store-limited acrylic stand panel sales group covering front-half/back-half random lineups, store-limited sales caveats, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Store Goods",
+      "descriptionJa": "オリジナルアクリルスタンドパネル。前半・後半それぞれランダム全4種で、一部店舗限定で販売。",
+      "factsJa": [
+        "前半・後半それぞれランダム全4種",
+        "当時の入手方法: 一部店舗限定の店頭販売で購入",
+        "販売期間: 前半: 2026年1月20日〜3月16日 / 後半: 2026年2月17日〜3月16日、なくなり次第終了",
+        "おひとり様、前半・後半各4個、最大8個まで"
+      ]
+    },
     "category": "figure",
     "recordType": "group",
     "distributionType": "retail-sale",
@@ -409,6 +435,16 @@
     "officialNameJa": "オリジナルブランケット",
     "displayNameEn": "Original blanket",
     "summaryEn": "COCOS web-lottery prize record for the original blanket, covering receipt-code entry, lottery window, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Web Lottery",
+      "descriptionJa": "オリジナルブランケット。レシートに印字される応募コードを使うWEB抽選景品。",
+      "factsJa": [
+        "WEB抽選景品",
+        "当時の入手方法: 対象メニュー1品=1pt分としてレシートに印字される応募コードを使ってWEB抽選に応募",
+        "レシート印字期間: 2026年1月20日 10:00〜3月17日 5:59 / 応募期間: 2026年1月20日 10:00〜3月23日 23:59",
+        "当選数: 300名"
+      ]
+    },
     "category": "prize",
     "recordType": "single",
     "distributionType": "lottery",
@@ -533,6 +569,15 @@
     "officialNameJa": "コラボ限定B2ポスター",
     "displayNameEn": "Collaboration-exclusive B2 posters",
     "summaryEn": "COCOS official-X follow-and-repost lottery prize group covering four campaign periods, one winner per period, official source, and reference searches.",
+    "productGrid": {
+      "tag": "Campaign Prize",
+      "descriptionJa": "コラボ限定B2ポスター。ココス公式Xのフォロー＆リポストキャンペーンで、各期間1名に抽選配布された景品。",
+      "factsJa": [
+        "第1弾〜第4弾の各期間 / 各1名",
+        "当時の入手方法: ココス公式Xをフォローし、対象投稿をリポスト",
+        "応募期間: 第1弾〜第4弾の各フォロー＆リポスト期間、最終第4弾は2026年3月9日まで"
+      ]
+    },
     "category": "prize",
     "recordType": "group",
     "distributionType": "lottery",
